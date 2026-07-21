@@ -5,49 +5,56 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MyDICollection.MainPage"
              xmlns:helpers="clr-namespace:MyDICollection.Helpers"
-             Title="{helpers:Translate Title}">
+             Title="{helpers:Translate Title}"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive">
 
     <Grid RowDefinitions="Auto,*">
 
         <!-- Sección de filtros -->
         <Border Grid.Row="0"
-                Margin="15,15,15,0"
-                StrokeShape="RoundRectangle 12"
-                Stroke="#E0E0E0"
-                StrokeThickness="1"
-                BackgroundColor="#F7F7F7">
+                Margin="{responsive:ResponsiveThickness BaseValue='15,15,15,0'}"
+                Style="{StaticResource FilterBorder}">
 
             <toolkit:Expander>
+                
                 <toolkit:Expander.Header>
-                    <Grid ColumnDefinitions="*,Auto" Padding="14,10">
+                    
+                    <Grid 
+                        ColumnDefinitions="*,Auto"
+                        Padding="{responsive:ResponsiveThickness BaseValue='14,10'}">
+                        
                         <Label Text="{helpers:Translate Filters}"
-                               FontAttributes="Bold"
-                               FontSize="15"
-                               VerticalOptions="Center"/>
+                               Style="{StaticResource FilterTitleLabel}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"/>
+                        
                     </Grid>
+                    
                 </toolkit:Expander.Header>
 
-                <VerticalStackLayout Padding="14,4,14,14" Spacing="10">
+                <VerticalStackLayout 
+                    Padding="{responsive:ResponsiveThickness BaseValue='14,4,14,14'}"
+                    Spacing="{responsive:ResponsiveSize BaseValue=10}">
 
-                    <VerticalStackLayout Spacing="2">
+                    <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
                         <Label Text="{helpers:Translate Collect}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesObtenido}"
                                 SelectedItem="{Binding FiltroObtenido}"/>
                     </VerticalStackLayout>
 
-                    <VerticalStackLayout Spacing="2">
+                    <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
                         <Label Text="{helpers:Translate Type}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesTipo}"
                                 SelectedItem="{Binding FiltroTipo}"/>
                     </VerticalStackLayout>
 
-                    <VerticalStackLayout Spacing="2">
+                    <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
                         <Label Text="{helpers:Translate Version}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesVersion}"
                                 SelectedItem="{Binding FiltroVersion}"/>
                     </VerticalStackLayout>
 
-                    <VerticalStackLayout Spacing="2">
+                    <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
                         <Label Text="{helpers:Translate Brand}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesFranquicia}"
                                 SelectedItem="{Binding FiltroFranquicia}"/>
@@ -62,43 +69,57 @@
                             IsRunning="{Binding IsBusy}"
                             IsVisible="{Binding IsBusy}"
                             HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Color="#EB1937" />
+                            VerticalOptions="Center"/>
 
         <!-- Lista de figuras -->
         <CollectionView Grid.Row="1"
                         ItemsSource="{Binding Figures}"
                         IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}"
-                        Margin="15"
+                        Margin="{responsive:ResponsiveThickness BaseValue='15'}"
                         HorizontalScrollBarVisibility="Never"
                         VerticalScrollBarVisibility="Never">
+            
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="12"/>
+                
+                <LinearItemsLayout 
+                    Orientation="Vertical" 
+                    ItemSpacing="{responsive:ResponsiveSize BaseValue=12}"/>
+                
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
+                
                 <DataTemplate x:DataType="models:FiguraModel">
-                    <Grid Padding="0,10,10,0">
+                    
+                    <Grid 
+                        Padding="{responsive:ResponsiveThickness BaseValue='0,10,10,0'}">
+                        
                         <Border StrokeShape="RoundRectangle 16"
                                 Stroke="#E0E0E0"
                                 StrokeThickness="1"
-                                Padding="12"
+                                Padding="{responsive:ResponsiveThickness BaseValue='12'}"
                                 BackgroundColor="White">
 
-                            <Grid ColumnDefinitions="90,*" ColumnSpacing="14">
+                            <Grid 
+                                ColumnDefinitions="Auto,*" 
+                                ColumnSpacing="{responsive:ResponsiveSize BaseValue=14}">
 
                                 <Border Grid.Column="0"
                                         StrokeShape="RoundRectangle 12"
-                                        HeightRequest="90"
-                                        WidthRequest="90"
+                                        HeightRequest="{responsive:ResponsiveSize BaseValue=90}"
+                                        WidthRequest="{responsive:ResponsiveSize BaseValue=90}"
                                         Padding="0">
+                                    
                                     <Image Source="{Binding ImagenUrl}"
                                            Aspect="AspectFit"
-                                           HeightRequest="90"
-                                           WidthRequest="90"/>
+                                           HeightRequest="{responsive:ResponsiveSize BaseValue=85}"
+                                           WidthRequest="{responsive:ResponsiveSize BaseValue=85}"/>
                                 </Border>
 
-                                <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                <VerticalStackLayout 
+                                    Grid.Column="1" 
+                                    Spacing="{responsive:ResponsiveSize BaseValue=2}" 
+                                    VerticalOptions="Center">
 
                                     <Label Text="{Binding Nombre}"
                                            FontSize="17"
@@ -120,7 +141,10 @@
                                            TextColor="#EB1937"
                                            FontAttributes="Italic"/>
 
-                                    <HorizontalStackLayout Spacing="10" Margin="0,8,0,0">
+                                    <HorizontalStackLayout 
+                                        Spacing="{responsive:ResponsiveSize BaseValue=10}" 
+                                        Margin="{responsive:ResponsiveThickness BaseValue='0,8,0,0'}">
+                                        
                                         <Button Text="－"
                                                 FontAttributes="Bold"
                                                 WidthRequest="40"
@@ -153,27 +177,33 @@
                                                 TextColor="White"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirWikiCommand}"
                                                 CommandParameter="{Binding .}"/>
+                                        
                                     </HorizontalStackLayout>
 
                                 </VerticalStackLayout>
+                                
                             </Grid>
+                            
                         </Border>
 
                         <Border IsVisible="{Binding Obtenido}"
                                 StrokeShape="RoundRectangle 14"
                                 BackgroundColor="#2E7D32"
-                                Padding="10,5"
+                                Padding="{responsive:ResponsiveThickness BaseValue='10,5'}"
                                 HorizontalOptions="End"
                                 VerticalOptions="Start"
-                                Margin="0,-10,-10,0"
+                                Margin="{responsive:ResponsiveThickness BaseValue='0,-10,-10,0'}"
                                 StrokeThickness="0">
+                            
                             <Border.Shadow>
                                 <Shadow Brush="Black" Opacity="0.3" Radius="6" Offset="0,2"/>
                             </Border.Shadow>
+                            
                             <Label Text="{Binding Cantidad, StringFormat='✓ x{0}'}"
                                    TextColor="White"
                                    FontSize="12"
                                    FontAttributes="Bold"/>
+                            
                         </Border>
 
                         <Border IsVisible="{Binding Obtenido, Converter={StaticResource InvertedBoolConverter}}"
@@ -183,13 +213,17 @@
                                 HeightRequest="28"
                                 HorizontalOptions="End"
                                 VerticalOptions="Start"
-                                Margin="0,-10,-10,0"
+                                Margin="{responsive:ResponsiveThickness BaseValue='0,-10,-10,0'}"
                                 Padding="0"
                                 StrokeThickness="0">
+                            
                             <Border.Shadow>
+                                
                                 <Shadow Brush="Black" Opacity="0.3" Radius="6" Offset="0,2"/>
+                                
                             </Border.Shadow>
-                            <Label Text="✕"
+                            
+                            <Label Text="0"
                                    TextColor="White"
                                    FontSize="14"
                                    FontAttributes="Bold"
@@ -197,11 +231,17 @@
                                    VerticalOptions="Center"
                                    HorizontalTextAlignment="Center"
                                    VerticalTextAlignment="Center"/>
+                            
                         </Border>
+                        
                     </Grid>
+                    
                 </DataTemplate>
+                
             </CollectionView.ItemTemplate>
 
         </CollectionView>
+        
     </Grid>
+    
 </ContentPage>
