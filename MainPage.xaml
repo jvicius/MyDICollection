@@ -94,11 +94,9 @@
                     <Grid 
                         Padding="{responsive:ResponsiveThickness BaseValue='0,10,10,0'}">
                         
-                        <Border StrokeShape="RoundRectangle 16"
-                                Stroke="#E0E0E0"
-                                StrokeThickness="1"
+                        <Border 
                                 Padding="{responsive:ResponsiveThickness BaseValue='12'}"
-                                BackgroundColor="White">
+                                Style="{StaticResource CardBorder}">
 
                             <Grid 
                                 ColumnDefinitions="Auto,*" 
