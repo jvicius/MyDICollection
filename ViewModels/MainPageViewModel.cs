@@ -174,7 +174,7 @@ namespace MyDICollection.ViewModels
             }
 
             // Si el filtro de "Obtenido" está activo, puede que la figura ya no deba mostrarse
-            AplicarFiltros();
+            //AplicarFiltros();
         }
 
         private async Task AbrirWikiAsync(FiguraModel figura)

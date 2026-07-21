@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using MyDICollection.Helpers;
 using MyDICollection.Services;
 using MyDICollection.ViewModels;
+using System.Globalization;
 
 namespace MyDICollection
 {
@@ -9,6 +11,8 @@ namespace MyDICollection
     {
         public static MauiApp CreateMauiApp()
         {
+            InitConfig(); 
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
@@ -28,6 +32,19 @@ namespace MyDICollection
             builder.Services.AddTransient<MainPage>();
 
             return builder.Build();
+        }
+
+        private static void InitConfig()
+        {
+            SetupLanguage();
+        }
+        private static void SetupLanguage()
+        {
+            if (string.IsNullOrEmpty(Settings.LanguageSettings))
+                Settings.LanguageSettings = CultureInfo.CurrentCulture.TwoLetterISOLanguageName.ToLower();
+
+            var LocalizationService = new LocalizationService();
+            LocalizationService.SetCulture(Settings.LanguageSettings);
         }
     }
 }

@@ -11,7 +11,7 @@
     <Color x:Key="PrimaryDarkText">#242424</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
     <Color x:Key="SecondaryDarkText">#9880e5</Color>
-    <Color x:Key="Tertiary">#2B0B98</Color>
+    <Color x:Key="Tertiary">#EB1937</Color>
 
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>

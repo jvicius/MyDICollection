@@ -4,7 +4,8 @@
              xmlns:models="clr-namespace:MyDICollection.Models"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MyDICollection.MainPage"
-             Title="Mi Colección">
+             xmlns:helpers="clr-namespace:MyDICollection.Helpers"
+             Title="{helpers:Translate Title}">
 
     <Grid RowDefinitions="Auto,*">
 
@@ -19,7 +20,7 @@
             <toolkit:Expander>
                 <toolkit:Expander.Header>
                     <Grid ColumnDefinitions="*,Auto" Padding="14,10">
-                        <Label Text="🔎 Filtros"
+                        <Label Text="{helpers:Translate Filters}"
                                FontAttributes="Bold"
                                FontSize="15"
                                VerticalOptions="Center"/>
@@ -29,25 +30,25 @@
                 <VerticalStackLayout Padding="14,4,14,14" Spacing="10">
 
                     <VerticalStackLayout Spacing="2">
-                        <Label Text="Obtenido" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Collect}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesObtenido}"
                                 SelectedItem="{Binding FiltroObtenido}"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="2">
-                        <Label Text="Tipo" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Type}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesTipo}"
                                 SelectedItem="{Binding FiltroTipo}"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="2">
-                        <Label Text="Versión" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Version}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesVersion}"
                                 SelectedItem="{Binding FiltroVersion}"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="2">
-                        <Label Text="Franquicia" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Brand}" FontSize="12" TextColor="Gray"/>
                         <Picker ItemsSource="{Binding OpcionesFranquicia}"
                                 SelectedItem="{Binding FiltroFranquicia}"/>
                     </VerticalStackLayout>
