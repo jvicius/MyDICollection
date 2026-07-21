@@ -6,6 +6,7 @@
     xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive">
 
     <responsive:ResponsiveSizeExtension x:Key="FilterTitleSize" BaseValue="15" />
+    <responsive:ResponsiveSizeExtension x:Key="ButtonFontSize" BaseValue="18" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
@@ -452,6 +453,81 @@
         <Setter Property="FontSize" Value="{StaticResource FilterTitleSize}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="CardActionButtonA" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="CornerRadius" Value="{responsive:ResponsiveInt BaseValue=36}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray950}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CardActionButtonB" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="CornerRadius" Value="{responsive:ResponsiveInt BaseValue=36}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray950}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CardActionButtonC" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryDarkText}, Dark={StaticResource SecondaryDarkText}}" />
+        <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="CornerRadius" Value="{responsive:ResponsiveInt BaseValue=36}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray950}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
 
 </ResourceDictionary>

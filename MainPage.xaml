@@ -106,14 +106,14 @@
 
                                 <Border Grid.Column="0"
                                         StrokeShape="RoundRectangle 12"
-                                        HeightRequest="{responsive:ResponsiveSize BaseValue=90}"
-                                        WidthRequest="{responsive:ResponsiveSize BaseValue=90}"
+                                        HeightRequest="{responsive:ResponsiveSize BaseValue=95}"
+                                        WidthRequest="{responsive:ResponsiveSize BaseValue=95}"
                                         Padding="0">
                                     
                                     <Image Source="{Binding ImagenUrl}"
                                            Aspect="AspectFit"
-                                           HeightRequest="{responsive:ResponsiveSize BaseValue=85}"
-                                           WidthRequest="{responsive:ResponsiveSize BaseValue=85}"/>
+                                           HeightRequest="{responsive:ResponsiveSize BaseValue=90}"
+                                           WidthRequest="{responsive:ResponsiveSize BaseValue=90}"/>
                                 </Border>
 
                                 <VerticalStackLayout 
@@ -146,35 +146,17 @@
                                         Margin="{responsive:ResponsiveThickness BaseValue='0,8,0,0'}">
                                         
                                         <Button Text="－"
-                                                FontAttributes="Bold"
-                                                WidthRequest="40"
-                                                HeightRequest="36"
-                                                Padding="0"
-                                                CornerRadius="18"
-                                                BackgroundColor="#E0E0E0"
-                                                TextColor="Black"
+                                                Style="{StaticResource CardActionButtonA}"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DecrementarCommand}"
                                                 CommandParameter="{Binding .}"/>
 
                                         <Button Text="＋"
-                                                FontAttributes="Bold"
-                                                WidthRequest="40"
-                                                HeightRequest="36"
-                                                Padding="0"
-                                                CornerRadius="18"
-                                                BackgroundColor="#EB1937"
-                                                TextColor="White"
+                                                Style="{StaticResource CardActionButtonB}"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IncrementarCommand}"
                                                 CommandParameter="{Binding .}"/>
 
                                         <Button Text="🌐"
-                                                FontSize="16"
-                                                WidthRequest="40"
-                                                HeightRequest="36"
-                                                Padding="0"
-                                                CornerRadius="18"
-                                                BackgroundColor="#FFA000"
-                                                TextColor="White"
+                                                Style="{StaticResource CardActionButtonC}"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirWikiCommand}"
                                                 CommandParameter="{Binding .}"/>
                                         
