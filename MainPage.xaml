@@ -62,7 +62,7 @@
                             IsVisible="{Binding IsBusy}"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Color="#512BD4" />
+                            Color="#EB1937" />
 
         <!-- Lista de figuras -->
         <CollectionView Grid.Row="1"
@@ -92,7 +92,7 @@
                                         WidthRequest="90"
                                         Padding="0">
                                     <Image Source="{Binding ImagenUrl}"
-                                           Aspect="AspectFill"
+                                           Aspect="AspectFit"
                                            HeightRequest="90"
                                            WidthRequest="90"/>
                                 </Border>
@@ -116,7 +116,7 @@
 
                                     <Label Text="{Binding Franquicia}"
                                            FontSize="13"
-                                           TextColor="#512BD4"
+                                           TextColor="#EB1937"
                                            FontAttributes="Italic"/>
 
                                     <HorizontalStackLayout Spacing="10" Margin="0,8,0,0">
@@ -137,7 +137,7 @@
                                                 HeightRequest="36"
                                                 Padding="0"
                                                 CornerRadius="18"
-                                                BackgroundColor="#512BD4"
+                                                BackgroundColor="#EB1937"
                                                 TextColor="White"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IncrementarCommand}"
                                                 CommandParameter="{Binding .}"/>

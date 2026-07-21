@@ -5,7 +5,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Piratas del Caribe",
-    "imagen_url": "https://picsum.photos/seed/DI-10-001/400/400",
+    "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_Jack_Sparrow",
     "obtenido": false,
     "cantidad": 0
@@ -16,7 +16,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Piratas del Caribe",
-    "imagen_url": "https://picsum.photos/seed/DI-10-002/400/400",
+    "imagen_url": "di10002.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hector_Barbossa",
     "obtenido": false,
     "cantidad": 0
@@ -27,7 +27,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Piratas del Caribe",
-    "imagen_url": "https://picsum.photos/seed/DI-10-003/400/400",
+    "imagen_url": "di10003.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Davy_Jones",
     "obtenido": false,
     "cantidad": 0
@@ -37,8 +37,8 @@
     "nombre": "Mr. Incredible",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Increíbles",
-    "imagen_url": "https://picsum.photos/seed/DI-10-004/400/400",
+    "franquicia": "Los Incre\u00EDbles",
+    "imagen_url": "di10004.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mr._Incredible",
     "obtenido": false,
     "cantidad": 0
@@ -48,8 +48,8 @@
     "nombre": "Mrs. Incredible (Elastigirl)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Increíbles",
-    "imagen_url": "https://picsum.photos/seed/DI-10-005/400/400",
+    "franquicia": "Los Incre\u00EDbles",
+    "imagen_url": "di10005.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mrs._Incredible",
     "obtenido": false,
     "cantidad": 0
@@ -59,8 +59,8 @@
     "nombre": "Dash",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Increíbles",
-    "imagen_url": "https://picsum.photos/seed/DI-10-006/400/400",
+    "franquicia": "Los Incre\u00EDbles",
+    "imagen_url": "di10006.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dash",
     "obtenido": false,
     "cantidad": 0
@@ -70,8 +70,8 @@
     "nombre": "Violet",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Increíbles",
-    "imagen_url": "https://picsum.photos/seed/DI-10-007/400/400",
+    "franquicia": "Los Incre\u00EDbles",
+    "imagen_url": "di10007.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Violet",
     "obtenido": false,
     "cantidad": 0
@@ -81,8 +81,8 @@
     "nombre": "Syndrome",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Increíbles",
-    "imagen_url": "https://picsum.photos/seed/DI-10-008/400/400",
+    "franquicia": "Los Incre\u00EDbles",
+    "imagen_url": "di10008.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Syndrome",
     "obtenido": false,
     "cantidad": 0
@@ -93,7 +93,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Monsters University",
-    "imagen_url": "https://picsum.photos/seed/DI-10-009/400/400",
+    "imagen_url": "di10009.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sulley",
     "obtenido": false,
     "cantidad": 0
@@ -104,7 +104,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Monsters University",
-    "imagen_url": "https://picsum.photos/seed/DI-10-010/400/400",
+    "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mike_Wazowski",
     "obtenido": false,
     "cantidad": 0
@@ -115,7 +115,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Monsters University",
-    "imagen_url": "https://picsum.photos/seed/DI-10-011/400/400",
+    "imagen_url": "di10011.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Randy",
     "obtenido": false,
     "cantidad": 0
@@ -126,7 +126,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Cars",
-    "imagen_url": "https://picsum.photos/seed/DI-10-012/400/400",
+    "imagen_url": "di10012.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lightning_McQueen",
     "obtenido": false,
     "cantidad": 0
@@ -137,7 +137,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Cars",
-    "imagen_url": "https://picsum.photos/seed/DI-10-013/400/400",
+    "imagen_url": "di10013.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mater",
     "obtenido": false,
     "cantidad": 0
@@ -148,7 +148,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Cars",
-    "imagen_url": "https://picsum.photos/seed/DI-10-014/400/400",
+    "imagen_url": "di10014.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Francesco_Bernoulli",
     "obtenido": false,
     "cantidad": 0
@@ -159,7 +159,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Cars",
-    "imagen_url": "https://picsum.photos/seed/DI-10-015/400/400",
+    "imagen_url": "di10015.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Holley_Shiftwell",
     "obtenido": false,
     "cantidad": 0
@@ -170,7 +170,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "El Llanero Solitario",
-    "imagen_url": "https://picsum.photos/seed/DI-10-016/400/400",
+    "imagen_url": "di10016.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lone_Ranger",
     "obtenido": false,
     "cantidad": 0
@@ -181,7 +181,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "El Llanero Solitario",
-    "imagen_url": "https://picsum.photos/seed/DI-10-017/400/400",
+    "imagen_url": "di10017.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tonto",
     "obtenido": false,
     "cantidad": 0
@@ -191,8 +191,8 @@
     "nombre": "Jack Skellington",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "El extraño mundo de Jack",
-    "imagen_url": "https://picsum.photos/seed/DI-10-018/400/400",
+    "franquicia": "El extra\u00F1o mundo de Jack",
+    "imagen_url": "di10018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jack_Skellington",
     "obtenido": false,
     "cantidad": 0
@@ -202,8 +202,8 @@
     "nombre": "Mickey Mouse (Sorcerer)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Disney Clásicos",
-    "imagen_url": "https://picsum.photos/seed/DI-10-019/400/400",
+    "franquicia": "Disney Cl\u00E1sicos",
+    "imagen_url": "di10019.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
     "obtenido": false,
     "cantidad": 0
@@ -214,7 +214,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Toy Story",
-    "imagen_url": "https://picsum.photos/seed/DI-10-020/400/400",
+    "imagen_url": "di10020.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Buzz_Lightyear",
     "obtenido": false,
     "cantidad": 0
@@ -225,7 +225,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Toy Story",
-    "imagen_url": "https://picsum.photos/seed/DI-10-021/400/400",
+    "imagen_url": "di10021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Woody",
     "obtenido": false,
     "cantidad": 0
@@ -236,7 +236,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Toy Story",
-    "imagen_url": "https://picsum.photos/seed/DI-10-022/400/400",
+    "imagen_url": "di10022.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jessie",
     "obtenido": false,
     "cantidad": 0
@@ -247,7 +247,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Ralph el Demoledor",
-    "imagen_url": "https://picsum.photos/seed/DI-10-023/400/400",
+    "imagen_url": "di10023.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Wreck-It_Ralph",
     "obtenido": false,
     "cantidad": 0
@@ -258,7 +258,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Ralph el Demoledor",
-    "imagen_url": "https://picsum.photos/seed/DI-10-024/400/400",
+    "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Vanellope_von_Schweetz",
     "obtenido": false,
     "cantidad": 0
@@ -269,7 +269,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Enredados",
-    "imagen_url": "https://picsum.photos/seed/DI-10-025/400/400",
+    "imagen_url": "di10025.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rapunzel",
     "obtenido": false,
     "cantidad": 0
@@ -280,7 +280,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Frozen",
-    "imagen_url": "https://picsum.photos/seed/DI-10-026/400/400",
+    "imagen_url": "di10026.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Elsa",
     "obtenido": false,
     "cantidad": 0
@@ -291,7 +291,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Frozen",
-    "imagen_url": "https://picsum.photos/seed/DI-10-027/400/400",
+    "imagen_url": "di10027.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anna",
     "obtenido": false,
     "cantidad": 0
@@ -302,7 +302,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Phineas y Ferb",
-    "imagen_url": "https://picsum.photos/seed/DI-10-028/400/400",
+    "imagen_url": "di10028.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Phineas",
     "obtenido": false,
     "cantidad": 0
@@ -313,7 +313,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Phineas y Ferb",
-    "imagen_url": "https://picsum.photos/seed/DI-10-029/400/400",
+    "imagen_url": "di10029.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Agent_P",
     "obtenido": false,
     "cantidad": 0
@@ -324,7 +324,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-001/400/400",
+    "imagen_url": "di20001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Iron_Man",
     "obtenido": false,
     "cantidad": 0
@@ -335,7 +335,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-002/400/400",
+    "imagen_url": "di20002.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Thor",
     "obtenido": false,
     "cantidad": 0
@@ -346,7 +346,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-003/400/400",
+    "imagen_url": "di20003.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Black_Widow",
     "obtenido": false,
     "cantidad": 0
@@ -357,7 +357,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-004/400/400",
+    "imagen_url": "di20004.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_America",
     "obtenido": false,
     "cantidad": 0
@@ -368,7 +368,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-005/400/400",
+    "imagen_url": "di20005.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hulk",
     "obtenido": false,
     "cantidad": 0
@@ -379,7 +379,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-006/400/400",
+    "imagen_url": "di20006.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hawkeye",
     "obtenido": false,
     "cantidad": 0
@@ -390,7 +390,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-007/400/400",
+    "imagen_url": "di20007.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Man",
     "obtenido": false,
     "cantidad": 0
@@ -401,7 +401,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-008/400/400",
+    "imagen_url": "di20008.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nova",
     "obtenido": false,
     "cantidad": 0
@@ -412,7 +412,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-009/400/400",
+    "imagen_url": "di20009.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Iron_Fist",
     "obtenido": false,
     "cantidad": 0
@@ -423,7 +423,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-010/400/400",
+    "imagen_url": "di20010.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nick_Fury",
     "obtenido": false,
     "cantidad": 0
@@ -434,7 +434,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-011/400/400",
+    "imagen_url": "di20011.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Venom",
     "obtenido": false,
     "cantidad": 0
@@ -445,7 +445,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-012/400/400",
+    "imagen_url": "di20012.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Star-Lord",
     "obtenido": false,
     "cantidad": 0
@@ -456,7 +456,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-013/400/400",
+    "imagen_url": "di20013.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Gamora",
     "obtenido": false,
     "cantidad": 0
@@ -467,7 +467,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-014/400/400",
+    "imagen_url": "di20014.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rocket_Raccoon",
     "obtenido": false,
     "cantidad": 0
@@ -478,7 +478,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-015/400/400",
+    "imagen_url": "di20015.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Groot",
     "obtenido": false,
     "cantidad": 0
@@ -489,7 +489,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-20-016/400/400",
+    "imagen_url": "di20016.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Drax",
     "obtenido": false,
     "cantidad": 0
@@ -499,8 +499,8 @@
     "nombre": "Hiro Hamada",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Grandes Héroes",
-    "imagen_url": "https://picsum.photos/seed/DI-20-017/400/400",
+    "franquicia": "Grandes H\u00E9roes",
+    "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hiro_Hamada",
     "obtenido": false,
     "cantidad": 0
@@ -510,8 +510,8 @@
     "nombre": "Baymax",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Grandes Héroes",
-    "imagen_url": "https://picsum.photos/seed/DI-20-018/400/400",
+    "franquicia": "Grandes H\u00E9roes",
+    "imagen_url": "di20018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Baymax",
     "obtenido": false,
     "cantidad": 0
@@ -522,7 +522,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Tron",
-    "imagen_url": "https://picsum.photos/seed/DI-20-019/400/400",
+    "imagen_url": "di20019.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sam_Flynn",
     "obtenido": false,
     "cantidad": 0
@@ -533,7 +533,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Tron",
-    "imagen_url": "https://picsum.photos/seed/DI-20-020/400/400",
+    "imagen_url": "di20020.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Quorra",
     "obtenido": false,
     "cantidad": 0
@@ -543,8 +543,8 @@
     "nombre": "Maleficent",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Maléfica",
-    "imagen_url": "https://picsum.photos/seed/DI-20-021/400/400",
+    "franquicia": "Mal\u00E9fica",
+    "imagen_url": "di20021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Maleficent",
     "obtenido": false,
     "cantidad": 0
@@ -554,8 +554,8 @@
     "nombre": "Stitch",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Lilo & Stitch",
-    "imagen_url": "https://picsum.photos/seed/DI-20-022/400/400",
+    "franquicia": "Lilo \u0026 Stitch",
+    "imagen_url": "di20022.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stitch",
     "obtenido": false,
     "cantidad": 0
@@ -566,7 +566,7 @@
     "tipo": "Figura",
     "version": "2.0",
     "franquicia": "Peter Pan",
-    "imagen_url": "https://picsum.photos/seed/DI-20-023/400/400",
+    "imagen_url": "di20023.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tinker_Bell",
     "obtenido": false,
     "cantidad": 0
@@ -576,8 +576,8 @@
     "nombre": "Donald Duck",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Disney Clásicos",
-    "imagen_url": "https://picsum.photos/seed/DI-20-024/400/400",
+    "franquicia": "Disney Cl\u00E1sicos",
+    "imagen_url": "di20024.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Donald_Duck",
     "obtenido": false,
     "cantidad": 0
@@ -588,7 +588,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-001/400/400",
+    "imagen_url": "di30001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anakin_Skywalker",
     "obtenido": false,
     "cantidad": 0
@@ -599,7 +599,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-002/400/400",
+    "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ahsoka_Tano",
     "obtenido": false,
     "cantidad": 0
@@ -610,7 +610,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-003/400/400",
+    "imagen_url": "di30003.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Yoda",
     "obtenido": false,
     "cantidad": 0
@@ -621,7 +621,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-004/400/400",
+    "imagen_url": "di30004.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Obi-Wan_Kenobi",
     "obtenido": false,
     "cantidad": 0
@@ -632,7 +632,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-005/400/400",
+    "imagen_url": "di30005.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darth_Maul",
     "obtenido": false,
     "cantidad": 0
@@ -643,7 +643,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-006/400/400",
+    "imagen_url": "di30006.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Luke_Skywalker",
     "obtenido": false,
     "cantidad": 0
@@ -654,7 +654,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-007/400/400",
+    "imagen_url": "di30007.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Princess_Leia",
     "obtenido": false,
     "cantidad": 0
@@ -665,7 +665,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-008/400/400",
+    "imagen_url": "di30008.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Han_Solo",
     "obtenido": false,
     "cantidad": 0
@@ -676,7 +676,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-009/400/400",
+    "imagen_url": "di30009.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Chewbacca",
     "obtenido": false,
     "cantidad": 0
@@ -687,7 +687,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-010/400/400",
+    "imagen_url": "di30010.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darth_Vader",
     "obtenido": false,
     "cantidad": 0
@@ -698,7 +698,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-011/400/400",
+    "imagen_url": "di30011.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Boba_Fett",
     "obtenido": false,
     "cantidad": 0
@@ -709,7 +709,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-012/400/400",
+    "imagen_url": "di30012.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rey",
     "obtenido": false,
     "cantidad": 0
@@ -720,7 +720,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-013/400/400",
+    "imagen_url": "di30013.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Finn",
     "obtenido": false,
     "cantidad": 0
@@ -731,7 +731,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-014/400/400",
+    "imagen_url": "di30014.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Kylo_Ren",
     "obtenido": false,
     "cantidad": 0
@@ -742,7 +742,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "https://picsum.photos/seed/DI-30-015/400/400",
+    "imagen_url": "di30015.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Poe_Dameron",
     "obtenido": false,
     "cantidad": 0
@@ -753,7 +753,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Intensa Mente",
-    "imagen_url": "https://picsum.photos/seed/DI-30-016/400/400",
+    "imagen_url": "di30016.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Joy",
     "obtenido": false,
     "cantidad": 0
@@ -764,7 +764,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Intensa Mente",
-    "imagen_url": "https://picsum.photos/seed/DI-30-017/400/400",
+    "imagen_url": "di30017.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sadness",
     "obtenido": false,
     "cantidad": 0
@@ -775,7 +775,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Intensa Mente",
-    "imagen_url": "https://picsum.photos/seed/DI-30-018/400/400",
+    "imagen_url": "di30018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anger",
     "obtenido": false,
     "cantidad": 0
@@ -786,7 +786,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Intensa Mente",
-    "imagen_url": "https://picsum.photos/seed/DI-30-019/400/400",
+    "imagen_url": "di30019.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Disgust",
     "obtenido": false,
     "cantidad": 0
@@ -797,7 +797,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Intensa Mente",
-    "imagen_url": "https://picsum.photos/seed/DI-30-020/400/400",
+    "imagen_url": "di30020.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Fear",
     "obtenido": false,
     "cantidad": 0
@@ -807,8 +807,8 @@
     "nombre": "Mickey Mouse (Classic)",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Disney Clásicos",
-    "imagen_url": "https://picsum.photos/seed/DI-30-021/400/400",
+    "franquicia": "Disney Cl\u00E1sicos",
+    "imagen_url": "di30021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mickey_Mouse",
     "obtenido": false,
     "cantidad": 0
@@ -818,8 +818,8 @@
     "nombre": "Minnie Mouse",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Disney Clásicos",
-    "imagen_url": "https://picsum.photos/seed/DI-30-022/400/400",
+    "franquicia": "Disney Cl\u00E1sicos",
+    "imagen_url": "di30022.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Minnie_Mouse",
     "obtenido": false,
     "cantidad": 0
@@ -830,7 +830,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Frozen",
-    "imagen_url": "https://picsum.photos/seed/DI-30-023/400/400",
+    "imagen_url": "di30023.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Olaf",
     "obtenido": false,
     "cantidad": 0
@@ -841,7 +841,7 @@
     "tipo": "Power Disc",
     "version": "1.0",
     "franquicia": "Piratas del Caribe",
-    "imagen_url": "https://picsum.photos/seed/DI-PD-10-001/400/400",
+    "imagen_url": "dipd10001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Pieces_of_Eight",
     "obtenido": false,
     "cantidad": 0
@@ -852,7 +852,7 @@
     "tipo": "Power Disc",
     "version": "2.0",
     "franquicia": "Marvel",
-    "imagen_url": "https://picsum.photos/seed/DI-PD-20-001/400/400",
+    "imagen_url": "dipd20001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/S.H.I.E.L.D._Helicarrier_Strike",
     "obtenido": false,
     "cantidad": 0
