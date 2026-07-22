@@ -40,7 +40,8 @@ namespace MyDICollection
         }
         private static void SetupLanguage()
         {
-            Settings.LanguageSettings = "";
+            //force language
+            //Settings.LanguageSettings = "en";
 
             if (string.IsNullOrEmpty(Settings.LanguageSettings))
                 Settings.LanguageSettings = CultureInfo.CurrentCulture.TwoLetterISOLanguageName.ToLower();
