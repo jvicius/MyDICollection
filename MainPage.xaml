@@ -6,7 +6,8 @@
              x:Class="MyDICollection.MainPage"
              xmlns:helpers="clr-namespace:MyDICollection.Helpers"
              Title="{helpers:Translate Title}"
-             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive">
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             xmlns:controls="clr-namespace:MyDICollection.Controls">
 
     <Grid RowDefinitions="Auto,*">
 
@@ -143,10 +144,16 @@
                                         Spacing="{responsive:ResponsiveSize BaseValue=10}" 
                                         Margin="{responsive:ResponsiveThickness BaseValue='0,8,0,0'}">
                                         
-                                        <Button Text="－"
+                                        <!--<Button Text="－"
                                                 Style="{StaticResource CardActionButtonA}"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DecrementarCommand}"
-                                                CommandParameter="{Binding .}"/>
+                                                CommandParameter="{Binding .}"/>-->
+
+                                        <controls:HexagonButton Text="-"
+                                            Style="{StaticResource CardActionHexaButtonA}"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DecrementarCommand}"
+                                            CommandParameter="{Binding .}"/>
+
 
                                         <Button Text="＋"
                                                 Style="{StaticResource CardActionButtonB}"

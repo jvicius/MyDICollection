@@ -3,10 +3,12 @@
 <ResourceDictionary 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive">
+    xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+    xmlns:controls="clr-namespace:MyDICollection.Controls">
 
     <responsive:ResponsiveSizeExtension x:Key="FilterTitleSize" BaseValue="15" />
     <responsive:ResponsiveSizeExtension x:Key="ButtonFontSize" BaseValue="18" />
+    <responsive:ResponsiveSizeExtension x:Key="HexaButtonFontSize" BaseValue="20" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
@@ -453,6 +455,15 @@
         <Setter Property="FontSize" Value="{StaticResource FilterTitleSize}" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="CardActionHexaButtonA" TargetType="controls:HexagonButton">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
+        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource White}}" />
+        <Setter Property="HexBorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource FilterStrokeColor}}" />
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+
     </Style>
 
     <Style x:Key="CardActionButtonA" TargetType="Button">

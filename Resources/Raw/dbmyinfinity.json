@@ -8,7 +8,8 @@
     "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_Jack_Sparrow",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000003"
   },
   {
     "id": "DI-10-002",
@@ -19,7 +20,8 @@
     "imagen_url": "di10002.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hector_Barbossa",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000012"
   },
   {
     "id": "DI-10-003",
@@ -30,62 +32,68 @@
     "imagen_url": "di10003.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Davy_Jones",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000013"
   },
   {
     "id": "DI-10-004",
     "nombre": "Mr. Incredible",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Incre\u00EDbles",
+    "franquicia": "Los Increibles",
     "imagen_url": "di10004.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mr._Incredible",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000030"
   },
   {
     "id": "DI-10-005",
     "nombre": "Mrs. Incredible (Elastigirl)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Incre\u00EDbles",
+    "franquicia": "Los Increibles",
     "imagen_url": "di10005.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mrs._Incredible",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000011"
   },
   {
     "id": "DI-10-006",
     "nombre": "Dash",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Incre\u00EDbles",
+    "franquicia": "Los Increibles",
     "imagen_url": "di10006.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dash",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000018"
   },
   {
     "id": "DI-10-007",
     "nombre": "Violet",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Incre\u00EDbles",
+    "franquicia": "Los Increibles",
     "imagen_url": "di10007.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Violet",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000013"
   },
   {
     "id": "DI-10-008",
     "nombre": "Syndrome",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Los Incre\u00EDbles",
+    "franquicia": "Los Increibles",
     "imagen_url": "di10008.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Syndrome",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000015"
   },
   {
     "id": "DI-10-009",
@@ -96,7 +104,8 @@
     "imagen_url": "di10009.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sulley",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": null
   },
   {
     "id": "DI-10-010",
@@ -107,7 +116,8 @@
     "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mike_Wazowski",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000010"
   },
   {
     "id": "DI-10-011",
@@ -118,7 +128,8 @@
     "imagen_url": "di10011.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Randy",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000014"
   },
   {
     "id": "DI-10-012",
@@ -129,7 +140,8 @@
     "imagen_url": "di10012.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lightning_McQueen",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000033"
   },
   {
     "id": "DI-10-013",
@@ -140,7 +152,8 @@
     "imagen_url": "di10013.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mater",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000017"
   },
   {
     "id": "DI-10-014",
@@ -151,7 +164,8 @@
     "imagen_url": "di10014.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Francesco_Bernoulli",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000020"
   },
   {
     "id": "DI-10-015",
@@ -162,7 +176,8 @@
     "imagen_url": "di10015.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Holley_Shiftwell",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000007"
   },
   {
     "id": "DI-10-016",
@@ -173,7 +188,8 @@
     "imagen_url": "di10016.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lone_Ranger",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000217"
   },
   {
     "id": "DI-10-017",
@@ -184,7 +200,8 @@
     "imagen_url": "di10017.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tonto",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000005"
   },
   {
     "id": "DI-10-018",
@@ -195,18 +212,20 @@
     "imagen_url": "di10018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jack_Skellington",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000149"
   },
   {
     "id": "DI-10-019",
     "nombre": "Mickey Mouse (Sorcerer)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Disney Cl\u00E1sicos",
+    "franquicia": "Disney Clasicos",
     "imagen_url": "di10019.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000221"
   },
   {
     "id": "DI-10-020",
@@ -217,7 +236,8 @@
     "imagen_url": "di10020.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Buzz_Lightyear",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000035"
   },
   {
     "id": "DI-10-021",
@@ -228,7 +248,8 @@
     "imagen_url": "di10021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Woody",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000016"
   },
   {
     "id": "DI-10-022",
@@ -239,7 +260,8 @@
     "imagen_url": "di10022.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jessie",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000009"
   },
   {
     "id": "DI-10-023",
@@ -250,7 +272,8 @@
     "imagen_url": "di10023.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Wreck-It_Ralph",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000028"
   },
   {
     "id": "DI-10-024",
@@ -261,7 +284,8 @@
     "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Vanellope_von_Schweetz",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000029"
   },
   {
     "id": "DI-10-025",
@@ -272,7 +296,8 @@
     "imagen_url": "di10025.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rapunzel",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000061"
   },
   {
     "id": "DI-10-026",
@@ -283,7 +308,8 @@
     "imagen_url": "di10026.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Elsa",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000025"
   },
   {
     "id": "DI-10-027",
@@ -294,7 +320,8 @@
     "imagen_url": "di10027.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anna",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000024"
   },
   {
     "id": "DI-10-028",
@@ -305,7 +332,8 @@
     "imagen_url": "di10028.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Phineas",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000026"
   },
   {
     "id": "DI-10-029",
@@ -316,7 +344,8 @@
     "imagen_url": "di10029.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Agent_P",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000036"
   },
   {
     "id": "DI-20-001",
@@ -327,7 +356,8 @@
     "imagen_url": "di20001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Iron_Man",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000102"
   },
   {
     "id": "DI-20-002",
@@ -338,7 +368,8 @@
     "imagen_url": "di20002.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Thor",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000103"
   },
   {
     "id": "DI-20-003",
@@ -349,7 +380,8 @@
     "imagen_url": "di20003.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Black_Widow",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000109"
   },
   {
     "id": "DI-20-004",
@@ -360,7 +392,8 @@
     "imagen_url": "di20004.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_America",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000229"
   },
   {
     "id": "DI-20-005",
@@ -371,7 +404,8 @@
     "imagen_url": "di20005.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hulk",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000119"
   },
   {
     "id": "DI-20-006",
@@ -382,7 +416,8 @@
     "imagen_url": "di20006.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hawkeye",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000110"
   },
   {
     "id": "DI-20-007",
@@ -393,7 +428,8 @@
     "imagen_url": "di20007.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Man",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000134"
   },
   {
     "id": "DI-20-008",
@@ -404,7 +440,8 @@
     "imagen_url": "di20008.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nova",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000230"
   },
   {
     "id": "DI-20-009",
@@ -415,7 +452,8 @@
     "imagen_url": "di20009.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Iron_Fist",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000190"
   },
   {
     "id": "DI-20-010",
@@ -426,7 +464,8 @@
     "imagen_url": "di20010.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nick_Fury",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000108"
   },
   {
     "id": "DI-20-011",
@@ -437,7 +476,8 @@
     "imagen_url": "di20011.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Venom",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000115"
   },
   {
     "id": "DI-20-012",
@@ -448,7 +488,8 @@
     "imagen_url": "di20012.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Star-Lord",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000109"
   },
   {
     "id": "DI-20-013",
@@ -459,7 +500,8 @@
     "imagen_url": "di20013.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Gamora",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000112"
   },
   {
     "id": "DI-20-014",
@@ -470,7 +512,8 @@
     "imagen_url": "di20014.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rocket_Raccoon",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000105"
   },
   {
     "id": "DI-20-015",
@@ -481,7 +524,8 @@
     "imagen_url": "di20015.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Groot",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000127"
   },
   {
     "id": "DI-20-016",
@@ -492,7 +536,8 @@
     "imagen_url": "di20016.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Drax",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000111"
   },
   {
     "id": "DI-20-017",
@@ -503,7 +548,8 @@
     "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hiro_Hamada",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000122"
   },
   {
     "id": "DI-20-018",
@@ -514,7 +560,8 @@
     "imagen_url": "di20018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Baymax",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000123"
   },
   {
     "id": "DI-20-019",
@@ -525,7 +572,8 @@
     "imagen_url": "di20019.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sam_Flynn",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000150"
   },
   {
     "id": "DI-20-020",
@@ -536,7 +584,8 @@
     "imagen_url": "di20020.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Quorra",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000151"
   },
   {
     "id": "DI-20-021",
@@ -547,7 +596,8 @@
     "imagen_url": "di20021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Maleficent",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000174"
   },
   {
     "id": "DI-20-022",
@@ -558,7 +608,8 @@
     "imagen_url": "di20022.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stitch",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000041"
   },
   {
     "id": "DI-20-023",
@@ -569,18 +620,20 @@
     "imagen_url": "di20023.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tinker_Bell",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000120"
   },
   {
     "id": "DI-20-024",
     "nombre": "Donald Duck",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Disney Cl\u00E1sicos",
+    "franquicia": "Disney Clasicos",
     "imagen_url": "di20024.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Donald_Duck",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000116"
   },
   {
     "id": "DI-30-001",
@@ -591,7 +644,8 @@
     "imagen_url": "di30001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anakin_Skywalker",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000239"
   },
   {
     "id": "DI-30-002",
@@ -602,7 +656,8 @@
     "imagen_url": "none.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ahsoka_Tano",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000203"
   },
   {
     "id": "DI-30-003",
@@ -613,7 +668,8 @@
     "imagen_url": "di30003.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Yoda",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000241"
   },
   {
     "id": "DI-30-004",
@@ -624,7 +680,8 @@
     "imagen_url": "di30004.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Obi-Wan_Kenobi",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000240"
   },
   {
     "id": "DI-30-005",
@@ -635,7 +692,8 @@
     "imagen_url": "di30005.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darth_Maul",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000204"
   },
   {
     "id": "DI-30-006",
@@ -646,7 +704,8 @@
     "imagen_url": "di30006.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Luke_Skywalker",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000242"
   },
   {
     "id": "DI-30-007",
@@ -657,7 +716,8 @@
     "imagen_url": "di30007.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Princess_Leia",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000228"
   },
   {
     "id": "DI-30-008",
@@ -668,7 +728,8 @@
     "imagen_url": "di30008.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Han_Solo",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000207"
   },
   {
     "id": "DI-30-009",
@@ -679,7 +740,8 @@
     "imagen_url": "di30009.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Chewbacca",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000209"
   },
   {
     "id": "DI-30-010",
@@ -690,7 +752,8 @@
     "imagen_url": "di30010.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darth_Vader",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000243"
   },
   {
     "id": "DI-30-011",
@@ -701,7 +764,8 @@
     "imagen_url": "di30011.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Boba_Fett",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000211"
   },
   {
     "id": "DI-30-012",
@@ -712,7 +776,8 @@
     "imagen_url": "di30012.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rey",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000233"
   },
   {
     "id": "DI-30-013",
@@ -723,7 +788,8 @@
     "imagen_url": "di30013.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Finn",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000216"
   },
   {
     "id": "DI-30-014",
@@ -734,7 +800,8 @@
     "imagen_url": "di30014.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Kylo_Ren",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000245"
   },
   {
     "id": "DI-30-015",
@@ -745,7 +812,8 @@
     "imagen_url": "di30015.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Poe_Dameron",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000232"
   },
   {
     "id": "DI-30-016",
@@ -756,7 +824,8 @@
     "imagen_url": "di30016.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Joy",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000216"
   },
   {
     "id": "DI-30-017",
@@ -767,7 +836,8 @@
     "imagen_url": "di30017.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sadness",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000219"
   },
   {
     "id": "DI-30-018",
@@ -778,7 +848,8 @@
     "imagen_url": "di30018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anger",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000034"
   },
   {
     "id": "DI-30-019",
@@ -789,7 +860,8 @@
     "imagen_url": "di30019.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Disgust",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000220"
   },
   {
     "id": "DI-30-020",
@@ -800,29 +872,32 @@
     "imagen_url": "di30020.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Fear",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000218"
   },
   {
     "id": "DI-30-021",
     "nombre": "Mickey Mouse (Classic)",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Disney Cl\u00E1sicos",
+    "franquicia": "Disney Clasicos",
     "imagen_url": "di30021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mickey_Mouse",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": null
   },
   {
     "id": "DI-30-022",
     "nombre": "Minnie Mouse",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Disney Cl\u00E1sicos",
+    "franquicia": "Disney Clasicos",
     "imagen_url": "di30022.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Minnie_Mouse",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000222"
   },
   {
     "id": "DI-30-023",
@@ -833,7 +908,8 @@
     "imagen_url": "di30023.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Olaf",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000224"
   },
   {
     "id": "DI-PD-10-001",
@@ -844,7 +920,8 @@
     "imagen_url": "dipd10001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Pieces_of_Eight",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000014"
   },
   {
     "id": "DI-PD-20-001",
@@ -855,6 +932,2143 @@
     "imagen_url": "dipd20001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/S.H.I.E.L.D._Helicarrier_Strike",
     "obtenido": false,
-    "cantidad": 0
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000168"
+  },
+  {
+    "id": "DI-100-100",
+    "nombre": "Sulley",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di100100.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sulley",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000032"
+  },
+  {
+    "id": "DI-100-101",
+    "nombre": "Sorcerer\u0027s Apprentice Mickey",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di100101.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer\u0027s_Apprentice_Mickey",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000037"
+  },
+  {
+    "id": "DI-100-102",
+    "nombre": "Infinite Jack Sparrow (Crystal Series)",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Infinite_Jack_Sparrow_(Crystal_Series)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000031"
+  },
+  {
+    "id": "DI-200-103",
+    "nombre": "Aladdin",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200103.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Aladdin",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000165"
+  },
+  {
+    "id": "DI-200-104",
+    "nombre": "Merida",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200104.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Merida",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000119"
+  },
+  {
+    "id": "DI-200-105",
+    "nombre": "Loki",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200105.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Loki",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000124"
+  },
+  {
+    "id": "DI-200-106",
+    "nombre": "Ronan",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200106.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ronan",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000125"
+  },
+  {
+    "id": "DI-200-107",
+    "nombre": "Green Goblin",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200107.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Green_Goblin",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000126"
+  },
+  {
+    "id": "DI-200-108",
+    "nombre": "Falcon",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200108.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Falcon",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000160"
+  },
+  {
+    "id": "DI-200-109",
+    "nombre": "Yondu",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200109.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Yondu",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000180"
+  },
+  {
+    "id": "DI-200-110",
+    "nombre": "Jasmine",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di200110.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jasmine",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000167"
+  },
+  {
+    "id": "DI-300-111",
+    "nombre": "Ezra Bridger",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300111.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ezra_Bridger",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000212"
+  },
+  {
+    "id": "DI-300-112",
+    "nombre": "Kanan Jarrus",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300112.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Kanan_Jarrus",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000244"
+  },
+  {
+    "id": "DI-300-113",
+    "nombre": "Sabine Wren",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300113.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sabine_Wren",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000214"
+  },
+  {
+    "id": "DI-300-114",
+    "nombre": "Zeb Orrelios",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300114.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Zeb_Orrelios",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000215"
+  },
+  {
+    "id": "DI-300-115",
+    "nombre": "Mulan",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300115.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mulan",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000112"
+  },
+  {
+    "id": "DI-300-116",
+    "nombre": "Vision",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300116.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Vision",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000225"
+  },
+  {
+    "id": "DI-300-117",
+    "nombre": "Ultron",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300117.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ultron",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000226"
+  },
+  {
+    "id": "DI-300-118",
+    "nombre": "Ant-Man",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300118.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ant-Man",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000178"
+  },
+  {
+    "id": "DI-300-119",
+    "nombre": "Spot",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300119.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spot",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000235"
+  },
+  {
+    "id": "DI-300-120",
+    "nombre": "Nick Wilde",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300120.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nick_Wilde",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000222"
+  },
+  {
+    "id": "DI-300-121",
+    "nombre": "Judy Hopps",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300121.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Judy_Hopps",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000237"
+  },
+  {
+    "id": "DI-300-122",
+    "nombre": "Black Panther",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300122.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Black_Panther",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000163"
+  },
+  {
+    "id": "DI-300-123",
+    "nombre": "Nemo",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300123.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nemo",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000066"
+  },
+  {
+    "id": "DI-300-124",
+    "nombre": "Dory",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300124.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dory",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000301"
+  },
+  {
+    "id": "DI-300-125",
+    "nombre": "Baloo",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300125.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Baloo",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000302"
+  },
+  {
+    "id": "DI-300-126",
+    "nombre": "Alice",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300126.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Alice",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000137"
+  },
+  {
+    "id": "DI-300-127",
+    "nombre": "Mad Hatter",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300127.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mad_Hatter",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000304"
+  },
+  {
+    "id": "DI-300-128",
+    "nombre": "Time",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300128.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Time",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000200"
+  },
+  {
+    "id": "DI-300-129",
+    "nombre": "Peter Pan",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "di300129.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Peter_Pan",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000306"
+  },
+  {
+    "id": "DI-PD-100-130",
+    "nombre": "Bolt\u0027s Super Strength",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100130.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Bolt\u0027s_Super_Strength",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000003"
+  },
+  {
+    "id": "DI-PD-100-131",
+    "nombre": "Ralph\u0027s Power of Destruction",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100131.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ralph\u0027s_Power_of_Destruction",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000004"
+  },
+  {
+    "id": "DI-PD-100-132",
+    "nombre": "Chernabog\u0027s Power",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100132.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Chernabog\u0027s_Power",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000005"
+  },
+  {
+    "id": "DI-PD-100-133",
+    "nombre": "C.H.R.O.M.E. Damage Increaser (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/C.H.R.O.M.E._Damage_Increaser_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000006"
+  },
+  {
+    "id": "DI-PD-100-134",
+    "nombre": "Dr. Doofenshmirtz\u0027s Damage-Inator!",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dr._Doofenshmirtz\u0027s_Damage-Inator!",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000007"
+  },
+  {
+    "id": "DI-PD-100-135",
+    "nombre": "Electro-Charge",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100135.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Electro-Charge",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000008"
+  },
+  {
+    "id": "DI-PD-100-136",
+    "nombre": "Fix-It Felix\u0027s Repair Power",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Fix-It_Felix\u0027s_Repair_Power",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000009"
+  },
+  {
+    "id": "DI-PD-100-137",
+    "nombre": "C.H.R.O.M.E. Armor Shield",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/C.H.R.O.M.E._Armor_Shield",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000011"
+  },
+  {
+    "id": "DI-PD-100-138",
+    "nombre": "Star Command Shield",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100138.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Star_Command_Shield",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000012"
+  },
+  {
+    "id": "DI-PD-100-139",
+    "nombre": "Scrooge McDuck\u0027s Lucky Dime (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Scrooge_McDuck\u0027s_Lucky_Dime_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000015"
+  },
+  {
+    "id": "DI-PD-100-140",
+    "nombre": "User Control (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/User_Control_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000016"
+  },
+  {
+    "id": "DI-PD-100-141",
+    "nombre": "Sorcerer Mickey\u0027s Hat",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer_Mickey\u0027s_Hat",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000017"
+  },
+  {
+    "id": "DI-PD-100-142",
+    "nombre": "Emperor Zurg\u0027s Wrath (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Emperor_Zurg\u0027s_Wrath_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000062"
+  },
+  {
+    "id": "DI-PD-100-143",
+    "nombre": "Merlin\u0027s Summon (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Merlin\u0027s_Summon_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000063"
+  },
+  {
+    "id": "DI-PD-200-144",
+    "nombre": "Enchanted Rose",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200144.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Enchanted_Rose",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000165"
+  },
+  {
+    "id": "DI-PD-200-145",
+    "nombre": "Flubber",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200145.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Flubber",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000167"
+  },
+  {
+    "id": "DI-PD-200-146",
+    "nombre": "Zeus\u0027 Thunderbolts",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200146.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Zeus\u0027_Thunderbolts",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000169"
+  },
+  {
+    "id": "DI-PD-200-147",
+    "nombre": "King Louie\u0027s Monkeys",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200147.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/King_Louie\u0027s_Monkeys",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000170"
+  },
+  {
+    "id": "DI-PD-200-148",
+    "nombre": "Infinity Gauntlet (Rare)",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Infinity_Gauntlet_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000171"
+  },
+  {
+    "id": "DI-PD-200-149",
+    "nombre": "Sorcerer Supreme",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200149.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer_Supreme",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000173"
+  },
+  {
+    "id": "DI-PD-200-150",
+    "nombre": "Chernabog\u0027s Spirit Cyclone",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200150.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Chernabog\u0027s_Spirit_Cyclone",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000175"
+  },
+  {
+    "id": "DI-PD-200-151",
+    "nombre": "Marvel Team-Up: Captain Marvel",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200151.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Marvel_Team-Up:_Captain_Marvel",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000176"
+  },
+  {
+    "id": "DI-PD-200-152",
+    "nombre": "Marvel Team-Up: Iron Patriot",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200152.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Marvel_Team-Up:_Iron_Patriot",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000177"
+  },
+  {
+    "id": "DI-PD-200-153",
+    "nombre": "Marvel Team-Up: White Tiger",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200153.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Marvel_Team-Up:_White_Tiger",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000179"
+  },
+  {
+    "id": "DI-PD-200-154",
+    "nombre": "Marvel Team-Up: Winter Soldier",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200154.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Marvel_Team-Up:_Winter_Soldier",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000181"
+  },
+  {
+    "id": "DI-PD-200-155",
+    "nombre": "Stark Arc Reactor",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200155.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stark_Arc_Reactor",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000182"
+  },
+  {
+    "id": "DI-PD-200-156",
+    "nombre": "Gamma Rays",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200156.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Gamma_Rays",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000183"
+  },
+  {
+    "id": "DI-PD-200-157",
+    "nombre": "Alien Symbiote",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200157.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Alien_Symbiote",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000184"
+  },
+  {
+    "id": "DI-PD-200-158",
+    "nombre": "All for One",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200158.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/All_for_One",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000185"
+  },
+  {
+    "id": "DI-PD-200-159",
+    "nombre": "Sandy Claws Surprise",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200159.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sandy_Claws_Surprise",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000186"
+  },
+  {
+    "id": "DI-PD-200-160",
+    "nombre": "Glory Days",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Glory_Days",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000187"
+  },
+  {
+    "id": "DI-PD-200-161",
+    "nombre": "Cursed Pirate Gold",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200161.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Cursed_Pirate_Gold",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000188"
+  },
+  {
+    "id": "DI-PD-200-162",
+    "nombre": "Sentinel of Liberty",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200162.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sentinel_of_Liberty",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000189"
+  },
+  {
+    "id": "DI-PD-200-163",
+    "nombre": "Space Armor",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200163.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Space_Armor",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000191"
+  },
+  {
+    "id": "DI-PD-200-164",
+    "nombre": "Rags to Riches",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200164.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rags_to_Riches",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000192"
+  },
+  {
+    "id": "DI-PD-300-165",
+    "nombre": "Galactic Team-Up: Mace Windu",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300165.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Galactic_Team-Up:_Mace_Windu",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000206"
+  },
+  {
+    "id": "DI-PD-300-166",
+    "nombre": "Luke\u0027s Rebel Alliance Flight Suit Costume",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300166.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Luke\u0027s_Rebel_Alliance_Flight_Suit_Costume",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000209"
+  },
+  {
+    "id": "DI-PD-300-167",
+    "nombre": "Poe\u0027s Resistance Jacket",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300167.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Poe\u0027s_Resistance_Jacket",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000217"
+  },
+  {
+    "id": "DI-PD-300-168",
+    "nombre": "Resistance Tactical Strike",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300168.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Resistance_Tactical_Strike",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000218"
+  },
+  {
+    "id": "DI-PD-300-169",
+    "nombre": "Meter Maid Judy",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300169.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Meter_Maid_Judy",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000223"
+  },
+  {
+    "id": "DI-PD-300-170",
+    "nombre": "Darkhawk\u0027s Blast",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darkhawk\u0027s_Blast",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000226"
+  },
+  {
+    "id": "DI-PD-300-171",
+    "nombre": "Cosmic Cube Blast",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300171.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Cosmic_Cube_Blast",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000227"
+  },
+  {
+    "id": "DI-PD-300-172",
+    "nombre": "King Mickey",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300172.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/King_Mickey",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000231"
+  },
+  {
+    "id": "DI-PD-100-173",
+    "nombre": "Mickey\u0027s Car",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100173.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mickey\u0027s_Car",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000018"
+  },
+  {
+    "id": "DI-PD-100-174",
+    "nombre": "Cinderella\u0027s Coach",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100174.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Cinderella\u0027s_Coach",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000019"
+  },
+  {
+    "id": "DI-PD-100-175",
+    "nombre": "Electric Mayhem Bus",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100175.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Electric_Mayhem_Bus",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000020"
+  },
+  {
+    "id": "DI-PD-100-176",
+    "nombre": "Cruella De Vil\u0027s Car",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100176.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Cruella_De_Vil\u0027s_Car",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000021"
+  },
+  {
+    "id": "DI-PD-100-177",
+    "nombre": "Pizza Planet Delivery Truck",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100177.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Pizza_Planet_Delivery_Truck",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000022"
+  },
+  {
+    "id": "DI-PD-100-178",
+    "nombre": "Mike\u0027s New Car (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mike\u0027s_New_Car_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000023"
+  },
+  {
+    "id": "DI-PD-100-179",
+    "nombre": "Parking Lot Tram",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100179.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Parking_Lot_Tram",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000025"
+  },
+  {
+    "id": "DI-PD-100-180",
+    "nombre": "Captain Hook\u0027s Ship (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_Hook\u0027s_Ship_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000026"
+  },
+  {
+    "id": "DI-PD-100-181",
+    "nombre": "Dumbo (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dumbo_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000027"
+  },
+  {
+    "id": "DI-PD-100-182",
+    "nombre": "Calico Helicopter",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100182.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Calico_Helicopter",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000028"
+  },
+  {
+    "id": "DI-PD-100-183",
+    "nombre": "Maximus",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100183.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Maximus",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000029"
+  },
+  {
+    "id": "DI-PD-100-184",
+    "nombre": "Angus",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100184.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Angus",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000030"
+  },
+  {
+    "id": "DI-PD-100-185",
+    "nombre": "Abu the Elephant (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Abu_the_Elephant_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000031"
+  },
+  {
+    "id": "DI-PD-100-186",
+    "nombre": "Headless Horseman\u0027s Horse",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100186.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Headless_Horseman\u0027s_Horse",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000032"
+  },
+  {
+    "id": "DI-PD-100-187",
+    "nombre": "Phillipe",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100187.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Phillipe",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000033"
+  },
+  {
+    "id": "DI-PD-100-188",
+    "nombre": "Khan",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Khan",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000034"
+  },
+  {
+    "id": "DI-PD-100-189",
+    "nombre": "Tantor",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100189.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tantor",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000035"
+  },
+  {
+    "id": "DI-PD-100-190",
+    "nombre": "Dragon Firework Cannon",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100190.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dragon_Firework_Cannon",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000036"
+  },
+  {
+    "id": "DI-PD-100-191",
+    "nombre": "Toy Story Mania Blaster",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100191.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Toy_Story_Mania_Blaster",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000038"
+  },
+  {
+    "id": "DI-PD-100-192",
+    "nombre": "Flamingo Croquet Mallet",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100192.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Flamingo_Croquet_Mallet",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000039"
+  },
+  {
+    "id": "DI-PD-100-193",
+    "nombre": "Carl Fredricksen\u0027s Cane",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100193.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Carl_Fredricksen\u0027s_Cane",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000040"
+  },
+  {
+    "id": "DI-PD-100-194",
+    "nombre": "Condorman Glider (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Condorman_Glider_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000042"
+  },
+  {
+    "id": "DI-PD-100-195",
+    "nombre": "WALL-E\u0027s Fire Extinguisher (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/WALL-E\u0027s_Fire_Extinguisher_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000043"
+  },
+  {
+    "id": "DI-PD-100-196",
+    "nombre": "On the Grid (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/On_the_Grid_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000044"
+  },
+  {
+    "id": "DI-PD-100-197",
+    "nombre": "WALL-E\u0027s Collection",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100197.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/WALL-E\u0027s_Collection",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000045"
+  },
+  {
+    "id": "DI-PD-100-198",
+    "nombre": "King Candy\u0027s Dessert Toppings",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100198.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/King_Candy\u0027s_Dessert_Toppings",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000046"
+  },
+  {
+    "id": "DI-PD-100-199",
+    "nombre": "Victor\u0027s Experiments",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100199.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Victor\u0027s_Experiments",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000048"
+  },
+  {
+    "id": "DI-PD-100-200",
+    "nombre": "Jack\u0027s Scary Decorations",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100200.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jack\u0027s_Scary_Decorations",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000049"
+  },
+  {
+    "id": "DI-PD-100-201",
+    "nombre": "Frozen Flourish",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100201.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Frozen_Flourish",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000051"
+  },
+  {
+    "id": "DI-PD-100-202",
+    "nombre": "TRON Interface (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/TRON_Interface_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000053"
+  },
+  {
+    "id": "DI-PD-100-203",
+    "nombre": "Buy N Large Atmosphere",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100203.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Buy_N_Large_Atmosphere",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000054"
+  },
+  {
+    "id": "DI-PD-100-204",
+    "nombre": "Sugar Rush Sky",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100204.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sugar_Rush_Sky",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000055"
+  },
+  {
+    "id": "DI-PD-100-205",
+    "nombre": "New Holland Skyline",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100205.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/New_Holland_Skyline",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000057"
+  },
+  {
+    "id": "DI-PD-100-206",
+    "nombre": "Halloween Town Sky",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100206.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Halloween_Town_Sky",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000058"
+  },
+  {
+    "id": "DI-PD-100-207",
+    "nombre": "Chill in the Air",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100207.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Chill_in_the_Air",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000060"
+  },
+  {
+    "id": "DI-PD-100-208",
+    "nombre": "Astro Blasters Space Cruiser (Rare)",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Astro_Blasters_Space_Cruiser_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000064"
+  },
+  {
+    "id": "DI-PD-100-209",
+    "nombre": "Marlin\u0027s Reef",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100209.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Marlin\u0027s_Reef",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000065"
+  },
+  {
+    "id": "DI-PD-100-210",
+    "nombre": "Tulgey Wood",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100210.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tulgey_Wood",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000068"
+  },
+  {
+    "id": "DI-PD-100-211",
+    "nombre": "Tri-State Area Terrain",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100211.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tri-State_Area_Terrain",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000069"
+  },
+  {
+    "id": "DI-PD-100-212",
+    "nombre": "Danville Sky",
+    "tipo": "Power Disc",
+    "version": "1.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd100212.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Danville_Sky",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000070"
+  },
+  {
+    "id": "DI-PD-200-213",
+    "nombre": "Stark Tech",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200213.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stark_Tech",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000101"
+  },
+  {
+    "id": "DI-PD-200-214",
+    "nombre": "Spider-Streets",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Streets",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000102"
+  },
+  {
+    "id": "DI-PD-200-215",
+    "nombre": "Gravity Falls Forest",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200215.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Gravity_Falls_Forest",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000104"
+  },
+  {
+    "id": "DI-PD-200-216",
+    "nombre": "Neverland",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200216.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Neverland",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000105"
+  },
+  {
+    "id": "DI-PD-200-217",
+    "nombre": "Simba\u0027s Pridelands",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Simba\u0027s_Pridelands",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000106"
+  },
+  {
+    "id": "DI-PD-200-218",
+    "nombre": "Calhoun\u0027s Command",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200218.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Calhoun\u0027s_Command",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000108"
+  },
+  {
+    "id": "DI-PD-200-219",
+    "nombre": "Dinosaur World",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200219.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dinosaur_World",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000110"
+  },
+  {
+    "id": "DI-PD-200-220",
+    "nombre": "The Sands of Agrabah",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200220.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/The_Sands_of_Agrabah",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000113"
+  },
+  {
+    "id": "DI-PD-200-221",
+    "nombre": "A Small World",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200221.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/A_Small_World",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000116"
+  },
+  {
+    "id": "DI-PD-200-222",
+    "nombre": "View from the Suit",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200222.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/View_from_the_Suit",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000117"
+  },
+  {
+    "id": "DI-PD-200-223",
+    "nombre": "Spider-Sky",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Sky",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000118"
+  },
+  {
+    "id": "DI-PD-200-224",
+    "nombre": "Gravity Falls Sky",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200224.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Gravity_Falls_Sky",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000120"
+  },
+  {
+    "id": "DI-PD-200-225",
+    "nombre": "Second Star to the Right",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200225.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Second_Star_to_the_Right",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000121"
+  },
+  {
+    "id": "DI-PD-200-226",
+    "nombre": "The King\u0027s Domain",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200226.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/The_King\u0027s_Domain",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000122"
+  },
+  {
+    "id": "DI-PD-200-227",
+    "nombre": "CyBug Swarm",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200227.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/CyBug_Swarm",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000124"
+  },
+  {
+    "id": "DI-PD-200-228",
+    "nombre": "The Rip",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200228.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/The_Rip",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000125"
+  },
+  {
+    "id": "DI-PD-200-229",
+    "nombre": "Forgotten Skies",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200229.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Forgotten_Skies",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000126"
+  },
+  {
+    "id": "DI-PD-200-230",
+    "nombre": "The Middle Kingdom",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200230.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/The_Middle_Kingdom",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000128"
+  },
+  {
+    "id": "DI-PD-200-231",
+    "nombre": "Skies of the World",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200231.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Skies_of_the_World",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000132"
+  },
+  {
+    "id": "DI-PD-200-232",
+    "nombre": "S.H.I.E.L.D. Containment Truck",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200232.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/S.H.I.E.L.D._Containment_Truck",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000133"
+  },
+  {
+    "id": "DI-PD-200-233",
+    "nombre": "Main Street Electrical Parade Float",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200233.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Main_Street_Electrical_Parade_Float",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000134"
+  },
+  {
+    "id": "DI-PD-200-234",
+    "nombre": "Mr. Toad\u0027s Motorcar",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200234.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mr._Toad\u0027s_Motorcar",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000135"
+  },
+  {
+    "id": "DI-PD-200-235",
+    "nombre": "Le Maximum",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200235.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Le_Maximum",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000136"
+  },
+  {
+    "id": "DI-PD-200-236",
+    "nombre": "Eglantine\u0027s Motorcycle",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200236.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Eglantine\u0027s_Motorcycle",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000138"
+  },
+  {
+    "id": "DI-PD-200-237",
+    "nombre": "Medusa\u0027s Swamp Mobile",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200237.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Medusa\u0027s_Swamp_Mobile",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000139"
+  },
+  {
+    "id": "DI-PD-200-238",
+    "nombre": "Hydra Motorcycle",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200238.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hydra_Motorcycle",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000140"
+  },
+  {
+    "id": "DI-PD-200-239",
+    "nombre": "Darkwing Duck\u0027s Ratcatcher",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200239.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darkwing_Duck\u0027s_Ratcatcher",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000141"
+  },
+  {
+    "id": "DI-PD-200-240",
+    "nombre": "The USS Swinetrek",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200240.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/The_USS_Swinetrek",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000143"
+  },
+  {
+    "id": "DI-PD-200-241",
+    "nombre": "Spider-Copter",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200241.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Copter",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000145"
+  },
+  {
+    "id": "DI-PD-200-242",
+    "nombre": "Aerial Area Rug",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200242.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Aerial_Area_Rug",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000146"
+  },
+  {
+    "id": "DI-PD-200-243",
+    "nombre": "Jack-O-Lantern\u0027s Glider",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200243.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jack-O-Lantern\u0027s_Glider",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000147"
+  },
+  {
+    "id": "DI-PD-200-244",
+    "nombre": "Spider-Buggy",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200244.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Buggy",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000148"
+  },
+  {
+    "id": "DI-PD-200-245",
+    "nombre": "Fantasyland Carousel Horse",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200245.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Fantasyland_Carousel_Horse",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000150"
+  },
+  {
+    "id": "DI-PD-200-246",
+    "nombre": "Odin\u0027s Horse",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200246.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Odin\u0027s_Horse",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000151"
+  },
+  {
+    "id": "DI-PD-200-247",
+    "nombre": "Gus the Mule",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200247.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Gus_the_Mule",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000152"
+  },
+  {
+    "id": "DI-PD-200-248",
+    "nombre": "Darkwing Duck\u0027s Grappling Gun",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200248.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darkwing_Duck\u0027s_Grappling_Gun",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000154"
+  },
+  {
+    "id": "DI-PD-200-249",
+    "nombre": "Ghost Rider\u0027s Chain Whip",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200249.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ghost_Rider\u0027s_Chain_Whip",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000156"
+  },
+  {
+    "id": "DI-PD-200-250",
+    "nombre": "Lew Zealand\u0027s Boomerang Fish",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200250.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lew_Zealand\u0027s_Boomerang_Fish",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000157"
+  },
+  {
+    "id": "DI-PD-200-251",
+    "nombre": "Sergeant Calhoun\u0027s Blaster",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200251.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sergeant_Calhoun\u0027s_Blaster",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000158"
+  },
+  {
+    "id": "DI-PD-200-252",
+    "nombre": "Mabel\u0027s Kittens for Fists",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200252.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mabel\u0027s_Kittens_for_Fists",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000161"
+  },
+  {
+    "id": "DI-PD-200-253",
+    "nombre": "Jim Hawkins\u0027 Solar Board",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200253.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jim_Hawkins\u0027_Solar_Board",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000162"
+  },
+  {
+    "id": "DI-PD-200-254",
+    "nombre": "Cloak of Levitation",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200254.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Cloak_of_Levitation",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000164"
+  },
+  {
+    "id": "DI-PD-200-255",
+    "nombre": "Honey Lemon\u0027s Ice Capsules",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200255.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Honey_Lemon\u0027s_Ice_Capsules",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000166"
+  },
+  {
+    "id": "DI-PD-200-256",
+    "nombre": "Lola",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200256.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lola",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000193"
+  },
+  {
+    "id": "DI-PD-200-257",
+    "nombre": "Spider-Cycle (Rare)",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Cycle_(Rare)",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000194"
+  },
+  {
+    "id": "DI-PD-200-258",
+    "nombre": "The Avenjet",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200258.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/The_Avenjet",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000195"
+  },
+  {
+    "id": "DI-PD-200-259",
+    "nombre": "Spider-Glider",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Glider",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000196"
+  },
+  {
+    "id": "DI-PD-200-260",
+    "nombre": "Light Cycle",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200260.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Light_Cycle",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000197"
+  },
+  {
+    "id": "DI-PD-200-261",
+    "nombre": "Light Jet",
+    "tipo": "Power Disc",
+    "version": "2.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd200261.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Light_Jet",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000198"
+  },
+  {
+    "id": "DI-PD-300-262",
+    "nombre": "Retro Ray Gun",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300262.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Retro_Ray_Gun",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000201"
+  },
+  {
+    "id": "DI-PD-300-263",
+    "nombre": "Tomorrowland Futurescape",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300263.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tomorrowland_Futurescape",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000202"
+  },
+  {
+    "id": "DI-PD-300-264",
+    "nombre": "Tomorrowland Stratosphere",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300264.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Tomorrowland_Stratosphere",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000203"
+  },
+  {
+    "id": "DI-PD-300-265",
+    "nombre": "Skies Over Felucia",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "none.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Skies_Over_Felucia",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000204"
+  },
+  {
+    "id": "DI-PD-300-266",
+    "nombre": "Forests of Felucia",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300266.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Forests_of_Felucia",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000205"
+  },
+  {
+    "id": "DI-PD-300-267",
+    "nombre": "General Grievous\u0027 Wheel Bike",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300267.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/General_Grievous\u0027_Wheel_Bike",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000207"
+  },
+  {
+    "id": "DI-PD-300-268",
+    "nombre": "Slave I Flyer",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300268.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Slave_I_Flyer",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000210"
+  },
+  {
+    "id": "DI-PD-300-269",
+    "nombre": "Y-Wing Fighter",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300269.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Y-Wing_Fighter",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000211"
+  },
+  {
+    "id": "DI-PD-300-270",
+    "nombre": "Arlo",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300270.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Arlo",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000212"
+  },
+  {
+    "id": "DI-PD-300-271",
+    "nombre": "Nash",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300271.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nash",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000213"
+  },
+  {
+    "id": "DI-PD-300-272",
+    "nombre": "Butch",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300272.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Butch",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000214"
+  },
+  {
+    "id": "DI-PD-300-273",
+    "nombre": "Ramsey",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300273.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ramsey",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000215"
+  },
+  {
+    "id": "DI-PD-300-274",
+    "nombre": "Stars Over Sahara Square",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300274.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stars_Over_Sahara_Square",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000220"
+  },
+  {
+    "id": "DI-PD-300-275",
+    "nombre": "Sahara Square Sands",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300275.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sahara_Square_Sands",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000221"
+  },
+  {
+    "id": "DI-PD-300-276",
+    "nombre": "Ghost Rider\u0027s Motorcycle",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Por Asignar",
+    "imagen_url": "dipd300276.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ghost_Rider\u0027s_Motorcycle",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000224"
+  },
+  {
+    "id": "DI-PD-300-277",
+    "nombre": "Quad Jumper",
+    "tipo": "Power Disc",
+    "version": "3.0",
+    "franquicia": "Star Wars",
+    "imagen_url": "dipd300277.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Quad_Jumper",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000229"
   }
 ]

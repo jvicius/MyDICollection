@@ -9,7 +9,8 @@ namespace MyDICollection.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
-        private const string FileName = "dbmyinfinity.json";
+        private const string CatalogFileName = "dbmyinfinity.json";
+        private const string UserDataFileName = "userdata.json";
         private const string TodosLabel = "Todos";
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -20,8 +21,9 @@ namespace MyDICollection.ViewModels
 
         private readonly IJsonDataService _jsonDataService;
 
-        // Lista maestra (sin filtrar) — nunca se muestra directo en la UI
         private List<FiguraModel> _allFigures = new();
+        // Diccionario Id -> datos del usuario, se guarda tal cual en userdata.json
+        private Dictionary<string, FiguraUserData> _userData = new();
 
         public ICommand IncrementarCommand { get; }
         public ICommand DecrementarCommand { get; }
@@ -38,7 +40,6 @@ namespace MyDICollection.ViewModels
             LoadDataAsync();
         }
 
-        // ---------- Colección mostrada en el CollectionView (ya filtrada) ----------
         private ObservableCollection<FiguraModel> _figures = new();
         public ObservableCollection<FiguraModel> Figures
         {
@@ -53,13 +54,11 @@ namespace MyDICollection.ViewModels
             set { if (_isBusy != value) { _isBusy = value; OnPropertyChanged(); } }
         }
 
-        // ---------- Opciones disponibles para cada Picker ----------
         public ObservableCollection<string> OpcionesObtenido { get; } = new() { TodosLabel, "Obtenido", "No obtenido" };
         public ObservableCollection<string> OpcionesTipo { get; } = new();
         public ObservableCollection<string> OpcionesVersion { get; } = new();
         public ObservableCollection<string> OpcionesFranquicia { get; } = new();
 
-        // ---------- Filtros seleccionados ----------
         private string _filtroObtenido = TodosLabel;
         public string FiltroObtenido
         {
@@ -95,8 +94,25 @@ namespace MyDICollection.ViewModels
             try
             {
                 await Task.Delay(500);
-                var loadedFigures = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(FileName);
-                _allFigures = loadedFigures ?? new List<FiguraModel>();
+
+                // 1) Catálogo fresco del paquete
+                var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
+                _allFigures = catalogo ?? new List<FiguraModel>();
+
+                // 2) Datos del usuario desde AppData
+                _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);
+
+                // 3) Merge: hidratamos cada figura del catálogo con su progreso guardado
+                foreach (var figura in _allFigures)
+                {
+                    if (_userData.TryGetValue(figura.Id, out var datosUsuario))
+                    {
+                        figura.Obtenido = datosUsuario.Obtenido;
+                        figura.Cantidad = datosUsuario.Cantidad;
+                        figura.NfcCodes = new ObservableCollection<string>(datosUsuario.NfcCodes ?? new List<string>());
+                    }
+                    // si no existe entrada -> se queda en default (false, 0, lista vacía)
+                }
 
                 CargarOpcionesDeFiltro();
                 AplicarFiltros();
@@ -154,7 +170,6 @@ namespace MyDICollection.ViewModels
         {
             if (figura is null) return;
 
-            // Buscamos en la lista MAESTRA, no en la filtrada, para no perder referencia
             var figuraEnLista = _allFigures.FirstOrDefault(f => f.Id == figura.Id);
             if (figuraEnLista is null) return;
 
@@ -164,17 +179,28 @@ namespace MyDICollection.ViewModels
             figuraEnLista.Cantidad = nuevaCantidad;
             figuraEnLista.Obtenido = nuevaCantidad > 0;
 
+            await GuardarProgresoAsync(figuraEnLista);
+            //AplicarFiltros();
+        }
+
+        // Guarda SOLO el diccionario de progreso (userdata.json), nunca el catálogo
+        private async Task GuardarProgresoAsync(FiguraModel figura)
+        {
+            _userData[figura.Id] = new FiguraUserData
+            {
+                Obtenido = figura.Obtenido,
+                Cantidad = figura.Cantidad,
+                NfcCodes = figura.NfcCodes.ToList()
+            };
+
             try
             {
-                await _jsonDataService.WriteJsonFileAsync(FileName, _allFigures);
+                await _jsonDataService.WriteUserDataAsync(UserDataFileName, _userData);
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error al guardar cambios: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Error al guardar progreso: {ex.Message}");
             }
-
-            // Si el filtro de "Obtenido" está activo, puede que la figura ya no deba mostrarse
-            //AplicarFiltros();
         }
 
         private async Task AbrirWikiAsync(FiguraModel figura)
