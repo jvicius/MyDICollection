@@ -24,10 +24,10 @@
 		<ApplicationTitle>MyDICollection</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mydicollection</ApplicationId>
+		<ApplicationId>com.jvelarde.mydicollection</ApplicationId>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
