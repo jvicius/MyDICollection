@@ -5,12 +5,9 @@
     {
         public double BaseValue { get; set; }
 
-        // 1. Agrega este constructor vacío (obligatorio para XAML)
         public ResponsiveSizeExtension()
         {
         }
-
-        // 2. Agrega este constructor que recibe el valor directamente
         public ResponsiveSizeExtension(double baseValue)
         {
             BaseValue = baseValue;

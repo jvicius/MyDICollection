@@ -5,7 +5,6 @@ namespace MyDICollection.Helpers.Responsive
     [ContentProperty(nameof(BaseValue))]
     public class ResponsiveThicknessExtension : IMarkupExtension<Thickness>
     {
-        // Recibe el string clásico de XAML: "40,20,40,0" o "20"
         public string BaseValue { get; set; }
 
         public ResponsiveThicknessExtension()

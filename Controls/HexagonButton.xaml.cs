@@ -73,11 +73,9 @@ public partial class HexagonButton : ContentView
 
     private async void OnTapped(object sender, TappedEventArgs e)
     {
-        // 1. Ejecutamos la animación visual de presionar el disco
         await this.ScaleTo(0.9, 100, Easing.CubicOut);
         await this.ScaleTo(1.0, 100, Easing.CubicIn);
 
-        // 2. Validamos y ejecutamos el Comando pasándole el Parámetro
         if (Command != null && Command.CanExecute(CommandParameter))
         {
             Command.Execute(CommandParameter);

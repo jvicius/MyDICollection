@@ -6,7 +6,6 @@ namespace MyDICollection.Helpers.Responsive
     [ContentProperty(nameof(BaseValue))]
     public class ResponsiveRoundRectangleExtension : IMarkupExtension<RoundRectangle>
     {
-        // Recibe las esquinas en string: "10" o "10,10,10,10"
         public string BaseValue { get; set; }
 
         public ResponsiveRoundRectangleExtension()
@@ -20,11 +19,9 @@ namespace MyDICollection.Helpers.Responsive
             if (string.IsNullOrEmpty(BaseValue))
                 return roundRectangle;
 
-            // Usamos el convertidor nativo de CornerRadius para desarmar el string fácilmente
             var converter = new CornerRadiusTypeConverter();
             var radius = (CornerRadius)converter.ConvertFromInvariantString(BaseValue);
 
-            // Si es Tablet o Desktop, aplicamos tu regla (Valor / 2) * 3
             if (DeviceInfo.Current.Idiom == DeviceIdiom.Tablet ||
                 DeviceInfo.Current.Idiom == DeviceIdiom.Desktop)
             {
@@ -37,7 +34,6 @@ namespace MyDICollection.Helpers.Responsive
             }
             else
             {
-                // Si es Phone, se queda con los valores base
                 roundRectangle.CornerRadius = radius;
             }
 

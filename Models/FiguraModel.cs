@@ -1,12 +1,10 @@
-﻿// Models/FiguraModel.cs
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
 
 namespace MyDICollection.Models
 {
-    // Datos del CATÁLOGO — vienen siempre del paquete, son de solo lectura para el usuario
     public class FiguraModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -37,9 +35,8 @@ namespace MyDICollection.Models
         public string WikiUrl { get; set; }
 
         // --- Estos 3 campos son "editables" por el usuario, pero YA NO se leen/escriben ---
-        // --- directo de este JSON: se hidratan desde FiguraUserData en tiempo de carga ---
         private bool _obtenido;
-        [JsonIgnore] // 👈 ya no viene del catálogo
+        [JsonIgnore] 
         public bool Obtenido
         {
             get => _obtenido;

@@ -9,16 +9,13 @@ namespace MyDICollection.Converters
             if (value is not string originalString || string.IsNullOrEmpty(originalString))
                 return string.Empty;
 
-            // Detectamos si el celular está en inglés
             bool isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
 
             if (!isEnglish)
             {
-                // Si está en español (o cualquier otro idioma), pasamos el texto original
                 return originalString;
             }
 
-            // Mapeo exhaustivo de traducciones al inglés basado en tu JSON
             return originalString switch
             {
                 // ---- Tipos ----
@@ -28,26 +25,26 @@ namespace MyDICollection.Converters
                 // ---- Franquicias 1.0 ----
                 "Piratas del Caribe" => "Pirates of the Caribbean",
                 "Los Increibles" => "The Incredibles",
-                "Monsters University" => "Monsters University", // Se queda igual
-                "Cars" => "Cars", // Se queda igual
+                "Monsters University" => "Monsters University", 
+                "Cars" => "Cars", 
                 "El Llanero Solitario" => "The Lone Ranger",
                 "El extraño mundo de Jack" => "The Nightmare Before Christmas",
-                "Toy Story" => "Toy Story", // Se queda igual
+                "Toy Story" => "Toy Story", 
                 "Ralph el Demoledor" => "Wreck-It Ralph",
                 "Enredados" => "Tangled",
-                "Frozen" => "Frozen", // Se queda igual
+                "Frozen" => "Frozen", 
                 "Phineas y Ferb" => "Phineas and Ferb",
 
                 // ---- Franquicias 2.0 ----
-                "Marvel" => "Marvel", // Se queda igual
+                "Marvel" => "Marvel", 
                 "Grandes Héroes" => "Big Hero 6",
-                "Tron" => "Tron", // Se queda igual
+                "Tron" => "Tron", 
                 "Maléfica" => "Maleficent",
-                "Lilo & Stitch" => "Lilo & Stitch", // Se queda igual
-                "Peter Pan" => "Peter Pan", // Se queda igual
+                "Lilo & Stitch" => "Lilo & Stitch", 
+                "Peter Pan" => "Peter Pan", 
 
                 // ---- Franquicias 3.0 ----
-                "Star Wars" => "Star Wars", // Se queda igual
+                "Star Wars" => "Star Wars", 
                 "Intensa Mente" => "Inside Out",
 
                 // ---- Franquicias Generales/Clásicos ----
@@ -58,7 +55,7 @@ namespace MyDICollection.Converters
 
                 "Todos" => "All",
 
-                // Fallback: si no está en el diccionario, lo pasamos tal cual
+                // Fallback:
                 _ => originalString
             };
         }
