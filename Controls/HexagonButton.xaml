@@ -21,7 +21,7 @@
            HorizontalOptions="Center"
            VerticalOptions="Center"
            FontAttributes="Bold" 
-           FontSize="18"/>
+           FontSize="{Binding FontSize, Source={x:Reference RootControl}}"/>
     </Grid>
 
     <ContentView.GestureRecognizers>

@@ -45,5 +45,7 @@
 
     <Color x:Key="FilterBorderBackgroundColor">#F7F7F7</Color>
     <Color x:Key="FilterStrokeColor">#E0E0E0</Color>
+    <Color x:Key="WikiHexColor">#007AFF</Color>
+    <Color x:Key="ObtenidoColor">#2E7D32</Color>
     
 </ResourceDictionary>

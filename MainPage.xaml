@@ -104,7 +104,7 @@
                                 ColumnSpacing="{responsive:ResponsiveSize BaseValue=14}">
 
                                 <Border Grid.Column="0"
-                                        StrokeShape="RoundRectangle 12"
+                                        Style="{StaticResource ImageCardBorder}"
                                         HeightRequest="{responsive:ResponsiveSize BaseValue=95}"
                                         WidthRequest="{responsive:ResponsiveSize BaseValue=95}"
                                         Padding="0">
@@ -121,50 +121,41 @@
                                     VerticalOptions="Center">
 
                                     <Label Text="{Binding Nombre}"
-                                           FontSize="17"
-                                           FontAttributes="Bold"
-                                           LineBreakMode="TailTruncation"/>
+                                           Style="{StaticResource FiguraTitleLabel}"/>
 
-                                    <Label FontSize="13" TextColor="Gray">
+                                    <Label>
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="{Binding Tipo}" />
-                                                <Span Text=" · v" />
-                                                <Span Text="{Binding Version}" />
+                                                <Span Text="{Binding Tipo}" Style="{StaticResource FiguraVersionSpan}"/>
+                                                <Span Text=" · v" Style="{StaticResource FiguraVersionSpan}" />
+                                                <Span Text="{Binding Version}" Style="{StaticResource FiguraVersionSpan}" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
 
                                     <Label Text="{Binding Franquicia}"
-                                           FontSize="13"
-                                           TextColor="#EB1937"
-                                           FontAttributes="Italic"/>
+                                           Style="{StaticResource FiguraFranquiciaLabel}"
+                                           />
 
                                     <HorizontalStackLayout 
                                         Spacing="{responsive:ResponsiveSize BaseValue=10}" 
                                         Margin="{responsive:ResponsiveThickness BaseValue='0,8,0,0'}">
-                                        
-                                        <!--<Button Text="－"
-                                                Style="{StaticResource CardActionButtonA}"
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DecrementarCommand}"
-                                                CommandParameter="{Binding .}"/>-->
 
                                         <controls:HexagonButton Text="-"
                                             Style="{StaticResource CardActionHexaButtonA}"
                                             Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DecrementarCommand}"
                                             CommandParameter="{Binding .}"/>
 
+                                        <controls:HexagonButton Text="+"
+                                             Style="{StaticResource CardActionHexaButtonB}"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IncrementarCommand}"
+                                             CommandParameter="{Binding .}"/>
 
-                                        <Button Text="＋"
-                                                Style="{StaticResource CardActionButtonB}"
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IncrementarCommand}"
-                                                CommandParameter="{Binding .}"/>
+                                        <controls:HexagonButton Text="🌐"
+                                             Style="{StaticResource CardActionHexaButtonC}"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirWikiCommand}"
+                                             CommandParameter="{Binding .}"/>
 
-                                        <Button Text="🌐"
-                                                Style="{StaticResource CardActionButtonC}"
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirWikiCommand}"
-                                                CommandParameter="{Binding .}"/>
-                                        
                                     </HorizontalStackLayout>
 
                                 </VerticalStackLayout>
@@ -174,46 +165,38 @@
                         </Border>
 
                         <Border IsVisible="{Binding Obtenido}"
-                                StrokeShape="RoundRectangle 14"
-                                BackgroundColor="#2E7D32"
+                                Style="{StaticResource ObtenidoBorder}"
                                 Padding="{responsive:ResponsiveThickness BaseValue='10,5'}"
                                 HorizontalOptions="End"
                                 VerticalOptions="Start"
                                 Margin="{responsive:ResponsiveThickness BaseValue='0,-10,-10,0'}"
-                                StrokeThickness="0">
+                                >
                             
                             <Border.Shadow>
-                                <Shadow Brush="Black" Opacity="0.3" Radius="6" Offset="0,2"/>
+                                <Shadow Brush="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray100Brush}}" Opacity="{AppThemeBinding Light=0.3, Dark=0.7}" Radius="6" Offset="0,2"/>
                             </Border.Shadow>
                             
                             <Label Text="{Binding Cantidad, StringFormat='✓ x{0}'}"
-                                   TextColor="White"
-                                   FontSize="12"
-                                   FontAttributes="Bold"/>
+                                   Style="{StaticResource ObtenidoIndicatorLabel}"/>
                             
                         </Border>
 
                         <Border IsVisible="{Binding Obtenido, Converter={StaticResource InvertedBoolConverter}}"
-                                StrokeShape="RoundRectangle 14"
-                                BackgroundColor="#C62828"
-                                WidthRequest="28"
-                                HeightRequest="28"
+                                Style="{StaticResource NoObtenidoBorder}"
                                 HorizontalOptions="End"
                                 VerticalOptions="Start"
                                 Margin="{responsive:ResponsiveThickness BaseValue='0,-10,-10,0'}"
                                 Padding="0"
-                                StrokeThickness="0">
+                                >
                             
                             <Border.Shadow>
-                                
-                                <Shadow Brush="Black" Opacity="0.3" Radius="6" Offset="0,2"/>
+
+                                <Shadow Brush="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray100Brush}}" Opacity="{AppThemeBinding Light=0.3, Dark=0.7}" Radius="6" Offset="0,2"/>
                                 
                             </Border.Shadow>
                             
                             <Label Text="0"
-                                   TextColor="White"
-                                   FontSize="14"
-                                   FontAttributes="Bold"
+                                   Style="{StaticResource ObtenidoIndicatorLabel}"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
                                    HorizontalTextAlignment="Center"

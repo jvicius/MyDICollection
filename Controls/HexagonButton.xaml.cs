@@ -22,14 +22,14 @@ public partial class HexagonButton : ContentView
     public static readonly BindableProperty CommandParameterProperty =
         BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(HexagonButton));
 
-    //public static readonly BindableProperty FontSizeProperty =
-    //   BindableProperty.Create(nameof(FontSize), typeof(double), typeof(HexagonButton), 12);
+    public static readonly BindableProperty FontSizeProperty =
+       BindableProperty.Create(nameof(FontSize), typeof(double), typeof(HexagonButton), (double) 12);
 
-    //public double FontSize
-    //{
-    //    get => (double)GetValue(FontSizeProperty);
-    //    set => SetValue(FontSizeProperty, value);
-    //}
+    public double FontSize
+    {
+        get => (double)GetValue(FontSizeProperty);
+        set => SetValue(FontSizeProperty, value);
+    }
     public string Text
     {
         get => (string)GetValue(TextProperty);

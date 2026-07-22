@@ -9,6 +9,9 @@
     <responsive:ResponsiveSizeExtension x:Key="FilterTitleSize" BaseValue="15" />
     <responsive:ResponsiveSizeExtension x:Key="ButtonFontSize" BaseValue="18" />
     <responsive:ResponsiveSizeExtension x:Key="HexaButtonFontSize" BaseValue="20" />
+    <responsive:ResponsiveSizeExtension x:Key="FigureTitleSize" BaseValue="17" />
+    <responsive:ResponsiveSizeExtension x:Key="FigureLabelSize" BaseValue="13" />
+    <responsive:ResponsiveSizeExtension x:Key="ObtenidoLabelSize" BaseValue="14" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
@@ -420,7 +423,7 @@
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
         <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
         <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource SecondaryDarkText}}" />
-        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource SecondaryDarkText}}" />
+        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
@@ -458,12 +461,30 @@
     </Style>
 
     <Style x:Key="CardActionHexaButtonA" TargetType="controls:HexagonButton">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
-        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource FilterStrokeColor}}" />
+        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource Black}}" />
         <Setter Property="HexBorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource FilterStrokeColor}}" />
         <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+    </Style>
 
+    <Style x:Key="CardActionHexaButtonB" TargetType="controls:HexagonButton">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="HexBorderColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+    </Style>
+
+    <Style x:Key="CardActionHexaButtonC" TargetType="controls:HexagonButton">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource WikiHexColor}, Dark={StaticResource WikiHexColor}}" />
+        <Setter Property="HexBorderColor" Value="{AppThemeBinding Light={StaticResource WikiHexColor}, Dark={StaticResource WikiHexColor}}" />
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
     </Style>
 
     <Style x:Key="CardActionButtonA" TargetType="Button">
@@ -542,10 +563,61 @@
     </Style>
 
     <Style TargetType="Border" x:Key="CardBorder">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource FilterStrokeColor}}" />
         <Setter Property="StrokeShape" Value="RoundRectangle 16"/>
         <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="ImageCardBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource Black}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 16"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="ObtenidoBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource ObtenidoColor}, Dark={StaticResource ObtenidoColor}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 14"/>
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=30}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="NoObtenidoBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 14"/>
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=30}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=30}"/>
+    </Style>
+
+    <Style x:Key="FiguraTitleLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureTitleSize}" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="LineBreakMode" Value="TailTruncation"/>
+    </Style>
+
+    <Style x:Key="FiguraVersionLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray200Brush}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
+    </Style>
+
+    <Style x:Key="FiguraVersionSpan" TargetType="Span">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray200Brush}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
+    </Style>
+
+    <Style x:Key="FiguraFranquiciaLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
+        <Setter Property="FontAttributes" Value="Italic"/>
+    </Style>
+
+    <Style x:Key="ObtenidoIndicatorLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource ObtenidoLabelSize}" />
+        <Setter Property="FontAttributes" Value="Bold"/>
     </Style>
 
 </ResourceDictionary>
