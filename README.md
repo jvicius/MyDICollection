@@ -4,6 +4,11 @@ A modern, fast, and 100% offline-first application built with **.NET MAUI** to e
 
 Whether you're hunting for figures at a retro game store or organizing your display at home, this app lets you know exactly what you own, what you're missing, and how many duplicates you have.
 
+
+## Preview 
+
+<video src="https://raw.githubusercontent.com/jvicius/MyDICollection/master/Samples/sampleVideo01.mp4" controls="controls" width="100%"></video>
+
 ## ✨ Features
 
 * **📦 Precise Collection Tracking:** Keep track of your entire collection, including exact quantities for duplicates.
