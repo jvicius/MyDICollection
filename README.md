@@ -7,7 +7,9 @@ Whether you're hunting for figures at a retro game store or organizing your disp
 
 ## Preview 
 
-https://github.com/user-attachments/assets/b3223098-1968-4b27-b802-7b2fae9c30d4
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/b3223098-1968-4b27-b802-7b2fae9c30d4" width="300" controls="controls"></video>
+</div>
 
 ## ✨ Features
 
