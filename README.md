@@ -7,7 +7,7 @@ Whether you're hunting for figures at a retro game store or organizing your disp
 
 ## Preview 
 
-![Disney Infinity Collection Tracker Preview](https://github.com/jvicius/MyDICollection/blob/master/Samples/sampleVideo01.mp4)
+https://github.com/user-attachments/assets/b3223098-1968-4b27-b802-7b2fae9c30d4
 
 ## ✨ Features
 
