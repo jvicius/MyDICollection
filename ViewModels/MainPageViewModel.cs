@@ -1,4 +1,6 @@
-﻿using MyDICollection.Models;
+﻿using MyDICollection.Converters;
+using MyDICollection.Models;
+using MyDICollection.Resources;
 using MyDICollection.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -11,7 +13,6 @@ namespace MyDICollection.ViewModels
     {
         private const string CatalogFileName = "dbmyinfinity.json";
         private const string UserDataFileName = "userdata.json";
-        private const string TodosLabel = "Todos";
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -54,33 +55,33 @@ namespace MyDICollection.ViewModels
             set { if (_isBusy != value) { _isBusy = value; OnPropertyChanged(); } }
         }
 
-        public ObservableCollection<string> OpcionesObtenido { get; } = new() { TodosLabel, "Obtenido", "No obtenido" };
+        public ObservableCollection<string> OpcionesObtenido { get; } = new() { AppResource.All, AppResource.Owned, AppResource.Missing };
         public ObservableCollection<string> OpcionesTipo { get; } = new();
         public ObservableCollection<string> OpcionesVersion { get; } = new();
         public ObservableCollection<string> OpcionesFranquicia { get; } = new();
 
-        private string _filtroObtenido = TodosLabel;
+        private string _filtroObtenido = AppResource.All;
         public string FiltroObtenido
         {
             get => _filtroObtenido;
             set { if (_filtroObtenido != value) { _filtroObtenido = value; OnPropertyChanged(); AplicarFiltros(); } }
         }
 
-        private string _filtroTipo = TodosLabel;
+        private string _filtroTipo = AppResource.All;
         public string FiltroTipo
         {
             get => _filtroTipo;
             set { if (_filtroTipo != value) { _filtroTipo = value; OnPropertyChanged(); AplicarFiltros(); } }
         }
 
-        private string _filtroVersion = TodosLabel;
+        private string _filtroVersion = AppResource.All;
         public string FiltroVersion
         {
             get => _filtroVersion;
             set { if (_filtroVersion != value) { _filtroVersion = value; OnPropertyChanged(); AplicarFiltros(); } }
         }
 
-        private string _filtroFranquicia = TodosLabel;
+        private string _filtroFranquicia = AppResource.All;
         public string FiltroFranquicia
         {
             get => _filtroFranquicia;
@@ -95,8 +96,30 @@ namespace MyDICollection.ViewModels
             {
                 await Task.Delay(500);
 
+                var traductor = new DbTranslationConverter();
+
                 // 1) Catálogo fresco del paquete
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
+
+                foreach (var figura in catalogo)
+                {
+                    string tipoTraducido = traductor.Convert(
+                           value: figura.Tipo,
+                           targetType: typeof(string),
+                           parameter: null,
+                           culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
+
+                    figura.Tipo = tipoTraducido;
+
+                    string franquiciaTraducido = traductor.Convert(
+                        value: figura.Franquicia,
+                        targetType: typeof(string),
+                        parameter: null,
+                        culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
+
+                    figura.Franquicia = franquiciaTraducido;
+                }
+
                 _allFigures = catalogo ?? new List<FiguraModel>();
 
                 // 2) Datos del usuario desde AppData
@@ -129,38 +152,58 @@ namespace MyDICollection.ViewModels
 
         private void CargarOpcionesDeFiltro()
         {
+            var traductor = new DbTranslationConverter();
+
             OpcionesTipo.Clear();
-            OpcionesTipo.Add(TodosLabel);
+            OpcionesTipo.Add(AppResource.All);
             foreach (var tipo in _allFigures.Select(f => f.Tipo).Distinct().OrderBy(t => t))
-                OpcionesTipo.Add(tipo);
+            {
+                string tipoTraducido = traductor.Convert(
+                    value: tipo,
+                    targetType: typeof(string),
+                    parameter: null,
+                    culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
+
+                if (!OpcionesTipo.Contains(tipoTraducido))
+                    OpcionesTipo.Add(tipoTraducido);
+            }
 
             OpcionesVersion.Clear();
-            OpcionesVersion.Add(TodosLabel);
+            OpcionesVersion.Add(AppResource.All);
             foreach (var version in _allFigures.Select(f => f.Version).Distinct().OrderBy(v => v))
                 OpcionesVersion.Add(version);
 
             OpcionesFranquicia.Clear();
-            OpcionesFranquicia.Add(TodosLabel);
+            OpcionesFranquicia.Add(AppResource.All);
             foreach (var franquicia in _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f))
-                OpcionesFranquicia.Add(franquicia);
+            {
+                string franquiciaTraducido = traductor.Convert(
+                    value: franquicia,
+                    targetType: typeof(string),
+                    parameter: null,
+                    culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
+
+                if (!OpcionesFranquicia.Contains(franquiciaTraducido))
+                    OpcionesFranquicia.Add(franquiciaTraducido);
+            }
         }
 
         private void AplicarFiltros()
         {
             IEnumerable<FiguraModel> query = _allFigures;
 
-            if (FiltroObtenido == "Obtenido")
+            if (FiltroObtenido == AppResource.Owned)
                 query = query.Where(f => f.Obtenido);
-            else if (FiltroObtenido == "No obtenido")
+            else if (FiltroObtenido == AppResource.Missing)
                 query = query.Where(f => !f.Obtenido);
 
-            if (!string.IsNullOrEmpty(FiltroTipo) && FiltroTipo != TodosLabel)
+            if (!string.IsNullOrEmpty(FiltroTipo) && FiltroTipo != AppResource.All)
                 query = query.Where(f => f.Tipo == FiltroTipo);
 
-            if (!string.IsNullOrEmpty(FiltroVersion) && FiltroVersion != TodosLabel)
+            if (!string.IsNullOrEmpty(FiltroVersion) && FiltroVersion != AppResource.All)
                 query = query.Where(f => f.Version == FiltroVersion);
 
-            if (!string.IsNullOrEmpty(FiltroFranquicia) && FiltroFranquicia != TodosLabel)
+            if (!string.IsNullOrEmpty(FiltroFranquicia) && FiltroFranquicia != AppResource.All)
                 query = query.Where(f => f.Franquicia == FiltroFranquicia);
 
             Figures = new ObservableCollection<FiguraModel>(query);

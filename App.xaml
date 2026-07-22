@@ -13,6 +13,8 @@
             </ResourceDictionary.MergedDictionaries>
 
             <converters:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+            <converters:DbTranslationConverter x:Key="DbTranslator" />
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
