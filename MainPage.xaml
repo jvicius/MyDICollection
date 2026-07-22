@@ -38,25 +38,25 @@
                     Spacing="{responsive:ResponsiveSize BaseValue=10}">
 
                     <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
-                        <Label Text="{helpers:Translate Collect}" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Collect}" Style="{StaticResource FilterLabel}"/>
                         <Picker ItemsSource="{Binding OpcionesObtenido}"
                                 SelectedItem="{Binding FiltroObtenido}"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
-                        <Label Text="{helpers:Translate Type}" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Type}" Style="{StaticResource FilterLabel}"/>
                         <Picker ItemsSource="{Binding OpcionesTipo}"
                                 SelectedItem="{Binding FiltroTipo}"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
-                        <Label Text="{helpers:Translate Version}" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Version}" Style="{StaticResource FilterLabel}"/>
                         <Picker ItemsSource="{Binding OpcionesVersion}"
                                 SelectedItem="{Binding FiltroVersion}"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=2}">
-                        <Label Text="{helpers:Translate Brand}" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{helpers:Translate Brand}" Style="{StaticResource FilterLabel}"/>
                         <Picker ItemsSource="{Binding OpcionesFranquicia}"
                                 SelectedItem="{Binding FiltroFranquicia}"/>
                     </VerticalStackLayout>
