@@ -53,6 +53,11 @@ namespace MyDICollection.Converters
                 // ---- Casos Especiales/Nuevos ----
                 "Por Asignar" => "Unassigned",
 
+                "Un Gran Dinosaurio" => "The Good Dinosaur",
+                "Buscando a Nemo" => "Finding Nemo",
+                "El Libro de la Selva" => "The Jungle Book",
+                "Alicia en el Pais de las Maravillas" => "Alice in Wonderland",
+
                 "Todos" => "All",
 
                 // Fallback:
