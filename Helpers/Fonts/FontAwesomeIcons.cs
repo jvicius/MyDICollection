@@ -50,5 +50,12 @@
         public const string Star = "\uf005";   // Estrella sólida clásica (star)
         public const string Crown = "\uf521";  // Corona, para rangos más altos (crown)
 
+        public const string InfoCircle = "\uf05a"; // La "i" dentro de un círculo (ideal para botones)
+        public const string Info = "\uf129";       // Solo la "i" solita
+
+        // Inventario y Cajas
+        public const string Box = "\uf466";    // Una caja sola (box)
+        public const string Boxes = "\uf468";  // Varias cajas apiladas (boxes-stacked) - ¡Esta queda de lujo para representar stock/inventario!
+
     }
 }

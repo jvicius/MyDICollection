@@ -493,6 +493,16 @@
         <Setter Property="FontFamily" Value="FASolid"/>
     </Style>
 
+    <Style x:Key="CardActionHexaButtonD" TargetType="controls:HexagonButton">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}" />
+        <Setter Property="HexBorderColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}" />
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
+        <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+        <Setter Property="FontFamily" Value="FASolid"/>
+    </Style>
+
     <Style x:Key="CardActionButtonA" TargetType="Button">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource White}}" />
