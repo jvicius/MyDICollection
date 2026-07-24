@@ -37,9 +37,9 @@ namespace MyDICollection.Converters
 
                 // ---- Franquicias 2.0 ----
                 "Marvel" => "Marvel", 
-                "Grandes Héroes" => "Big Hero 6",
+                "Grandes Heroes" => "Big Hero 6",
                 "Tron" => "Tron", 
-                "Maléfica" => "Maleficent",
+                "Malefica" => "Maleficent",
                 "Lilo & Stitch" => "Lilo & Stitch", 
                 "Peter Pan" => "Peter Pan", 
 
@@ -57,6 +57,7 @@ namespace MyDICollection.Converters
                 "Buscando a Nemo" => "Finding Nemo",
                 "El Libro de la Selva" => "The Jungle Book",
                 "Alicia en el Pais de las Maravillas" => "Alice in Wonderland",
+                "Valiente" => "Brave",
 
                 "Todos" => "All",
 
