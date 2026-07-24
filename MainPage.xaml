@@ -16,7 +16,7 @@
         <Grid 
             ColumnDefinitions="auto, *, auto" 
             VerticalOptions="Center" 
-            Padding="0,0,10,0">
+            Padding="{responsive:ResponsiveThickness BaseValue='0,0,10,0'}">
 
             <!-- 1. ICONO IZQUIERDO (Menú/Home) -->
             <Label Grid.Column="0" 
