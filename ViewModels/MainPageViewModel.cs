@@ -5,6 +5,7 @@ using MyDICollection.Resources;
 using MyDICollection.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -84,6 +85,7 @@ namespace MyDICollection.ViewModels
         public ICommand IncrementarCommand { get; }
         public ICommand DecrementarCommand { get; }
         public ICommand AbrirWikiCommand { get; }
+        public ICommand MenuCommand { get; }
 
         #endregion
 
@@ -95,12 +97,22 @@ namespace MyDICollection.ViewModels
             IncrementarCommand = new Command<FiguraModel>(async (figura) => await CambiarCantidadAsync(figura, 1));
             DecrementarCommand = new Command<FiguraModel>(async (figura) => await CambiarCantidadAsync(figura, -1));
             AbrirWikiCommand = new Command<FiguraModel>(async (figura) => await AbrirWikiAsync(figura));
+            MenuCommand = new Command<string>(async (value) => await AbrirMenuAsync(value));
 
-            
+
             MainThread.BeginInvokeOnMainThread(async () =>
             {
                 await LoadDataAsync();
             });
+        }
+
+        private async Task AbrirMenuAsync(string value)
+        {
+            // Una validación rápida por si el CommandParameter llega vacío o nulo
+            string mensaje = string.IsNullOrEmpty(value) ? "¡No llegó nada bro!" : value;
+
+            // Título de la alerta, Mensaje, y Texto del botón
+            await Application.Current.MainPage.DisplayAlert("Test Botón Central", $"El valor es: {mensaje}", "OK");
         }
 
         #endregion

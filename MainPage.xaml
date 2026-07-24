@@ -344,6 +344,11 @@
                 HorizontalOptions="Center"
                 >
 
+                <Border.GestureRecognizers>
+                    <!-- Si tu comando pide parámetro, agrégale el CommandParameter aquí también -->
+                    <TapGestureRecognizer Command="{Binding MenuCommand}" CommandParameter="1" />
+                </Border.GestureRecognizers>
+
                 <!-- Sombra manual porque ya no existe el HasShadow en Border -->
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Radius="5" Offset="0,3" />
@@ -357,7 +362,7 @@
                     HorizontalOptions="Center"
                     HeightRequest="{responsive:ResponsiveSize BaseValue=50}"
                     WidthRequest="{responsive:ResponsiveSize BaseValue=50}"/>
-                
+
             </Border>
 
             <VerticalStackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
