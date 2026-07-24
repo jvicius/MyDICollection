@@ -470,6 +470,7 @@
         <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+        <Setter Property="FontFamily" Value="FASolid"/>
     </Style>
 
     <Style x:Key="CardActionHexaButtonB" TargetType="controls:HexagonButton">
@@ -479,6 +480,7 @@
         <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+        <Setter Property="FontFamily" Value="FASolid"/>
     </Style>
 
     <Style x:Key="CardActionHexaButtonC" TargetType="controls:HexagonButton">
@@ -488,6 +490,7 @@
         <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=36}"/>
         <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+        <Setter Property="FontFamily" Value="FASolid"/>
     </Style>
 
     <Style x:Key="CardActionButtonA" TargetType="Button">
@@ -669,6 +672,18 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="{StaticResource MenuIconLabelSize}" />
         <Setter Property="FontFamily" Value="FASolid"/>
+    </Style>
+
+    <Style x:Key="HomeMenuIconLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource MenuIconLabelSize}" />
+        <Setter Property="FontFamily" Value="FASolid"/>
+    </Style>
+
+    <Style x:Key="TitleLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}" />
+        <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
 </ResourceDictionary>

@@ -1,4 +1,5 @@
-﻿using MyDICollection.Helpers.Extensions;
+﻿using MyDICollection.Helpers;
+using MyDICollection.Helpers.Extensions;
 using MyDICollection.Models;
 using MyDICollection.Resources;
 using MyDICollection.Services;
@@ -115,7 +116,7 @@ namespace MyDICollection.ViewModels
                 // 1) Catálogo fresco del paquete
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
 
-                catalogo = catalogo.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
+                catalogo = (Settings.LanguageSettings == "es") ? catalogo.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()  : catalogo.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
 
                 foreach (var figura in catalogo)
                 {

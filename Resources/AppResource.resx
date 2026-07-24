@@ -136,9 +136,6 @@
   <data name="Missing" xml:space="preserve">
     <value>Missing</value>
   </data>
-  <data name="MyDisc" xml:space="preserve">
-    <value>Power Disc</value>
-  </data>
   <data name="MyFigures" xml:space="preserve">
     <value>My Figures</value>
   </data>
@@ -156,5 +153,11 @@
   </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
+  </data>
+  <data name="MyDiscs" xml:space="preserve">
+    <value>Power Disc</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
   </data>
 </root>

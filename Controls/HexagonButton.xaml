@@ -21,6 +21,7 @@
            HorizontalOptions="Center"
            VerticalOptions="Center"
            FontAttributes="Bold" 
+           FontFamily="{Binding FontFamily, Source={x:Reference RootControl}}"
            FontSize="{Binding FontSize, Source={x:Reference RootControl}}"/>
     </Grid>
 

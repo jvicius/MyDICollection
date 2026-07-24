@@ -135,9 +135,6 @@
   <data name="Missing" xml:space="preserve">
     <value>No obtenido</value>
   </data>
-  <data name="MyDisc" xml:space="preserve">
-    <value>Discos de Poder</value>
-  </data>
   <data name="MyFigures" xml:space="preserve">
     <value>Figuras</value>
   </data>
@@ -155,5 +152,11 @@
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versión</value>
+  </data>
+  <data name="MyDiscs" xml:space="preserve">
+    <value>Discos de Poder</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
   </data>
 </root>

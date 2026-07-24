@@ -37,6 +37,7 @@
         public const string Minus = "\uf068";  // Signo de menos (minus)
         public const string Sync = "\uf021";   // Flechitas en círculo (rotate). Otra opción chida es "\uf2f1" (sync-alt)
         public const string Sync2 = "\uf2f1";   // Flechitas en círculo (rotate). Otra opción chida es "\uf2f1" (sync-alt)
+        public const string Menu = "\uf0c9"; // Menú de hamburguesa (bars)
 
         // NFC y Web
         public const string Nfc = "\uf09e";    // Es el icono de RSS. 
