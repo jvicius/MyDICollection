@@ -13,6 +13,8 @@
     <responsive:ResponsiveSizeExtension x:Key="FigureLabelSize" BaseValue="13" />
     <responsive:ResponsiveSizeExtension x:Key="ObtenidoLabelSize" BaseValue="14" />
     <responsive:ResponsiveSizeExtension x:Key="FilterLabelSize" BaseValue="12" />
+    <responsive:ResponsiveSizeExtension x:Key="MenuHeight" BaseValue="80" />
+    <responsive:ResponsiveSizeExtension x:Key="MenuIconLabelSize" BaseValue="24" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
@@ -592,6 +594,15 @@
         <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=30}"/>
     </Style>
 
+
+    <Style TargetType="Border" x:Key="MenuNumberBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 14"/>
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=18}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=18}"/>
+    </Style>
+
     <Style x:Key="FiguraTitleLabel" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="{StaticResource FigureTitleSize}" />
@@ -624,6 +635,40 @@
     <Style x:Key="FilterLabel" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="{StaticResource FilterLabelSize}" />
+    </Style>
+
+    <Style TargetType="Grid" x:Key="MenuGrid">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="HeightRequest" Value="{StaticResource MenuHeight}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="MenuCenterBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="StrokeShape" Value="{OnIdiom Phone='RoundRectangle 37.5', Tablet='RoundRectangle 56.25', Default='RoundRectangle 56.25'}"/>
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=75}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=75}"/>
+        <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue='0, -5, 0, 0'}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="MenuCenterButton">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="StrokeShape" Value="{OnIdiom Phone='RoundRectangle 30', Tablet='RoundRectangle 45', Default='RoundRectangle 45'}"/>
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=60}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=60}"/>
+        <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue='0, 2.5, 0, 0'}"/>
+    </Style>
+
+    <Style x:Key="MenuLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource FilterLabelSize}" />
+    </Style>
+
+    <Style x:Key="MenuIconLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource MenuIconLabelSize}" />
+        <Setter Property="FontFamily" Value="FASolid"/>
     </Style>
 
 </ResourceDictionary>

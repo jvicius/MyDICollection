@@ -7,12 +7,14 @@
              xmlns:helpers="clr-namespace:MyDICollection.Helpers"
              Title="{helpers:Translate Title}"
              xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
-             xmlns:controls="clr-namespace:MyDICollection.Controls">
+             xmlns:controls="clr-namespace:MyDICollection.Controls"
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+             >
 
-    <Grid RowDefinitions="Auto,*">
+    <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- Sección de filtros -->
-        <Border Grid.Row="0"
+        <!--<Border Grid.Row="0"
                 Margin="{responsive:ResponsiveThickness BaseValue='15,15,15,0'}"
                 Style="{StaticResource FilterBorder}">
 
@@ -63,7 +65,7 @@
 
                 </VerticalStackLayout>
             </toolkit:Expander>
-        </Border>
+        </Border>-->
 
         <!-- Loader -->
         <ActivityIndicator Grid.Row="1"
@@ -212,6 +214,104 @@
 
         </CollectionView>
         
+        <!--Menu Inferior-->
+
+        <Grid 
+            Grid.Row="2" 
+            VerticalOptions="End" 
+            Style="{StaticResource MenuGrid}">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="{StaticResource MenuHeight}"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- EFECTO CUTOUT: Círculo blanco detrás del botón verde para simular la curva de la barra -->
+            <Border Grid.Column="2" 
+                Style="{StaticResource MenuCenterBorder}"
+                Padding="0"
+                VerticalOptions="Start"
+                HorizontalOptions="Center" 
+                />
+            <!-- Sube un poquito más allá del fondo -->
+
+            <!-- BOTÓN CENTRAL -->
+            <Border Grid.Column="2" 
+                Style="{StaticResource MenuCenterButton}"
+                Padding="0" 
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                >
+
+                <!-- Sombra manual porque ya no existe el HasShadow en Border -->
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Radius="5" Offset="0,3" />
+                </Border.Shadow>
+
+                <!-- Centrado dentro del círculo blanco -->
+                <Image 
+                    Margin="{responsive:ResponsiveThickness BaseValue='0, 5, 0, 0'}"
+                    Source="none.png" 
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    HeightRequest="{responsive:ResponsiveSize BaseValue=50}"
+                    WidthRequest="{responsive:ResponsiveSize BaseValue=50}"/>
+                
+            </Border>
+
+            <VerticalStackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
+
+                    
+                    <Label Grid.Row="1" 
+                           Text="{x:Static fonts:FontAwesomeIcons.Figura2}"
+                        Style="{StaticResource MenuIconLabel}"
+                        HorizontalOptions="Center"/>
+
+
+                <Label Text="{helpers:Translate MyFigures}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center"/>
+            
+            </VerticalStackLayout>
+
+            
+
+
+
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
+
+                <Label Text="{x:Static fonts:FontAwesomeIcons.PowerDisc3}"
+                   Style="{StaticResource MenuIconLabel}"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="{helpers:Translate MyDisc}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center"/>
+            
+            </VerticalStackLayout>
+
+            <!-- BOTONES NORMALES (Activity y Profile) -->
+            <VerticalStackLayout Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
+               
+                <Label Text="{x:Static fonts:FontAwesomeIcons.Trophy}"
+                       Style="{StaticResource MenuIconLabel}"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="{helpers:Translate Achievements}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center"/>
+                
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
+
+                <Label Text="{x:Static fonts:FontAwesomeIcons.Settings}"
+                       Style="{StaticResource MenuIconLabel}"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="{helpers:Translate Settings}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center"/>
+                
+            </VerticalStackLayout>
+
+        </Grid>
+
     </Grid>
     
 </ContentPage>

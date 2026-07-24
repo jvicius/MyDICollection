@@ -20,7 +20,7 @@ namespace MyDICollection.Converters
             {
                 // ---- Tipos ----
                 "Figura" => "Figure",
-                "Power Disc" => "Power Disc",
+                "Disco de Poder" => "Power Disc",
 
                 // ---- Franquicias 1.0 ----
                 "Piratas del Caribe" => "Pirates of the Caribbean",
