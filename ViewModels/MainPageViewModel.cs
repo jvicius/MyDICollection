@@ -5,7 +5,6 @@ using MyDICollection.Resources;
 using MyDICollection.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -173,55 +172,34 @@ namespace MyDICollection.ViewModels
                 await LoadDataAsync();
             });
         }
-
+        private void SetActiveMenu(string menuName)
+        {
+            SelectedMenuFigures = menuName == "MyFigures";
+            SelectedMenuDiscs = menuName == "MyDiscs";
+            SelectedMenuArchi = menuName == "Achievements";
+            SelectedMenuSettings = menuName == "Settings";
+            SelectedMenuHome = menuName == "Home";
+        }
         private async Task AbrirMenuAsync(string value)
         {
-            switch (value)
-            {
-                case "MyFigures":
-                    if (SelectedMenuFigures)
-                        return;
-                    SelectedMenuFigures = true;
-                    SelectedMenuDiscs = false;
-                    SelectedMenuHome = false;
-                    SelectedMenuArchi = false;
-                    SelectedMenuSettings = false;
-                    await LoadDataAsync();
-                    break;
-                case "MyDiscs":
-                    if (SelectedMenuDiscs)
-                        return;
-                    SelectedMenuDiscs = true;
-                    SelectedMenuFigures = false;
-                    SelectedMenuHome = false;
-                    SelectedMenuArchi = false;
-                    SelectedMenuSettings = false;
+            if ((value == "MyFigures" && SelectedMenuFigures) ||
+                (value == "MyDiscs" && SelectedMenuDiscs) ||
+                (value == "Achievements" && SelectedMenuArchi) ||
+                (value == "Settings" && SelectedMenuSettings))
+                return;
 
-                    await LoadDataAsync();
-                    break;
-                case "Achievements":
-                    if (SelectedMenuArchi)
-                        return;
-                    SelectedMenuArchi = true;
-                    SelectedMenuFigures = false;
-                    SelectedMenuDiscs = false;
-                    SelectedMenuHome = false;
-                    SelectedMenuSettings = false;
-                    break;
-                case "Settings":
-                    if (SelectedMenuSettings)
-                        return;
-                    SelectedMenuSettings = true;
-                    SelectedMenuFigures = false;
-                    SelectedMenuDiscs = false;
-                    SelectedMenuHome = false;
-                    SelectedMenuArchi = false;
-                    break;
-                case "Home":
-                    SelectedMenuHome = true;
-                    await Task.Delay(500);
-                    SelectedMenuHome = false;
-                    break;
+            SetActiveMenu(value);
+
+            if (value == "Home")
+            {
+                await Task.Delay(500);
+                SelectedMenuHome = false;
+                return;
+            }
+
+            if (value == "MyFigures" || value == "MyDiscs")
+            {
+                await LoadDataAsync();
             }
         }
 
@@ -235,25 +213,27 @@ namespace MyDICollection.ViewModels
             {
                 await Task.Delay(500);
 
-                // 1) Catálogo fresco del paquete
+                // 1. Cargar datos
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
+                IEnumerable<FiguraModel> query = catalogo ?? new List<FiguraModel>();
 
-                catalogo = (Settings.LanguageSettings == "es") ? catalogo.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()  : catalogo.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
-
+                // 2. Filtrar por menú ACTIVO
                 if (SelectedMenuFigures)
-                    catalogo = catalogo.Where(w=>w.Tipo == AppResource.Figure).ToList();
+                    query = query.Where(w => w.Tipo == "Figura");
+                else if (SelectedMenuDiscs)
+                    query = query.Where(w => w.Tipo == "Disco de Poder");
 
-                if (SelectedMenuDiscs)
-                    catalogo = catalogo.Where(w => w.Tipo == AppResource.PowerDisc).ToList();
-
-                foreach (var figura in catalogo)
+                // 3. Traducir SOLO los que quedaron en el filtro
+                foreach (var figura in query)
                 {
                     figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
-
-                    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate(); ;
+                    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
                 }
 
-                _allFigures = catalogo ?? new List<FiguraModel>();
+                // 4. Ordenar al final
+                _allFigures = (Settings.LanguageSettings == "es")
+                    ? query.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()
+                    : query.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
 
                 // 2) Datos del usuario desde AppData
                 _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);
@@ -285,30 +265,26 @@ namespace MyDICollection.ViewModels
 
         private void CargarOpcionesDeFiltro()
         {
+            // Opciones de Tipo
             OpcionesTipo.Clear();
             OpcionesTipo.Add(AppResource.All);
-            foreach (var tipo in _allFigures.Select(f => f.Tipo).Distinct().OrderBy(t => t))
-            {
-                string tipoTraducido = tipo.ToCurrentLanguageTraslate();
+            var tiposUnicos = _allFigures.Select(f => f.Tipo).Distinct().OrderBy(t => t);
+            foreach (var tipo in tiposUnicos)
+                OpcionesTipo.Add(tipo);
 
-                if (!OpcionesTipo.Contains(tipoTraducido))
-                    OpcionesTipo.Add(tipoTraducido);
-            }
-
+            // Opciones de Versión
             OpcionesVersion.Clear();
             OpcionesVersion.Add(AppResource.All);
-            foreach (var version in _allFigures.Select(f => f.Version).Distinct().OrderBy(v => v))
+            var versionesUnicas = _allFigures.Select(f => f.Version).Distinct().OrderBy(v => v);
+            foreach (var version in versionesUnicas)
                 OpcionesVersion.Add(version);
 
+            // Opciones de Franquicia
             OpcionesFranquicia.Clear();
             OpcionesFranquicia.Add(AppResource.All);
-            foreach (var franquicia in _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f))
-            {
-                string franquiciaTraducido = franquicia.ToCurrentLanguageTraslate();
-
-                if (!OpcionesFranquicia.Contains(franquiciaTraducido))
-                    OpcionesFranquicia.Add(franquiciaTraducido);
-            }
+            var franquiciasUnicas = _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f);
+            foreach (var franquicia in franquiciasUnicas)
+                OpcionesFranquicia.Add(franquicia);
         }
 
         private void AplicarFiltros()
