@@ -47,7 +47,7 @@
     <Grid RowDefinitions="Auto,Auto,*,Auto">
 
         <!-- Sección de filtros -->
-        <Border 
+        <!--<Border 
             Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,0'}"
             Style="{StaticResource FilterBorder}">
 
@@ -98,64 +98,55 @@
 
                 </VerticalStackLayout>
             </toolkit:Expander>
-        </Border>
+        </Border>-->
 
-        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="15" Margin="{responsive:ResponsiveThickness BaseValue='15,10,15,10'}">
+        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="15" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}">
 
             <!-- ETIQUETA 1: INVENTARIO FÍSICO (Incluye repetidas) -->
             <Border Grid.Column="0" 
-            StrokeShape="RoundRectangle 8" 
-            BackgroundColor="#F0F0F0" 
-            StrokeThickness="0" 
-            Padding="10,5">
-                
+                Style="{StaticResource BorderInfo}">
+
                 <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Icono de cajas o un signo de + (puedes usar FontAwesome aquí también) -->
+                    <!-- Icono -->
                     <Label Text="{x:Static fonts:FontAwesomeIcons.Boxes}" 
-                       FontFamily="FASolid"
-                       FontSize="14" 
-                       TextColor="DimGray"
-                       VerticalOptions="Center" />
+                        Style="{StaticResource BorderInfoIcon}"
+                        VerticalOptions="Center" />
 
                     <Label Text="Piezas:" 
-                   FontSize="12" 
-                   TextColor="DimGray" 
-                   VerticalOptions="Center" />
+                        Style="{StaticResource BorderInfoLabel}"
+                        VerticalOptions="Center" />
 
-                    <Label Text="3" 
-                   FontSize="13" 
-                   FontAttributes="Bold" 
-                   TextColor="Black" 
-                   VerticalOptions="Center" />
+                    <Label Text="{Binding TotalPiezasFisicas}" 
+                        Style="{StaticResource BorderInfoLabel}"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center" />
+                    
                 </HorizontalStackLayout>
+                
             </Border>
 
             <!-- ETIQUETA 2: PROGRESO DE COLECCIÓN (Únicas) -->
-            <!-- Le ponemos un fondito rojo muy claro para que combine con el tema de Disney Infinity -->
             <Border Grid.Column="1" 
-            StrokeShape="RoundRectangle 8" 
-            BackgroundColor="#FBE9E7" 
-            StrokeThickness="0" 
-            Padding="10,5">
+                Style="{StaticResource BorderInfo}">
+
                 <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
-                    <!-- Tu icono de figura -->
+                    
+                    <!-- Icono -->
                     <Label Text="{x:Static fonts:FontAwesomeIcons.Figura2}" 
-                   Style="{StaticResource MenuIconLabel}"
-                   FontSize="14" 
-                   TextColor="#D32F2F" 
-                   VerticalOptions="Center"/>
+                            Style="{StaticResource BorderInfoIcon2}"
+                            VerticalOptions="Center"/>
 
                     <Label Text="Únicas:" 
-                   FontSize="12" 
-                   TextColor="#D32F2F" 
-                   VerticalOptions="Center" />
+                        Style="{StaticResource BorderInfoLabel2}"
+                        VerticalOptions="Center" />
 
-                    <Label Text="2/100" 
-                   FontSize="13" 
-                   FontAttributes="Bold" 
-                   TextColor="#D32F2F" 
-                   VerticalOptions="Center" />
+                    <Label Text="{Binding TextoProgresoColeccion}" 
+                        Style="{StaticResource BorderInfoLabel2}"
+                        FontAttributes="Bold" 
+                        VerticalOptions="Center" />
+                    
                 </HorizontalStackLayout>
+                
             </Border>
 
         </Grid>
@@ -252,10 +243,10 @@
                                              Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirWikiCommand}"
                                              CommandParameter="{Binding .}"/>
 
-                                        <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Sync}"
+                                        <!--<controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Sync}"
                                                Style="{StaticResource CardActionHexaButtonD}"
                                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirWikiCommand}"
-                                               CommandParameter="{Binding .}"/>
+                                               CommandParameter="{Binding .}"/>-->
 
                                     </HorizontalStackLayout>
 
