@@ -14,16 +14,12 @@
              CloseWhenBackgroundIsClicked="False">
 
 
-
+    <controls:SafeAreaView>
 
         <Border 
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Style="{StaticResource BorderPopup}">
-
-            <Border.Shadow>
-                <Shadow Brush="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray100Brush}}" Opacity="{AppThemeBinding Light=0.3, Dark=0.7}" Radius="15" Offset="0,5"/>
-            </Border.Shadow>
 
             <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=15}">
 
@@ -119,6 +115,7 @@
 
             </VerticalStackLayout>
         </Border>
-
+        
+    </controls:SafeAreaView>
 
 </mopups:PopupPage>
