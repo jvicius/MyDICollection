@@ -133,6 +133,19 @@ namespace MyDICollection.ViewModels
             {
                 await LoadDataAsync();
             }
+
+            if(value == "Settings")
+            {
+                var resultadoMenu = await _popupPageService.ShowPopupAsync<SettingsMenuPopup, SettingsMenuViewModel, string>();
+
+                if (!string.IsNullOrEmpty(resultadoMenu))
+                {
+                    // resultadoMenu va a traer "Lenguaje", "Contribuir" o "AcercaDe"
+                    Console.WriteLine($"El usuario eligió: {resultadoMenu}");
+                }
+
+                SelectedMenuSettings = false;
+            }
         }
 
         private void SetActiveMenu(string menuName)
