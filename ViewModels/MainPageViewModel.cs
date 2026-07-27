@@ -71,6 +71,9 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private string _textoProgresoColeccion;
 
+        [ObservableProperty]
+        private double _porcentajeColeccion;
+
         // Constructor súper limpio (Ya no hay "new Command(...)")
         public MainPageViewModel(IJsonDataService jsonDataService)
         {
@@ -308,16 +311,19 @@ namespace MyDICollection.ViewModels
             {
                 TotalPiezasFisicas = 0;
                 TextoProgresoColeccion = "0/0";
+                PorcentajeColeccion = 0; // Se resetea si no hay nada
                 return;
             }
 
-            // Usamos la lista que ya viene con los filtros de Marvel, Disney, etc.
             TotalPiezasFisicas = listaFiltrada.Sum(f => f.Cantidad);
 
             var unicas = listaFiltrada.Count(f => f.Obtenido);
             var total = listaFiltrada.Count();
 
             TextoProgresoColeccion = $"{unicas}/{total}";
+
+            // 💥 Calculamos el porcentaje (de 0.0 a 1.0)
+            PorcentajeColeccion = total == 0 ? 0 : (double)unicas / total;
         }
 
     }

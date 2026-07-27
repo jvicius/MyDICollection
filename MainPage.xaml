@@ -129,24 +129,31 @@
             <Border Grid.Column="1" 
                 Style="{StaticResource BorderInfo}">
 
-                <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
-                    
-                    <!-- Icono -->
-                    <Label Text="{x:Static fonts:FontAwesomeIcons.Figura2}" 
+                <VerticalStackLayout Spacing="4" VerticalOptions="Center" HorizontalOptions="Fill">
+
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+
+                        <!-- Icono -->
+                        <Label Text="{x:Static fonts:FontAwesomeIcons.Figura2}" 
                             Style="{StaticResource BorderInfoIcon2}"
                             VerticalOptions="Center"/>
 
-                    <Label Text="Únicas:" 
+                        <Label Text="Únicas:" 
                         Style="{StaticResource BorderInfoLabel2}"
                         VerticalOptions="Center" />
 
-                    <Label Text="{Binding TextoProgresoColeccion}" 
+                        <Label Text="{Binding TextoProgresoColeccion}" 
                         Style="{StaticResource BorderInfoLabel2}"
                         FontAttributes="Bold" 
                         VerticalOptions="Center" />
-                    
-                </HorizontalStackLayout>
-                
+
+                    </HorizontalStackLayout>
+
+                    <ProgressBar Progress="{Binding PorcentajeColeccion}" 
+                         Style="{StaticResource BorderInfoProgrees}"/>
+
+                </VerticalStackLayout>
+
             </Border>
 
         </Grid>

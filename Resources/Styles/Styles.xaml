@@ -730,4 +730,12 @@
         <Setter Property="FontSize" Value="{StaticResource ObtenidoLabelSize}" />
     </Style>
 
+    <Style x:Key="BorderInfoProgrees" TargetType="ProgressBar">
+        <Setter Property="ProgressColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}" />
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=4}"/>
+        <Setter Property="HorizontalOptions" Value="Fill"/>
+        <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue='10,0'}"/>
+    </Style>
+
 </ResourceDictionary>
