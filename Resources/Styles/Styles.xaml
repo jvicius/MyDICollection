@@ -620,7 +620,6 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="{StaticResource FigureTitleSize}" />
         <Setter Property="FontAttributes" Value="Bold"/>
-        <Setter Property="LineBreakMode" Value="TailTruncation"/>
     </Style>
 
     <Style x:Key="FiguraVersionLabel" TargetType="Label">

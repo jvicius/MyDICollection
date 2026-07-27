@@ -3130,5 +3130,17 @@
     "obtenido": false,
     "cantidad": 0,
     "modelo_fabrica": "INF-1000036"
+  },
+  {
+    "id": "DI-300-135",
+    "nombre": "Mickey Mouse Sorcerer D23",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Disney Clasicos",
+    "imagen_url": "d23.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000021"
   }
 ]
