@@ -348,7 +348,7 @@
             <!-- TU NUEVO BOTÓN CENTRAL -->
             <controls:CenterMenuButton Grid.Column="2"
                            ImageSource="none.png"
-                           Command="{Binding MenuCommand}"
+                           Command="{Binding AbrirMenuAsync}"
                            CommandParameter="Home" />
 
 
@@ -357,7 +357,7 @@
                 LabelText="{helpers:Translate MyFigures}"
                 Style="{StaticResource MenuTabItemStyle}"
                 IsSelected="{Binding SelectedMenuFigures}" 
-                Command="{Binding MenuCommand}"
+                Command="{Binding AbrirMenuCommand}"
                 CommandParameter="MyFigures" />
 
             <controls:MenuTabItem Grid.Column="1"
@@ -365,7 +365,7 @@
                 LabelText="{helpers:Translate MyDiscs}"
                 Style="{StaticResource MenuTabItemStyle}"
                 IsSelected="{Binding SelectedMenuDiscs}" 
-                Command="{Binding MenuCommand}"
+                Command="{Binding AbrirMenuCommand}"
                 CommandParameter="MyDiscs" />
 
 
@@ -374,7 +374,7 @@
                LabelText="{helpers:Translate Achievements}"
                Style="{StaticResource MenuTabItemStyle}"
                IsSelected="{Binding SelectedMenuArchi}" 
-               Command="{Binding MenuCommand}"
+               Command="{Binding AbrirMenuCommand}"
                CommandParameter="Achievements" />
 
 
@@ -383,7 +383,7 @@
                 LabelText="{helpers:Translate Settings}"
                 Style="{StaticResource MenuTabItemStyle}"
                 IsSelected="{Binding SelectedMenuSettings}" 
-                Command="{Binding MenuCommand}"
+                Command="{Binding AbrirMenuCommand}"
                 CommandParameter="Settings" />
 
         </Grid>

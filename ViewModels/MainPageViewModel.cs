@@ -4,167 +4,71 @@ using MyDICollection.Models;
 using MyDICollection.Resources;
 using MyDICollection.Services;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace MyDICollection.ViewModels
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    // 1. Debe ser "partial" y heredar de ObservableObject
+    public partial class MainPageViewModel : ObservableObject
     {
-        #region consts
-
         private const string CatalogFileName = "dbmyinfinity.json";
         private const string UserDataFileName = "userdata.json";
-
-        #endregion
-
-        #region properties and variables
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         private readonly IJsonDataService _jsonDataService;
 
         private List<FiguraModel> _allFigures = new();
-        // Diccionario Id -> datos del usuario, se guarda tal cual en userdata.json
         private Dictionary<string, FiguraUserData> _userData = new();
+
         public ObservableCollection<string> OpcionesObtenido { get; } = new() { AppResource.All, AppResource.Owned, AppResource.Missing };
         public ObservableCollection<string> OpcionesTipo { get; } = new();
         public ObservableCollection<string> OpcionesVersion { get; } = new();
         public ObservableCollection<string> OpcionesFranquicia { get; } = new();
 
+        // 2. MAGIA: [ObservableProperty] genera los Getters y Setters públicos por ti.
+        // Y para ejecutar algo cuando cambia (tu AplicarFiltros), usamos este método partial que se auto-engancha.
+
+        [ObservableProperty]
         private string _filtroObtenido = AppResource.All;
-        public string FiltroObtenido
-        {
-            get => _filtroObtenido;
-            set { if (_filtroObtenido != value) { _filtroObtenido = value; OnPropertyChanged(); AplicarFiltros(); } }
-        }
+        partial void OnFiltroObtenidoChanged(string value) => AplicarFiltros();
 
+        [ObservableProperty]
         private string _filtroTipo = AppResource.All;
-        public string FiltroTipo
-        {
-            get => _filtroTipo;
-            set { if (_filtroTipo != value) { _filtroTipo = value; OnPropertyChanged(); AplicarFiltros(); } }
-        }
+        partial void OnFiltroTipoChanged(string value) => AplicarFiltros();
 
+        [ObservableProperty]
         private string _filtroVersion = AppResource.All;
-        public string FiltroVersion
-        {
-            get => _filtroVersion;
-            set { if (_filtroVersion != value) { _filtroVersion = value; OnPropertyChanged(); AplicarFiltros(); } }
-        }
+        partial void OnFiltroVersionChanged(string value) => AplicarFiltros();
 
+        [ObservableProperty]
         private string _filtroFranquicia = AppResource.All;
-        public string FiltroFranquicia
-        {
-            get => _filtroFranquicia;
-            set { if (_filtroFranquicia != value) { _filtroFranquicia = value; OnPropertyChanged(); AplicarFiltros(); } }
-        }
+        partial void OnFiltroFranquiciaChanged(string value) => AplicarFiltros();
+
+        [ObservableProperty]
         private ObservableCollection<FiguraModel> _figures = new();
-        public ObservableCollection<FiguraModel> Figures
-        {
-            get => _figures;
-            set { if (_figures != value) { _figures = value; OnPropertyChanged(); } }
-        }
 
+        [ObservableProperty]
         private bool _isBusy;
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set { if (_isBusy != value) { _isBusy = value; OnPropertyChanged(); } }
-        }
 
+        [ObservableProperty]
         private bool _selectedMenuFigures;
-        public bool SelectedMenuFigures
-        {
-            get => _selectedMenuFigures;
-            set
-            {
-                if (_selectedMenuFigures != value)
-                {
-                    _selectedMenuFigures = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
+
+        [ObservableProperty]
         private bool _selectedMenuDiscs;
-        public bool SelectedMenuDiscs
-        {
-            get => _selectedMenuDiscs;
-            set
-            {
-                if (_selectedMenuDiscs != value)
-                {
-                    _selectedMenuDiscs = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
+
+        [ObservableProperty]
         private bool _selectedMenuArchi;
-        public bool SelectedMenuArchi
-        {
-            get => _selectedMenuArchi;
-            set
-            {
-                if (_selectedMenuArchi != value)
-                {
-                    _selectedMenuArchi = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
 
+        [ObservableProperty]
         private bool _selectedMenuSettings;
-        public bool SelectedMenuSettings
-        {
-            get => _selectedMenuSettings;
-            set
-            {
-                if (_selectedMenuSettings != value)
-                {
-                    _selectedMenuSettings = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
+
+        [ObservableProperty]
         private bool _selectedMenuHome;
-        public bool SelectedMenuHome
-        {
-            get => _selectedMenuHome;
-            set
-            {
-                if (_selectedMenuHome != value)
-                {
-                    _selectedMenuHome = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
 
-        #endregion
-
-        #region commands
-        public ICommand IncrementarCommand { get; }
-        public ICommand DecrementarCommand { get; }
-        public ICommand AbrirWikiCommand { get; }
-        public ICommand MenuCommand { get; }
-
-        #endregion
-
-        #region constructor
+        // Constructor súper limpio (Ya no hay "new Command(...)")
         public MainPageViewModel(IJsonDataService jsonDataService)
         {
             _jsonDataService = jsonDataService;
-
-            IncrementarCommand = new Command<FiguraModel>(async (figura) => await CambiarCantidadAsync(figura, 1));
-            DecrementarCommand = new Command<FiguraModel>(async (figura) => await CambiarCantidadAsync(figura, -1));
-            AbrirWikiCommand = new Command<FiguraModel>(async (figura) => await AbrirWikiAsync(figura));
-            MenuCommand = new Command<string>(async (value) => await AbrirMenuAsync(value));
-
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
@@ -172,14 +76,9 @@ namespace MyDICollection.ViewModels
                 await LoadDataAsync();
             });
         }
-        private void SetActiveMenu(string menuName)
-        {
-            SelectedMenuFigures = menuName == "MyFigures";
-            SelectedMenuDiscs = menuName == "MyDiscs";
-            SelectedMenuArchi = menuName == "Achievements";
-            SelectedMenuSettings = menuName == "Settings";
-            SelectedMenuHome = menuName == "Home";
-        }
+
+        // 3. MAGIA: [RelayCommand] expone automáticamente un "MenuCommand" en tu UI.
+        [RelayCommand]
         private async Task AbrirMenuAsync(string value)
         {
             if ((value == "MyFigures" && SelectedMenuFigures) ||
@@ -203,8 +102,42 @@ namespace MyDICollection.ViewModels
             }
         }
 
-        #endregion
-        #region methods
+        private void SetActiveMenu(string menuName)
+        {
+            SelectedMenuFigures = menuName == "MyFigures";
+            SelectedMenuDiscs = menuName == "MyDiscs";
+            SelectedMenuArchi = menuName == "Achievements";
+            SelectedMenuSettings = menuName == "Settings";
+            SelectedMenuHome = menuName == "Home";
+        }
+
+        [RelayCommand]
+        private async Task IncrementarAsync(FiguraModel figura)
+        {
+            await CambiarCantidadAsync(figura, 1);
+        }
+
+        [RelayCommand]
+        private async Task DecrementarAsync(FiguraModel figura)
+        {
+            await CambiarCantidadAsync(figura, -1);
+        }
+
+        [RelayCommand]
+        private async Task AbrirWikiAsync(FiguraModel figura)
+        {
+            if (figura is null || string.IsNullOrWhiteSpace(figura.WikiUrl)) return;
+
+            try
+            {
+                await Launcher.Default.OpenAsync(new Uri(figura.WikiUrl));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al abrir la wiki: {ex.Message}");
+            }
+        }
+
         private async Task LoadDataAsync()
         {
             if (IsBusy) return;
@@ -213,15 +146,15 @@ namespace MyDICollection.ViewModels
             {
                 await Task.Delay(500);
 
-                // 1. Cargar datos
+                // 1. Cargar catálogo base
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
                 IEnumerable<FiguraModel> query = catalogo ?? new List<FiguraModel>();
 
                 // 2. Filtrar por menú ACTIVO
                 if (SelectedMenuFigures)
-                    query = query.Where(w => w.Tipo == "Figura");
+                    query = query.Where(w => w.Tipo == AppResource.Figure);
                 else if (SelectedMenuDiscs)
-                    query = query.Where(w => w.Tipo == "Disco de Poder");
+                    query = query.Where(w => w.Tipo == AppResource.PowerDisc);
 
                 // 3. Traducir SOLO los que quedaron en el filtro
                 foreach (var figura in query)
@@ -235,10 +168,9 @@ namespace MyDICollection.ViewModels
                     ? query.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()
                     : query.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
 
-                // 2) Datos del usuario desde AppData
+                // 5. Cargar progreso del usuario
                 _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);
 
-                // 3) Merge: hidratamos cada figura del catálogo con su progreso guardado
                 foreach (var figura in _allFigures)
                 {
                     if (_userData.TryGetValue(figura.Id, out var datosUsuario))
@@ -247,7 +179,6 @@ namespace MyDICollection.ViewModels
                         figura.Cantidad = datosUsuario.Cantidad;
                         figura.NfcCodes = new ObservableCollection<string>(datosUsuario.NfcCodes ?? new List<string>());
                     }
-                    // si no existe entrada -> se queda en default (false, 0, lista vacía)
                 }
 
                 CargarOpcionesDeFiltro();
@@ -265,25 +196,19 @@ namespace MyDICollection.ViewModels
 
         private void CargarOpcionesDeFiltro()
         {
-            // Opciones de Tipo
             OpcionesTipo.Clear();
             OpcionesTipo.Add(AppResource.All);
-            var tiposUnicos = _allFigures.Select(f => f.Tipo).Distinct().OrderBy(t => t);
-            foreach (var tipo in tiposUnicos)
+            foreach (var tipo in _allFigures.Select(f => f.Tipo).Distinct().OrderBy(t => t))
                 OpcionesTipo.Add(tipo);
 
-            // Opciones de Versión
             OpcionesVersion.Clear();
             OpcionesVersion.Add(AppResource.All);
-            var versionesUnicas = _allFigures.Select(f => f.Version).Distinct().OrderBy(v => v);
-            foreach (var version in versionesUnicas)
+            foreach (var version in _allFigures.Select(f => f.Version).Distinct().OrderBy(v => v))
                 OpcionesVersion.Add(version);
 
-            // Opciones de Franquicia
             OpcionesFranquicia.Clear();
             OpcionesFranquicia.Add(AppResource.All);
-            var franquiciasUnicas = _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f);
-            foreach (var franquicia in franquiciasUnicas)
+            foreach (var franquicia in _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f))
                 OpcionesFranquicia.Add(franquicia);
         }
 
@@ -312,30 +237,25 @@ namespace MyDICollection.ViewModels
         {
             if (figura is null) return;
 
-            var refrescar = false;
-
             var figuraEnLista = _allFigures.FirstOrDefault(f => f.Id == figura.Id);
             if (figuraEnLista is null) return;
 
             int nuevaCantidad = figuraEnLista.Cantidad + delta;
             if (nuevaCantidad < 0) nuevaCantidad = 0;
 
-            if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0)
-                refrescar = true;
-
-            if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0)
-                refrescar = true;
+            var refrescar = false;
+            if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
+            if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
 
             figuraEnLista.Cantidad = nuevaCantidad;
             figuraEnLista.Obtenido = nuevaCantidad > 0;
 
             await GuardarProgresoAsync(figuraEnLista);
 
-            if(refrescar)
+            if (refrescar)
                 AplicarFiltros();
         }
 
-        // Guarda SOLO el diccionario de progreso (userdata.json), nunca el catálogo
         private async Task GuardarProgresoAsync(FiguraModel figura)
         {
             _userData[figura.Id] = new FiguraUserData
@@ -354,19 +274,5 @@ namespace MyDICollection.ViewModels
                 System.Diagnostics.Debug.WriteLine($"Error al guardar progreso: {ex.Message}");
             }
         }
-        private async Task AbrirWikiAsync(FiguraModel figura)
-        {
-            if (figura is null || string.IsNullOrWhiteSpace(figura.WikiUrl)) return;
-
-            try
-            {
-                await Launcher.Default.OpenAsync(new Uri(figura.WikiUrl));
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Error al abrir la wiki: {ex.Message}");
-            }
-        }
     }
-    #endregion
 }
