@@ -91,6 +91,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\CenterMenuButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\HexagonButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

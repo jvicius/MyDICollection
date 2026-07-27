@@ -337,33 +337,19 @@
             <!-- Sube un poquito más allá del fondo -->
 
             <!-- BOTÓN CENTRAL -->
+            
+            <!-- EFECTO CUTOUT (El fondo blanco se queda igual) -->
             <Border Grid.Column="2" 
-                Style="{StaticResource MenuCenterButton}"
-                Padding="0" 
+                Style="{StaticResource MenuCenterBorder}"
+                Padding="0"
                 VerticalOptions="Start"
-                HorizontalOptions="Center"
-                >
+                HorizontalOptions="Center" />
 
-                <Border.GestureRecognizers>
-                    <!-- Si tu comando pide parámetro, agrégale el CommandParameter aquí también -->
-                    <TapGestureRecognizer Command="{Binding MenuCommand}" CommandParameter="Home" />
-                </Border.GestureRecognizers>
-
-                <!-- Sombra manual porque ya no existe el HasShadow en Border -->
-                <Border.Shadow>
-                    <Shadow Brush="Black" Opacity="0.3" Radius="5" Offset="0,3" />
-                </Border.Shadow>
-
-                <!-- Centrado dentro del círculo blanco -->
-                <Image 
-                    Margin="{responsive:ResponsiveThickness BaseValue='0, 5, 0, 0'}"
-                    Source="none.png" 
-                    VerticalOptions="Start"
-                    HorizontalOptions="Center"
-                    HeightRequest="{responsive:ResponsiveSize BaseValue=50}"
-                    WidthRequest="{responsive:ResponsiveSize BaseValue=50}"/>
-
-            </Border>
+            <!-- TU NUEVO BOTÓN CENTRAL -->
+            <controls:CenterMenuButton Grid.Column="2"
+                           ImageSource="none.png"
+                           Command="{Binding MenuCommand}"
+                           CommandParameter="Home" />
 
 
             <controls:MenuTabItem Grid.Column="0"

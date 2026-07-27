@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDICollection.Controls.CenterMenuButton"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             x:Name="thisControl">
+
+    <!-- Reutilizamos tu Border tal cual lo tenías -->
+    <Border Style="{StaticResource MenuCenterButton}"
+            Padding="0" 
+            VerticalOptions="Start"
+            HorizontalOptions="Center">
+
+        <!-- Llamamos al evento en el Code-Behind para la animación -->
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnCenterButtonTapped" />
+        </Border.GestureRecognizers>
+
+        <!-- Sombra manual -->
+        <Border.Shadow>
+            <Shadow Brush="Black" Opacity="0.3" Radius="5" Offset="0,3" />
+        </Border.Shadow>
+
+        <!-- Bindeamos la imagen a la propiedad que vamos a crear -->
+        <Image Margin="{responsive:ResponsiveThickness BaseValue='0, 5, 0, 0'}"
+               Source="{Binding ImageSource, Source={x:Reference thisControl}}" 
+               VerticalOptions="Start"
+               HorizontalOptions="Center"
+               HeightRequest="{responsive:ResponsiveSize BaseValue=50}"
+               WidthRequest="{responsive:ResponsiveSize BaseValue=50}"/>
+    </Border>
+
+</ContentView>

@@ -182,7 +182,6 @@ namespace MyDICollection.ViewModels
                     if (SelectedMenuFigures)
                         return;
                     SelectedMenuFigures = true;
-                    //SelectedMenuFigures = false;
                     SelectedMenuDiscs = false;
                     SelectedMenuHome = false;
                     SelectedMenuArchi = false;
@@ -194,7 +193,6 @@ namespace MyDICollection.ViewModels
                         return;
                     SelectedMenuDiscs = true;
                     SelectedMenuFigures = false;
-                    //SelectedMenuDiscs = false;
                     SelectedMenuHome = false;
                     SelectedMenuArchi = false;
                     SelectedMenuSettings = false;
@@ -208,7 +206,6 @@ namespace MyDICollection.ViewModels
                     SelectedMenuFigures = false;
                     SelectedMenuDiscs = false;
                     SelectedMenuHome = false;
-                    //SelectedMenuArchi = false;
                     SelectedMenuSettings = false;
                     break;
                 case "Settings":
@@ -219,17 +216,11 @@ namespace MyDICollection.ViewModels
                     SelectedMenuDiscs = false;
                     SelectedMenuHome = false;
                     SelectedMenuArchi = false;
-                    //SelectedMenuSettings = false;
                     break;
                 case "Home":
-                    if (SelectedMenuHome)
-                        return;
                     SelectedMenuHome = true;
-                    SelectedMenuFigures = false;
-                    SelectedMenuDiscs = false;
-                    //SelectedMenuHome = false;
-                    SelectedMenuArchi = false;
-                    SelectedMenuSettings = false;               
+                    await Task.Delay(500);
+                    SelectedMenuHome = false;
                     break;
             }
         }
