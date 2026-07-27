@@ -34,6 +34,7 @@ namespace MyDICollection
 #endif
             builder.Services.AddSingleton<IPopupPageService, PopupPageService>();
             builder.Services.AddSingleton<IJsonDataService, JsonDataService>();
+            builder.Services.AddSingleton<StatusBarService>();
 
             builder.Services.AddTransient<FiguraInfoPopup>();
             builder.Services.AddTransient<FiguraInfoViewModel>();

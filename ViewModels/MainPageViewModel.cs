@@ -15,11 +15,15 @@ namespace MyDICollection.ViewModels
     // 1. Debe ser "partial" y heredar de ObservableObject
     public partial class MainPageViewModel : ObservableObject
     {
+        public Color statusBarColor = Color.FromArgb("#EB1937");
+        public Color navigationBarColor = Color.FromArgb("#EB1937");
+
         private const string CatalogFileName = "dbmyinfinity.json";
         private const string UserDataFileName = "userdata.json";
 
         private readonly IJsonDataService _jsonDataService;
         private readonly IPopupPageService _popupPageService;
+        protected StatusBarService StatusBarService { get; set; }
 
         private List<FiguraModel> _allFigures = new();
         private Dictionary<string, FiguraUserData> _userData = new();
@@ -81,13 +85,15 @@ namespace MyDICollection.ViewModels
         private string _iconInfo = FontAwesomeIcons.Figura2;
 
         // Constructor súper limpio (Ya no hay "new Command(...)")
-        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService)
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService)
         {
             _jsonDataService = jsonDataService;
             _popupPageService = popupPageService;
+            StatusBarService = statusBarService;
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
+                SetStatusBarColors();
                 SelectedMenuFigures = true;
                 await LoadDataAsync();
             });
@@ -355,6 +361,19 @@ namespace MyDICollection.ViewModels
 
             // 💥 Calculamos el porcentaje (de 0.0 a 1.0)
             PorcentajeColeccion = total == 0 ? 0 : (double)unicas / total;
+        }
+
+        public void SetStatusBarColors()
+        {
+#if ANDROID
+            StatusBarService.SetSystemBars(
+            lightStatusBarColor: statusBarColor,
+            darkStatusBarColor: statusBarColor,
+            lightNavigationBarColor: navigationBarColor,
+            darkNavigationBarColor: navigationBarColor,
+            animate: false
+        );
+#endif
         }
 
     }
