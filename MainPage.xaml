@@ -208,6 +208,7 @@
                                            Aspect="AspectFit"
                                            HeightRequest="{responsive:ResponsiveSize BaseValue=90}"
                                            WidthRequest="{responsive:ResponsiveSize BaseValue=90}"/>
+
                                 </Border>
 
                                 <VerticalStackLayout 

@@ -65,6 +65,12 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private bool _selectedMenuHome;
 
+        [ObservableProperty]
+        private int _totalPiezasFisicas;
+
+        [ObservableProperty]
+        private string _textoProgresoColeccion;
+
         // Constructor súper limpio (Ya no hay "new Command(...)")
         public MainPageViewModel(IJsonDataService jsonDataService)
         {
@@ -214,23 +220,22 @@ namespace MyDICollection.ViewModels
 
         private void AplicarFiltros()
         {
-            IEnumerable<FiguraModel> query = _allFigures;
+            // 1. Obtenemos la lista filtrada por Universo (Marvel, Disney, etc.)
+            var queryBase = ObtenerListaBaseFiltrada();
+
+            // 2. 💥 Actualizamos los números con esa lista base
+            ActualizarEstadisticas(queryBase);
+
+            // 3. Aplicamos el filtro visual de Obtenidas/Faltantes
+            IEnumerable<FiguraModel> queryVisual = queryBase;
 
             if (FiltroObtenido == AppResource.Owned)
-                query = query.Where(f => f.Obtenido);
+                queryVisual = queryVisual.Where(f => f.Obtenido);
             else if (FiltroObtenido == AppResource.Missing)
-                query = query.Where(f => !f.Obtenido);
+                queryVisual = queryVisual.Where(f => !f.Obtenido);
 
-            if (!string.IsNullOrEmpty(FiltroTipo) && FiltroTipo != AppResource.All)
-                query = query.Where(f => f.Tipo == FiltroTipo);
-
-            if (!string.IsNullOrEmpty(FiltroVersion) && FiltroVersion != AppResource.All)
-                query = query.Where(f => f.Version == FiltroVersion);
-
-            if (!string.IsNullOrEmpty(FiltroFranquicia) && FiltroFranquicia != AppResource.All)
-                query = query.Where(f => f.Franquicia == FiltroFranquicia);
-
-            Figures = new ObservableCollection<FiguraModel>(query);
+            // 4. Mandamos a repintar la pantalla
+            Figures = new ObservableCollection<FiguraModel>(queryVisual);
         }
 
         private async Task CambiarCantidadAsync(FiguraModel figura, int delta)
@@ -253,7 +258,14 @@ namespace MyDICollection.ViewModels
             await GuardarProgresoAsync(figuraEnLista);
 
             if (refrescar)
+            {
                 AplicarFiltros();
+            }
+            else
+            {
+                // Si no recargamos la lista visual para ahorrar memoria, de todos modos actualizamos los numeritos de arriba
+                ActualizarEstadisticas(ObtenerListaBaseFiltrada());
+            }
         }
 
         private async Task GuardarProgresoAsync(FiguraModel figura)
@@ -274,5 +286,39 @@ namespace MyDICollection.ViewModels
                 System.Diagnostics.Debug.WriteLine($"Error al guardar progreso: {ex.Message}");
             }
         }
+
+        private IEnumerable<FiguraModel> ObtenerListaBaseFiltrada()
+        {
+            IEnumerable<FiguraModel> query = _allFigures;
+
+            if (!string.IsNullOrEmpty(FiltroTipo) && FiltroTipo != AppResource.All)
+                query = query.Where(f => f.Tipo == FiltroTipo);
+
+            if (!string.IsNullOrEmpty(FiltroVersion) && FiltroVersion != AppResource.All)
+                query = query.Where(f => f.Version == FiltroVersion);
+
+            if (!string.IsNullOrEmpty(FiltroFranquicia) && FiltroFranquicia != AppResource.All)
+                query = query.Where(f => f.Franquicia == FiltroFranquicia);
+
+            return query;
+        }
+        private void ActualizarEstadisticas(IEnumerable<FiguraModel> listaFiltrada)
+        {
+            if (listaFiltrada == null || !listaFiltrada.Any())
+            {
+                TotalPiezasFisicas = 0;
+                TextoProgresoColeccion = "0/0";
+                return;
+            }
+
+            // Usamos la lista que ya viene con los filtros de Marvel, Disney, etc.
+            TotalPiezasFisicas = listaFiltrada.Sum(f => f.Cantidad);
+
+            var unicas = listaFiltrada.Count(f => f.Obtenido);
+            var total = listaFiltrada.Count();
+
+            TextoProgresoColeccion = $"{unicas}/{total}";
+        }
+
     }
 }
