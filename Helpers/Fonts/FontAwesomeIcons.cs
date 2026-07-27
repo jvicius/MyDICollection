@@ -57,5 +57,8 @@
         public const string Box = "\uf466";    // Una caja sola (box)
         public const string Boxes = "\uf468";  // Varias cajas apiladas (boxes-stacked) - ¡Esta queda de lujo para representar stock/inventario!
 
+        public const string Close = "\uf00d";
+        public const string Close2 = "\uf057";
+
     }
 }

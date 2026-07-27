@@ -124,6 +124,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Model Number: .
+        /// </summary>
+        internal static string ModelNumber {
+            get {
+                return ResourceManager.GetString("ModelNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Power Disc.
         /// </summary>
         internal static string MyDiscs {
@@ -147,6 +156,15 @@ namespace MyDICollection.Resources {
         internal static string Owned {
             get {
                 return ResourceManager.GetString("Owned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pieces:.
+        /// </summary>
+        internal static string PiecesLabel {
+            get {
+                return ResourceManager.GetString("PiecesLabel", resourceCulture);
             }
         }
         
@@ -192,6 +210,24 @@ namespace MyDICollection.Resources {
         internal static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unique:.
+        /// </summary>
+        internal static string UniqueLabel {
+            get {
+                return ResourceManager.GetString("UniqueLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Universe: .
+        /// </summary>
+        internal static string Universe {
+            get {
+                return ResourceManager.GetString("Universe", resourceCulture);
             }
         }
         

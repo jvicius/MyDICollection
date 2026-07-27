@@ -503,6 +503,16 @@
         <Setter Property="FontFamily" Value="FASolid"/>
     </Style>
 
+    <Style x:Key="HexaButton" TargetType="controls:HexagonButton">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource FilterStrokeColor}}" />
+        <Setter Property="HexBackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource Black}}" />
+        <Setter Property="HexBorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource FilterStrokeColor}}" />
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=50}"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=50}"/>
+        <Setter Property="FontSize" Value="{StaticResource HexaButtonFontSize}"/>
+        <Setter Property="FontFamily" Value="FASolid"/>
+    </Style>
+
     <Style x:Key="CardActionButtonA" TargetType="Button">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource FilterStrokeColor}, Dark={StaticResource White}}" />
@@ -634,6 +644,12 @@
 
     <Style x:Key="FiguraFranquiciaLabel" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
+        <Setter Property="FontAttributes" Value="Italic"/>
+    </Style>
+
+    <Style x:Key="FiguraModelNumberSpan" TargetType="Span">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
         <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
         <Setter Property="FontAttributes" Value="Italic"/>
     </Style>

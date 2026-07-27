@@ -1,11 +1,14 @@
-﻿using MyDICollection.Helpers;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Mopups.Services;
+using MyDICollection.Helpers;
 using MyDICollection.Helpers.Extensions;
+using MyDICollection.Helpers.Fonts;
 using MyDICollection.Models;
+using MyDICollection.Popups;
 using MyDICollection.Resources;
 using MyDICollection.Services;
 using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 
 namespace MyDICollection.ViewModels
 {
@@ -16,6 +19,7 @@ namespace MyDICollection.ViewModels
         private const string UserDataFileName = "userdata.json";
 
         private readonly IJsonDataService _jsonDataService;
+        private readonly IPopupPageService _popupPageService;
 
         private List<FiguraModel> _allFigures = new();
         private Dictionary<string, FiguraUserData> _userData = new();
@@ -73,17 +77,21 @@ namespace MyDICollection.ViewModels
 
         [ObservableProperty]
         private double _porcentajeColeccion;
+        [ObservableProperty]
+        private string _iconInfo = FontAwesomeIcons.Figura2;
 
         // Constructor súper limpio (Ya no hay "new Command(...)")
-        public MainPageViewModel(IJsonDataService jsonDataService)
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService)
         {
             _jsonDataService = jsonDataService;
+            _popupPageService = popupPageService;
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
                 SelectedMenuFigures = true;
                 await LoadDataAsync();
             });
+            _popupPageService = popupPageService;
         }
 
         // 3. MAGIA: [RelayCommand] expone automáticamente un "MenuCommand" en tu UI.
@@ -103,6 +111,16 @@ namespace MyDICollection.ViewModels
                 await Task.Delay(500);
                 SelectedMenuHome = false;
                 return;
+            }
+
+            if (value == "MyFigures")
+            {
+                IconInfo = FontAwesomeIcons.Figura2;
+            }
+
+            if (value == "MyDiscs")
+            {
+                IconInfo = FontAwesomeIcons.PowerDisc3;
             }
 
             if (value == "MyFigures" || value == "MyDiscs")
@@ -145,6 +163,19 @@ namespace MyDICollection.ViewModels
             {
                 System.Diagnostics.Debug.WriteLine($"Error al abrir la wiki: {ex.Message}");
             }
+        }
+
+        [RelayCommand]
+        private async Task AbrirDetalleAsync(FiguraModel figura)
+        {
+            if (figura == null) return;
+
+            var navParams = new NavigationParameters
+                {
+                    { "FiguraActual", figura }
+                };
+
+            var resultado = await _popupPageService.ShowPopupAsync<FiguraInfoPopup, FiguraInfoViewModel, bool>(navParams);
         }
 
         private async Task LoadDataAsync()

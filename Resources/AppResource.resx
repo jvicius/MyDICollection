@@ -165,4 +165,16 @@
   <data name="PowerDisc" xml:space="preserve">
     <value>Power Disc</value>
   </data>
+  <data name="PiecesLabel" xml:space="preserve">
+    <value>Pieces:</value>
+  </data>
+  <data name="UniqueLabel" xml:space="preserve">
+    <value>Unique:</value>
+  </data>
+  <data name="Universe" xml:space="preserve">
+    <value>Universe: </value>
+  </data>
+  <data name="ModelNumber" xml:space="preserve">
+    <value>Model Number: </value>
+  </data>
 </root>

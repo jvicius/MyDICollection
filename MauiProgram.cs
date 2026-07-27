@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
 using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
 using MyDICollection.Helpers;
+using MyDICollection.Popups;
 using MyDICollection.Services;
 using MyDICollection.ViewModels;
 using System.Globalization;
@@ -19,6 +21,7 @@ namespace MyDICollection
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
                 .UseMauiCommunityToolkitCore()
+                .ConfigureMopups()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -29,8 +32,12 @@ namespace MyDICollection
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<IPopupPageService, PopupPageService>();
             builder.Services.AddSingleton<IJsonDataService, JsonDataService>();
+
+            builder.Services.AddTransient<FiguraInfoPopup>();
+            builder.Services.AddTransient<FiguraInfoViewModel>();
+
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();
 

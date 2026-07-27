@@ -100,7 +100,7 @@
             </toolkit:Expander>
         </Border>-->
 
-        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="15" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}">
+        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="15" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}" IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}">
 
             <!-- ETIQUETA 1: INVENTARIO FÍSICO (Incluye repetidas) -->
             <Border Grid.Column="0" 
@@ -112,7 +112,7 @@
                         Style="{StaticResource BorderInfoIcon}"
                         VerticalOptions="Center" />
 
-                    <Label Text="Piezas:" 
+                    <Label Text="{helpers:Translate PiecesLabel}" 
                         Style="{StaticResource BorderInfoLabel}"
                         VerticalOptions="Center" />
 
@@ -134,11 +134,11 @@
                     <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
 
                         <!-- Icono -->
-                        <Label Text="{x:Static fonts:FontAwesomeIcons.Figura2}" 
+                        <Label Text="{Binding IconInfo}" 
                             Style="{StaticResource BorderInfoIcon2}"
                             VerticalOptions="Center"/>
 
-                        <Label Text="Únicas:" 
+                        <Label Text="{helpers:Translate UniqueLabel}" 
                         Style="{StaticResource BorderInfoLabel2}"
                         VerticalOptions="Center" />
 
@@ -302,6 +302,13 @@
                                    VerticalTextAlignment="Center"/>
                             
                         </Border>
+
+                        <Grid.GestureRecognizers>
+                            
+                            <TapGestureRecognizer 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AbrirDetalleCommand}"
+                                    CommandParameter="{Binding .}"/>
+                        </Grid.GestureRecognizers>
                         
                     </Grid>
                     

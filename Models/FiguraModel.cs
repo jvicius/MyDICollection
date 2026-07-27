@@ -33,6 +33,8 @@ namespace MyDICollection.Models
 
         [JsonPropertyName("wiki_url")]
         public string WikiUrl { get; set; }
+        [JsonPropertyName("modelo_fabrica")]
+        public string Modelo { get; set; }
 
         // --- Estos 3 campos son "editables" por el usuario, pero YA NO se leen/escriben ---
         private bool _obtenido;
