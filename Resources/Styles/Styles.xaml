@@ -695,4 +695,9 @@
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
+    <Style x:Key="MenuTabItemStyle" TargetType="controls:MenuTabItem">
+        <Setter Property="SelectedColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray500}}" />
+    </Style>
+
 </ResourceDictionary>

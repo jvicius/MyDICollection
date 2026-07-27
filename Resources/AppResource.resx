@@ -128,7 +128,6 @@
   </data>
   <data name="Collect" xml:space="preserve">
     <value>Collect</value>
-    <comment>Obtenido</comment>
   </data>
   <data name="Filters" xml:space="preserve">
     <value>🔎 Filters</value>
@@ -159,5 +158,11 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
+  </data>
+  <data name="Figure" xml:space="preserve">
+    <value>Figure</value>
+  </data>
+  <data name="PowerDisc" xml:space="preserve">
+    <value>Power Disc</value>
   </data>
 </root>

@@ -159,4 +159,10 @@
   <data name="Search" xml:space="preserve">
     <value>Buscar</value>
   </data>
+  <data name="Figure" xml:space="preserve">
+    <value>Figura</value>
+  </data>
+  <data name="PowerDisc" xml:space="preserve">
+    <value>Disco de Poder</value>
+  </data>
 </root>

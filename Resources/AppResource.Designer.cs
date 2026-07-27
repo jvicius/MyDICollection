@@ -97,6 +97,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Figure.
+        /// </summary>
+        internal static string Figure {
+            get {
+                return ResourceManager.GetString("Figure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 🔎 Filters.
         /// </summary>
         internal static string Filters {
@@ -138,6 +147,15 @@ namespace MyDICollection.Resources {
         internal static string Owned {
             get {
                 return ResourceManager.GetString("Owned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Power Disc.
+        /// </summary>
+        internal static string PowerDisc {
+            get {
+                return ResourceManager.GetString("PowerDisc", resourceCulture);
             }
         }
         

@@ -346,7 +346,7 @@
 
                 <Border.GestureRecognizers>
                     <!-- Si tu comando pide parámetro, agrégale el CommandParameter aquí también -->
-                    <TapGestureRecognizer Command="{Binding MenuCommand}" CommandParameter="1" />
+                    <TapGestureRecognizer Command="{Binding MenuCommand}" CommandParameter="Home" />
                 </Border.GestureRecognizers>
 
                 <!-- Sombra manual porque ya no existe el HasShadow en Border -->
@@ -365,53 +365,40 @@
 
             </Border>
 
-            <VerticalStackLayout Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
 
-                    
-                    <Label Grid.Row="1" 
-                           Text="{x:Static fonts:FontAwesomeIcons.Figura2}"
-                        Style="{StaticResource MenuIconLabel}"
-                        HorizontalOptions="Center"/>
+            <controls:MenuTabItem Grid.Column="0"
+                IconText="{x:Static fonts:FontAwesomeIcons.Figura2}"
+                LabelText="{helpers:Translate MyFigures}"
+                Style="{StaticResource MenuTabItemStyle}"
+                IsSelected="{Binding SelectedMenuFigures}" 
+                Command="{Binding MenuCommand}"
+                CommandParameter="MyFigures" />
+
+            <controls:MenuTabItem Grid.Column="1"
+                IconText="{x:Static fonts:FontAwesomeIcons.PowerDisc3}"
+                LabelText="{helpers:Translate MyDiscs}"
+                Style="{StaticResource MenuTabItemStyle}"
+                IsSelected="{Binding SelectedMenuDiscs}" 
+                Command="{Binding MenuCommand}"
+                CommandParameter="MyDiscs" />
 
 
-                <Label Text="{helpers:Translate MyFigures}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center" LineBreakMode="TailTruncation"/>
-            
-            </VerticalStackLayout>
+            <controls:MenuTabItem Grid.Column="3"
+               IconText="{x:Static fonts:FontAwesomeIcons.Trophy}"
+               LabelText="{helpers:Translate Achievements}"
+               Style="{StaticResource MenuTabItemStyle}"
+               IsSelected="{Binding SelectedMenuArchi}" 
+               Command="{Binding MenuCommand}"
+               CommandParameter="Achievements" />
 
-            
 
-
-
-            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
-
-                <Label Text="{x:Static fonts:FontAwesomeIcons.PowerDisc3}"
-                   Style="{StaticResource MenuIconLabel}"
-                   HorizontalOptions="Center"/>
-
-                <Label Text="{helpers:Translate MyDiscs}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center" LineBreakMode="TailTruncation"/>
-            
-            </VerticalStackLayout>
-
-            <!-- BOTONES NORMALES (Activity y Profile) -->
-            <VerticalStackLayout Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
-               
-                <Label Text="{x:Static fonts:FontAwesomeIcons.Trophy}"
-                       Style="{StaticResource MenuIconLabel}"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="{helpers:Translate Achievements}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center" LineBreakMode="TailTruncation"/>
-                
-            </VerticalStackLayout>
-
-            <VerticalStackLayout Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Margin="{responsive:ResponsiveThickness BaseValue='0, 15, 0, 0'}" Spacing="{responsive:ResponsiveSize BaseValue=10}">
-
-                <Label Text="{x:Static fonts:FontAwesomeIcons.Settings}"
-                       Style="{StaticResource MenuIconLabel}"
-                       HorizontalOptions="Center"/>
-
-                <Label Text="{helpers:Translate Settings}" Style="{StaticResource MenuLabel}" HorizontalOptions="Center" LineBreakMode="TailTruncation"/>
-                
-            </VerticalStackLayout>
+            <controls:MenuTabItem Grid.Column="4"
+                IconText="{x:Static fonts:FontAwesomeIcons.Settings}"
+                LabelText="{helpers:Translate Settings}"
+                Style="{StaticResource MenuTabItemStyle}"
+                IsSelected="{Binding SelectedMenuSettings}" 
+                Command="{Binding MenuCommand}"
+                CommandParameter="Settings" />
 
         </Grid>
 

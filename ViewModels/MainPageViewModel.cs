@@ -79,6 +79,73 @@ namespace MyDICollection.ViewModels
             set { if (_isBusy != value) { _isBusy = value; OnPropertyChanged(); } }
         }
 
+        private bool _selectedMenuFigures;
+        public bool SelectedMenuFigures
+        {
+            get => _selectedMenuFigures;
+            set
+            {
+                if (_selectedMenuFigures != value)
+                {
+                    _selectedMenuFigures = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _selectedMenuDiscs;
+        public bool SelectedMenuDiscs
+        {
+            get => _selectedMenuDiscs;
+            set
+            {
+                if (_selectedMenuDiscs != value)
+                {
+                    _selectedMenuDiscs = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _selectedMenuArchi;
+        public bool SelectedMenuArchi
+        {
+            get => _selectedMenuArchi;
+            set
+            {
+                if (_selectedMenuArchi != value)
+                {
+                    _selectedMenuArchi = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private bool _selectedMenuSettings;
+        public bool SelectedMenuSettings
+        {
+            get => _selectedMenuSettings;
+            set
+            {
+                if (_selectedMenuSettings != value)
+                {
+                    _selectedMenuSettings = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _selectedMenuHome;
+        public bool SelectedMenuHome
+        {
+            get => _selectedMenuHome;
+            set
+            {
+                if (_selectedMenuHome != value)
+                {
+                    _selectedMenuHome = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         #endregion
 
         #region commands
@@ -102,17 +169,69 @@ namespace MyDICollection.ViewModels
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
+                SelectedMenuFigures = true;
                 await LoadDataAsync();
             });
         }
 
         private async Task AbrirMenuAsync(string value)
         {
-            // Una validación rápida por si el CommandParameter llega vacío o nulo
-            string mensaje = string.IsNullOrEmpty(value) ? "¡No llegó nada bro!" : value;
+            switch (value)
+            {
+                case "MyFigures":
+                    if (SelectedMenuFigures)
+                        return;
+                    SelectedMenuFigures = true;
+                    //SelectedMenuFigures = false;
+                    SelectedMenuDiscs = false;
+                    SelectedMenuHome = false;
+                    SelectedMenuArchi = false;
+                    SelectedMenuSettings = false;
+                    await LoadDataAsync();
+                    break;
+                case "MyDiscs":
+                    if (SelectedMenuDiscs)
+                        return;
+                    SelectedMenuDiscs = true;
+                    SelectedMenuFigures = false;
+                    //SelectedMenuDiscs = false;
+                    SelectedMenuHome = false;
+                    SelectedMenuArchi = false;
+                    SelectedMenuSettings = false;
 
-            // Título de la alerta, Mensaje, y Texto del botón
-            await Application.Current.MainPage.DisplayAlert("Test Botón Central", $"El valor es: {mensaje}", "OK");
+                    await LoadDataAsync();
+                    break;
+                case "Achievements":
+                    if (SelectedMenuArchi)
+                        return;
+                    SelectedMenuArchi = true;
+                    SelectedMenuFigures = false;
+                    SelectedMenuDiscs = false;
+                    SelectedMenuHome = false;
+                    //SelectedMenuArchi = false;
+                    SelectedMenuSettings = false;
+                    break;
+                case "Settings":
+                    if (SelectedMenuSettings)
+                        return;
+                    SelectedMenuSettings = true;
+                    SelectedMenuFigures = false;
+                    SelectedMenuDiscs = false;
+                    SelectedMenuHome = false;
+                    SelectedMenuArchi = false;
+                    //SelectedMenuSettings = false;
+                    break;
+                case "Home":
+                    if (SelectedMenuHome)
+                        return;
+                    SelectedMenuHome = true;
+                    SelectedMenuFigures = false;
+                    SelectedMenuDiscs = false;
+                    //SelectedMenuHome = false;
+                    SelectedMenuArchi = false;
+                    SelectedMenuSettings = false;               
+                    break;
+            }
         }
 
         #endregion
@@ -129,6 +248,12 @@ namespace MyDICollection.ViewModels
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
 
                 catalogo = (Settings.LanguageSettings == "es") ? catalogo.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()  : catalogo.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
+
+                if (SelectedMenuFigures)
+                    catalogo = catalogo.Where(w=>w.Tipo == AppResource.Figure).ToList();
+
+                if (SelectedMenuDiscs)
+                    catalogo = catalogo.Where(w => w.Tipo == AppResource.PowerDisc).ToList();
 
                 foreach (var figura in catalogo)
                 {
