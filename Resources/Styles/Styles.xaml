@@ -648,6 +648,12 @@
         <Setter Property="FontAttributes" Value="Italic"/>
     </Style>
 
+    <Style x:Key="FiguraFranquiciaSpan" TargetType="Span">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
+        <Setter Property="FontAttributes" Value="Italic"/>
+    </Style>
+
     <Style x:Key="FiguraModelNumberSpan" TargetType="Span">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}" />
         <Setter Property="FontSize" Value="{StaticResource FigureLabelSize}" />
@@ -752,6 +758,15 @@
         <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=4}"/>
         <Setter Property="HorizontalOptions" Value="Fill"/>
         <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue='10,0'}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="BorderPopup">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 20"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=320}"/>
+        <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue=5}"/>
+        <Setter Property="Padding" Value="{responsive:ResponsiveThickness BaseValue=20}"/>
     </Style>
 
 </ResourceDictionary>
