@@ -114,9 +114,9 @@ namespace MyDICollection.ViewModels
             OpcionesMenu = new ObservableCollection<MenuOpcion>
             {
                 // Nota: Cambia los nombres de los íconos por los que tengas en tu clase FontAwesomeIcons
-                new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = "Acerca del App" },
-                new MenuOpcion { Icono = FontAwesomeIcons.Globe, Texto = "Cambio de Idioma" },
-                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = "Contribuciones" }
+                new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = AppResource.MenuAboutApp },
+                new MenuOpcion { Icono = FontAwesomeIcons.Language, Texto = AppResource.MenuChangeLanguage },
+                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions }
             };
         }
         [RelayCommand]

@@ -186,4 +186,13 @@
   <data name="UnderConstruction" xml:space="preserve">
     <value> ¡Sección en construccion! Pronto podras ver aqui todos los logros y trofeos de tu coleccion.</value>
   </data>
+  <data name="MenuAboutApp" xml:space="preserve">
+    <value>Acerca del App</value>
+  </data>
+  <data name="MenuChangeLanguage" xml:space="preserve">
+    <value>Cambio de Idioma</value>
+  </data>
+  <data name="MenuContributions" xml:space="preserve">
+    <value>Contribuciones</value>
+  </data>
 </root>

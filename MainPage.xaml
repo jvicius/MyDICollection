@@ -14,7 +14,7 @@
     <Shell.TitleView>
         <!-- Un Grid de 3 columnas: Izquierda (Auto), Centro (* para rellenar), Derecha (Auto) -->
         <Grid 
-            ColumnDefinitions="auto, *, auto" 
+            ColumnDefinitions="*" 
             VerticalOptions="Center" 
             Padding="{responsive:ResponsiveThickness BaseValue='0,0,10,0'}">
 
@@ -23,11 +23,11 @@
                 Text="{x:Static fonts:FontAwesomeIcons.Menu}"
                 Style="{StaticResource HomeMenuIconLabel}"
                 TextColor="Transparent"
-                HorizontalOptions="Center"
+                HorizontalOptions="Start"
                 VerticalOptions="Center"/>
 
             <!-- 2. TÍTULO CENTRADO -->
-            <Label Grid.Column="1"
+            <Label Grid.Column="0"
                    Text="{helpers:Translate Title}"
                    Style="{StaticResource TitleLabel}"
                    HorizontalOptions="Center"
@@ -36,10 +36,10 @@
                    VerticalTextAlignment="Center"/>
 
             <!-- 3. ICONO DERECHO (Filtro) -->
-            <Label Grid.Column="2" 
+            <Label Grid.Column="0" 
                 Text="{x:Static fonts:FontAwesomeIcons.Filter}"
                 Style="{StaticResource HomeMenuIconLabel}"
-                HorizontalOptions="Center"
+                HorizontalOptions="End"
                 VerticalOptions="Center"
                 IsVisible="{Binding MostrarLista}"/>
 

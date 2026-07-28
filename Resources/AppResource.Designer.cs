@@ -133,6 +133,33 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About the App.
+        /// </summary>
+        internal static string MenuAboutApp {
+            get {
+                return ResourceManager.GetString("MenuAboutApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Language.
+        /// </summary>
+        internal static string MenuChangeLanguage {
+            get {
+                return ResourceManager.GetString("MenuChangeLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contributions.
+        /// </summary>
+        internal static string MenuContributions {
+            get {
+                return ResourceManager.GetString("MenuContributions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Missing.
         /// </summary>
         internal static string Missing {

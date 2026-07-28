@@ -62,6 +62,7 @@
 
         public const string Globe = "\uf0ac";
         public const string Handshake = "\uf2b5";
+        public const string Language = "\uf1ab";
 
     }
 }
