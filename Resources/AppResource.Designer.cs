@@ -97,6 +97,24 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check for Updates.
+        /// </summary>
+        internal static string ButtonCheckUpdates {
+            get {
+                return ResourceManager.GetString("ButtonCheckUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Code on GitHub.
+        /// </summary>
+        internal static string ButtonViewCode {
+            get {
+                return ResourceManager.GetString("ButtonViewCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collect.
         /// </summary>
         internal static string Collect {
@@ -129,6 +147,15 @@ namespace MyDICollection.Resources {
         internal static string HallOffFame {
             get {
                 return ResourceManager.GetString("HallOffFame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disclaimer: This application is an unofficial fan-made project. All images, names, and trademarks related to Disney Infinity are the property of Disney Enterprises, Inc. There is no official affiliation, sponsorship, or endorsement by Disney..
+        /// </summary>
+        internal static string LegalDisclaimerText {
+            get {
+                return ResourceManager.GetString("LegalDisclaimerText", resourceCulture);
             }
         }
         

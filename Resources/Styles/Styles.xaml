@@ -16,6 +16,7 @@
     <responsive:ResponsiveSizeExtension x:Key="MenuHeight" BaseValue="80" />
     <responsive:ResponsiveSizeExtension x:Key="MenuIconLabelSize" BaseValue="24" />
     <responsive:ResponsiveSizeExtension x:Key="BigIconLabelSize" BaseValue="45" />
+    <responsive:ResponsiveSizeExtension x:Key="LegalLabelSize" BaseValue="11" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
@@ -776,6 +777,45 @@
         <Setter Property="FontSize" Value="{StaticResource MenuIconLabelSize}" />
         <Setter Property="FontFamily" Value="FASolid"/>
         <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="InfoIconLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource BigIconLabelSize}" />
+        <Setter Property="FontFamily" Value="FASolid"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="InfoTitleLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource MenuIconLabelSize}" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="InfoLegalLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource LegalLabelSize}" />
+        <Setter Property="FontAttributes" Value="Italic"/>
+    </Style>
+
+    <Style x:Key="InfoButton1" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=50}"/>
+        <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+        <Setter Property="CornerRadius" Value="{responsive:ResponsiveInt BaseValue=10}"/>
+    </Style>
+
+    <Style x:Key="InfoButton2" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
+        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="HeightRequest" Value="{responsive:ResponsiveSize BaseValue=50}"/>
+        <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"/>
+        <Setter Property="CornerRadius" Value="{responsive:ResponsiveInt BaseValue=10}"/>
     </Style>
 
 </ResourceDictionary>

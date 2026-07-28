@@ -40,6 +40,8 @@ namespace MyDICollection
             builder.Services.AddTransient<FiguraInfoViewModel>();
             builder.Services.AddTransient<SettingsMenuPopup>();
             builder.Services.AddTransient<SettingsMenuViewModel>();
+            builder.Services.AddTransient<AboutPopup>();
+            builder.Services.AddTransient<AboutViewModel>();
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();

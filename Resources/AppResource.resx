@@ -195,4 +195,13 @@
   <data name="MenuContributions" xml:space="preserve">
     <value>Contributions</value>
   </data>
+  <data name="LegalDisclaimerText" xml:space="preserve">
+    <value>Disclaimer: This application is an unofficial fan-made project. All images, names, and trademarks related to Disney Infinity are the property of Disney Enterprises, Inc. There is no official affiliation, sponsorship, or endorsement by Disney.</value>
+  </data>
+  <data name="ButtonViewCode" xml:space="preserve">
+    <value>View Code on GitHub</value>
+  </data>
+  <data name="ButtonCheckUpdates" xml:space="preserve">
+    <value>Check for Updates</value>
+  </data>
 </root>

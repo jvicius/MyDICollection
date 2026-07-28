@@ -123,6 +123,11 @@ namespace MyDICollection.ViewModels
         private async Task OpcionSeleccionadaAsync(MenuOpcion opcion)
         {
             if (opcion == null) return;
+
+            if (opcion.Texto == AppResource.MenuAboutApp)
+            {
+                var resultado = await _popupPageService.ShowPopupAsync<AboutPopup, AboutViewModel, bool>();
+            }
         }
 
         [RelayCommand]
