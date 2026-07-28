@@ -55,13 +55,18 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private ObservableCollection<FiguraModel> _figures = new();
 
+        public bool MostrarLista => !IsBusy && (SelectedMenuFigures || SelectedMenuDiscs);
+
         [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(MostrarLista))]
         private bool _isBusy;
 
         [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(MostrarLista))]
         private bool _selectedMenuFigures;
 
         [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(MostrarLista))]
         private bool _selectedMenuDiscs;
 
         [ObservableProperty]

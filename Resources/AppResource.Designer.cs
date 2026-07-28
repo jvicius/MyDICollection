@@ -70,6 +70,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Achievements: .
+        /// </summary>
+        internal static string Achievements2 {
+            get {
+                return ResourceManager.GetString("Achievements2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string All {
@@ -111,6 +120,15 @@ namespace MyDICollection.Resources {
         internal static string Filters {
             get {
                 return ResourceManager.GetString("Filters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hall of Fame.
+        /// </summary>
+        internal static string HallOffFame {
+            get {
+                return ResourceManager.GetString("HallOffFame", resourceCulture);
             }
         }
         
@@ -210,6 +228,15 @@ namespace MyDICollection.Resources {
         internal static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Section under construction! Soon you&apos;ll be able to see all your collection&apos;s achievements and trophies here..
+        /// </summary>
+        internal static string UnderConstruction {
+            get {
+                return ResourceManager.GetString("UnderConstruction", resourceCulture);
             }
         }
         

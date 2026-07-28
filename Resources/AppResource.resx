@@ -177,4 +177,13 @@
   <data name="ModelNumber" xml:space="preserve">
     <value>Model Number: </value>
   </data>
+  <data name="Achievements2" xml:space="preserve">
+    <value>Achievements: </value>
+  </data>
+  <data name="HallOffFame" xml:space="preserve">
+    <value>Hall of Fame</value>
+  </data>
+  <data name="UnderConstruction" xml:space="preserve">
+    <value>Section under construction! Soon you'll be able to see all your collection's achievements and trophies here.</value>
+  </data>
 </root>

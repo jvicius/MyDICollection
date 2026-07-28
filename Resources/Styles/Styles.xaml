@@ -15,6 +15,7 @@
     <responsive:ResponsiveSizeExtension x:Key="FilterLabelSize" BaseValue="12" />
     <responsive:ResponsiveSizeExtension x:Key="MenuHeight" BaseValue="80" />
     <responsive:ResponsiveSizeExtension x:Key="MenuIconLabelSize" BaseValue="24" />
+    <responsive:ResponsiveSizeExtension x:Key="BigIconLabelSize" BaseValue="45" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />

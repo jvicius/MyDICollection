@@ -177,4 +177,13 @@
   <data name="ModelNumber" xml:space="preserve">
     <value>Numero de Modelo: </value>
   </data>
+  <data name="Achievements2" xml:space="preserve">
+    <value>Logros: </value>
+  </data>
+  <data name="HallOffFame" xml:space="preserve">
+    <value>Salon de la Fama</value>
+  </data>
+  <data name="UnderConstruction" xml:space="preserve">
+    <value> ¡Sección en construccion! Pronto podras ver aqui todos los logros y trofeos de tu coleccion.</value>
+  </data>
 </root>

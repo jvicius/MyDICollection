@@ -22,6 +22,7 @@
             <Label Grid.Column="0" 
                 Text="{x:Static fonts:FontAwesomeIcons.Menu}"
                 Style="{StaticResource HomeMenuIconLabel}"
+                TextColor="Transparent"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
 
@@ -39,7 +40,8 @@
                 Text="{x:Static fonts:FontAwesomeIcons.Filter}"
                 Style="{StaticResource HomeMenuIconLabel}"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center"
+                IsVisible="{Binding MostrarLista}"/>
 
         </Grid>
     </Shell.TitleView>
@@ -100,13 +102,13 @@
             </toolkit:Expander>
         </Border>-->
 
-        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="15" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}" IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}">
+        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="{responsive:ResponsiveSize BaseValue=15}" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}" IsVisible="{Binding MostrarLista}">
 
             <!-- ETIQUETA 1: INVENTARIO FÍSICO (Incluye repetidas) -->
             <Border Grid.Column="0" 
                 Style="{StaticResource BorderInfo}">
 
-                <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                <HorizontalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" HorizontalOptions="Center" VerticalOptions="Center">
                     <!-- Icono -->
                     <Label Text="{x:Static fonts:FontAwesomeIcons.Boxes}" 
                         Style="{StaticResource BorderInfoIcon}"
@@ -129,9 +131,9 @@
             <Border Grid.Column="1" 
                 Style="{StaticResource BorderInfo}">
 
-                <VerticalStackLayout Spacing="4" VerticalOptions="Center" HorizontalOptions="Fill">
+                <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=4}" VerticalOptions="Center" HorizontalOptions="Fill">
 
-                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                    <HorizontalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" HorizontalOptions="Center" VerticalOptions="Center">
 
                         <!-- Icono -->
                         <Label Text="{Binding IconInfo}" 
@@ -158,6 +160,42 @@
 
         </Grid>
 
+        <Grid Grid.Row="1" ColumnDefinitions="*" ColumnSpacing="{responsive:ResponsiveSize BaseValue=15}" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}" IsVisible="{Binding SelectedMenuArchi}">
+
+            <!-- ETIQUETA 1: PROGRESO DE Logros -->
+            <Border Grid.Column="0" 
+                    Style="{StaticResource BorderInfo}">
+
+                <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=4}" VerticalOptions="Center" HorizontalOptions="Fill">
+
+                    <HorizontalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" HorizontalOptions="Center" VerticalOptions="Center">
+
+                        <!-- Icono -->
+                        <Label Text="{x:Static fonts:FontAwesomeIcons.Trophy}" 
+                            Style="{StaticResource BorderInfoIcon2}"
+                            VerticalOptions="Center"/>
+
+                        <Label Text="{helpers:Translate Achievements2}" 
+                            Style="{StaticResource BorderInfoLabel2}"
+                            VerticalOptions="Center" />
+
+                        <Label Text="0/0" 
+                            Style="{StaticResource BorderInfoLabel2}"
+                            FontAttributes="Bold" 
+                            VerticalOptions="Center" />
+
+                    </HorizontalStackLayout>
+
+                    <ProgressBar Progress="0" 
+                        Style="{StaticResource BorderInfoProgrees}"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+        </Grid>
+
         <!-- Loader -->
         <ActivityIndicator Grid.Row="2"
                             IsRunning="{Binding IsBusy}"
@@ -168,7 +206,7 @@
         <!-- Lista de figuras -->
         <CollectionView Grid.Row="2"
                         ItemsSource="{Binding Figures}"
-                        IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}"
+                        IsVisible="{Binding MostrarLista}"
                         Margin="{responsive:ResponsiveThickness BaseValue='15,0,15,15'}"
                         HorizontalScrollBarVisibility="Never"
                         VerticalScrollBarVisibility="Never">
@@ -317,7 +355,52 @@
             </CollectionView.ItemTemplate>
 
         </CollectionView>
-        
+
+        <!-- Seccion de trofeos -->
+        <Grid Grid.Row="2"
+            IsVisible="{Binding SelectedMenuArchi}"
+            Padding="{responsive:ResponsiveThickness BaseValue='20'}">
+
+            <!-- Tarjeta centrada estilo "Empty State" -->
+            <Border 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Style="{StaticResource BorderPopup}">
+
+                <VerticalStackLayout 
+                             Spacing="{responsive:ResponsiveSize BaseValue=10}" 
+                             HorizontalOptions="Center" 
+                             VerticalOptions="Center">
+
+                    <!-- Ícono/Emoji de Trofeo -->
+                    <Label Text="🏆" 
+                        FontSize="{StaticResource BigIconLabelSize}" 
+                        HorizontalOptions="Center" 
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+
+                    <!-- Título mamalón -->
+                    <Label Text="{helpers:Translate HallOffFame}" 
+                       FontSize="{StaticResource HexaButtonFontSize}" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center"
+                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+
+                    <!-- Subtítulo / Texto de construcción -->
+                    <Label Text="{helpers:Translate UnderConstruction}" 
+                        Style="{StaticResource BorderInfoLabel}"
+                        HorizontalOptions="Center" 
+                        HorizontalTextAlignment="Center"
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+
+                    <!-- Animación de "Trabajando en ello" -->
+                    <ActivityIndicator IsRunning="True" 
+                               HorizontalOptions="Center" />
+
+                </VerticalStackLayout>
+            </Border>
+
+        </Grid>
+
         <!--Menu Inferior-->
 
         <Grid 
