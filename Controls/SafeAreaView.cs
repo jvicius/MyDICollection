@@ -10,7 +10,7 @@
 
         private void ApplySafeAreaInsets()
         {
-#if ANDROID || IOS
+#if ANDROID || IOS || WINDOWS
             var insets = GetPlatformSafeArea();
             Padding = insets;
 #else
@@ -41,6 +41,14 @@
 
             var insets = window.SafeAreaInsets;
             return new Thickness(insets.Left, insets.Top, insets.Right, insets.Bottom);
+        }
+#elif WINDOWS
+        private Thickness GetPlatformSafeArea()
+        {
+            // En Windows, el "Safe Area" superior corresponde a la barra de título nativa.
+            // Por estándar de WinUI, los botones de control de ventana miden 32px de alto.
+            // Empujamos 32 puntos hacia abajo (Top) para que nada se empalme.
+            return new Thickness(0, 32, 0, 0);
         }
 #endif
     }
