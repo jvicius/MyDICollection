@@ -89,7 +89,9 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private string _iconInfo = FontAwesomeIcons.Figura2;
 
-        // Constructor súper limpio (Ya no hay "new Command(...)")
+        [ObservableProperty]
+        private ObservableCollection<MenuOpcion> _opcionesMenu;
+
         public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService)
         {
             _jsonDataService = jsonDataService;
@@ -99,13 +101,30 @@ namespace MyDICollection.ViewModels
             MainThread.BeginInvokeOnMainThread(async () =>
             {
                 SetStatusBarColors();
+                SetupMenu();
                 SelectedMenuFigures = true;
                 await LoadDataAsync();
             });
             _popupPageService = popupPageService;
         }
 
-        // 3. MAGIA: [RelayCommand] expone automáticamente un "MenuCommand" en tu UI.
+        private void SetupMenu()
+        {
+            // Inicializamos el menú
+            OpcionesMenu = new ObservableCollection<MenuOpcion>
+            {
+                // Nota: Cambia los nombres de los íconos por los que tengas en tu clase FontAwesomeIcons
+                new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = "Acerca del App" },
+                new MenuOpcion { Icono = FontAwesomeIcons.Globe, Texto = "Cambio de Idioma" },
+                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = "Contribuciones" }
+            };
+        }
+        [RelayCommand]
+        private async Task OpcionSeleccionadaAsync(MenuOpcion opcion)
+        {
+            if (opcion == null) return;
+        }
+
         [RelayCommand]
         private async Task AbrirMenuAsync(string value)
         {
@@ -137,19 +156,6 @@ namespace MyDICollection.ViewModels
             if (value == "MyFigures" || value == "MyDiscs")
             {
                 await LoadDataAsync();
-            }
-
-            if(value == "Settings")
-            {
-                var resultadoMenu = await _popupPageService.ShowPopupAsync<SettingsMenuPopup, SettingsMenuViewModel, string>();
-
-                if (!string.IsNullOrEmpty(resultadoMenu))
-                {
-                    // resultadoMenu va a traer "Lenguaje", "Contribuir" o "AcercaDe"
-                    Console.WriteLine($"El usuario eligió: {resultadoMenu}");
-                }
-
-                SelectedMenuSettings = false;
             }
         }
 

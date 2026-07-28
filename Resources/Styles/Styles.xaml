@@ -771,4 +771,11 @@
         <Setter Property="Padding" Value="{responsive:ResponsiveThickness BaseValue=20}"/>
     </Style>
 
+    <Style x:Key="MenuOptionIconLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource MenuIconLabelSize}" />
+        <Setter Property="FontFamily" Value="FASolid"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
 </ResourceDictionary>

@@ -60,5 +60,8 @@
         public const string Close = "\uf00d";
         public const string Close2 = "\uf057";
 
+        public const string Globe = "\uf0ac";
+        public const string Handshake = "\uf2b5";
+
     }
 }

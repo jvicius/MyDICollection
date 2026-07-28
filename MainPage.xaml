@@ -400,8 +400,78 @@
             </Border>
 
         </Grid>
+        
+        <!--Seccion de Configuracion-->
+
+        <CollectionView Grid.Row="2"
+                ItemsSource="{Binding OpcionesMenu}"
+                Margin="{responsive:ResponsiveThickness BaseValue='15,0,15,15'}"
+                HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never"
+                IsVisible="{Binding SelectedMenuSettings}">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" 
+                           ItemSpacing="{responsive:ResponsiveSize BaseValue=12}"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:MenuOpcion">
+
+                    <Grid Padding="{responsive:ResponsiveThickness BaseValue='0,10,10,0'}">
+
+                        <Border Padding="{responsive:ResponsiveThickness BaseValue='12'}"
+                                Style="{StaticResource CardBorder}">
+
+                            <Grid ColumnDefinitions="Auto,*" 
+                                ColumnSpacing="{responsive:ResponsiveSize BaseValue=14}">
+
+                                <!-- Contenedor del Ícono -->
+                                <Border Grid.Column="0"
+                                    Style="{StaticResource ImageCardBorder}"
+                                    HeightRequest="{responsive:ResponsiveSize BaseValue=60}"
+                                    WidthRequest="{responsive:ResponsiveSize BaseValue=60}"
+                                    Padding="0">
+
+                                    <!-- Cambiamos la Image por un Label para FontAwesome -->
+                                    <Label Text="{Binding Icono}"
+                                            FontFamily="FontAwesome" 
+                                            FontSize="24"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                                    
+                                </Border>
+
+                                <!-- Texto de la Opción -->
+                                <Label Grid.Column="1"
+                                    Text="{Binding Texto}"
+                                    Style="{StaticResource FiguraTitleLabel}"
+                                    VerticalOptions="Center" />
+
+                            </Grid>
+                            
+                        </Border>
+
+                        <!-- El Tap Gesture para detectar el clic en la opción -->
+                        <Grid.GestureRecognizers>
+                            
+                            <TapGestureRecognizer 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.OpcionSeleccionadaCommand}"
+                                CommandParameter="{Binding .}"/>
+                            
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                </DataTemplate>
+                
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
 
         <!--Menu Inferior-->
+
 
         <Grid 
             Grid.Row="3" 
