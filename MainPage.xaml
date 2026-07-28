@@ -435,8 +435,7 @@
 
                                     <!-- Cambiamos la Image por un Label para FontAwesome -->
                                     <Label Text="{Binding Icono}"
-                                            FontFamily="FontAwesome" 
-                                            FontSize="24"
+                                           Style="{StaticResource MenuOptionIconLabel}"
                                             HorizontalOptions="Center"
                                             VerticalOptions="Center"
                                             TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
