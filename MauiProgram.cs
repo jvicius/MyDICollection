@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
 using Mopups.Hosting;
 using MyDICollection.Helpers;
 using MyDICollection.Popups;
@@ -50,6 +51,28 @@ namespace MyDICollection
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();
+
+            builder.ConfigureLifecycleEvents(events =>
+            {
+#if WINDOWS
+    events.AddWindows(windows => windows
+        .OnWindowCreated(window =>
+        {
+            // Obtenemos el "Handle" (identificador nativo) de la ventana de Windows
+            var handle = WinRT.Interop.WindowNative.GetWindowHandle(window);
+            var id = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(handle);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(id);
+
+            // Sacamos el Presenter, que es el que controla si está en pantalla completa, minimizada, etc.
+            var presenter = appWindow.Presenter as Microsoft.UI.Windowing.OverlappedPresenter;
+            if (presenter != null)
+            {
+                // ¡Maximizamos alv!
+                presenter.Maximize();
+            }
+        }));
+#endif
+            });
 
             return builder.Build();
         }
