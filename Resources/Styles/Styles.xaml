@@ -767,7 +767,7 @@
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource White}}" />
         <Setter Property="StrokeShape" Value="RoundRectangle 20"/>
         <Setter Property="StrokeThickness" Value="1"/>
-        <Setter Property="WidthRequest" Value="{responsive:ResponsiveSize BaseValue=400}"/>
+        <Setter Property="WidthRequest" Value="{OnIdiom Phone=320, Tablet=500, Default=500}"/>
         <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue=5}"/>
         <Setter Property="Padding" Value="{responsive:ResponsiveThickness BaseValue=20}"/>
     </Style>
