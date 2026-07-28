@@ -10,8 +10,7 @@
              xmlns:helpers="clr-namespace:MyDICollection.Helpers"
              BackgroundColor="#80000000"
              xmlns:controls="clr-namespace:MyDICollection.Controls"
-             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
-             CloseWhenBackgroundIsClicked="False">
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts">
 
 
     <controls:SafeAreaView>

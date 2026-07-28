@@ -18,7 +18,6 @@
 
     <Grid HorizontalOptions="Center" 
           VerticalOptions="Center" 
-          WidthRequest="{responsive:ResponsiveSize BaseValue=320}"
           Padding="{responsive:ResponsiveThickness BaseValue='20'}">
 
         <Border Style="{StaticResource BorderPopup}">

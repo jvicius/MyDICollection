@@ -149,6 +149,11 @@ namespace MyDICollection.ViewModels
                     }
                 }
             }
+
+            if (opcion.Texto == AppResource.MenuContributions) // O el nombre que le hayas dado
+            {
+                var resultado = await _popupPageService.ShowPopupAsync<ContributionsPopup, ContributionsViewModel, bool>();
+            }
         }
 
         [RelayCommand]

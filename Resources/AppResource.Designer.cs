@@ -124,6 +124,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This app is free to use and made with love. If you find it useful and want to support the development or buy me a coffee, I would greatly appreciate it! ☕💙.
+        /// </summary>
+        internal static string ContributionsMessage {
+            get {
+                return ResourceManager.GetString("ContributionsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Figure.
         /// </summary>
         internal static string Figure {

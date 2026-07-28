@@ -3,17 +3,18 @@ using MyDICollection.ViewModels;
 
 namespace MyDICollection.Popups;
 
-public partial class FiguraInfoPopup : PopupPage
+public partial class ContributionsPopup : PopupPage
 {
-    public FiguraInfoPopup()
-    {
-        InitializeComponent();
-    }
+	public ContributionsPopup()
+	{
+		InitializeComponent();
+	}
+
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
 
-        if (BindingContext is FiguraInfoViewModel vm)
+        if (BindingContext is ContributionsViewModel vm)
         {
             vm.ResultSource.TrySetResult(true);
         }

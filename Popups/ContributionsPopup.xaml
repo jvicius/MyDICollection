@@ -8,8 +8,8 @@
              xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
              xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
              xmlns:helpers="clr-namespace:MyDICollection.Helpers"
-             x:Class="MyDICollection.Popups.LanguagePopup"
-             x:DataType="viewmodels:LanguageViewModel"
+             x:Class="MyDICollection.Popups.ContributionsPopup"
+             x:DataType="viewmodels:ContributionsViewModel"
              BackgroundColor="#80000000">
 
     <mopups:PopupPage.Animation>
@@ -26,13 +26,13 @@
                 Spacing="{responsive:ResponsiveSize BaseValue=15}" 
                 HorizontalOptions="Center">
 
-                <!-- Ícono de Lenguaje -->
-                <Label Text="{x:Static fonts:FontAwesomeIcons.Language}"         
+                <!-- Ícono de Handshake (Apretón de manos) -->
+                <Label Text="{x:Static fonts:FontAwesomeIcons.Handshake}"         
                        HorizontalOptions="Center"
                        Style="{StaticResource InfoIconLabel}" />
 
-                <!-- Título del Popup -->
-                <Label Text="{helpers:Translate LanguagePopupTitle}" 
+                <!-- Título -->
+                <Label Text="{helpers:Translate MenuContributions}" 
                        Style="{StaticResource InfoTitleLabel}"
                        HorizontalOptions="Center" />
 
@@ -40,19 +40,23 @@
                 <BoxView HeightRequest="1" 
                          Color="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource White}}" 
                          Opacity="0.2" 
-                         Margin="{responsive:ResponsiveThickness BaseValue='5,10,5,10'}"/>
+                         Margin="{responsive:ResponsiveThickness BaseValue='5,0'}"/>
 
-                <!-- Botón Español -->
-                <Button Text="Español 🇲🇽"
-                        Command="{Binding SeleccionarIdiomaCommand}"
-                        CommandParameter="es"
+                <!-- Texto amigable de invitación -->
+                <Label Text="{helpers:Translate ContributionsMessage}"
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource InfoLegalLabel}"
+                       Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+
+                <!-- Botón GitHub Sponsors -->
+                <Button Text="GitHub Sponsors"
+                        Command="{Binding AbrirGitHubSponsorsCommand}"
                         Style="{StaticResource InfoButton1}"
                         Margin="{responsive:ResponsiveThickness BaseValue='0,5'}"/>
 
-                <!-- Botón Inglés -->
-                <Button Text="English 🇺🇸"
-                        Command="{Binding SeleccionarIdiomaCommand}"
-                        CommandParameter="en"
+                <!-- Botón Ko-Fi -->
+                <Button Text="Ko-fi"
+                        Command="{Binding AbrirKoFiCommand}"
                         Style="{StaticResource InfoButton2}"
                         Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
 

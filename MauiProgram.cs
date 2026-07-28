@@ -45,6 +45,8 @@ namespace MyDICollection
             builder.Services.AddTransient<AboutViewModel>();
             builder.Services.AddTransient<LanguagePopup>();
             builder.Services.AddTransient<LanguageViewModel>();
+            builder.Services.AddTransient<ContributionsPopup>();
+            builder.Services.AddTransient<ContributionsViewModel>();
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();
