@@ -1,4 +1,5 @@
 ﻿using MyDICollection.Converters;
+using System.Globalization;
 
 namespace MyDICollection.Helpers.Extensions
 {
@@ -15,7 +16,7 @@ namespace MyDICollection.Helpers.Extensions
                     value: texto,
                     targetType: typeof(string),
                     parameter: null,
-                    culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
+                    culture: CultureInfo.DefaultThreadCurrentUICulture).ToString();
         }
     }
 }

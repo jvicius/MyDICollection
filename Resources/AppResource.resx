@@ -204,4 +204,7 @@
   <data name="ButtonCheckUpdates" xml:space="preserve">
     <value>Check for Updates</value>
   </data>
+  <data name="LanguagePopupTitle" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
 </root>

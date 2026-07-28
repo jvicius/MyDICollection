@@ -151,6 +151,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Language.
+        /// </summary>
+        internal static string LanguagePopupTitle {
+            get {
+                return ResourceManager.GetString("LanguagePopupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disclaimer: This application is an unofficial fan-made project. All images, names, and trademarks related to Disney Infinity are the property of Disney Enterprises, Inc. There is no official affiliation, sponsorship, or endorsement by Disney..
         /// </summary>
         internal static string LegalDisclaimerText {

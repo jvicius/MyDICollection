@@ -75,7 +75,8 @@
                 <!-- Nombre de la Figura -->
                 <Label Text="{Binding FiguraActual.Nombre}" 
                    Style="{StaticResource FiguraTitleLabel}"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center"/>
 
                 <Label HorizontalOptions="Center">
                     <Label.FormattedText>

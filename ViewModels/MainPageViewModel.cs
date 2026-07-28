@@ -23,6 +23,7 @@ namespace MyDICollection.ViewModels
 
         private readonly IJsonDataService _jsonDataService;
         private readonly IPopupPageService _popupPageService;
+        private readonly ILocalizationService _localizationService;
         protected StatusBarService StatusBarService { get; set; }
 
         private List<FiguraModel> _allFigures = new();
@@ -92,11 +93,12 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private ObservableCollection<MenuOpcion> _opcionesMenu;
 
-        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService)
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService)
         {
             _jsonDataService = jsonDataService;
             _popupPageService = popupPageService;
             StatusBarService = statusBarService;
+            _localizationService = localizationService;
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
@@ -127,6 +129,25 @@ namespace MyDICollection.ViewModels
             if (opcion.Texto == AppResource.MenuAboutApp)
             {
                 var resultado = await _popupPageService.ShowPopupAsync<AboutPopup, AboutViewModel, bool>();
+            }
+
+            if (opcion.Texto == AppResource.MenuChangeLanguage)
+            {
+                var resultado = await _popupPageService.ShowPopupAsync<LanguagePopup, LanguageViewModel, string>();
+
+                if (!string.IsNullOrEmpty(resultado))
+                {
+                    if (resultado != Settings.LanguageSettings)
+                    {
+                        Settings.LanguageSettings = resultado;
+
+                        _localizationService.SetCulture(Settings.LanguageSettings);
+
+                        await Task.Delay(500);
+
+                        Application.Current.MainPage = new AppShell();
+                    }
+                }
             }
         }
 
@@ -227,21 +248,24 @@ namespace MyDICollection.ViewModels
 
                 // 2. Filtrar por menú ACTIVO
                 if (SelectedMenuFigures)
-                    query = query.Where(w => w.Tipo == AppResource.Figure);
+                    query = query.Where(w => w.Tipo == "Figura");
                 else if (SelectedMenuDiscs)
-                    query = query.Where(w => w.Tipo == AppResource.PowerDisc);
+                    query = query.Where(w => w.Tipo == "Disco de Poder");
+
+                var listaFiltrada = query.ToList();
 
                 // 3. Traducir SOLO los que quedaron en el filtro
-                foreach (var figura in query)
+                foreach (var figura in listaFiltrada)
                 {
+                    // Al modificar aquí, ya no afectas la consulta original
                     figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
                     figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
                 }
 
                 // 4. Ordenar al final
                 _allFigures = (Settings.LanguageSettings == "es")
-                    ? query.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()
-                    : query.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
+                    ? listaFiltrada.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()
+                    : listaFiltrada.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
 
                 // 5. Cargar progreso del usuario
                 _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);

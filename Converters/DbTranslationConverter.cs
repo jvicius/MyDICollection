@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using MyDICollection.Helpers;
+using System.Globalization;
 
 namespace MyDICollection.Converters
 {
@@ -9,7 +10,7 @@ namespace MyDICollection.Converters
             if (value is not string originalString || string.IsNullOrEmpty(originalString))
                 return string.Empty;
 
-            bool isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
+            bool isEnglish = Settings.LanguageSettings == "en";
 
             if (!isEnglish)
             {
