@@ -210,4 +210,10 @@
   <data name="ContributionsMessage" xml:space="preserve">
     <value>This app is free to use and made with love. If you find it useful and want to support the development or buy me a coffee, I would greatly appreciate it! ☕💙</value>
   </data>
+  <data name="FilterApplyButton" xml:space="preserve">
+    <value>Apply Filters</value>
+  </data>
+  <data name="FilterClearButton" xml:space="preserve">
+    <value>Clear Filters</value>
+  </data>
 </root>

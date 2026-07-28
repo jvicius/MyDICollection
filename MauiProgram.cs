@@ -39,14 +39,14 @@ namespace MyDICollection
 
             builder.Services.AddTransient<FiguraInfoPopup>();
             builder.Services.AddTransient<FiguraInfoViewModel>();
-            builder.Services.AddTransient<SettingsMenuPopup>();
-            builder.Services.AddTransient<SettingsMenuViewModel>();
             builder.Services.AddTransient<AboutPopup>();
             builder.Services.AddTransient<AboutViewModel>();
             builder.Services.AddTransient<LanguagePopup>();
             builder.Services.AddTransient<LanguageViewModel>();
             builder.Services.AddTransient<ContributionsPopup>();
             builder.Services.AddTransient<ContributionsViewModel>();
+            builder.Services.AddTransient<FilterPopup>();
+            builder.Services.AddTransient<FilterViewModel>();
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();

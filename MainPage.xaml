@@ -41,7 +41,15 @@
                 Style="{StaticResource HomeMenuIconLabel}"
                 HorizontalOptions="End"
                 VerticalOptions="Center"
-                IsVisible="{Binding MostrarLista}"/>
+                IsVisible="{Binding MostrarLista}">
+
+                <Label.GestureRecognizers>
+                    
+                    <TapGestureRecognizer Command="{Binding AbrirFiltrosCommand}"/>
+                    
+                </Label.GestureRecognizers>
+                
+            </Label>
 
         </Grid>
     </Shell.TitleView>

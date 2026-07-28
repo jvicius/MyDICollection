@@ -142,6 +142,24 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply Filters.
+        /// </summary>
+        internal static string FilterApplyButton {
+            get {
+                return ResourceManager.GetString("FilterApplyButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Filters.
+        /// </summary>
+        internal static string FilterClearButton {
+            get {
+                return ResourceManager.GetString("FilterClearButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 🔎 Filters.
         /// </summary>
         internal static string Filters {

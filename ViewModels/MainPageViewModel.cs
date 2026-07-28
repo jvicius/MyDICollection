@@ -121,6 +121,37 @@ namespace MyDICollection.ViewModels
                 new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions }
             };
         }
+
+        [RelayCommand]
+        private async Task AbrirFiltrosAsync()
+        {
+            // Empacamos el estado actual de los filtros
+            var parametrosActuales = new FilterParams
+            {
+                OpcionesObtenido = OpcionesObtenido.ToList(),
+                OpcionesVersion = OpcionesVersion.ToList(),
+                OpcionesFranquicia = OpcionesFranquicia.ToList(),
+                FiltroObtenido = this.FiltroObtenido,
+                FiltroVersion = this.FiltroVersion,
+                FiltroFranquicia = this.FiltroFranquicia
+            };
+
+            // Usas tu servicio de inyección de dependencias para crear y pasar el modelo si es necesario,
+            // o configuras el ViewModel antes de mostrarlo.
+            var navParams = new NavigationParameters { { "Filtros", parametrosActuales } };
+            var nuevosFiltros = await _popupPageService.ShowPopupAsync<FilterPopup, FilterViewModel, FilterParams>(navParams);
+
+            // Si no regresó null, significa que le dio a "Aplicar"
+            if (nuevosFiltros != null)
+            {
+                FiltroObtenido = nuevosFiltros.FiltroObtenido;
+                FiltroVersion = nuevosFiltros.FiltroVersion;
+                FiltroFranquicia = nuevosFiltros.FiltroFranquicia;
+
+                AplicarFiltros();
+            }
+        }
+
         [RelayCommand]
         private async Task OpcionSeleccionadaAsync(MenuOpcion opcion)
         {

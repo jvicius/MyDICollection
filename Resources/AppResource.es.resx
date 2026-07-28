@@ -210,4 +210,10 @@
   <data name="ContributionsMessage" xml:space="preserve">
     <value>Esta app es de uso gratuito y está hecha con mucho cariño. Si te ha sido útil y quieres apoyar el desarrollo o invitarme un café, ¡te lo agradeceré infinitamente! ☕💙</value>
   </data>
+  <data name="FilterApplyButton" xml:space="preserve">
+    <value>Aplicar Filtros</value>
+  </data>
+  <data name="FilterClearButton" xml:space="preserve">
+    <value>Limpiar Filtros</value>
+  </data>
 </root>

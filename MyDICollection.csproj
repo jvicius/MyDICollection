@@ -111,10 +111,10 @@
 	  <MauiXaml Update="Popups\FiguraInfoPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Popups\LanguagePopup.xaml">
+	  <MauiXaml Update="Popups\FilterPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Popups\SettingsMenuPopup.xaml">
+	  <MauiXaml Update="Popups\LanguagePopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

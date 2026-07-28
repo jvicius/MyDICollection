@@ -818,4 +818,13 @@
         <Setter Property="CornerRadius" Value="{responsive:ResponsiveInt BaseValue=10}"/>
     </Style>
 
+    <Style TargetType="Border" x:Key="BorderMenuPopup">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource White}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 25,0,25,0"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue=5}"/>
+        <Setter Property="Padding" Value="{responsive:ResponsiveThickness BaseValue='20,40,20,30'}"/>
+    </Style>
+
 </ResourceDictionary>
