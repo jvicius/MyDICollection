@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using MyDICollection.Helpers.Extensions;
 using MyDICollection.Models;
 
 namespace MyDICollection.Services
@@ -61,13 +62,13 @@ namespace MyDICollection.Services
             {
                 // ¿Cuántos existen en TOTAL en el juego según esta regla?
                 int metaTotal = catalogoFigurasBase.Count(f =>
-                    f.Tipo == logro.CategoriaItem && CumpleFiltro(f, logro));
+                    f.Tipo == logro.CategoriaItem && CumpleFiltro(f, logro, false));
 
                 // ¿Cuántos tiene el USUARIO que cumplan esta regla?
                 // ¿Cuántos tiene el USUARIO que cumplan esta regla?
                 int progresoUsuario = inventarioUsuario.Count(f =>
-                    f.Tipo == logro.CategoriaItem &&
-                    CumpleFiltro(f, logro) &&
+                    f.Tipo == logro.CategoriaItem.ToCurrentLanguageTraslate() &&
+                    CumpleFiltro(f, logro, true) &&
                     f.Obtenido); 
 
                 // 💥 VEREDICTO 💥
@@ -97,13 +98,13 @@ namespace MyDICollection.Services
         }
 
         // El motorcito dinámico con switch que platicamos
-        private bool CumpleFiltro(FiguraModel figura, LogroDefinicion logro)
+        private bool CumpleFiltro(FiguraModel figura, LogroDefinicion logro, bool forceTraslate)
         {
             return logro.TipoFiltro switch
             {
                 "Todos" => true,
                 "Version" => figura.Version == logro.ValorFiltro,
-                "Franquicia" => figura.Franquicia == logro.ValorFiltro,
+                "Franquicia" => figura.Franquicia ==  ((forceTraslate) ? logro.ValorFiltro.ToCurrentLanguageTraslate() : logro.ValorFiltro),
                 "Especial" => figura.EdicionEspecial == logro.ValorFiltro,
                 _ => false
             };

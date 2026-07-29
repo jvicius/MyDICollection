@@ -42,10 +42,11 @@
 
                 <VerticalStackLayout 
                     Grid.Column="1" 
-                    VerticalOptions="Center" Spacing="{responsive:ResponsiveSize BaseValue=2}">
+                    VerticalOptions="Center" 
+                    Spacing="{responsive:ResponsiveSize BaseValue=2}">
 
                     <Label Text="{helpers:Translate AchievemetsUnlock}" 
-                           Style="{StaticResource FilterLabelSize}"
+                           Style="{StaticResource LogroDescLabel}"
                            TextColor="{StaticResource Golden}" 
                            FontAttributes="Bold"/>
 
@@ -54,7 +55,7 @@
                           Style="{StaticResource LogroTitleLabel}"/>
 
                     <Label Text="{Binding Logro.DescripcionMostrada}" 
-                           Style="{StaticResource FilterLabelSize}"
+                           Style="{StaticResource LogroDescLabel}"
                            MaxLines="2"
                            LineBreakMode="TailTruncation"/>
 

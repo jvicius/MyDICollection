@@ -42,5 +42,27 @@
     "Descripcion": "Mickey Mouse Super Fan",
     "DescripcionEn": "Mickey Mouse Super Fan",
     "BadgeImage": "none.png"
+  },
+  {
+    "Id": "Zootopia",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Franquicia",
+    "ValorFiltro": "Zootopia",
+    "Titulo": "Zootopia Super Fan",
+    "TituloEn": "Zootopia Super Fan",
+    "Descripcion": "Consigue todas las figuras de Zootopia",
+    "DescripcionEn": "Find all Zootopia edition figures.",
+    "BadgeImage": "none.png"
+  },
+  {
+    "Id": "Valiente",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Franquicia",
+    "ValorFiltro": "Valiente",
+    "Titulo": "Valiente Super Fan",
+    "TituloEn": "Valiente Super Fan",
+    "Descripcion": "Consigue todas las figuras de Valiente",
+    "DescripcionEn": "Find all Valiente edition figures.",
+    "BadgeImage": "none.png"
   }
 ]
