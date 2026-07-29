@@ -24,6 +24,7 @@ namespace MyDICollection.ViewModels
         private readonly IJsonDataService _jsonDataService;
         private readonly IPopupPageService _popupPageService;
         private readonly ILocalizationService _localizationService;
+        private readonly ILogrosService _logrosService;
         protected StatusBarService StatusBarService { get; set; }
 
         private List<FiguraModel> _allFigures = new();
@@ -93,15 +94,23 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private ObservableCollection<MenuOpcion> _opcionesMenu;
 
-        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService)
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService)
         {
             _jsonDataService = jsonDataService;
             _popupPageService = popupPageService;
             StatusBarService = statusBarService;
             _localizationService = localizationService;
+            _logrosService = logrosService;
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
+                //borrar logros test
+                var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
+                if (File.Exists(rutaLogros))
+                {
+                    File.Delete(rutaLogros);
+                }
+
                 SetStatusBarColors();
                 SetupMenu();
                 SelectedMenuFigures = true;
@@ -385,6 +394,21 @@ namespace MyDICollection.ViewModels
             figuraEnLista.Obtenido = nuevaCantidad > 0;
 
             await GuardarProgresoAsync(figuraEnLista);
+
+            // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
+            // Le pasamos la colección completa (_allFigures) para que evalúe 
+            var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_allFigures);
+
+            foreach (var logro in nuevosLogros)
+            {
+                var navParams = new NavigationParameters { { "Logro", logro } };
+                await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
+
+                // Damos una pequeña pausa de medio segundo por si desbloqueó 2 logros al mismo tiempo 
+                // (así se encolan bonito en lugar de empalmarse)
+                await Task.Delay(500);
+            }
+            // 💥 FIN DEL MOTOR DE LOGROS 💥
 
             if (refrescar)
             {

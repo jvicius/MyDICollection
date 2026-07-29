@@ -36,6 +36,7 @@ namespace MyDICollection
             builder.Services.AddSingleton<IPopupPageService, PopupPageService>();
             builder.Services.AddSingleton<IJsonDataService, JsonDataService>();
             builder.Services.AddSingleton<ILocalizationService, LocalizationService>();
+            builder.Services.AddSingleton<ILogrosService, LogrosService>();
             builder.Services.AddSingleton<StatusBarService>();
 
             builder.Services.AddTransient<FiguraInfoPopup>();
@@ -48,6 +49,8 @@ namespace MyDICollection
             builder.Services.AddTransient<ContributionsViewModel>();
             builder.Services.AddTransient<FilterPopup>();
             builder.Services.AddTransient<FilterViewModel>();
+            builder.Services.AddTransient<LogroDesbloqueadoPopup>();
+            builder.Services.AddTransient<LogroDesbloqueadoViewModel>();
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();

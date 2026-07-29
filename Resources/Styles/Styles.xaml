@@ -17,6 +17,7 @@
     <responsive:ResponsiveSizeExtension x:Key="MenuIconLabelSize" BaseValue="24" />
     <responsive:ResponsiveSizeExtension x:Key="BigIconLabelSize" BaseValue="45" />
     <responsive:ResponsiveSizeExtension x:Key="LegalLabelSize" BaseValue="11" />
+    <responsive:ResponsiveSizeExtension x:Key="LogroIconSize" BaseValue="35" />
 
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
@@ -825,6 +826,33 @@
         <Setter Property="StrokeThickness" Value="1"/>
         <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue=5}"/>
         <Setter Property="Padding" Value="{responsive:ResponsiveThickness BaseValue='20,40,20,30'}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="BorderLogroPopup">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Golden}, Dark={StaticResource Golden}}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 20"/>
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="Padding" Value="{responsive:ResponsiveThickness BaseValue=15}"/>
+    </Style>
+
+
+    <Style x:Key="LogroIconLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Golden}, Dark={StaticResource Golden}}" />
+        <Setter Property="FontSize" Value="{StaticResource LogroIconSize}" />
+        <Setter Property="FontFamily" Value="FASolid"/>
+        <Setter Property="Margin" Value="{responsive:ResponsiveThickness BaseValue='0,0,15,0'}"/>
+    </Style>
+
+    <Style x:Key="LogroTitleLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="FontSize" Value="{StaticResource FigureTitleSize}" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="LogroDescLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray400}}" />
+        <Setter Property="FontSize" Value="{StaticResource FilterLabelSize}" />
     </Style>
 
 </ResourceDictionary>

@@ -945,7 +945,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sulley",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000032"
+    "modelo_fabrica": "INF-1000032",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-100-101",
@@ -957,7 +958,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer\u0027s_Apprentice_Mickey",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000037"
+    "modelo_fabrica": "INF-1000037",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-100-102",
@@ -969,7 +971,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Infinite_Jack_Sparrow_(Crystal_Series)",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000031"
+    "modelo_fabrica": "INF-1000031",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-200-103",
@@ -1293,7 +1296,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Peter_Pan",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000306"
+    "modelo_fabrica": "INF-1000306",
+    "edicion_especial": "Grial"
   },
   {
     "id": "DI-PD-100-130",
@@ -3081,7 +3085,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mr._Incredible",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000030"
+    "modelo_fabrica": "INF-1000030",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-300-131",
@@ -3093,7 +3098,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lightning_McQueen",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000033"
+    "modelo_fabrica": "INF-1000033",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-300-132",
@@ -3105,7 +3111,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lone_Ranger",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000034"
+    "modelo_fabrica": "INF-1000034",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-300-133",
@@ -3117,7 +3124,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Buzz_Lightyear",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000035"
+    "modelo_fabrica": "INF-1000035",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-300-134",
@@ -3129,7 +3137,8 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Agent_P",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000036"
+    "modelo_fabrica": "INF-1000036",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-300-135",
@@ -3141,6 +3150,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000021"
+    "modelo_fabrica": "INF-1000021",
+    "edicion_especial": "D23"
   }
 ]

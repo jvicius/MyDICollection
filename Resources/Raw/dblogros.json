@@ -1,0 +1,46 @@
+[
+  {
+    "Id": "FIG_ALL_COMPLETE",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Todos",
+    "ValorFiltro": "N/A",
+    "Titulo": "Dios del Infinity",
+    "TituloEn": "Infinity God",
+    "Descripcion": "Consigue absolutamente todas las figuras de la colección.",
+    "DescripcionEn": "Collect absolutely every figure in the collection.",
+    "BadgeImage": "none.png"
+  },
+  {
+    "Id": "FIG_V1_MASTER",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Version",
+    "ValorFiltro": "1.0",
+    "Titulo": "Pionero del Infinity",
+    "TituloEn": "Infinity Pioneer",
+    "Descripcion": "Consigue todas las figuras de la versión 1.0",
+    "DescripcionEn": "Collect all version 1.0 figures.",
+    "BadgeImage": "none.png"
+  },
+  {
+    "Id": "FIG_CRYSTAL_HUNTER",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Especial",
+    "ValorFiltro": "Crystal",
+    "Titulo": "Poder de Cristal",
+    "TituloEn": "Crystal Power",
+    "Descripcion": "Encuentra todas las figuras edición Crystal.",
+    "DescripcionEn": "Find all Crystal edition figures.",
+    "BadgeImage": "none.png"
+  },
+  {
+    "Id": "D23",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Especial",
+    "ValorFiltro": "D23",
+    "Titulo": "Figura Especial D23",
+    "TituloEn": "D23 Special Figure",
+    "Descripcion": "Mickey Mouse Super Fan",
+    "DescripcionEn": "Mickey Mouse Super Fan",
+    "BadgeImage": "none.png"
+  }
+]

@@ -216,4 +216,7 @@
   <data name="FilterClearButton" xml:space="preserve">
     <value>Limpiar Filtros</value>
   </data>
+  <data name="AchievemetsUnlock" xml:space="preserve">
+    <value>¡LOGRO DESBLOQUEADO!</value>
+  </data>
 </root>

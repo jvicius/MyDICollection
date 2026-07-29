@@ -79,6 +79,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ACHIEVEMENT UNLOCKED!.
+        /// </summary>
+        internal static string AchievemetsUnlock {
+            get {
+                return ResourceManager.GetString("AchievemetsUnlock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string All {
