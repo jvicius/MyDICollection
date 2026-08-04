@@ -432,41 +432,42 @@
                 <!-- Aquí le decimos que queremos 2 columnas -->
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" 
-                             Span="2" 
-                             HorizontalItemSpacing="15" 
-                             VerticalItemSpacing="15" />
+                             Span="1" 
+                             HorizontalItemSpacing="{responsive:ResponsiveSize BaseValue=10}" 
+                             VerticalItemSpacing="{responsive:ResponsiveSize BaseValue=10}" />
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
                     <!-- Ajusta el x:DataType a tu namespace de modelos -->
                     <DataTemplate x:DataType="models:LogroDefinicion">
-                        <Border Style="{StaticResource BorderPopup}"
-                        Padding="10">
 
-                            <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Border Style="{StaticResource BorderPopup}">
 
-                                <!-- La imagen PNG del Badge (Ajusta el nombre de tu propiedad si es diferente a 'ImagenBadge') -->
+                            <!-- 1. Cambiamos HorizontalOptions a "Fill" y agregamos un Padding lateral ligerito para que el texto respire -->
+                            <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" 
+                              HorizontalOptions="Fill" 
+                              Padding="{responsive:ResponsiveThickness BaseValue='5,0'}">
+
+                                <!-- La imagen PNG del Badge se queda centrada, eso está bien -->
                                 <Image Source="{Binding BadgeImage}" 
-                               Aspect="AspectFit" 
-                               HeightRequest="80"
-                               WidthRequest="80"
-                               HorizontalOptions="Center"/>
+                                    Aspect="AspectFit" 
+                                    HeightRequest="{responsive:ResponsiveSize BaseValue=60}"
+                                    WidthRequest="{responsive:ResponsiveSize BaseValue=60}"
+                                    HorizontalOptions="Center"/>
 
-                                <!-- Título del logro -->
+                                <!-- 2. 💥 El fix maestro: HorizontalOptions="Fill" y LineBreakMode="WordWrap" -->
                                 <Label Text="{Binding TituloMostrado}" 
-                               FontSize="14"
-                               FontAttributes="Bold" 
-                               HorizontalOptions="Center"
-                               HorizontalTextAlignment="Center"
-                               MaxLines="2"
-                               LineBreakMode="TailTruncation"
-                               TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                                    Style="{StaticResource ObtenidoIndicatorLabel}"
+                                    HorizontalOptions="Fill"
+                                    HorizontalTextAlignment="Center"
+                                    MaxLines="2"
+                                    LineBreakMode="WordWrap"
+                                    TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
 
-                                <!-- Fecha de obtención (Ajusta 'FechaObtenido') -->
+                                <!-- Fecha de obtención -->
                                 <Label Text="{Binding FechaObtenido, StringFormat='{0:dd/MM/yyyy}'}" 
-                               FontSize="11" 
-                               TextColor="Gray"
-                               HorizontalOptions="Center"/>
+                                    Style="{StaticResource InfoLegalLabel}"
+                                    HorizontalOptions="Center"/>
 
                             </VerticalStackLayout>
                         </Border>
