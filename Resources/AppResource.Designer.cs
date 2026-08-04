@@ -268,6 +268,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No achievements unlocked yet.
+        /// </summary>
+        internal static string NoAchievementsMessage {
+            get {
+                return ResourceManager.GetString("NoAchievementsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Owned.
         /// </summary>
         internal static string Owned {

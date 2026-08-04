@@ -219,4 +219,7 @@
   <data name="AchievemetsUnlock" xml:space="preserve">
     <value>¡LOGRO DESBLOQUEADO!</value>
   </data>
+  <data name="NoAchievementsMessage" xml:space="preserve">
+    <value>Aún no tienes logros desbloqueados</value>
+  </data>
 </root>

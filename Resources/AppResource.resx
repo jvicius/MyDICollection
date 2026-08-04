@@ -219,4 +219,7 @@
   <data name="AchievemetsUnlock" xml:space="preserve">
     <value>ACHIEVEMENT UNLOCKED!</value>
   </data>
+  <data name="NoAchievementsMessage" xml:space="preserve">
+    <value>No achievements unlocked yet</value>
+  </data>
 </root>
