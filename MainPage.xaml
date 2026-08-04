@@ -168,39 +168,64 @@
 
         </Grid>
 
-        <Grid Grid.Row="1" ColumnDefinitions="*" ColumnSpacing="{responsive:ResponsiveSize BaseValue=15}" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}" IsVisible="{Binding SelectedMenuArchi}">
+        <Grid Grid.Row="1" ColumnDefinitions="*, *" ColumnSpacing="{responsive:ResponsiveSize BaseValue=15}" Margin="{responsive:ResponsiveThickness BaseValue='15,5,15,10'}" IsVisible="{Binding SelectedMenuArchi}">
 
-            <!-- ETIQUETA 1: PROGRESO DE Logros -->
+
             <Border Grid.Column="0" 
-                    Style="{StaticResource BorderInfo}">
+     Style="{StaticResource BorderInfo}">
 
                 <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=4}" VerticalOptions="Center" HorizontalOptions="Fill">
 
                     <HorizontalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" HorizontalOptions="Center" VerticalOptions="Center">
 
                         <!-- Icono -->
-                        <Label Text="{x:Static fonts:FontAwesomeIcons.Trophy}" 
+                        <Label Text="{x:Static fonts:FontAwesomeIcons.Figura2}" 
                             Style="{StaticResource BorderInfoIcon2}"
+                            TextColor="{StaticResource Golden}"
                             VerticalOptions="Center"/>
 
-                        <Label Text="{helpers:Translate Achievements2}" 
-                            Style="{StaticResource BorderInfoLabel2}"
-                            VerticalOptions="Center" />
-
-                        <Label Text="0/0" 
-                            Style="{StaticResource BorderInfoLabel2}"
-                            FontAttributes="Bold" 
-                            VerticalOptions="Center" />
+                        <Label Text="{Binding TextoLogrosFiguras}" 
+                              Style="{StaticResource BorderInfoLabel2}"
+                              TextColor="{StaticResource Golden}"
+                              FontAttributes="Bold" 
+                              VerticalOptions="Center" />
 
                     </HorizontalStackLayout>
 
-                    <ProgressBar Progress="0" 
+                    <ProgressBar Progress="{Binding ProgresoLogrosFiguras}" 
                         Style="{StaticResource BorderInfoProgrees}"/>
 
                 </VerticalStackLayout>
 
             </Border>
 
+            <Border Grid.Column="1" 
+                Style="{StaticResource BorderInfo}">
+
+                <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=4}" VerticalOptions="Center" HorizontalOptions="Fill">
+
+                    <HorizontalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" HorizontalOptions="Center" VerticalOptions="Center">
+
+                        <!-- Icono -->
+                        <Label Text="{x:Static fonts:FontAwesomeIcons.PowerDisc3}" 
+                             Style="{StaticResource BorderInfoIcon2}"
+                                TextColor="{StaticResource Golden}"
+                             VerticalOptions="Center"/>
+
+                        <Label Text="{Binding TextoLogrosDiscos}" 
+                             Style="{StaticResource BorderInfoLabel2}"
+                                TextColor="{StaticResource Golden}"
+                             FontAttributes="Bold" 
+                             VerticalOptions="Center" />    
+
+                    </HorizontalStackLayout>
+
+                    <ProgressBar Progress="{Binding ProgresoLogrosDiscos}" 
+                  Style="{StaticResource BorderInfoProgrees}"/>
+
+                </VerticalStackLayout>
+
+            </Border>
 
         </Grid>
 
@@ -366,49 +391,88 @@
 
         <!-- Seccion de trofeos -->
         <Grid Grid.Row="2"
-            IsVisible="{Binding SelectedMenuArchi}"
-            Padding="{responsive:ResponsiveThickness BaseValue='20'}">
+          IsVisible="{Binding SelectedMenuArchi}"
+          Padding="{responsive:ResponsiveThickness BaseValue='15'}">
 
-            <!-- Tarjeta centrada estilo "Empty State" -->
-            <Border 
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Style="{StaticResource BorderPopup}">
-
-                <VerticalStackLayout 
-                             Spacing="{responsive:ResponsiveSize BaseValue=10}" 
+            <!-- ESTADO VACÍO: Se muestra si NO hay logros -->
+            <Border HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Style="{StaticResource BorderPopup}"
+            IsVisible="{Binding TieneLogros, Converter={toolkit:InvertedBoolConverter}}">
+                <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=10}" 
                              HorizontalOptions="Center" 
                              VerticalOptions="Center">
 
-                    <!-- Ícono/Emoji de Trofeo -->
                     <Label Text="🏆" 
-                        FontSize="{StaticResource BigIconLabelSize}" 
-                        HorizontalOptions="Center" 
-                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+                   FontSize="{StaticResource BigIconLabelSize}" 
+                   HorizontalOptions="Center" 
+                   Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
 
-                    <!-- Título mamalón -->
                     <Label Text="{helpers:Translate HallOffFame}" 
-                       FontSize="{StaticResource HexaButtonFontSize}" 
-                       FontAttributes="Bold" 
-                       HorizontalOptions="Center"
-                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+                   FontSize="{StaticResource HexaButtonFontSize}" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}" />
 
-                    <!-- Subtítulo / Texto de construcción -->
-                    <Label Text="{helpers:Translate UnderConstruction}" 
-                        Style="{StaticResource BorderInfoLabel}"
-                        HorizontalOptions="Center" 
-                        HorizontalTextAlignment="Center"
-                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
-
-                    <!-- Animación de "Trabajando en ello" -->
-                    <ActivityIndicator IsRunning="True" 
-                               HorizontalOptions="Center" />
-
+                    <!-- Cambia este texto en tus recursos a algo como "¡Empieza tu colección para ganar trofeos!" -->
+                    <Label Text="Aún no tienes logros desbloqueados" 
+                   Style="{StaticResource BorderInfoLabel}"
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
             </Border>
 
+            <!-- EL GRID DE LOGROS: Se muestra si SÍ hay logros -->
+            <CollectionView IsVisible="{Binding TieneLogros}"
+                    ItemsSource="{Binding LogrosObtenidos}"
+                    VerticalScrollBarVisibility="Never">
+
+                <!-- Aquí le decimos que queremos 2 columnas -->
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" 
+                             Span="2" 
+                             HorizontalItemSpacing="15" 
+                             VerticalItemSpacing="15" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <!-- Ajusta el x:DataType a tu namespace de modelos -->
+                    <DataTemplate x:DataType="models:LogroDefinicion">
+                        <Border Style="{StaticResource BorderPopup}"
+                        Padding="10">
+
+                            <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+
+                                <!-- La imagen PNG del Badge (Ajusta el nombre de tu propiedad si es diferente a 'ImagenBadge') -->
+                                <Image Source="{Binding BadgeImage}" 
+                               Aspect="AspectFit" 
+                               HeightRequest="80"
+                               WidthRequest="80"
+                               HorizontalOptions="Center"/>
+
+                                <!-- Título del logro -->
+                                <Label Text="{Binding TituloMostrado}" 
+                               FontSize="14"
+                               FontAttributes="Bold" 
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               MaxLines="2"
+                               LineBreakMode="TailTruncation"
+                               TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+
+                                <!-- Fecha de obtención (Ajusta 'FechaObtenido') -->
+                                <Label Text="{Binding FechaObtenido, StringFormat='{0:dd/MM/yyyy}'}" 
+                               FontSize="11" 
+                               TextColor="Gray"
+                               HorizontalOptions="Center"/>
+
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
-        
+
         <!--Seccion de Configuracion-->
 
         <CollectionView Grid.Row="2"

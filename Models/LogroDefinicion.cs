@@ -27,5 +27,8 @@ namespace MyDICollection.Models
         [JsonIgnore]
         public string DescripcionMostrada =>
             Settings.LanguageSettings == "en" ? DescripcionEn : Descripcion;
+
+        [JsonIgnore] // Lo ignoramos para que no busque esto en el JSON del catálogo
+        public DateTime FechaObtenido { get; set; }
     }
 }

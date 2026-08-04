@@ -35,8 +35,10 @@ namespace MyDICollection.ViewModels
         public ObservableCollection<string> OpcionesVersion { get; } = new();
         public ObservableCollection<string> OpcionesFranquicia { get; } = new();
 
-        // 2. MAGIA: [ObservableProperty] genera los Getters y Setters públicos por ti.
-        // Y para ejecutar algo cuando cambia (tu AplicarFiltros), usamos este método partial que se auto-engancha.
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(TieneLogros))]
+        private ObservableCollection<LogroDefinicion> _logrosObtenidos = new();
+        public bool TieneLogros => LogrosObtenidos != null && LogrosObtenidos.Count > 0;
 
         [ObservableProperty]
         private string _filtroObtenido = AppResource.All;
@@ -93,6 +95,18 @@ namespace MyDICollection.ViewModels
 
         [ObservableProperty]
         private ObservableCollection<MenuOpcion> _opcionesMenu;
+
+        [ObservableProperty]
+        private string _textoLogrosFiguras = "0/0";
+
+        [ObservableProperty]
+        private double _progresoLogrosFiguras = 0;
+
+        [ObservableProperty]
+        private string _textoLogrosDiscos = "0/0";
+
+        [ObservableProperty]
+        private double _progresoLogrosDiscos = 0;
 
         public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService)
         {
@@ -224,9 +238,63 @@ namespace MyDICollection.ViewModels
                 IconInfo = FontAwesomeIcons.PowerDisc3;
             }
 
+            if (value == "Achievements")
+            {
+                await CargarLogrosFamaAsync();
+            }
+
             if (value == "MyFigures" || value == "MyDiscs")
             {
                 await LoadDataAsync();
+            }
+        }
+
+        private async Task CargarLogrosFamaAsync()
+        {
+            var historialUsuario = await _logrosService.ObtenerLogrosDesbloqueadosAsync();
+            var catalogoCompleto = await _logrosService.ObtenerCatalogoLogrosAsync();
+
+            if (catalogoCompleto != null)
+            {
+                // 1. Calculamos los totales que existen en el juego
+                int totalLogrosFiguras = catalogoCompleto.Count(l => l.CategoriaItem == "Figura");
+                // Nota: Asegúrate de que "Disco de Poder" sea el texto exacto que usas en tu JSON de logros
+                int totalLogrosDiscos = catalogoCompleto.Count(l => l.CategoriaItem == "Disco de Poder");
+
+                int obtenidosFiguras = 0;
+                int obtenidosDiscos = 0;
+                var listaVisual = new List<LogroDefinicion>();
+
+                if (historialUsuario != null && historialUsuario.Any())
+                {
+                    foreach (var progreso in historialUsuario)
+                    {
+                        var definicion = catalogoCompleto.FirstOrDefault(c => c.Id == progreso.LogroId);
+                        if (definicion != null)
+                        {
+                            definicion.FechaObtenido = progreso.FechaDesbloqueo;
+                            listaVisual.Add(definicion);
+
+                            // Vamos sumando a los contadores de lo que ya obtuvo el usuario
+                            if (definicion.CategoriaItem == "Figura") obtenidosFiguras++;
+                            else if (definicion.CategoriaItem == "Disco de Poder") obtenidosDiscos++;
+                        }
+                    }
+
+                    var logrosOrdenados = listaVisual.OrderByDescending(l => l.FechaObtenido).ToList();
+                    LogrosObtenidos = new ObservableCollection<LogroDefinicion>(logrosOrdenados);
+                }
+                else
+                {
+                    LogrosObtenidos.Clear();
+                }
+
+                // 2. Asignamos los textos y la barra de progreso (de 0.0 a 1.0) para la UI
+                TextoLogrosFiguras = $"{obtenidosFiguras}/{totalLogrosFiguras}";
+                ProgresoLogrosFiguras = totalLogrosFiguras == 0 ? 0 : (double)obtenidosFiguras / totalLogrosFiguras;
+
+                TextoLogrosDiscos = $"{obtenidosDiscos}/{totalLogrosDiscos}";
+                ProgresoLogrosDiscos = totalLogrosDiscos == 0 ? 0 : (double)obtenidosDiscos / totalLogrosDiscos;
             }
         }
 

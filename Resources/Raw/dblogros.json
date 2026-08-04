@@ -11,6 +11,17 @@
     "BadgeImage": "none.png"
   },
   {
+    "Id": "PD_ALL_COMPLETE",
+    "CategoriaItem": "Disco de Poder",
+    "TipoFiltro": "Todos",
+    "ValorFiltro": "N/A",
+    "Titulo": "Colleccionista de poder",
+    "TituloEn": "Power Collector",
+    "Descripcion": "Consigue absolutamente todos las discos de poder de la colección.",
+    "DescripcionEn": "Collect absolutely every power disc's in the collection.",
+    "BadgeImage": "none.png"
+  },
+  {
     "Id": "FIG_V1_MASTER",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
