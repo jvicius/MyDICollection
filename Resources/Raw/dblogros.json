@@ -33,6 +33,28 @@
     "BadgeImage": "badge_v1_pioneer.png"
   },
   {
+    "Id": "FIG_V2_MASTER",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Version",
+    "ValorFiltro": "2.0",
+    "Titulo": "Pionero del Infinity",
+    "TituloEn": "Infinity Pioneer",
+    "Descripcion": "Consigue todas las figuras de la versión 2.0",
+    "DescripcionEn": "Collect all version 2.0 figures.",
+    "BadgeImage": "badge_v2_pioneer.png"
+  },
+  {
+    "Id": "FIG_V3_MASTER",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Version",
+    "ValorFiltro": "3.0",
+    "Titulo": "Pionero del Infinity",
+    "TituloEn": "Infinity Pioneer",
+    "Descripcion": "Consigue todas las figuras de la versión 3.0",
+    "DescripcionEn": "Collect all version 3.0 figures.",
+    "BadgeImage": "badge_v3_pioneer.png"
+  },
+  {
     "Id": "FIG_CRYSTAL_HUNTER",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Especial",
