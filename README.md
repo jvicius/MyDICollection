@@ -3,7 +3,7 @@
 
 A modern, fast, and 100% offline-first application built with **.NET MAUI** to easily manage and track your Disney Infinity collection.[cite: 4]
 
-Whether you're hunting for figures at a retro game store or organizing your display at home, this app lets you know exactly what you own, what you're missing, and how many duplicates you have.[cite: 4]
+Whether you're hunting for figures at a retro game store or organizing your display at home, this app lets you know exactly what you own, what you're missing, and how many duplicates you have.
 
 ## Preview 
 
