@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Achievements" xml:space="preserve">
+    <value>Achievements</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
@@ -125,7 +128,6 @@
   </data>
   <data name="Collect" xml:space="preserve">
     <value>Collect</value>
-    <comment>Obtenido</comment>
   </data>
   <data name="Filters" xml:space="preserve">
     <value>🔎 Filters</value>
@@ -133,8 +135,14 @@
   <data name="Missing" xml:space="preserve">
     <value>Missing</value>
   </data>
+  <data name="MyFigures" xml:space="preserve">
+    <value>My Figures</value>
+  </data>
   <data name="Owned" xml:space="preserve">
     <value>Owned</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>My Disney Infinity Collection</value>
@@ -144,5 +152,74 @@
   </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
+  </data>
+  <data name="MyDiscs" xml:space="preserve">
+    <value>Power Disc</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Figure" xml:space="preserve">
+    <value>Figure</value>
+  </data>
+  <data name="PowerDisc" xml:space="preserve">
+    <value>Power Disc</value>
+  </data>
+  <data name="PiecesLabel" xml:space="preserve">
+    <value>Pieces:</value>
+  </data>
+  <data name="UniqueLabel" xml:space="preserve">
+    <value>Unique:</value>
+  </data>
+  <data name="Universe" xml:space="preserve">
+    <value>Universe: </value>
+  </data>
+  <data name="ModelNumber" xml:space="preserve">
+    <value>Model Number: </value>
+  </data>
+  <data name="Achievements2" xml:space="preserve">
+    <value>Achievements: </value>
+  </data>
+  <data name="HallOffFame" xml:space="preserve">
+    <value>Hall of Fame</value>
+  </data>
+  <data name="UnderConstruction" xml:space="preserve">
+    <value>Section under construction! Soon you'll be able to see all your collection's achievements and trophies here.</value>
+  </data>
+  <data name="MenuAboutApp" xml:space="preserve">
+    <value>About the App</value>
+  </data>
+  <data name="MenuChangeLanguage" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+  <data name="MenuContributions" xml:space="preserve">
+    <value>Contributions</value>
+  </data>
+  <data name="LegalDisclaimerText" xml:space="preserve">
+    <value>Disclaimer: This application is an unofficial fan-made project. All images, names, and trademarks related to Disney Infinity are the property of Disney Enterprises, Inc. There is no official affiliation, sponsorship, or endorsement by Disney.</value>
+  </data>
+  <data name="ButtonViewCode" xml:space="preserve">
+    <value>View Code on GitHub</value>
+  </data>
+  <data name="ButtonCheckUpdates" xml:space="preserve">
+    <value>Check for Updates</value>
+  </data>
+  <data name="LanguagePopupTitle" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="ContributionsMessage" xml:space="preserve">
+    <value>This app is free to use and made with love. If you find it useful and want to support the development or buy me a coffee, I would greatly appreciate it! ☕💙</value>
+  </data>
+  <data name="FilterApplyButton" xml:space="preserve">
+    <value>Apply Filters</value>
+  </data>
+  <data name="FilterClearButton" xml:space="preserve">
+    <value>Clear Filters</value>
+  </data>
+  <data name="AchievemetsUnlock" xml:space="preserve">
+    <value>ACHIEVEMENT UNLOCKED!</value>
+  </data>
+  <data name="NoAchievementsMessage" xml:space="preserve">
+    <value>No achievements unlocked yet</value>
   </data>
 </root>

@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using MyDICollection.Helpers;
+using System.Globalization;
 
 namespace MyDICollection.Converters
 {
@@ -9,7 +10,7 @@ namespace MyDICollection.Converters
             if (value is not string originalString || string.IsNullOrEmpty(originalString))
                 return string.Empty;
 
-            bool isEnglish = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en";
+            bool isEnglish = Settings.LanguageSettings == "en";
 
             if (!isEnglish)
             {
@@ -20,7 +21,7 @@ namespace MyDICollection.Converters
             {
                 // ---- Tipos ----
                 "Figura" => "Figure",
-                "Power Disc" => "Power Disc",
+                "Disco de Poder" => "Power Disc",
 
                 // ---- Franquicias 1.0 ----
                 "Piratas del Caribe" => "Pirates of the Caribbean",
@@ -37,9 +38,9 @@ namespace MyDICollection.Converters
 
                 // ---- Franquicias 2.0 ----
                 "Marvel" => "Marvel", 
-                "Grandes Héroes" => "Big Hero 6",
+                "Grandes Heroes" => "Big Hero 6",
                 "Tron" => "Tron", 
-                "Maléfica" => "Maleficent",
+                "Malefica" => "Maleficent",
                 "Lilo & Stitch" => "Lilo & Stitch", 
                 "Peter Pan" => "Peter Pan", 
 
@@ -52,6 +53,12 @@ namespace MyDICollection.Converters
 
                 // ---- Casos Especiales/Nuevos ----
                 "Por Asignar" => "Unassigned",
+
+                "Un Gran Dinosaurio" => "The Good Dinosaur",
+                "Buscando a Nemo" => "Finding Nemo",
+                "El Libro de la Selva" => "The Jungle Book",
+                "Alicia en el Pais de las Maravillas" => "Alice in Wonderland",
+                "Valiente" => "Brave",
 
                 "Todos" => "All",
 

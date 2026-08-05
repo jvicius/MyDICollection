@@ -5,7 +5,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Piratas del Caribe",
-    "imagen_url": "none.png",
+    "imagen_url": "di10001.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_Jack_Sparrow",
     "obtenido": false,
     "cantidad": 0,
@@ -45,7 +45,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mr._Incredible",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000030"
+    "modelo_fabrica": "INF-1000001"
   },
   {
     "id": "DI-10-005",
@@ -105,7 +105,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sulley",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": null
+    "modelo_fabrica": "INF-1000002"
   },
   {
     "id": "DI-10-010",
@@ -113,7 +113,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Monsters University",
-    "imagen_url": "none.png",
+    "imagen_url": "di10010.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mike_Wazowski",
     "obtenido": false,
     "cantidad": 0,
@@ -141,7 +141,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lightning_McQueen",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000033"
+    "modelo_fabrica": "INF-1000006"
   },
   {
     "id": "DI-10-013",
@@ -189,7 +189,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lone_Ranger",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000217"
+    "modelo_fabrica": "INF-1000004"
   },
   {
     "id": "DI-10-017",
@@ -217,7 +217,7 @@
   },
   {
     "id": "DI-10-019",
-    "nombre": "Mickey Mouse (Sorcerer)",
+    "nombre": "Mickey Mouse Sorcerer",
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Disney Clasicos",
@@ -225,7 +225,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000221"
+    "modelo_fabrica": "INF-1000021"
   },
   {
     "id": "DI-10-020",
@@ -237,7 +237,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Buzz_Lightyear",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000035"
+    "modelo_fabrica": "INF-1000008"
   },
   {
     "id": "DI-10-021",
@@ -281,7 +281,7 @@
     "tipo": "Figura",
     "version": "1.0",
     "franquicia": "Ralph el Demoledor",
-    "imagen_url": "none.png",
+    "imagen_url": "di10024.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Vanellope_von_Schweetz",
     "obtenido": false,
     "cantidad": 0,
@@ -345,7 +345,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Agent_P",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000036"
+    "modelo_fabrica": "INF-1000027"
   },
   {
     "id": "DI-20-001",
@@ -544,8 +544,8 @@
     "nombre": "Hiro Hamada",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Grandes H\u00E9roes",
-    "imagen_url": "none.png",
+    "franquicia": "Grandes Heroes",
+    "imagen_url": "di20017.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hiro_Hamada",
     "obtenido": false,
     "cantidad": 0,
@@ -556,7 +556,7 @@
     "nombre": "Baymax",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Grandes H\u00E9roes",
+    "franquicia": "Grandes Heroes",
     "imagen_url": "di20018.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Baymax",
     "obtenido": false,
@@ -592,7 +592,7 @@
     "nombre": "Maleficent",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Mal\u00E9fica",
+    "franquicia": "Malefica",
     "imagen_url": "di20021.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Maleficent",
     "obtenido": false,
@@ -653,7 +653,7 @@
     "tipo": "Figura",
     "version": "3.0",
     "franquicia": "Star Wars",
-    "imagen_url": "none.png",
+    "imagen_url": "di30002.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ahsoka_Tano",
     "obtenido": false,
     "cantidad": 0,
@@ -849,7 +849,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anger",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000034"
+    "modelo_fabrica": "INF-1000217"
   },
   {
     "id": "DI-30-019",
@@ -885,7 +885,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mickey_Mouse",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": null
+    "modelo_fabrica": "INF-1000221"
   },
   {
     "id": "DI-30-022",
@@ -914,7 +914,7 @@
   {
     "id": "DI-PD-10-001",
     "nombre": "Pieces of Eight (Sujetador de Monedas)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Piratas del Caribe",
     "imagen_url": "dipd10001.png",
@@ -926,7 +926,7 @@
   {
     "id": "DI-PD-20-001",
     "nombre": "S.H.I.E.L.D. Helicarrier Strike",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Marvel",
     "imagen_url": "dipd20001.png",
@@ -937,46 +937,49 @@
   },
   {
     "id": "DI-100-100",
-    "nombre": "Sulley",
+    "nombre": "Sully (Crystal Series)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Monsters University",
     "imagen_url": "di100100.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sulley",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000032"
+    "modelo_fabrica": "INF-1000032",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-100-101",
-    "nombre": "Sorcerer\u0027s Apprentice Mickey",
+    "nombre": "Mickey Mouse Sorcerer (Crystal Series)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Disney Clasicos",
     "imagen_url": "di100101.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer\u0027s_Apprentice_Mickey",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000037"
+    "modelo_fabrica": "INF-1000037",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-100-102",
     "nombre": "Infinite Jack Sparrow (Crystal Series)",
     "tipo": "Figura",
     "version": "1.0",
-    "franquicia": "Por Asignar",
-    "imagen_url": "none.png",
+    "franquicia": "Piratas del Caribe",
+    "imagen_url": "di100102.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Infinite_Jack_Sparrow_(Crystal_Series)",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000031"
+    "modelo_fabrica": "INF-1000031",
+    "edicion_especial": "Crystal"
   },
   {
     "id": "DI-200-103",
     "nombre": "Aladdin",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Aladdin",
     "imagen_url": "di200103.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Aladdin",
     "obtenido": false,
@@ -988,7 +991,7 @@
     "nombre": "Merida",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Valiente",
     "imagen_url": "di200104.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Merida",
     "obtenido": false,
@@ -1000,7 +1003,7 @@
     "nombre": "Loki",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di200105.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Loki",
     "obtenido": false,
@@ -1012,7 +1015,7 @@
     "nombre": "Ronan",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di200106.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ronan",
     "obtenido": false,
@@ -1024,7 +1027,7 @@
     "nombre": "Green Goblin",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di200107.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Green_Goblin",
     "obtenido": false,
@@ -1036,7 +1039,7 @@
     "nombre": "Falcon",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di200108.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Falcon",
     "obtenido": false,
@@ -1048,7 +1051,7 @@
     "nombre": "Yondu",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di200109.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Yondu",
     "obtenido": false,
@@ -1060,7 +1063,7 @@
     "nombre": "Jasmine",
     "tipo": "Figura",
     "version": "2.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Aladdin",
     "imagen_url": "di200110.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jasmine",
     "obtenido": false,
@@ -1072,7 +1075,7 @@
     "nombre": "Ezra Bridger",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Star Wars",
     "imagen_url": "di300111.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ezra_Bridger",
     "obtenido": false,
@@ -1084,7 +1087,7 @@
     "nombre": "Kanan Jarrus",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Star Wars",
     "imagen_url": "di300112.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Kanan_Jarrus",
     "obtenido": false,
@@ -1096,7 +1099,7 @@
     "nombre": "Sabine Wren",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Star Wars",
     "imagen_url": "di300113.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sabine_Wren",
     "obtenido": false,
@@ -1108,7 +1111,7 @@
     "nombre": "Zeb Orrelios",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Star Wars",
     "imagen_url": "di300114.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Zeb_Orrelios",
     "obtenido": false,
@@ -1120,7 +1123,7 @@
     "nombre": "Mulan",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Mulan",
     "imagen_url": "di300115.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mulan",
     "obtenido": false,
@@ -1132,7 +1135,7 @@
     "nombre": "Vision",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di300116.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Vision",
     "obtenido": false,
@@ -1144,7 +1147,7 @@
     "nombre": "Ultron",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di300117.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ultron",
     "obtenido": false,
@@ -1156,7 +1159,7 @@
     "nombre": "Ant-Man",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di300118.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ant-Man",
     "obtenido": false,
@@ -1168,7 +1171,7 @@
     "nombre": "Spot",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Un Gran Dinosaurio",
     "imagen_url": "di300119.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spot",
     "obtenido": false,
@@ -1180,7 +1183,7 @@
     "nombre": "Nick Wilde",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Zootopia",
     "imagen_url": "di300120.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nick_Wilde",
     "obtenido": false,
@@ -1192,7 +1195,7 @@
     "nombre": "Judy Hopps",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Zootopia",
     "imagen_url": "di300121.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Judy_Hopps",
     "obtenido": false,
@@ -1204,7 +1207,7 @@
     "nombre": "Black Panther",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Marvel",
     "imagen_url": "di300122.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Black_Panther",
     "obtenido": false,
@@ -1216,7 +1219,7 @@
     "nombre": "Nemo",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Buscando a Nemo",
     "imagen_url": "di300123.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nemo",
     "obtenido": false,
@@ -1228,7 +1231,7 @@
     "nombre": "Dory",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Buscando a Nemo",
     "imagen_url": "di300124.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Dory",
     "obtenido": false,
@@ -1240,7 +1243,7 @@
     "nombre": "Baloo",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "El Libro de la Selva",
     "imagen_url": "di300125.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Baloo",
     "obtenido": false,
@@ -1252,7 +1255,7 @@
     "nombre": "Alice",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Alicia en el Pais de las Maravillas",
     "imagen_url": "di300126.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Alice",
     "obtenido": false,
@@ -1264,7 +1267,7 @@
     "nombre": "Mad Hatter",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Alicia en el Pais de las Maravillas",
     "imagen_url": "di300127.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mad_Hatter",
     "obtenido": false,
@@ -1276,7 +1279,7 @@
     "nombre": "Time",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Alicia en el Pais de las Maravillas",
     "imagen_url": "di300128.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Time",
     "obtenido": false,
@@ -1288,17 +1291,18 @@
     "nombre": "Peter Pan",
     "tipo": "Figura",
     "version": "3.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Peter Pan",
     "imagen_url": "di300129.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Peter_Pan",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000306"
+    "modelo_fabrica": "INF-1000306",
+    "edicion_especial": "Grial"
   },
   {
     "id": "DI-PD-100-130",
     "nombre": "Bolt\u0027s Super Strength",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100130.png",
@@ -1310,7 +1314,7 @@
   {
     "id": "DI-PD-100-131",
     "nombre": "Ralph\u0027s Power of Destruction",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100131.png",
@@ -1322,7 +1326,7 @@
   {
     "id": "DI-PD-100-132",
     "nombre": "Chernabog\u0027s Power",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100132.png",
@@ -1334,7 +1338,7 @@
   {
     "id": "DI-PD-100-133",
     "nombre": "C.H.R.O.M.E. Damage Increaser (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1346,7 +1350,7 @@
   {
     "id": "DI-PD-100-134",
     "nombre": "Dr. Doofenshmirtz\u0027s Damage-Inator!",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1358,7 +1362,7 @@
   {
     "id": "DI-PD-100-135",
     "nombre": "Electro-Charge",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100135.png",
@@ -1370,7 +1374,7 @@
   {
     "id": "DI-PD-100-136",
     "nombre": "Fix-It Felix\u0027s Repair Power",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1382,7 +1386,7 @@
   {
     "id": "DI-PD-100-137",
     "nombre": "C.H.R.O.M.E. Armor Shield",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1394,7 +1398,7 @@
   {
     "id": "DI-PD-100-138",
     "nombre": "Star Command Shield",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100138.png",
@@ -1406,7 +1410,7 @@
   {
     "id": "DI-PD-100-139",
     "nombre": "Scrooge McDuck\u0027s Lucky Dime (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1418,7 +1422,7 @@
   {
     "id": "DI-PD-100-140",
     "nombre": "User Control (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1430,7 +1434,7 @@
   {
     "id": "DI-PD-100-141",
     "nombre": "Sorcerer Mickey\u0027s Hat",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1442,7 +1446,7 @@
   {
     "id": "DI-PD-100-142",
     "nombre": "Emperor Zurg\u0027s Wrath (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1454,7 +1458,7 @@
   {
     "id": "DI-PD-100-143",
     "nombre": "Merlin\u0027s Summon (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1466,7 +1470,7 @@
   {
     "id": "DI-PD-200-144",
     "nombre": "Enchanted Rose",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200144.png",
@@ -1478,7 +1482,7 @@
   {
     "id": "DI-PD-200-145",
     "nombre": "Flubber",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200145.png",
@@ -1490,7 +1494,7 @@
   {
     "id": "DI-PD-200-146",
     "nombre": "Zeus\u0027 Thunderbolts",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200146.png",
@@ -1502,7 +1506,7 @@
   {
     "id": "DI-PD-200-147",
     "nombre": "King Louie\u0027s Monkeys",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200147.png",
@@ -1514,7 +1518,7 @@
   {
     "id": "DI-PD-200-148",
     "nombre": "Infinity Gauntlet (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1526,7 +1530,7 @@
   {
     "id": "DI-PD-200-149",
     "nombre": "Sorcerer Supreme",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200149.png",
@@ -1538,7 +1542,7 @@
   {
     "id": "DI-PD-200-150",
     "nombre": "Chernabog\u0027s Spirit Cyclone",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200150.png",
@@ -1550,7 +1554,7 @@
   {
     "id": "DI-PD-200-151",
     "nombre": "Marvel Team-Up: Captain Marvel",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200151.png",
@@ -1562,7 +1566,7 @@
   {
     "id": "DI-PD-200-152",
     "nombre": "Marvel Team-Up: Iron Patriot",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200152.png",
@@ -1574,7 +1578,7 @@
   {
     "id": "DI-PD-200-153",
     "nombre": "Marvel Team-Up: White Tiger",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200153.png",
@@ -1586,7 +1590,7 @@
   {
     "id": "DI-PD-200-154",
     "nombre": "Marvel Team-Up: Winter Soldier",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200154.png",
@@ -1598,7 +1602,7 @@
   {
     "id": "DI-PD-200-155",
     "nombre": "Stark Arc Reactor",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200155.png",
@@ -1610,7 +1614,7 @@
   {
     "id": "DI-PD-200-156",
     "nombre": "Gamma Rays",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200156.png",
@@ -1622,7 +1626,7 @@
   {
     "id": "DI-PD-200-157",
     "nombre": "Alien Symbiote",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200157.png",
@@ -1634,7 +1638,7 @@
   {
     "id": "DI-PD-200-158",
     "nombre": "All for One",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200158.png",
@@ -1646,7 +1650,7 @@
   {
     "id": "DI-PD-200-159",
     "nombre": "Sandy Claws Surprise",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200159.png",
@@ -1658,7 +1662,7 @@
   {
     "id": "DI-PD-200-160",
     "nombre": "Glory Days",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1670,7 +1674,7 @@
   {
     "id": "DI-PD-200-161",
     "nombre": "Cursed Pirate Gold",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200161.png",
@@ -1682,7 +1686,7 @@
   {
     "id": "DI-PD-200-162",
     "nombre": "Sentinel of Liberty",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200162.png",
@@ -1694,7 +1698,7 @@
   {
     "id": "DI-PD-200-163",
     "nombre": "Space Armor",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200163.png",
@@ -1706,7 +1710,7 @@
   {
     "id": "DI-PD-200-164",
     "nombre": "Rags to Riches",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200164.png",
@@ -1718,7 +1722,7 @@
   {
     "id": "DI-PD-300-165",
     "nombre": "Galactic Team-Up: Mace Windu",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300165.png",
@@ -1730,7 +1734,7 @@
   {
     "id": "DI-PD-300-166",
     "nombre": "Luke\u0027s Rebel Alliance Flight Suit Costume",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300166.png",
@@ -1742,7 +1746,7 @@
   {
     "id": "DI-PD-300-167",
     "nombre": "Poe\u0027s Resistance Jacket",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300167.png",
@@ -1754,7 +1758,7 @@
   {
     "id": "DI-PD-300-168",
     "nombre": "Resistance Tactical Strike",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300168.png",
@@ -1766,7 +1770,7 @@
   {
     "id": "DI-PD-300-169",
     "nombre": "Meter Maid Judy",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300169.png",
@@ -1778,7 +1782,7 @@
   {
     "id": "DI-PD-300-170",
     "nombre": "Darkhawk\u0027s Blast",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1790,7 +1794,7 @@
   {
     "id": "DI-PD-300-171",
     "nombre": "Cosmic Cube Blast",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300171.png",
@@ -1802,7 +1806,7 @@
   {
     "id": "DI-PD-300-172",
     "nombre": "King Mickey",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300172.png",
@@ -1814,7 +1818,7 @@
   {
     "id": "DI-PD-100-173",
     "nombre": "Mickey\u0027s Car",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100173.png",
@@ -1826,7 +1830,7 @@
   {
     "id": "DI-PD-100-174",
     "nombre": "Cinderella\u0027s Coach",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100174.png",
@@ -1838,7 +1842,7 @@
   {
     "id": "DI-PD-100-175",
     "nombre": "Electric Mayhem Bus",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100175.png",
@@ -1850,7 +1854,7 @@
   {
     "id": "DI-PD-100-176",
     "nombre": "Cruella De Vil\u0027s Car",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100176.png",
@@ -1862,7 +1866,7 @@
   {
     "id": "DI-PD-100-177",
     "nombre": "Pizza Planet Delivery Truck",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100177.png",
@@ -1874,7 +1878,7 @@
   {
     "id": "DI-PD-100-178",
     "nombre": "Mike\u0027s New Car (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1886,7 +1890,7 @@
   {
     "id": "DI-PD-100-179",
     "nombre": "Parking Lot Tram",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100179.png",
@@ -1898,7 +1902,7 @@
   {
     "id": "DI-PD-100-180",
     "nombre": "Captain Hook\u0027s Ship (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1910,7 +1914,7 @@
   {
     "id": "DI-PD-100-181",
     "nombre": "Dumbo (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1922,7 +1926,7 @@
   {
     "id": "DI-PD-100-182",
     "nombre": "Calico Helicopter",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100182.png",
@@ -1934,7 +1938,7 @@
   {
     "id": "DI-PD-100-183",
     "nombre": "Maximus",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100183.png",
@@ -1946,7 +1950,7 @@
   {
     "id": "DI-PD-100-184",
     "nombre": "Angus",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100184.png",
@@ -1958,7 +1962,7 @@
   {
     "id": "DI-PD-100-185",
     "nombre": "Abu the Elephant (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -1970,7 +1974,7 @@
   {
     "id": "DI-PD-100-186",
     "nombre": "Headless Horseman\u0027s Horse",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100186.png",
@@ -1982,7 +1986,7 @@
   {
     "id": "DI-PD-100-187",
     "nombre": "Phillipe",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100187.png",
@@ -1994,7 +1998,7 @@
   {
     "id": "DI-PD-100-188",
     "nombre": "Khan",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2006,7 +2010,7 @@
   {
     "id": "DI-PD-100-189",
     "nombre": "Tantor",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100189.png",
@@ -2018,7 +2022,7 @@
   {
     "id": "DI-PD-100-190",
     "nombre": "Dragon Firework Cannon",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100190.png",
@@ -2030,7 +2034,7 @@
   {
     "id": "DI-PD-100-191",
     "nombre": "Toy Story Mania Blaster",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100191.png",
@@ -2042,7 +2046,7 @@
   {
     "id": "DI-PD-100-192",
     "nombre": "Flamingo Croquet Mallet",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100192.png",
@@ -2054,7 +2058,7 @@
   {
     "id": "DI-PD-100-193",
     "nombre": "Carl Fredricksen\u0027s Cane",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100193.png",
@@ -2066,7 +2070,7 @@
   {
     "id": "DI-PD-100-194",
     "nombre": "Condorman Glider (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2078,7 +2082,7 @@
   {
     "id": "DI-PD-100-195",
     "nombre": "WALL-E\u0027s Fire Extinguisher (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2090,7 +2094,7 @@
   {
     "id": "DI-PD-100-196",
     "nombre": "On the Grid (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2102,7 +2106,7 @@
   {
     "id": "DI-PD-100-197",
     "nombre": "WALL-E\u0027s Collection",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100197.png",
@@ -2114,7 +2118,7 @@
   {
     "id": "DI-PD-100-198",
     "nombre": "King Candy\u0027s Dessert Toppings",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100198.png",
@@ -2126,7 +2130,7 @@
   {
     "id": "DI-PD-100-199",
     "nombre": "Victor\u0027s Experiments",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100199.png",
@@ -2138,7 +2142,7 @@
   {
     "id": "DI-PD-100-200",
     "nombre": "Jack\u0027s Scary Decorations",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100200.png",
@@ -2150,7 +2154,7 @@
   {
     "id": "DI-PD-100-201",
     "nombre": "Frozen Flourish",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100201.png",
@@ -2162,7 +2166,7 @@
   {
     "id": "DI-PD-100-202",
     "nombre": "TRON Interface (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2174,7 +2178,7 @@
   {
     "id": "DI-PD-100-203",
     "nombre": "Buy N Large Atmosphere",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100203.png",
@@ -2186,7 +2190,7 @@
   {
     "id": "DI-PD-100-204",
     "nombre": "Sugar Rush Sky",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100204.png",
@@ -2198,7 +2202,7 @@
   {
     "id": "DI-PD-100-205",
     "nombre": "New Holland Skyline",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100205.png",
@@ -2210,7 +2214,7 @@
   {
     "id": "DI-PD-100-206",
     "nombre": "Halloween Town Sky",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100206.png",
@@ -2222,7 +2226,7 @@
   {
     "id": "DI-PD-100-207",
     "nombre": "Chill in the Air",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100207.png",
@@ -2234,7 +2238,7 @@
   {
     "id": "DI-PD-100-208",
     "nombre": "Astro Blasters Space Cruiser (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2246,7 +2250,7 @@
   {
     "id": "DI-PD-100-209",
     "nombre": "Marlin\u0027s Reef",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100209.png",
@@ -2258,7 +2262,7 @@
   {
     "id": "DI-PD-100-210",
     "nombre": "Tulgey Wood",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100210.png",
@@ -2270,7 +2274,7 @@
   {
     "id": "DI-PD-100-211",
     "nombre": "Tri-State Area Terrain",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100211.png",
@@ -2282,7 +2286,7 @@
   {
     "id": "DI-PD-100-212",
     "nombre": "Danville Sky",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "1.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd100212.png",
@@ -2294,7 +2298,7 @@
   {
     "id": "DI-PD-200-213",
     "nombre": "Stark Tech",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200213.png",
@@ -2306,7 +2310,7 @@
   {
     "id": "DI-PD-200-214",
     "nombre": "Spider-Streets",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2318,7 +2322,7 @@
   {
     "id": "DI-PD-200-215",
     "nombre": "Gravity Falls Forest",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200215.png",
@@ -2330,7 +2334,7 @@
   {
     "id": "DI-PD-200-216",
     "nombre": "Neverland",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200216.png",
@@ -2342,7 +2346,7 @@
   {
     "id": "DI-PD-200-217",
     "nombre": "Simba\u0027s Pridelands",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2354,7 +2358,7 @@
   {
     "id": "DI-PD-200-218",
     "nombre": "Calhoun\u0027s Command",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200218.png",
@@ -2366,7 +2370,7 @@
   {
     "id": "DI-PD-200-219",
     "nombre": "Dinosaur World",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200219.png",
@@ -2378,7 +2382,7 @@
   {
     "id": "DI-PD-200-220",
     "nombre": "The Sands of Agrabah",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200220.png",
@@ -2390,7 +2394,7 @@
   {
     "id": "DI-PD-200-221",
     "nombre": "A Small World",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200221.png",
@@ -2402,7 +2406,7 @@
   {
     "id": "DI-PD-200-222",
     "nombre": "View from the Suit",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200222.png",
@@ -2414,7 +2418,7 @@
   {
     "id": "DI-PD-200-223",
     "nombre": "Spider-Sky",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2426,7 +2430,7 @@
   {
     "id": "DI-PD-200-224",
     "nombre": "Gravity Falls Sky",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200224.png",
@@ -2438,7 +2442,7 @@
   {
     "id": "DI-PD-200-225",
     "nombre": "Second Star to the Right",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200225.png",
@@ -2450,7 +2454,7 @@
   {
     "id": "DI-PD-200-226",
     "nombre": "The King\u0027s Domain",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200226.png",
@@ -2462,7 +2466,7 @@
   {
     "id": "DI-PD-200-227",
     "nombre": "CyBug Swarm",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200227.png",
@@ -2474,7 +2478,7 @@
   {
     "id": "DI-PD-200-228",
     "nombre": "The Rip",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200228.png",
@@ -2486,7 +2490,7 @@
   {
     "id": "DI-PD-200-229",
     "nombre": "Forgotten Skies",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200229.png",
@@ -2498,7 +2502,7 @@
   {
     "id": "DI-PD-200-230",
     "nombre": "The Middle Kingdom",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200230.png",
@@ -2510,7 +2514,7 @@
   {
     "id": "DI-PD-200-231",
     "nombre": "Skies of the World",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200231.png",
@@ -2522,7 +2526,7 @@
   {
     "id": "DI-PD-200-232",
     "nombre": "S.H.I.E.L.D. Containment Truck",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200232.png",
@@ -2534,7 +2538,7 @@
   {
     "id": "DI-PD-200-233",
     "nombre": "Main Street Electrical Parade Float",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200233.png",
@@ -2546,7 +2550,7 @@
   {
     "id": "DI-PD-200-234",
     "nombre": "Mr. Toad\u0027s Motorcar",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200234.png",
@@ -2558,7 +2562,7 @@
   {
     "id": "DI-PD-200-235",
     "nombre": "Le Maximum",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200235.png",
@@ -2570,7 +2574,7 @@
   {
     "id": "DI-PD-200-236",
     "nombre": "Eglantine\u0027s Motorcycle",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200236.png",
@@ -2582,7 +2586,7 @@
   {
     "id": "DI-PD-200-237",
     "nombre": "Medusa\u0027s Swamp Mobile",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200237.png",
@@ -2594,7 +2598,7 @@
   {
     "id": "DI-PD-200-238",
     "nombre": "Hydra Motorcycle",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200238.png",
@@ -2606,7 +2610,7 @@
   {
     "id": "DI-PD-200-239",
     "nombre": "Darkwing Duck\u0027s Ratcatcher",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200239.png",
@@ -2618,7 +2622,7 @@
   {
     "id": "DI-PD-200-240",
     "nombre": "The USS Swinetrek",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200240.png",
@@ -2630,7 +2634,7 @@
   {
     "id": "DI-PD-200-241",
     "nombre": "Spider-Copter",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200241.png",
@@ -2642,7 +2646,7 @@
   {
     "id": "DI-PD-200-242",
     "nombre": "Aerial Area Rug",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200242.png",
@@ -2654,7 +2658,7 @@
   {
     "id": "DI-PD-200-243",
     "nombre": "Jack-O-Lantern\u0027s Glider",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200243.png",
@@ -2666,7 +2670,7 @@
   {
     "id": "DI-PD-200-244",
     "nombre": "Spider-Buggy",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200244.png",
@@ -2678,7 +2682,7 @@
   {
     "id": "DI-PD-200-245",
     "nombre": "Fantasyland Carousel Horse",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200245.png",
@@ -2690,7 +2694,7 @@
   {
     "id": "DI-PD-200-246",
     "nombre": "Odin\u0027s Horse",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200246.png",
@@ -2702,7 +2706,7 @@
   {
     "id": "DI-PD-200-247",
     "nombre": "Gus the Mule",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200247.png",
@@ -2714,7 +2718,7 @@
   {
     "id": "DI-PD-200-248",
     "nombre": "Darkwing Duck\u0027s Grappling Gun",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200248.png",
@@ -2726,7 +2730,7 @@
   {
     "id": "DI-PD-200-249",
     "nombre": "Ghost Rider\u0027s Chain Whip",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200249.png",
@@ -2738,7 +2742,7 @@
   {
     "id": "DI-PD-200-250",
     "nombre": "Lew Zealand\u0027s Boomerang Fish",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200250.png",
@@ -2750,7 +2754,7 @@
   {
     "id": "DI-PD-200-251",
     "nombre": "Sergeant Calhoun\u0027s Blaster",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200251.png",
@@ -2762,7 +2766,7 @@
   {
     "id": "DI-PD-200-252",
     "nombre": "Mabel\u0027s Kittens for Fists",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200252.png",
@@ -2774,7 +2778,7 @@
   {
     "id": "DI-PD-200-253",
     "nombre": "Jim Hawkins\u0027 Solar Board",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200253.png",
@@ -2786,7 +2790,7 @@
   {
     "id": "DI-PD-200-254",
     "nombre": "Cloak of Levitation",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200254.png",
@@ -2798,7 +2802,7 @@
   {
     "id": "DI-PD-200-255",
     "nombre": "Honey Lemon\u0027s Ice Capsules",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200255.png",
@@ -2810,7 +2814,7 @@
   {
     "id": "DI-PD-200-256",
     "nombre": "Lola",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200256.png",
@@ -2822,7 +2826,7 @@
   {
     "id": "DI-PD-200-257",
     "nombre": "Spider-Cycle (Rare)",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2834,7 +2838,7 @@
   {
     "id": "DI-PD-200-258",
     "nombre": "The Avenjet",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200258.png",
@@ -2846,7 +2850,7 @@
   {
     "id": "DI-PD-200-259",
     "nombre": "Spider-Glider",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2858,7 +2862,7 @@
   {
     "id": "DI-PD-200-260",
     "nombre": "Light Cycle",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200260.png",
@@ -2870,7 +2874,7 @@
   {
     "id": "DI-PD-200-261",
     "nombre": "Light Jet",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "2.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd200261.png",
@@ -2882,7 +2886,7 @@
   {
     "id": "DI-PD-300-262",
     "nombre": "Retro Ray Gun",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300262.png",
@@ -2894,7 +2898,7 @@
   {
     "id": "DI-PD-300-263",
     "nombre": "Tomorrowland Futurescape",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300263.png",
@@ -2906,7 +2910,7 @@
   {
     "id": "DI-PD-300-264",
     "nombre": "Tomorrowland Stratosphere",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300264.png",
@@ -2918,7 +2922,7 @@
   {
     "id": "DI-PD-300-265",
     "nombre": "Skies Over Felucia",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "none.png",
@@ -2930,7 +2934,7 @@
   {
     "id": "DI-PD-300-266",
     "nombre": "Forests of Felucia",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300266.png",
@@ -2942,7 +2946,7 @@
   {
     "id": "DI-PD-300-267",
     "nombre": "General Grievous\u0027 Wheel Bike",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300267.png",
@@ -2954,7 +2958,7 @@
   {
     "id": "DI-PD-300-268",
     "nombre": "Slave I Flyer",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300268.png",
@@ -2966,7 +2970,7 @@
   {
     "id": "DI-PD-300-269",
     "nombre": "Y-Wing Fighter",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300269.png",
@@ -2978,7 +2982,7 @@
   {
     "id": "DI-PD-300-270",
     "nombre": "Arlo",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300270.png",
@@ -2990,7 +2994,7 @@
   {
     "id": "DI-PD-300-271",
     "nombre": "Nash",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300271.png",
@@ -3002,7 +3006,7 @@
   {
     "id": "DI-PD-300-272",
     "nombre": "Butch",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300272.png",
@@ -3014,7 +3018,7 @@
   {
     "id": "DI-PD-300-273",
     "nombre": "Ramsey",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300273.png",
@@ -3026,7 +3030,7 @@
   {
     "id": "DI-PD-300-274",
     "nombre": "Stars Over Sahara Square",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300274.png",
@@ -3038,7 +3042,7 @@
   {
     "id": "DI-PD-300-275",
     "nombre": "Sahara Square Sands",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300275.png",
@@ -3050,7 +3054,7 @@
   {
     "id": "DI-PD-300-276",
     "nombre": "Ghost Rider\u0027s Motorcycle",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Por Asignar",
     "imagen_url": "dipd300276.png",
@@ -3062,7 +3066,7 @@
   {
     "id": "DI-PD-300-277",
     "nombre": "Quad Jumper",
-    "tipo": "Power Disc",
+    "tipo": "Disco de Poder",
     "version": "3.0",
     "franquicia": "Star Wars",
     "imagen_url": "dipd300277.png",
@@ -3070,5 +3074,83 @@
     "obtenido": false,
     "cantidad": 0,
     "modelo_fabrica": "INF-4000229"
+  },
+  {
+    "id": "DI-300-130",
+    "nombre": "Mr. Incredible (Crystal Series)",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Los Increibles",
+    "imagen_url": "di300130.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mr._Incredible",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000030",
+    "edicion_especial": "Crystal"
+  },
+  {
+    "id": "DI-300-131",
+    "nombre": "Lightning McQueen (Crystal Series)",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Cars",
+    "imagen_url": "di300131.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lightning_McQueen",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000033",
+    "edicion_especial": "Crystal"
+  },
+  {
+    "id": "DI-300-132",
+    "nombre": "The Lone Ranger (Crystal Series)",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "El Llanero Solitario",
+    "imagen_url": "di300132.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Lone_Ranger",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000034",
+    "edicion_especial": "Crystal"
+  },
+  {
+    "id": "DI-300-133",
+    "nombre": "Buzz Lightyear (Crystal Series)",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Toy Story",
+    "imagen_url": "di300133.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Buzz_Lightyear",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000035",
+    "edicion_especial": "Crystal"
+  },
+  {
+    "id": "DI-300-134",
+    "nombre": "Agent P (Crystal Series)",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Phineas y Ferb",
+    "imagen_url": "di300134.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Agent_P",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000036",
+    "edicion_especial": "Crystal"
+  },
+  {
+    "id": "DI-300-135",
+    "nombre": "Mickey Mouse Sorcerer D23",
+    "tipo": "Figura",
+    "version": "1.0",
+    "franquicia": "Disney Clasicos",
+    "imagen_url": "d23.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000021",
+    "edicion_especial": "D23"
   }
 ]

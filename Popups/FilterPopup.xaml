@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             xmlns:controls="clr-namespace:MyDICollection.Controls"
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+             xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
+             xmlns:helpers="clr-namespace:MyDICollection.Helpers"
+             x:Class="MyDICollection.Popups.FilterPopup"
+             x:DataType="viewmodels:FilterViewModel"
+             BackgroundColor="#80000000">
+
+    <!-- Animación: Entra y sale desde la Izquierda -->
+    <mopups:PopupPage.Animation>
+        <animations:MoveAnimation PositionIn="Right" PositionOut="Right" DurationIn="300" DurationOut="300"/>
+    </mopups:PopupPage.Animation>
+
+    <controls:SafeAreaView>
+
+        <!-- Contenedor alineado a la Izquierda, altura completa -->
+        <Grid HorizontalOptions="End" 
+          VerticalOptions="Fill" 
+          WidthRequest="{responsive:ResponsiveSize BaseValue=290}">
+
+            <!-- Fondo del panel (Redondeado solo de la derecha) -->
+            <Border 
+                Style="{StaticResource BorderMenuPopup}">
+
+                <Grid RowDefinitions="Auto, *, Auto">
+
+                    <!-- HEADER -->
+                    <Grid 
+                        Grid.Row="0" 
+                        ColumnDefinitions="*, Auto" 
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,20'}">
+                        
+                        <HorizontalStackLayout 
+                            Spacing="{responsive:ResponsiveSize BaseValue=10}" 
+                            VerticalOptions="Center">
+                            
+                            <Label Text="{x:Static fonts:FontAwesomeIcons.Filter}" 
+                               Style="{StaticResource InfoIconLabel}" 
+                               FontSize="{StaticResource HexaButtonFontSize}"/>
+                            
+                            <Label Text="{helpers:Translate Search}" 
+                               Style="{StaticResource FilterTitleLabel}" 
+                               FontSize="{StaticResource HexaButtonFontSize}"/>
+                            
+                        </HorizontalStackLayout>
+
+                        <controls:HexagonButton 
+                                            Grid.Column="1" 
+                                            Text="{x:Static fonts:FontAwesomeIcons.Close}" 
+                                            Style="{StaticResource HexaButton}"
+                                            Command="{Binding CerrarCommand}"/>
+                    </Grid>
+
+                    <!-- PICKERS (Contenido scrolleable por si en el futuro agregas más) -->
+                    <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never">
+                        
+                        <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=15}">
+
+                            <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=5}">
+                                <Label Text="{helpers:Translate Collect}" Style="{StaticResource FilterLabel}"/>
+                                <Picker ItemsSource="{Binding Filtros.OpcionesObtenido}"
+                                    SelectedItem="{Binding Filtros.FiltroObtenido}"/>
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=5}">
+                                <Label Text="{helpers:Translate Version}" Style="{StaticResource FilterLabel}"/>
+                                <Picker ItemsSource="{Binding Filtros.OpcionesVersion}"
+                                    SelectedItem="{Binding Filtros.FiltroVersion}"/>
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=5}">
+                                <Label Text="{helpers:Translate Brand}" Style="{StaticResource FilterLabel}"/>
+                                <Picker ItemsSource="{Binding Filtros.OpcionesFranquicia}"
+                                    SelectedItem="{Binding Filtros.FiltroFranquicia}"/>
+                            </VerticalStackLayout>
+
+                        </VerticalStackLayout>
+                    </ScrollView>
+
+                    <!-- FOOTER (Botones de acción) -->
+                    <VerticalStackLayout 
+                        Grid.Row="2" 
+                        Spacing="{responsive:ResponsiveSize BaseValue=10}" 
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,15,0,0'}">
+
+                        <Button Text="{helpers:Translate FilterApplyButton}"
+                            Command="{Binding AplicarCommand}"
+                            Style="{StaticResource InfoButton1}"/>
+
+                        <!-- Un botón transparente o tipo Ghost para limpiar -->
+                        <Button Text="{helpers:Translate FilterClearButton}"
+                            Command="{Binding LimpiarFiltrosCommand}"
+                            Style="{StaticResource InfoButton2}"/>
+
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+        </Grid>
+
+    </controls:SafeAreaView>
+</mopups:PopupPage>

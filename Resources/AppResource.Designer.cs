@@ -61,6 +61,33 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Achievements.
+        /// </summary>
+        internal static string Achievements {
+            get {
+                return ResourceManager.GetString("Achievements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Achievements: .
+        /// </summary>
+        internal static string Achievements2 {
+            get {
+                return ResourceManager.GetString("Achievements2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ACHIEVEMENT UNLOCKED!.
+        /// </summary>
+        internal static string AchievemetsUnlock {
+            get {
+                return ResourceManager.GetString("AchievemetsUnlock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string All {
@@ -79,11 +106,65 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check for Updates.
+        /// </summary>
+        internal static string ButtonCheckUpdates {
+            get {
+                return ResourceManager.GetString("ButtonCheckUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Code on GitHub.
+        /// </summary>
+        internal static string ButtonViewCode {
+            get {
+                return ResourceManager.GetString("ButtonViewCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collect.
         /// </summary>
         internal static string Collect {
             get {
                 return ResourceManager.GetString("Collect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This app is free to use and made with love. If you find it useful and want to support the development or buy me a coffee, I would greatly appreciate it! ☕💙.
+        /// </summary>
+        internal static string ContributionsMessage {
+            get {
+                return ResourceManager.GetString("ContributionsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Figure.
+        /// </summary>
+        internal static string Figure {
+            get {
+                return ResourceManager.GetString("Figure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply Filters.
+        /// </summary>
+        internal static string FilterApplyButton {
+            get {
+                return ResourceManager.GetString("FilterApplyButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Filters.
+        /// </summary>
+        internal static string FilterClearButton {
+            get {
+                return ResourceManager.GetString("FilterClearButton", resourceCulture);
             }
         }
         
@@ -97,6 +178,60 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hall of Fame.
+        /// </summary>
+        internal static string HallOffFame {
+            get {
+                return ResourceManager.GetString("HallOffFame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Language.
+        /// </summary>
+        internal static string LanguagePopupTitle {
+            get {
+                return ResourceManager.GetString("LanguagePopupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disclaimer: This application is an unofficial fan-made project. All images, names, and trademarks related to Disney Infinity are the property of Disney Enterprises, Inc. There is no official affiliation, sponsorship, or endorsement by Disney..
+        /// </summary>
+        internal static string LegalDisclaimerText {
+            get {
+                return ResourceManager.GetString("LegalDisclaimerText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About the App.
+        /// </summary>
+        internal static string MenuAboutApp {
+            get {
+                return ResourceManager.GetString("MenuAboutApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Language.
+        /// </summary>
+        internal static string MenuChangeLanguage {
+            get {
+                return ResourceManager.GetString("MenuChangeLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contributions.
+        /// </summary>
+        internal static string MenuContributions {
+            get {
+                return ResourceManager.GetString("MenuContributions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Missing.
         /// </summary>
         internal static string Missing {
@@ -106,11 +241,83 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Model Number: .
+        /// </summary>
+        internal static string ModelNumber {
+            get {
+                return ResourceManager.GetString("ModelNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Power Disc.
+        /// </summary>
+        internal static string MyDiscs {
+            get {
+                return ResourceManager.GetString("MyDiscs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Figures.
+        /// </summary>
+        internal static string MyFigures {
+            get {
+                return ResourceManager.GetString("MyFigures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No achievements unlocked yet.
+        /// </summary>
+        internal static string NoAchievementsMessage {
+            get {
+                return ResourceManager.GetString("NoAchievementsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Owned.
         /// </summary>
         internal static string Owned {
             get {
                 return ResourceManager.GetString("Owned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pieces:.
+        /// </summary>
+        internal static string PiecesLabel {
+            get {
+                return ResourceManager.GetString("PiecesLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Power Disc.
+        /// </summary>
+        internal static string PowerDisc {
+            get {
+                return ResourceManager.GetString("PowerDisc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
         
@@ -129,6 +336,33 @@ namespace MyDICollection.Resources {
         internal static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Section under construction! Soon you&apos;ll be able to see all your collection&apos;s achievements and trophies here..
+        /// </summary>
+        internal static string UnderConstruction {
+            get {
+                return ResourceManager.GetString("UnderConstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unique:.
+        /// </summary>
+        internal static string UniqueLabel {
+            get {
+                return ResourceManager.GetString("UniqueLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Universe: .
+        /// </summary>
+        internal static string Universe {
+            get {
+                return ResourceManager.GetString("Universe", resourceCulture);
             }
         }
         

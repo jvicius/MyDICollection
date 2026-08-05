@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             xmlns:controls="clr-namespace:MyDICollection.Controls"
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+             xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
+             xmlns:helpers="clr-namespace:MyDICollection.Helpers"
+             x:Class="MyDICollection.Popups.AboutPopup"
+             x:DataType="viewmodels:AboutViewModel"
+             BackgroundColor="#80000000">
+
+    <mopups:PopupPage.Animation>
+        <animations:ScaleAnimation PositionIn="Center" PositionOut="Center" DurationIn="200" DurationOut="200"/>
+    </mopups:PopupPage.Animation>
+
+    <controls:SafeAreaView>
+
+        <Grid HorizontalOptions="Center" 
+          VerticalOptions="Center" 
+          Padding="{responsive:ResponsiveThickness BaseValue='20'}">
+
+            <Border Style="{StaticResource BorderPopup}">
+
+                <VerticalStackLayout 
+                Spacing="{responsive:ResponsiveSize BaseValue=15}" 
+                HorizontalOptions="Center">
+
+                    <!-- Ícono de Información (Opcional, pero se ve pro) -->
+                    <Label Text="{x:Static fonts:FontAwesomeIcons.InfoCircle}"         
+                       HorizontalOptions="Center"
+                       Style="{StaticResource InfoIconLabel}" />
+
+                    <!-- Título del App -->
+                    <Label Text="My DI Collection" 
+                       Style="{StaticResource InfoTitleLabel}"
+                       HorizontalOptions="Center"
+                        />
+
+                    <!-- Versión (Se bindea en automático desde el ViewModel) -->
+                    <Label Text="{Binding AppVersion, StringFormat='Version {0}'}" 
+                       Style="{StaticResource BorderInfoLabel}"
+                       HorizontalOptions="Center" />
+
+                    <!-- Divisor estético -->
+                    <BoxView HeightRequest="1" 
+                         Color="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource White}}" 
+                         Opacity="0.2" 
+                         Margin="{responsive:ResponsiveThickness BaseValue='5,0'}"/>
+
+                    <Label Text="{helpers:Translate LegalDisclaimerText}"
+                       
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource InfoLegalLabel}"
+                       Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+
+                    <!-- Botón GitHub -->
+                    <Button Text="{helpers:Translate ButtonViewCode}"
+                        Command="{Binding AbrirGitHubCommand}"
+                        Style="{StaticResource InfoButton1}"
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,5'}"/>
+
+                    <!-- Botón Releases -->
+                    <Button Text="{helpers:Translate ButtonCheckUpdates}"
+                        Command="{Binding AbrirReleasesCommand}"
+                        Style="{StaticResource InfoButton2}"
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+
+                    <!-- Botón de Cerrar  -->
+                    <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Close}" 
+                    Style="{StaticResource HexaButton}">
+                        <controls:HexagonButton.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CerrarCommand}"/>
+                        </controls:HexagonButton.GestureRecognizers>
+                    </controls:HexagonButton>
+
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+    </controls:SafeAreaView>
+
+</mopups:PopupPage>

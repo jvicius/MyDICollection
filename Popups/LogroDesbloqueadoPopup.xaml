@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+             xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
+             xmlns:helpers="clr-namespace:MyDICollection.Helpers"
+             x:Class="MyDICollection.Popups.LogroDesbloqueadoPopup"
+             x:DataType="viewmodels:LogroDesbloqueadoViewModel"
+             BackgroundColor="Transparent"
+             InputTransparent="False">
+
+    <mopups:PopupPage.Animation>
+        <animations:MoveAnimation PositionIn="Top" PositionOut="Top" DurationIn="400" DurationOut="300"/>
+    </mopups:PopupPage.Animation>
+
+    <!-- Lo alineamos arriba con un margen para que no pegue con la barra del celular -->
+    <Grid VerticalOptions="Start" 
+          HorizontalOptions="Center" 
+          Margin="{responsive:ResponsiveThickness BaseValue='0,50,0,0'}"
+          WidthRequest="{responsive:ResponsiveSize BaseValue=340}">
+
+        <Grid.GestureRecognizers>
+            <!-- Si el usuario lo toca, se cierra antes de tiempo -->
+            <TapGestureRecognizer Command="{Binding CerrarManualmenteCommand}"/>
+        </Grid.GestureRecognizers>
+
+        <!-- Borde dorado/amarillo estilo Trofeo -->
+        <Border 
+                Style="{StaticResource BorderLogroPopup}">
+
+            <Grid ColumnDefinitions="Auto, *">
+
+                <!-- Icono de Trofeo -->
+                <Label Grid.Column="0" 
+                       Text="{x:Static fonts:FontAwesomeIcons.Trophy}" 
+                       Style="{StaticResource LogroIconLabel}"
+                       VerticalOptions="Center"
+                       />
+
+                <VerticalStackLayout 
+                    Grid.Column="1" 
+                    VerticalOptions="Center" 
+                    Spacing="{responsive:ResponsiveSize BaseValue=2}">
+
+                    <Label Text="{helpers:Translate AchievemetsUnlock}" 
+                           Style="{StaticResource LogroDescLabel}"
+                           TextColor="{StaticResource Golden}" 
+                           FontAttributes="Bold"/>
+
+                    <!-- Bindeamos a nuestras propiedades mágicas del multi-idioma -->
+                    <Label Text="{Binding Logro.TituloMostrado}" 
+                          Style="{StaticResource LogroTitleLabel}"/>
+
+                    <Label Text="{Binding Logro.DescripcionMostrada}" 
+                           Style="{StaticResource LogroDescLabel}"
+                           MaxLines="2"
+                           LineBreakMode="TailTruncation"/>
+
+                </VerticalStackLayout>
+                
+            </Grid>
+            
+        </Border>
+        
+    </Grid>
+    
+</mopups:PopupPage>

@@ -25,6 +25,15 @@ public partial class HexagonButton : ContentView
     public static readonly BindableProperty FontSizeProperty =
        BindableProperty.Create(nameof(FontSize), typeof(double), typeof(HexagonButton), (double) 12);
 
+    public static readonly BindableProperty FontFamilyProperty =
+    BindableProperty.Create(nameof(FontFamily), typeof(string), typeof(HexagonButton), string.Empty);
+
+    public string FontFamily
+    {
+        get => (string)GetValue(FontFamilyProperty);
+        set => SetValue(FontSizeProperty, value);
+    }
+
     public double FontSize
     {
         get => (double)GetValue(FontSizeProperty);

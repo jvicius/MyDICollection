@@ -1,91 +1,350 @@
-﻿using MyDICollection.Converters;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Mopups.Services;
+using MyDICollection.Helpers;
+using MyDICollection.Helpers.Extensions;
+using MyDICollection.Helpers.Fonts;
 using MyDICollection.Models;
+using MyDICollection.Popups;
 using MyDICollection.Resources;
 using MyDICollection.Services;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
 
 namespace MyDICollection.ViewModels
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    // 1. Debe ser "partial" y heredar de ObservableObject
+    public partial class MainPageViewModel : ObservableObject
     {
+        public Color statusBarColor = Color.FromArgb("#EB1937");
+        public Color navigationBarColor = Color.FromArgb("#EB1937");
+
         private const string CatalogFileName = "dbmyinfinity.json";
         private const string UserDataFileName = "userdata.json";
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         private readonly IJsonDataService _jsonDataService;
+        private readonly IPopupPageService _popupPageService;
+        private readonly ILocalizationService _localizationService;
+        private readonly ILogrosService _logrosService;
+        protected StatusBarService StatusBarService { get; set; }
 
         private List<FiguraModel> _allFigures = new();
-        // Diccionario Id -> datos del usuario, se guarda tal cual en userdata.json
         private Dictionary<string, FiguraUserData> _userData = new();
-
-        public ICommand IncrementarCommand { get; }
-        public ICommand DecrementarCommand { get; }
-        public ICommand AbrirWikiCommand { get; }
-
-        public MainPageViewModel(IJsonDataService jsonDataService)
-        {
-            _jsonDataService = jsonDataService;
-
-            IncrementarCommand = new Command<FiguraModel>(async (figura) => await CambiarCantidadAsync(figura, 1));
-            DecrementarCommand = new Command<FiguraModel>(async (figura) => await CambiarCantidadAsync(figura, -1));
-            AbrirWikiCommand = new Command<FiguraModel>(async (figura) => await AbrirWikiAsync(figura));
-
-            LoadDataAsync();
-        }
-
-        private ObservableCollection<FiguraModel> _figures = new();
-        public ObservableCollection<FiguraModel> Figures
-        {
-            get => _figures;
-            set { if (_figures != value) { _figures = value; OnPropertyChanged(); } }
-        }
-
-        private bool _isBusy;
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set { if (_isBusy != value) { _isBusy = value; OnPropertyChanged(); } }
-        }
 
         public ObservableCollection<string> OpcionesObtenido { get; } = new() { AppResource.All, AppResource.Owned, AppResource.Missing };
         public ObservableCollection<string> OpcionesTipo { get; } = new();
         public ObservableCollection<string> OpcionesVersion { get; } = new();
         public ObservableCollection<string> OpcionesFranquicia { get; } = new();
 
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(TieneLogros))]
+        private ObservableCollection<LogroDefinicion> _logrosObtenidos = new();
+        public bool TieneLogros => LogrosObtenidos != null && LogrosObtenidos.Count > 0;
+
+        [ObservableProperty]
         private string _filtroObtenido = AppResource.All;
-        public string FiltroObtenido
-        {
-            get => _filtroObtenido;
-            set { if (_filtroObtenido != value) { _filtroObtenido = value; OnPropertyChanged(); AplicarFiltros(); } }
-        }
+        partial void OnFiltroObtenidoChanged(string value) => AplicarFiltros();
 
+        [ObservableProperty]
         private string _filtroTipo = AppResource.All;
-        public string FiltroTipo
-        {
-            get => _filtroTipo;
-            set { if (_filtroTipo != value) { _filtroTipo = value; OnPropertyChanged(); AplicarFiltros(); } }
-        }
+        partial void OnFiltroTipoChanged(string value) => AplicarFiltros();
 
+        [ObservableProperty]
         private string _filtroVersion = AppResource.All;
-        public string FiltroVersion
+        partial void OnFiltroVersionChanged(string value) => AplicarFiltros();
+
+        [ObservableProperty]
+        private string _filtroFranquicia = AppResource.All;
+        partial void OnFiltroFranquiciaChanged(string value) => AplicarFiltros();
+
+        [ObservableProperty]
+        private ObservableCollection<FiguraModel> _figures = new();
+
+        public bool MostrarLista => !IsBusy && (SelectedMenuFigures || SelectedMenuDiscs);
+
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(MostrarLista))]
+        private bool _isBusy;
+
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(MostrarLista))]
+        private bool _selectedMenuFigures;
+
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(MostrarLista))]
+        private bool _selectedMenuDiscs;
+
+        [ObservableProperty]
+        private bool _selectedMenuArchi;
+
+        [ObservableProperty]
+        private bool _selectedMenuSettings;
+
+        [ObservableProperty]
+        private bool _selectedMenuHome;
+
+        [ObservableProperty]
+        private int _totalPiezasFisicas;
+
+        [ObservableProperty]
+        private string _textoProgresoColeccion;
+
+        [ObservableProperty]
+        private double _porcentajeColeccion;
+        [ObservableProperty]
+        private string _iconInfo = FontAwesomeIcons.Figura2;
+
+        [ObservableProperty]
+        private ObservableCollection<MenuOpcion> _opcionesMenu;
+
+        [ObservableProperty]
+        private string _textoLogrosFiguras = "0/0";
+
+        [ObservableProperty]
+        private double _progresoLogrosFiguras = 0;
+
+        [ObservableProperty]
+        private string _textoLogrosDiscos = "0/0";
+
+        [ObservableProperty]
+        private double _progresoLogrosDiscos = 0;
+
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService)
         {
-            get => _filtroVersion;
-            set { if (_filtroVersion != value) { _filtroVersion = value; OnPropertyChanged(); AplicarFiltros(); } }
+            _jsonDataService = jsonDataService;
+            _popupPageService = popupPageService;
+            StatusBarService = statusBarService;
+            _localizationService = localizationService;
+            _logrosService = logrosService;
+
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                //borrar logros test
+                //var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
+                //if (File.Exists(rutaLogros))
+                //{
+                //    File.Delete(rutaLogros);
+                //}
+
+                SetStatusBarColors();
+                SetupMenu();
+                SelectedMenuFigures = true;
+                await LoadDataAsync();
+            });
+            _popupPageService = popupPageService;
         }
 
-        private string _filtroFranquicia = AppResource.All;
-        public string FiltroFranquicia
+        private void SetupMenu()
         {
-            get => _filtroFranquicia;
-            set { if (_filtroFranquicia != value) { _filtroFranquicia = value; OnPropertyChanged(); AplicarFiltros(); } }
+            // Inicializamos el menú
+            OpcionesMenu = new ObservableCollection<MenuOpcion>
+            {
+                // Nota: Cambia los nombres de los íconos por los que tengas en tu clase FontAwesomeIcons
+                new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = AppResource.MenuAboutApp },
+                new MenuOpcion { Icono = FontAwesomeIcons.Language, Texto = AppResource.MenuChangeLanguage },
+                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions }
+            };
+        }
+
+        [RelayCommand]
+        private async Task AbrirFiltrosAsync()
+        {
+            // Empacamos el estado actual de los filtros
+            var parametrosActuales = new FilterParams
+            {
+                OpcionesObtenido = OpcionesObtenido.ToList(),
+                OpcionesVersion = OpcionesVersion.ToList(),
+                OpcionesFranquicia = OpcionesFranquicia.ToList(),
+                FiltroObtenido = this.FiltroObtenido,
+                FiltroVersion = this.FiltroVersion,
+                FiltroFranquicia = this.FiltroFranquicia
+            };
+
+            // Usas tu servicio de inyección de dependencias para crear y pasar el modelo si es necesario,
+            // o configuras el ViewModel antes de mostrarlo.
+            var navParams = new NavigationParameters { { "Filtros", parametrosActuales } };
+            var nuevosFiltros = await _popupPageService.ShowPopupAsync<FilterPopup, FilterViewModel, FilterParams>(navParams);
+
+            // Si no regresó null, significa que le dio a "Aplicar"
+            if (nuevosFiltros != null)
+            {
+                FiltroObtenido = nuevosFiltros.FiltroObtenido;
+                FiltroVersion = nuevosFiltros.FiltroVersion;
+                FiltroFranquicia = nuevosFiltros.FiltroFranquicia;
+
+                AplicarFiltros();
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpcionSeleccionadaAsync(MenuOpcion opcion)
+        {
+            if (opcion == null) return;
+
+            if (opcion.Texto == AppResource.MenuAboutApp)
+            {
+                var resultado = await _popupPageService.ShowPopupAsync<AboutPopup, AboutViewModel, bool>();
+            }
+
+            if (opcion.Texto == AppResource.MenuChangeLanguage)
+            {
+                var resultado = await _popupPageService.ShowPopupAsync<LanguagePopup, LanguageViewModel, string>();
+
+                if (!string.IsNullOrEmpty(resultado))
+                {
+                    if (resultado != Settings.LanguageSettings)
+                    {
+                        Settings.LanguageSettings = resultado;
+
+                        _localizationService.SetCulture(Settings.LanguageSettings);
+
+                        await Task.Delay(500);
+
+                        Application.Current.MainPage = new AppShell();
+                    }
+                }
+            }
+
+            if (opcion.Texto == AppResource.MenuContributions) // O el nombre que le hayas dado
+            {
+                var resultado = await _popupPageService.ShowPopupAsync<ContributionsPopup, ContributionsViewModel, bool>();
+            }
+        }
+
+        [RelayCommand]
+        private async Task AbrirMenuAsync(string value)
+        {
+            if ((value == "MyFigures" && SelectedMenuFigures) ||
+                (value == "MyDiscs" && SelectedMenuDiscs) ||
+                (value == "Achievements" && SelectedMenuArchi) ||
+                (value == "Settings" && SelectedMenuSettings))
+                return;
+
+            SetActiveMenu(value);
+
+            if (value == "Home")
+            {
+                await Task.Delay(500);
+                SelectedMenuHome = false;
+                return;
+            }
+
+            if (value == "MyFigures")
+            {
+                IconInfo = FontAwesomeIcons.Figura2;
+            }
+
+            if (value == "MyDiscs")
+            {
+                IconInfo = FontAwesomeIcons.PowerDisc3;
+            }
+
+            if (value == "Achievements")
+            {
+                await CargarLogrosFamaAsync();
+            }
+
+            if (value == "MyFigures" || value == "MyDiscs")
+            {
+                await LoadDataAsync();
+            }
+        }
+
+        private async Task CargarLogrosFamaAsync()
+        {
+            var historialUsuario = await _logrosService.ObtenerLogrosDesbloqueadosAsync();
+            var catalogoCompleto = await _logrosService.ObtenerCatalogoLogrosAsync();
+
+            if (catalogoCompleto != null)
+            {
+                // 1. Calculamos los totales que existen en el juego
+                int totalLogrosFiguras = catalogoCompleto.Count(l => l.CategoriaItem == "Figura");
+                // Nota: Asegúrate de que "Disco de Poder" sea el texto exacto que usas en tu JSON de logros
+                int totalLogrosDiscos = catalogoCompleto.Count(l => l.CategoriaItem == "Disco de Poder");
+
+                int obtenidosFiguras = 0;
+                int obtenidosDiscos = 0;
+                var listaVisual = new List<LogroDefinicion>();
+
+                if (historialUsuario != null && historialUsuario.Any())
+                {
+                    foreach (var progreso in historialUsuario)
+                    {
+                        var definicion = catalogoCompleto.FirstOrDefault(c => c.Id == progreso.LogroId);
+                        if (definicion != null)
+                        {
+                            definicion.FechaObtenido = progreso.FechaDesbloqueo;
+                            listaVisual.Add(definicion);
+
+                            // Vamos sumando a los contadores de lo que ya obtuvo el usuario
+                            if (definicion.CategoriaItem == "Figura") obtenidosFiguras++;
+                            else if (definicion.CategoriaItem == "Disco de Poder") obtenidosDiscos++;
+                        }
+                    }
+
+                    var logrosOrdenados = listaVisual.OrderByDescending(l => l.FechaObtenido).ToList();
+                    LogrosObtenidos = new ObservableCollection<LogroDefinicion>(logrosOrdenados);
+                }
+                else
+                {
+                    LogrosObtenidos.Clear();
+                }
+
+                // 2. Asignamos los textos y la barra de progreso (de 0.0 a 1.0) para la UI
+                TextoLogrosFiguras = $"{obtenidosFiguras}/{totalLogrosFiguras}";
+                ProgresoLogrosFiguras = totalLogrosFiguras == 0 ? 0 : (double)obtenidosFiguras / totalLogrosFiguras;
+
+                TextoLogrosDiscos = $"{obtenidosDiscos}/{totalLogrosDiscos}";
+                ProgresoLogrosDiscos = totalLogrosDiscos == 0 ? 0 : (double)obtenidosDiscos / totalLogrosDiscos;
+            }
+        }
+
+        private void SetActiveMenu(string menuName)
+        {
+            SelectedMenuFigures = menuName == "MyFigures";
+            SelectedMenuDiscs = menuName == "MyDiscs";
+            SelectedMenuArchi = menuName == "Achievements";
+            SelectedMenuSettings = menuName == "Settings";
+            SelectedMenuHome = menuName == "Home";
+        }
+
+        [RelayCommand]
+        private async Task IncrementarAsync(FiguraModel figura)
+        {
+            await CambiarCantidadAsync(figura, 1);
+        }
+
+        [RelayCommand]
+        private async Task DecrementarAsync(FiguraModel figura)
+        {
+            await CambiarCantidadAsync(figura, -1);
+        }
+
+        [RelayCommand]
+        private async Task AbrirWikiAsync(FiguraModel figura)
+        {
+            if (figura is null || string.IsNullOrWhiteSpace(figura.WikiUrl)) return;
+
+            try
+            {
+                await Launcher.Default.OpenAsync(new Uri(figura.WikiUrl));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al abrir la wiki: {ex.Message}");
+            }
+        }
+
+        [RelayCommand]
+        private async Task AbrirDetalleAsync(FiguraModel figura)
+        {
+            if (figura == null) return;
+
+            var navParams = new NavigationParameters
+                {
+                    { "FiguraActual", figura }
+                };
+
+            var resultado = await _popupPageService.ShowPopupAsync<FiguraInfoPopup, FiguraInfoViewModel, bool>(navParams);
         }
 
         private async Task LoadDataAsync()
@@ -96,36 +355,34 @@ namespace MyDICollection.ViewModels
             {
                 await Task.Delay(500);
 
-                var traductor = new DbTranslationConverter();
-
-                // 1) Catálogo fresco del paquete
+                // 1. Cargar catálogo base
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
+                IEnumerable<FiguraModel> query = catalogo ?? new List<FiguraModel>();
 
-                foreach (var figura in catalogo)
+                // 2. Filtrar por menú ACTIVO
+                if (SelectedMenuFigures)
+                    query = query.Where(w => w.Tipo == "Figura");
+                else if (SelectedMenuDiscs)
+                    query = query.Where(w => w.Tipo == "Disco de Poder");
+
+                var listaFiltrada = query.ToList();
+
+                // 3. Traducir SOLO los que quedaron en el filtro
+                foreach (var figura in listaFiltrada)
                 {
-                    string tipoTraducido = traductor.Convert(
-                           value: figura.Tipo,
-                           targetType: typeof(string),
-                           parameter: null,
-                           culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
-
-                    figura.Tipo = tipoTraducido;
-
-                    string franquiciaTraducido = traductor.Convert(
-                        value: figura.Franquicia,
-                        targetType: typeof(string),
-                        parameter: null,
-                        culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
-
-                    figura.Franquicia = franquiciaTraducido;
+                    // Al modificar aquí, ya no afectas la consulta original
+                    figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
+                    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
                 }
 
-                _allFigures = catalogo ?? new List<FiguraModel>();
+                // 4. Ordenar al final
+                _allFigures = (Settings.LanguageSettings == "es")
+                    ? listaFiltrada.OrderByDescending(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList()
+                    : listaFiltrada.OrderBy(x => x.Tipo).ThenBy(x => x.Version).ThenBy(x => x.Franquicia).ThenBy(x => x.Nombre).ToList();
 
-                // 2) Datos del usuario desde AppData
+                // 5. Cargar progreso del usuario
                 _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);
 
-                // 3) Merge: hidratamos cada figura del catálogo con su progreso guardado
                 foreach (var figura in _allFigures)
                 {
                     if (_userData.TryGetValue(figura.Id, out var datosUsuario))
@@ -134,7 +391,6 @@ namespace MyDICollection.ViewModels
                         figura.Cantidad = datosUsuario.Cantidad;
                         figura.NfcCodes = new ObservableCollection<string>(datosUsuario.NfcCodes ?? new List<string>());
                     }
-                    // si no existe entrada -> se queda en default (false, 0, lista vacía)
                 }
 
                 CargarOpcionesDeFiltro();
@@ -152,21 +408,10 @@ namespace MyDICollection.ViewModels
 
         private void CargarOpcionesDeFiltro()
         {
-            var traductor = new DbTranslationConverter();
-
             OpcionesTipo.Clear();
             OpcionesTipo.Add(AppResource.All);
             foreach (var tipo in _allFigures.Select(f => f.Tipo).Distinct().OrderBy(t => t))
-            {
-                string tipoTraducido = traductor.Convert(
-                    value: tipo,
-                    targetType: typeof(string),
-                    parameter: null,
-                    culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
-
-                if (!OpcionesTipo.Contains(tipoTraducido))
-                    OpcionesTipo.Add(tipoTraducido);
-            }
+                OpcionesTipo.Add(tipo);
 
             OpcionesVersion.Clear();
             OpcionesVersion.Add(AppResource.All);
@@ -176,37 +421,27 @@ namespace MyDICollection.ViewModels
             OpcionesFranquicia.Clear();
             OpcionesFranquicia.Add(AppResource.All);
             foreach (var franquicia in _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f))
-            {
-                string franquiciaTraducido = traductor.Convert(
-                    value: franquicia,
-                    targetType: typeof(string),
-                    parameter: null,
-                    culture: System.Globalization.CultureInfo.CurrentUICulture).ToString();
-
-                if (!OpcionesFranquicia.Contains(franquiciaTraducido))
-                    OpcionesFranquicia.Add(franquiciaTraducido);
-            }
+                OpcionesFranquicia.Add(franquicia);
         }
 
         private void AplicarFiltros()
         {
-            IEnumerable<FiguraModel> query = _allFigures;
+            // 1. Obtenemos la lista filtrada por Universo (Marvel, Disney, etc.)
+            var queryBase = ObtenerListaBaseFiltrada();
+
+            // 2. 💥 Actualizamos los números con esa lista base
+            ActualizarEstadisticas(queryBase);
+
+            // 3. Aplicamos el filtro visual de Obtenidas/Faltantes
+            IEnumerable<FiguraModel> queryVisual = queryBase;
 
             if (FiltroObtenido == AppResource.Owned)
-                query = query.Where(f => f.Obtenido);
+                queryVisual = queryVisual.Where(f => f.Obtenido);
             else if (FiltroObtenido == AppResource.Missing)
-                query = query.Where(f => !f.Obtenido);
+                queryVisual = queryVisual.Where(f => !f.Obtenido);
 
-            if (!string.IsNullOrEmpty(FiltroTipo) && FiltroTipo != AppResource.All)
-                query = query.Where(f => f.Tipo == FiltroTipo);
-
-            if (!string.IsNullOrEmpty(FiltroVersion) && FiltroVersion != AppResource.All)
-                query = query.Where(f => f.Version == FiltroVersion);
-
-            if (!string.IsNullOrEmpty(FiltroFranquicia) && FiltroFranquicia != AppResource.All)
-                query = query.Where(f => f.Franquicia == FiltroFranquicia);
-
-            Figures = new ObservableCollection<FiguraModel>(query);
+            // 4. Mandamos a repintar la pantalla
+            Figures = new ObservableCollection<FiguraModel>(queryVisual);
         }
 
         private async Task CambiarCantidadAsync(FiguraModel figura, int delta)
@@ -219,14 +454,41 @@ namespace MyDICollection.ViewModels
             int nuevaCantidad = figuraEnLista.Cantidad + delta;
             if (nuevaCantidad < 0) nuevaCantidad = 0;
 
+            var refrescar = false;
+            if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
+            if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
+
             figuraEnLista.Cantidad = nuevaCantidad;
             figuraEnLista.Obtenido = nuevaCantidad > 0;
 
             await GuardarProgresoAsync(figuraEnLista);
-            //AplicarFiltros();
+
+            // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
+            // Le pasamos la colección completa (_allFigures) para que evalúe 
+            var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_allFigures);
+
+            foreach (var logro in nuevosLogros)
+            {
+                var navParams = new NavigationParameters { { "Logro", logro } };
+                await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
+
+                // Damos una pequeña pausa de medio segundo por si desbloqueó 2 logros al mismo tiempo 
+                // (así se encolan bonito en lugar de empalmarse)
+                await Task.Delay(500);
+            }
+            // 💥 FIN DEL MOTOR DE LOGROS 💥
+
+            if (refrescar)
+            {
+                AplicarFiltros();
+            }
+            else
+            {
+                // Si no recargamos la lista visual para ahorrar memoria, de todos modos actualizamos los numeritos de arriba
+                ActualizarEstadisticas(ObtenerListaBaseFiltrada());
+            }
         }
 
-        // Guarda SOLO el diccionario de progreso (userdata.json), nunca el catálogo
         private async Task GuardarProgresoAsync(FiguraModel figura)
         {
             _userData[figura.Id] = new FiguraUserData
@@ -246,18 +508,54 @@ namespace MyDICollection.ViewModels
             }
         }
 
-        private async Task AbrirWikiAsync(FiguraModel figura)
+        private IEnumerable<FiguraModel> ObtenerListaBaseFiltrada()
         {
-            if (figura is null || string.IsNullOrWhiteSpace(figura.WikiUrl)) return;
+            IEnumerable<FiguraModel> query = _allFigures;
 
-            try
-            {
-                await Launcher.Default.OpenAsync(new Uri(figura.WikiUrl));
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Error al abrir la wiki: {ex.Message}");
-            }
+            if (!string.IsNullOrEmpty(FiltroTipo) && FiltroTipo != AppResource.All)
+                query = query.Where(f => f.Tipo == FiltroTipo);
+
+            if (!string.IsNullOrEmpty(FiltroVersion) && FiltroVersion != AppResource.All)
+                query = query.Where(f => f.Version == FiltroVersion);
+
+            if (!string.IsNullOrEmpty(FiltroFranquicia) && FiltroFranquicia != AppResource.All)
+                query = query.Where(f => f.Franquicia == FiltroFranquicia);
+
+            return query;
         }
+        private void ActualizarEstadisticas(IEnumerable<FiguraModel> listaFiltrada)
+        {
+            if (listaFiltrada == null || !listaFiltrada.Any())
+            {
+                TotalPiezasFisicas = 0;
+                TextoProgresoColeccion = "0/0";
+                PorcentajeColeccion = 0; // Se resetea si no hay nada
+                return;
+            }
+
+            TotalPiezasFisicas = listaFiltrada.Sum(f => f.Cantidad);
+
+            var unicas = listaFiltrada.Count(f => f.Obtenido);
+            var total = listaFiltrada.Count();
+
+            TextoProgresoColeccion = $"{unicas}/{total}";
+
+            // 💥 Calculamos el porcentaje (de 0.0 a 1.0)
+            PorcentajeColeccion = total == 0 ? 0 : (double)unicas / total;
+        }
+
+        public void SetStatusBarColors()
+        {
+#if ANDROID
+            StatusBarService.SetSystemBars(
+            lightStatusBarColor: statusBarColor,
+            darkStatusBarColor: statusBarColor,
+            lightNavigationBarColor: navigationBarColor,
+            darkNavigationBarColor: navigationBarColor,
+            animate: false
+        );
+#endif
+        }
+
     }
 }

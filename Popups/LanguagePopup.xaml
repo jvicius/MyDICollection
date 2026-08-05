@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             xmlns:controls="clr-namespace:MyDICollection.Controls"
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+             xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
+             xmlns:helpers="clr-namespace:MyDICollection.Helpers"
+             x:Class="MyDICollection.Popups.LanguagePopup"
+             x:DataType="viewmodels:LanguageViewModel"
+             BackgroundColor="#80000000">
+
+    <mopups:PopupPage.Animation>
+        <animations:ScaleAnimation PositionIn="Center" PositionOut="Center" DurationIn="200" DurationOut="200"/>
+    </mopups:PopupPage.Animation>
+
+    <controls:SafeAreaView>
+
+        <Grid HorizontalOptions="Center" 
+          VerticalOptions="Center" 
+          Padding="{responsive:ResponsiveThickness BaseValue='20'}">
+
+            <Border Style="{StaticResource BorderPopup}">
+
+                <VerticalStackLayout 
+                Spacing="{responsive:ResponsiveSize BaseValue=15}" 
+                HorizontalOptions="Center">
+
+                    <!-- Ícono de Lenguaje -->
+                    <Label Text="{x:Static fonts:FontAwesomeIcons.Language}"         
+                       HorizontalOptions="Center"
+                       Style="{StaticResource InfoIconLabel}" />
+
+                    <!-- Título del Popup -->
+                    <Label Text="{helpers:Translate LanguagePopupTitle}" 
+                       Style="{StaticResource InfoTitleLabel}"
+                       HorizontalOptions="Center" />
+
+                    <!-- Divisor estético -->
+                    <BoxView HeightRequest="1" 
+                         Color="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource White}}" 
+                         Opacity="0.2" 
+                         Margin="{responsive:ResponsiveThickness BaseValue='5,10,5,10'}"/>
+
+                    <!-- Botón Español -->
+                    <Button Text="Español 🇲🇽"
+                        Command="{Binding SeleccionarIdiomaCommand}"
+                        CommandParameter="es"
+                        Style="{StaticResource InfoButton1}"
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,5'}"/>
+
+                    <!-- Botón Inglés -->
+                    <Button Text="English 🇺🇸"
+                        Command="{Binding SeleccionarIdiomaCommand}"
+                        CommandParameter="en"
+                        Style="{StaticResource InfoButton2}"
+                        Margin="{responsive:ResponsiveThickness BaseValue='0,0,0,10'}"/>
+
+                    <!-- Botón de Cerrar -->
+                    <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Close}" 
+                    Style="{StaticResource HexaButton}">
+                        <controls:HexagonButton.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CerrarCommand}"/>
+                        </controls:HexagonButton.GestureRecognizers>
+                    </controls:HexagonButton>
+
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+    </controls:SafeAreaView>
+    
+</mopups:PopupPage>

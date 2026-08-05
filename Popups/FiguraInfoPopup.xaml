@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDICollection.Popups.FiguraInfoPopup"
+             Title="FiguraInfoPopup"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
+             x:DataType="viewmodels:FiguraInfoViewModel"
+             xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+             xmlns:helpers="clr-namespace:MyDICollection.Helpers"
+             BackgroundColor="#80000000"
+             xmlns:controls="clr-namespace:MyDICollection.Controls"
+             xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts">
+
+
+    <controls:SafeAreaView>
+
+        <Border 
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Style="{StaticResource BorderPopup}">
+
+            <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=15}">
+
+                <!-- Imagen en grande -->
+                <Grid 
+                      HorizontalOptions="Center"
+                      RowDefinitions="Auto,Auto">
+
+                    <!-- 1. La Imagen (Fondo) -->
+                    <Image Source="{Binding FiguraActual.ImagenUrl}" 
+                           Aspect="AspectFit" 
+                           Grid.Row="1"
+                           HeightRequest="{responsive:ResponsiveSize BaseValue=150}"
+                           WidthRequest="{responsive:ResponsiveSize BaseValue=150}"/>
+
+                    <!-- 2. Badge Obtenido (Encima de la imagen, esquina superior derecha) -->
+                    <Border IsVisible="{Binding FiguraActual.Obtenido}"
+                            Style="{StaticResource ObtenidoBorder}"
+                            Padding="{responsive:ResponsiveThickness BaseValue='10,5'}"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            Margin="{responsive:ResponsiveThickness BaseValue='5,5,5,0'}">
+
+                        <Border.Shadow>
+                            <Shadow Brush="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray100Brush}}" Opacity="{AppThemeBinding Light=0.3, Dark=0.7}" Radius="6" Offset="0,2"/>
+                        </Border.Shadow>
+
+                        <Label Text="{Binding FiguraActual.Cantidad, StringFormat='✓ x{0}'}"
+                               Style="{StaticResource ObtenidoIndicatorLabel}"/>
+                    </Border>
+
+                    <!-- 3. Badge No Obtenido (Encima de la imagen, esquina superior derecha) -->
+                    <Border IsVisible="{Binding FiguraActual.Obtenido, Converter={StaticResource InvertedBoolConverter}}"
+                            Style="{StaticResource NoObtenidoBorder}"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            Margin="{responsive:ResponsiveThickness BaseValue='5,5,5,0'}"
+                            Padding="0">
+
+                        <Border.Shadow>
+                            <Shadow Brush="{AppThemeBinding Light={StaticResource Gray950Brush}, Dark={StaticResource Gray100Brush}}" Opacity="{AppThemeBinding Light=0.3, Dark=0.7}" Radius="6" Offset="0,2"/>
+                        </Border.Shadow>
+
+                        <Label Text="0"
+                               Style="{StaticResource ObtenidoIndicatorLabel}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"/>
+                    </Border>
+                </Grid>
+
+                <!-- Nombre de la Figura -->
+                <Label Text="{Binding FiguraActual.Nombre}" 
+                   Style="{StaticResource FiguraTitleLabel}"
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center"/>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding FiguraActual.Tipo}" Style="{StaticResource FiguraVersionSpan}"/>
+                            <Span Text=" · v" Style="{StaticResource FiguraVersionSpan}" />
+                            <Span Text="{Binding FiguraActual.Version}" Style="{StaticResource FiguraVersionSpan}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{helpers:Translate Universe}" Style="{StaticResource FiguraFranquiciaSpan}"/>
+                            <Span Text="{Binding FiguraActual.Franquicia}" Style="{StaticResource FiguraFranquiciaSpan}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{helpers:Translate ModelNumber}" Style="{StaticResource FiguraModelNumberSpan}"/>
+                            <Span Text="{Binding FiguraActual.Modelo}" Style="{StaticResource FiguraModelNumberSpan}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <!-- Botón para cerrar (Usamos tu HexagonButton o un simple Button) -->
+                <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Close}" 
+                    Style="{StaticResource HexaButton}">
+                    <controls:HexagonButton.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CerrarCommand}"/>
+                    </controls:HexagonButton.GestureRecognizers>
+                </controls:HexagonButton>
+
+            </VerticalStackLayout>
+        </Border>
+        
+    </controls:SafeAreaView>
+
+</mopups:PopupPage>
