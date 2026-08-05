@@ -433,8 +433,8 @@
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" 
                              Span="2" 
-                             HorizontalItemSpacing="15" 
-                             VerticalItemSpacing="15" />
+                             HorizontalItemSpacing="{responsive:ResponsiveSize BaseValue=15}" 
+                             VerticalItemSpacing="{responsive:ResponsiveSize BaseValue=15}" />
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
@@ -445,7 +445,7 @@
                             Style="{StaticResource CardBorder}"
                             Padding="{responsive:ResponsiveThickness BaseValue=10}">
 
-                            <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                            <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=8}" HorizontalOptions="Center">
 
                                 <!-- La imagen PNG del Badge (Ajusta el nombre de tu propiedad si es diferente a 'ImagenBadge') -->
                                 <Image Source="{Binding BadgeImage}" 
