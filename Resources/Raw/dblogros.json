@@ -1,6 +1,6 @@
 [
   {
-    "Id": "FIG_ALL_COMPLETE",
+    "Id": "FIGALLCOMPLETE",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Todos",
     "ValorFiltro": "N/A",
@@ -8,10 +8,10 @@
     "TituloEn": "Infinity God",
     "Descripcion": "Consigue absolutamente todas las figuras de la colección.",
     "DescripcionEn": "Collect absolutely every figure in the collection.",
-    "BadgeImage": "badge_infinity_god.png"
+    "BadgeImage": "badgeinfinitygod.png"
   },
   {
-    "Id": "PD_ALL_COMPLETE",
+    "Id": "PDALLCOMPLETE",
     "CategoriaItem": "Disco de Poder",
     "TipoFiltro": "Todos",
     "ValorFiltro": "N/A",
@@ -19,10 +19,10 @@
     "TituloEn": "Power Collector",
     "Descripcion": "Consigue absolutamente todos las discos de poder de la colección.",
     "DescripcionEn": "Collect absolutely every power disc's in the collection.",
-    "BadgeImage": "badge_power_collector.png"
+    "BadgeImage": "badgepowercollector.png"
   },
   {
-    "Id": "FIG_V1_MASTER",
+    "Id": "FIGV1MASTER",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
     "ValorFiltro": "1.0",
@@ -30,10 +30,10 @@
     "TituloEn": "Infinity Pioneer",
     "Descripcion": "Consigue todas las figuras de la versión 1.0",
     "DescripcionEn": "Collect all version 1.0 figures.",
-    "BadgeImage": "badge_v1_pioneer.png"
+    "BadgeImage": "badgev1pioneer.png"
   },
   {
-    "Id": "FIG_V2_MASTER",
+    "Id": "FIGV2MASTER",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
     "ValorFiltro": "2.0",
@@ -41,10 +41,10 @@
     "TituloEn": "Infinity Pioneer",
     "Descripcion": "Consigue todas las figuras de la versión 2.0",
     "DescripcionEn": "Collect all version 2.0 figures.",
-    "BadgeImage": "badge_v2_pioneer.png"
+    "BadgeImage": "badgev2pioneer.png"
   },
   {
-    "Id": "FIG_V3_MASTER",
+    "Id": "FIGV3MASTER",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
     "ValorFiltro": "3.0",
@@ -52,10 +52,10 @@
     "TituloEn": "Infinity Pioneer",
     "Descripcion": "Consigue todas las figuras de la versión 3.0",
     "DescripcionEn": "Collect all version 3.0 figures.",
-    "BadgeImage": "badge_v3_pioneer.png"
+    "BadgeImage": "badgev3pioneer.png"
   },
   {
-    "Id": "FIG_CRYSTAL_HUNTER",
+    "Id": "FIGCRYSTALHUNTER",
     "CategoriaItem": "Figura",
     "TipoFiltro": "Especial",
     "ValorFiltro": "Crystal",
@@ -63,7 +63,7 @@
     "TituloEn": "Crystal Power",
     "Descripcion": "Encuentra todas las figuras edición Crystal.",
     "DescripcionEn": "Find all Crystal edition figures.",
-    "BadgeImage": "badge_crystal_power.png"
+    "BadgeImage": "badgecrystalpower.png"
   },
   {
     "Id": "D23",
@@ -74,7 +74,7 @@
     "TituloEn": "D23 Special Figure",
     "Descripcion": "Mickey Mouse Super Fan",
     "DescripcionEn": "Mickey Mouse Super Fan",
-    "BadgeImage": "badge_d23_special.png"
+    "BadgeImage": "badged23special.png"
   },
   {
     "Id": "Zootopia",
@@ -85,7 +85,7 @@
     "TituloEn": "Zootopia Super Fan",
     "Descripcion": "Consigue todas las figuras de Zootopia",
     "DescripcionEn": "Find all Zootopia edition figures.",
-    "BadgeImage": "badge_zootopia.png"
+    "BadgeImage": "badgezootopia.png"
   },
   {
     "Id": "Valiente",
@@ -96,7 +96,7 @@
     "TituloEn": "Valiente Super Fan",
     "Descripcion": "Consigue todas las figuras de Valiente",
     "DescripcionEn": "Find all Valiente edition figures.",
-    "BadgeImage": "badge_valiente.png"
+    "BadgeImage": "badgevaliente.png"
   },
   {
     "Id": "PiratasDelCaribe",
@@ -107,7 +107,7 @@
     "TituloEn": "Pirates of the Caribbean Super Fan",
     "Descripcion": "Consigue todas las figuras de Piratas del Caribe",
     "DescripcionEn": "Find all Pirates of the Caribbean edition figures.",
-    "BadgeImage": "badge_piratas_caribe.png"
+    "BadgeImage": "badgepiratascaribe.png"
   },
   {
     "Id": "LosIncreibles",
@@ -118,7 +118,7 @@
     "TituloEn": "The Incredibles Super Fan",
     "Descripcion": "Consigue todas las figuras de Los Increibles",
     "DescripcionEn": "Find all The Incredibles edition figures.",
-    "BadgeImage": "badge_increibles.png"
+    "BadgeImage": "badgeincreibles.png"
   },
   {
     "Id": "MonstersUniversity",
@@ -129,7 +129,7 @@
     "TituloEn": "Monsters University Super Fan",
     "Descripcion": "Consigue todas las figuras de Monsters University",
     "DescripcionEn": "Find all Monsters University edition figures.",
-    "BadgeImage": "badge_monsters_uni.png"
+    "BadgeImage": "badgemonstersuni.png"
   },
   {
     "Id": "Cars",
@@ -140,7 +140,7 @@
     "TituloEn": "Cars Super Fan",
     "Descripcion": "Consigue todas las figuras de Cars",
     "DescripcionEn": "Find all Cars edition figures.",
-    "BadgeImage": "badge_cars.png"
+    "BadgeImage": "badgecars.png"
   },
   {
     "Id": "ElLlaneroSolitario",
@@ -151,7 +151,7 @@
     "TituloEn": "The Lone Ranger Super Fan",
     "Descripcion": "Consigue todas las figuras de El Llanero Solitario",
     "DescripcionEn": "Find all The Lone Ranger edition figures.",
-    "BadgeImage": "badge_llanero.png"
+    "BadgeImage": "badgellanero.png"
   },
   {
     "Id": "ElExtranoMundoDeJack",
@@ -162,7 +162,7 @@
     "TituloEn": "The Nightmare Before Christmas Super Fan",
     "Descripcion": "Consigue todas las figuras de El extraño mundo de Jack",
     "DescripcionEn": "Find all The Nightmare Before Christmas edition figures.",
-    "BadgeImage": "badge_jack.png"
+    "BadgeImage": "badgejack.png"
   },
   {
     "Id": "DisneyClasicos",
@@ -173,7 +173,7 @@
     "TituloEn": "Disney Classics Super Fan",
     "Descripcion": "Consigue todas las figuras de Disney Clasicos",
     "DescripcionEn": "Find all Disney Classics edition figures.",
-    "BadgeImage": "badge_disney_clasicos.png"
+    "BadgeImage": "badgedisneyclasicos.png"
   },
   {
     "Id": "ToyStory",
@@ -184,7 +184,7 @@
     "TituloEn": "Toy Story Super Fan",
     "Descripcion": "Consigue todas las figuras de Toy Story",
     "DescripcionEn": "Find all Toy Story edition figures.",
-    "BadgeImage": "badge_toy_story.png"
+    "BadgeImage": "badgetoystory.png"
   },
   {
     "Id": "RalphElDemoledor",
@@ -195,7 +195,7 @@
     "TituloEn": "Wreck-It Ralph Super Fan",
     "Descripcion": "Consigue todas las figuras de Ralph el Demoledor",
     "DescripcionEn": "Find all Wreck-It Ralph edition figures.",
-    "BadgeImage": "badge_ralph.png"
+    "BadgeImage": "badgeralph.png"
   },
   {
     "Id": "Enredados",
@@ -206,7 +206,7 @@
     "TituloEn": "Tangled Super Fan",
     "Descripcion": "Consigue todas las figuras de Enredados",
     "DescripcionEn": "Find all Tangled edition figures.",
-    "BadgeImage": "badge_enredados.png"
+    "BadgeImage": "badgeenredados.png"
   },
   {
     "Id": "Frozen",
@@ -217,7 +217,7 @@
     "TituloEn": "Frozen Super Fan",
     "Descripcion": "Consigue todas las figuras de Frozen",
     "DescripcionEn": "Find all Frozen edition figures.",
-    "BadgeImage": "badge_frozen.png"
+    "BadgeImage": "badgefrozen.png"
   },
   {
     "Id": "PhineasYFerb",
@@ -228,7 +228,7 @@
     "TituloEn": "Phineas and Ferb Super Fan",
     "Descripcion": "Consigue todas las figuras de Phineas y Ferb",
     "DescripcionEn": "Find all Phineas and Ferb edition figures.",
-    "BadgeImage": "badge_phineas.png"
+    "BadgeImage": "badgephineas.png"
   },
   {
     "Id": "Marvel",
@@ -239,7 +239,7 @@
     "TituloEn": "Marvel Super Fan",
     "Descripcion": "Consigue todas las figuras de Marvel",
     "DescripcionEn": "Find all Marvel edition figures.",
-    "BadgeImage": "badge_marvel.png"
+    "BadgeImage": "badgemarvel.png"
   },
   {
     "Id": "GrandesHeroes",
@@ -250,7 +250,7 @@
     "TituloEn": "Big Hero 6 Super Fan",
     "Descripcion": "Consigue todas las figuras de Grandes Heroes",
     "DescripcionEn": "Find all Big Hero 6 edition figures.",
-    "BadgeImage": "badge_grandes_heroes.png"
+    "BadgeImage": "badgegrandesheroes.png"
   },
   {
     "Id": "Tron",
@@ -261,7 +261,7 @@
     "TituloEn": "Tron Super Fan",
     "Descripcion": "Consigue todas las figuras de Tron",
     "DescripcionEn": "Find all Tron edition figures.",
-    "BadgeImage": "badge_tron.png"
+    "BadgeImage": "badgetron.png"
   },
   {
     "Id": "Malefica",
@@ -272,7 +272,7 @@
     "TituloEn": "Maleficent Super Fan",
     "Descripcion": "Consigue todas las figuras de Malefica",
     "DescripcionEn": "Find all Maleficent edition figures.",
-    "BadgeImage": "badge_malefica.png"
+    "BadgeImage": "badgemalefica.png"
   },
   {
     "Id": "LiloStitch",
@@ -283,7 +283,7 @@
     "TituloEn": "Lilo & Stitch Super Fan",
     "Descripcion": "Consigue todas las figuras de Lilo & Stitch",
     "DescripcionEn": "Find all Lilo & Stitch edition figures.",
-    "BadgeImage": "badge_lilo.png"
+    "BadgeImage": "badgelilo.png"
   },
   {
     "Id": "PeterPan",
@@ -294,7 +294,7 @@
     "TituloEn": "Peter Pan Super Fan",
     "Descripcion": "Consigue todas las figuras de Peter Pan",
     "DescripcionEn": "Find all Peter Pan edition figures.",
-    "BadgeImage": "badge_peter_pan.png"
+    "BadgeImage": "badgepeterpan.png"
   },
   {
     "Id": "StarWars",
@@ -305,7 +305,7 @@
     "TituloEn": "Star Wars Super Fan",
     "Descripcion": "Consigue todas las figuras de Star Wars",
     "DescripcionEn": "Find all Star Wars edition figures.",
-    "BadgeImage": "badge_star_wars.png"
+    "BadgeImage": "badgestarwars.png"
   },
   {
     "Id": "IntensaMente",
@@ -316,7 +316,7 @@
     "TituloEn": "Inside Out Super Fan",
     "Descripcion": "Consigue todas las figuras de Intensa Mente",
     "DescripcionEn": "Find all Inside Out edition figures.",
-    "BadgeImage": "badge_intensamente.png"
+    "BadgeImage": "badgeintensamente.png"
   },
   {
     "Id": "Aladdin",
@@ -327,7 +327,7 @@
     "TituloEn": "Aladdin Super Fan",
     "Descripcion": "Consigue todas las figuras de Aladdin",
     "DescripcionEn": "Find all Aladdin edition figures.",
-    "BadgeImage": "badge_aladdin.png"
+    "BadgeImage": "badgealaddin.png"
   },
   {
     "Id": "Mulan",
@@ -338,7 +338,7 @@
     "TituloEn": "Mulan Super Fan",
     "Descripcion": "Consigue todas las figuras de Mulan",
     "DescripcionEn": "Find all Mulan edition figures.",
-    "BadgeImage": "badge_mulan.png"
+    "BadgeImage": "badgemulan.png"
   },
   {
     "Id": "UnGranDinosaurio",
@@ -349,7 +349,7 @@
     "TituloEn": "The Good Dinosaur Super Fan",
     "Descripcion": "Consigue todas las figuras de Un Gran Dinosaurio",
     "DescripcionEn": "Find all The Good Dinosaur edition figures.",
-    "BadgeImage": "badge_gran_dinosaurio.png"
+    "BadgeImage": "badgegrandinosaurio.png"
   },
   {
     "Id": "BuscandoANemo",
@@ -360,7 +360,7 @@
     "TituloEn": "Finding Nemo Super Fan",
     "Descripcion": "Consigue todas las figuras de Buscando a Nemo",
     "DescripcionEn": "Find all Finding Nemo edition figures.",
-    "BadgeImage": "badge_nemo.png"
+    "BadgeImage": "badgenemo.png"
   },
   {
     "Id": "ElLibroDeLaSelva",
@@ -371,7 +371,7 @@
     "TituloEn": "The Jungle Book Super Fan",
     "Descripcion": "Consigue todas las figuras de El Libro de la Selva",
     "DescripcionEn": "Find all The Jungle Book edition figures.",
-    "BadgeImage": "badge_libro_selva.png"
+    "BadgeImage": "badgelibroselva.png"
   },
   {
     "Id": "AliciaEnElPaisDeLasMaravillas",
@@ -382,6 +382,6 @@
     "TituloEn": "Alice in Wonderland Super Fan",
     "Descripcion": "Consigue todas las figuras de Alicia en el Pais de las Maravillas",
     "DescripcionEn": "Find all Alice in Wonderland edition figures.",
-    "BadgeImage": "badge_alicia.png"
+    "BadgeImage": "badgealicia.png"
   }
 ]
