@@ -1,4 +1,5 @@
-﻿# 🌌 Disney Infinity Collection Tracker
+
+# 🌌 Disney Infinity Collection Tracker
 
 A modern, fast, and 100% offline-first application built with **.NET MAUI** to easily manage and track your Disney Infinity collection.[cite: 4]
 
@@ -7,7 +8,7 @@ Whether you're hunting for figures at a retro game store or organizing your disp
 ## Preview 
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/b3223098-1968-4b27-b802-7b2fae9c30d4" width="300" controls="controls"></video>
+  <video src="https://github.com/user-attachments/assets/933edbbd-1a41-4067-ac2b-d8051905e78c" width="300" controls="controls"></video>
 </div>[cite: 4]
 
 ## ✨ Features
