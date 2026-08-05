@@ -26,8 +26,8 @@
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
     "ValorFiltro": "1.0",
-    "Titulo": "Pionero del Infinity",
-    "TituloEn": "Infinity Pioneer",
+    "Titulo": "Pionero del Infinity 1.0",
+    "TituloEn": "Infinity Pioneer 1.0",
     "Descripcion": "Consigue todas las figuras de la versión 1.0",
     "DescripcionEn": "Collect all version 1.0 figures.",
     "BadgeImage": "badgev1pioneer.png"
@@ -37,8 +37,8 @@
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
     "ValorFiltro": "2.0",
-    "Titulo": "Pionero del Infinity",
-    "TituloEn": "Infinity Pioneer",
+    "Titulo": "Pionero del Infinity 2.0",
+    "TituloEn": "Infinity Pioneer 2.0",
     "Descripcion": "Consigue todas las figuras de la versión 2.0",
     "DescripcionEn": "Collect all version 2.0 figures.",
     "BadgeImage": "badgev2pioneer.png"
@@ -48,8 +48,8 @@
     "CategoriaItem": "Figura",
     "TipoFiltro": "Version",
     "ValorFiltro": "3.0",
-    "Titulo": "Pionero del Infinity",
-    "TituloEn": "Infinity Pioneer",
+    "Titulo": "Pionero del Infinity 3.0",
+    "TituloEn": "Infinity Pioneer 3.0",
     "Descripcion": "Consigue todas las figuras de la versión 3.0",
     "DescripcionEn": "Collect all version 3.0 figures.",
     "BadgeImage": "badgev3pioneer.png"
@@ -75,6 +75,17 @@
     "Descripcion": "Mickey Mouse Super Fan",
     "DescripcionEn": "Mickey Mouse Super Fan",
     "BadgeImage": "badged23special.png"
+  },
+  {
+    "Id": "PeterPanGrial",
+    "CategoriaItem": "Figura",
+    "TipoFiltro": "Especial",
+    "ValorFiltro": "Grial",
+    "Titulo": "Santo Grial del Infinity ",
+    "TituloEn": "Infinity Holly Grial",
+    "Descripcion": "Santo Grial Peter Pan ",
+    "DescripcionEn": "Holly Grial Peter Pan",
+    "BadgeImage": "peterpanprial.png"
   },
   {
     "Id": "Zootopia",

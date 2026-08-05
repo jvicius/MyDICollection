@@ -119,11 +119,11 @@ namespace MyDICollection.ViewModels
             MainThread.BeginInvokeOnMainThread(async () =>
             {
                 //borrar logros test
-                var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
-                if (File.Exists(rutaLogros))
-                {
-                    File.Delete(rutaLogros);
-                }
+                //var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
+                //if (File.Exists(rutaLogros))
+                //{
+                //    File.Delete(rutaLogros);
+                //}
 
                 SetStatusBarColors();
                 SetupMenu();
