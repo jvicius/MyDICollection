@@ -9,7 +9,7 @@ Whether you're hunting for figures at a retro game store or organizing your disp
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/933edbbd-1a41-4067-ac2b-d8051905e78c" width="300" controls="controls"></video>
-</div>[cite: 4]
+</div>
 
 ## ✨ Features
 
@@ -31,14 +31,14 @@ Whether you're hunting for figures at a retro game store or organizing your disp
 
 ## 📥 Installation
 
-Go to the [Releases](../../releases) tab to download the latest version for your device:[cite: 4]
-* **Android:** Download the `.apk` file and install it directly on your phone.[cite: 4]
-* **Windows:** Download the `.exe` file to run it on your PC.[cite: 4]
+Go to the [Releases](../../releases) tab to download the latest version for your device:
+* **Android:** Download the `.apk` file and install it directly on your phone.
+* **Windows:** Download the `.exe` file to run it on your PC.
 
 ## ☕ Support the Project (iOS Release Fund)
 
-If you find this app useful and want to help me keep building cool features (like the NFC integration!), consider buying me a coffee:[cite: 4]
+If you find this app useful and want to help me keep building cool features (like the NFC integration!), consider buying me a coffee:
 
 🍏 **Current Goal:** We are raising funds for the Apple Developer Account to release this app on iOS! So far, we've raised **$10 USD**. Every donation helps bring the app to iPhone users.
 
-[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/josevelarde)[cite: 4]
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/josevelarde)
