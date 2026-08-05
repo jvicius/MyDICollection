@@ -1,7 +1,7 @@
 
 # 🌌 Disney Infinity Collection Tracker
 
-A modern, fast, and 100% offline-first application built with **.NET MAUI** to easily manage and track your Disney Infinity collection.[cite: 4]
+A modern, fast, and 100% offline-first application built with **.NET MAUI** to easily manage and track your Disney Infinity collection.
 
 Whether you're hunting for figures at a retro game store or organizing your display at home, this app lets you know exactly what you own, what you're missing, and how many duplicates you have.
 
@@ -16,8 +16,8 @@ Whether you're hunting for figures at a retro game store or organizing your disp
 * **🏆 NEW! Achievement System:** Show off your dedication! Unlock special badges as you complete specific franchises and collections.
 * **🎨 Brand New UI:** A completely redesigned, intuitive, and premium user interface.
 * **📦 Precise Collection Tracking:** Keep track of your entire collection, with separate and organized lists for Figures and Power Discs.
-* **📶 100% Offline-First:** The database and all images are stored locally on your device.[cite: 4] No internet connection required to check your collection on the go![cite: 4]
-* **🌗 Native Theme Support:** Beautifully designed UI that seamlessly adapts to your device's Light and Dark mode.[cite: 4]
+* **📶 100% Offline-First:** The database and all images are stored locally on your device. No internet connection required to check your collection on the go!
+* **🌗 Native Theme Support:** Beautifully designed UI that seamlessly adapts to your device's Light and Dark mode.
 * **🌐 Bilingual (On-Demand):** Fully translated into English and Spanish. You can now toggle the language directly within the app settings!
 * **🔍 Accessible & Lightning-Fast Filters:** Quickly sort and filter your collection by Franchise or Item Type from a newly relocated, easy-to-reach menu.
 * **🗃️ Up-to-date Database:** Contains the latest details and direct links to the official Disney Infinity Fandom Wiki for every item.
