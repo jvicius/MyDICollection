@@ -81,7 +81,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Violet",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000013"
+    "modelo_fabrica": "INF-1000019"
   },
   {
     "id": "DI-10-008",
@@ -297,7 +297,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rapunzel",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000061"
+    "modelo_fabrica": "INF-1000023"
   },
   {
     "id": "DI-10-026",
@@ -609,7 +609,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stitch",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000041"
+    "modelo_fabrica": "INF-1000118"
   },
   {
     "id": "DI-20-023",
@@ -1044,7 +1044,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Falcon",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000160"
+    "modelo_fabrica": "INF-1000127"
   },
   {
     "id": "DI-200-109",
@@ -1164,7 +1164,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Ant-Man",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000178"
+    "modelo_fabrica": "INF-1000227"
   },
   {
     "id": "DI-300-119",
@@ -1832,7 +1832,7 @@
     "nombre": "Cinderella\u0027s Coach",
     "tipo": "Disco de Poder",
     "version": "1.0",
-    "franquicia": "Por Asignar",
+    "franquicia": "Cenicienta",
     "imagen_url": "dipd100174.png",
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Cinderella\u0027s_Coach",
     "obtenido": false,
@@ -3176,5 +3176,125 @@
     "obtenido": false,
     "cantidad": 0,
     "modelo_fabrica": "INF-1000134"
+  },
+  {
+    "id": "DI-PD-300-278",
+    "nombre": "Stitch's Blaster",
+    "tipo": "Disco de Poder",
+    "version": "1.0",
+    "franquicia": "Lilo \u0026 Stitch",
+    "imagen_url": "dipd300278.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Stitch%27s_Blaster",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000037"
+  },
+  {
+    "id": "DI-PD-300-279",
+    "nombre": "Alice's Wonderland",
+    "tipo": "Disco de Poder",
+    "version": "1.0",
+    "franquicia": "Alicia en el Pais de las Maravillas",
+    "imagen_url": "dipd300279.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Alice%27s_Wonderland",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000067"
+  },
+  {
+    "id": "DI-PD-300-280",
+    "nombre": "Nemo's Seascape",
+    "tipo": "Disco de Poder",
+    "version": "1.0",
+    "franquicia": "Buscando a Nemo",
+    "imagen_url": "dipd300280.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nemo%27s_Seascape",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000066"
+  },
+  {
+    "id": "DI-PD-300-281",
+    "nombre": "Rapunzel's Birthday Sky",
+    "tipo": "Disco de Poder",
+    "version": "1.0",
+    "franquicia": "Enredados",
+    "imagen_url": "dipd300281.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rapunzel%27s_Birthday_Sky",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000061"
+  },
+  {
+    "id": "DI-PD-300-282",
+    "nombre": "Hangin' Ten Stitch with Surfboard",
+    "tipo": "Disco de Poder",
+    "version": "2.0",
+    "franquicia": "Lilo \u0026 Stitch",
+    "imagen_url": "dipd300282.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hangin%27_Ten_Stitch_with_Surfboard",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000041"
+  },
+  {
+    "id": "DI-PD-300-283",
+    "nombre": "Marvel Team-Up: Ant-Man",
+    "tipo": "Disco de Poder",
+    "version": "2.0",
+    "franquicia": "Marvel",
+    "imagen_url": "dipd300283.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Marvel_Team-Up:_Ant-Man",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000178"
+  },
+  {
+    "id": "DI-PD-300-284",
+    "nombre": "Falcon's Wings",
+    "tipo": "Disco de Poder",
+    "version": "2.0",
+    "franquicia": "Marvel",
+    "imagen_url": "dipd300284.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Falcon%27s_Wings",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000160"
+  },
+  {
+    "id": "DI-PD-300-285",
+    "nombre": "Rapunzel's Healing",
+    "tipo": "Disco de Poder",
+    "version": "1.0",
+    "franquicia": "Enredados",
+    "imagen_url": "dipd300285.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Rapunzel%27s_Healing",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000010"
+  },
+  {
+    "id": "DI-PD-300-286",
+    "nombre": "Violet's Force Field",
+    "tipo": "Disco de Poder",
+    "version": "1.0",
+    "franquicia": "Los Increibles",
+    "imagen_url": "dipd300286.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Violet%27s_Force_Field",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-3000013"
+  },
+  {
+    "id": "DI-PD-300-287",
+    "nombre": "Groot's Roots",
+    "tipo": "Disco de Poder",
+    "version": "2.0",
+    "franquicia": "Marvel",
+    "imagen_url": "dipd300287.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Groot%27s_Roots",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-4000111"
   }
 ]

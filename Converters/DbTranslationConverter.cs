@@ -35,6 +35,7 @@ namespace MyDICollection.Converters
                 "Enredados" => "Tangled",
                 "Frozen" => "Frozen", 
                 "Phineas y Ferb" => "Phineas and Ferb",
+                "Cenicienta" => "Cinderella's",
 
                 // ---- Franquicias 2.0 ----
                 "Marvel" => "Marvel", 
