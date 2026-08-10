@@ -3152,5 +3152,29 @@
     "cantidad": 0,
     "modelo_fabrica": "INF-1000021",
     "edicion_especial": "D23"
+  },
+  {
+    "id": "DI-300-136",
+    "nombre": "Hulk Buster",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Marvel",
+    "imagen_url": "hb.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hulkbuster",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000238"
+  },
+  {
+    "id": "DI-300-137",
+    "nombre": "Black Suit Spider-Man",
+    "tipo": "Figura",
+    "version": "2.0",
+    "franquicia": "Marvel",
+    "imagen_url": "sbs.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Black_Suit_Spider-Man",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000134"
   }
 ]
