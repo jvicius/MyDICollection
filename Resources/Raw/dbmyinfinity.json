@@ -393,7 +393,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_America",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000229"
+    "modelo_fabrica": "INF-1000100"
   },
   {
     "id": "DI-20-005",
@@ -3296,5 +3296,17 @@
     "obtenido": false,
     "cantidad": 0,
     "modelo_fabrica": "INF-4000111"
+  },
+  {
+    "id": "DI-300-138",
+    "nombre": "Captain America - The First Avenger",
+    "tipo": "Figura",
+    "version": "3.0",
+    "franquicia": "Marvel",
+    "imagen_url": "di300138.png",
+    "wiki_url": "https://disneyinfinity.fandom.com/wiki/Captain_America_-_The_First_Avenger",
+    "obtenido": false,
+    "cantidad": 0,
+    "modelo_fabrica": "INF-1000229"
   }
 ]
