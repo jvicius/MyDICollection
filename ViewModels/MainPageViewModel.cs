@@ -264,7 +264,7 @@ namespace MyDICollection.ViewModels
 
                     if (resultado != null)
                     {
-                        var item = Figures.First(f => f.Modelo == resultado.InfCode);
+                        var item = Figures.FirstOrDefault(f => f.Modelo == resultado.InfCode);
                         if (item != null)
                         {
                             MainThread.BeginInvokeOnMainThread(async () =>

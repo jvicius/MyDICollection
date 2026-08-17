@@ -31,7 +31,6 @@
 
                     <!-- Loader animado -->
                     <ActivityIndicator IsRunning="True" 
-                                       Color="{AppThemeBinding Light={StaticResource PrimaryColor}, Dark={StaticResource PrimaryColorDark}}" 
                                        HorizontalOptions="Center" 
                                        WidthRequest="{responsive:ResponsiveSize BaseValue=50}" 
                                        HeightRequest="{responsive:ResponsiveSize BaseValue=50}"/>
