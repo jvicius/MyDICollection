@@ -222,4 +222,13 @@
   <data name="NoAchievementsMessage" xml:space="preserve">
     <value>No achievements unlocked yet</value>
   </data>
+  <data name="NFCScanMessage" xml:space="preserve">
+    <value>Tap your figure or disc to the back of your phone to scan it...</value>
+  </data>
+  <data name="NFCNotSupported" xml:space="preserve">
+    <value>Your device does not support NFC scanning.</value>
+  </data>
+  <data name="NFCDisabled" xml:space="preserve">
+    <value>NFC is disabled. Turn it on to scan your figures.</value>
+  </data>
 </root>

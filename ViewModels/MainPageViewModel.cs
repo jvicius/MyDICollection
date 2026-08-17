@@ -119,13 +119,6 @@ namespace MyDICollection.ViewModels
             _logrosService = logrosService;
             _disneyNfcService  = disneyNfcService;
 
-#if DEBUG
-            //_disneyNfcService.OnLogGenerated += _disneyNfcService_OnLogGenerated;
-#endif
-
-            _disneyNfcService.ErrorOccurred += _disneyNfcService_OnError;
-            _disneyNfcService.FigureDetected += _disneyNfcService_OnFigureDetected;
-
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
@@ -221,6 +214,21 @@ namespace MyDICollection.ViewModels
             }
         }
 
+        protected async Task<bool> MostrarAlertaAsync(string icono, string mensaje, Color fontColor = null)
+        {
+            // Si no mandas color, le ponemos un rojo de advertencia por default
+            fontColor ??= Colors.Red;
+
+            var parameters = new NavigationParameters
+            {
+                { "Icono", icono },
+                { "Mensaje", mensaje },
+                { "FontColor", fontColor }
+            };
+
+            return await _popupPageService.ShowPopupAsync<AlertMessagePopup, AlertMessagePopupViewModel, bool>(parameters);
+        }
+
         [RelayCommand]
         private async Task AbrirMenuAsync(string value)
         {
@@ -237,15 +245,42 @@ namespace MyDICollection.ViewModels
                 await Task.Delay(500);
                 SelectedMenuHome = false;
 
-                // Verificamos si el cel tiene NFC y si está prendido
-                if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsEnabled)
+                if (!_disneyNfcService.IsSupported || !_disneyNfcService.IsAvailable)
                 {
-                    _disneyNfcService.StartListening();
+                    await MostrarAlertaAsync(FontAwesomeIcons.ErrorTimes, AppResource.NFCNotSupported, Colors.Red);
+                    return;
+                }
+
+                if (!_disneyNfcService.IsEnabled)
+                {
+                    await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.NFCDisabled, Colors.Yellow);
+                    return;
+                }
+
+                //// Verificamos si el cel tiene NFC y si está prendido
+                if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsSupported)
+                {
+                    var resultado = await _popupPageService.ShowPopupAsync<NfcScannerPopup, NfcScannerViewModel, DisneyNfcUtils.DisneyFigureInfo>();
+
+                    if (resultado != null)
+                    {
+                        var item = Figures.First(f => f.Modelo == resultado.InfCode);
+                        if (item != null)
+                        {
+                            MainThread.BeginInvokeOnMainThread(async () =>
+                            {
+                                await Task.Delay(500);
+                                await AbrirDetalleAsync(item);
+                            });
+                        }
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Este dispositivo no soporta NFC o está apagado.");
                 }
+
+             
 
                 return;
             }
@@ -270,34 +305,6 @@ namespace MyDICollection.ViewModels
                 await LoadDataAsync();
             }
         }
-
-        private void _disneyNfcService_OnFigureDetected(object? sender, DisneyNfcUtils.DisneyFigureInfo e)
-        {
-            Console.WriteLine($"UID: {e.UidHex}");
-            Console.WriteLine($"ModelNumber: {e.InfCode}");
-
-            var item = Figures.First(f => f.Modelo == e.InfCode);
-            if(item!=null)
-            {
-
-                MainThread.BeginInvokeOnMainThread(async () =>
-                {
-                    await AbrirDetalleAsync(item);
-                });
-            }
-        }
-
-        private void _disneyNfcService_OnError(object? sender, string e)
-        {
-            Console.WriteLine(e);
-            _disneyNfcService.StopListening();
-        }
-
-        private void _disneyNfcService_OnLogGenerated(object? sender, string e)
-        {
-            Console.WriteLine(e);
-        }
-
         private async Task CargarLogrosFamaAsync()
         {
             var historialUsuario = await _logrosService.ObtenerLogrosDesbloqueadosAsync();

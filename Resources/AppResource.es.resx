@@ -222,4 +222,13 @@
   <data name="NoAchievementsMessage" xml:space="preserve">
     <value>Aún no tienes logros desbloqueados</value>
   </data>
+  <data name="NFCScanMessage" xml:space="preserve">
+    <value>Acerque su figura o disco a la parte trasera del celular para escanearla...</value>
+  </data>
+  <data name="NFCNotSupported" xml:space="preserve">
+    <value>Tu dispositivo no soporta la lectura por NFC.</value>
+  </data>
+  <data name="NFCDisabled" xml:space="preserve">
+    <value>El NFC está desactivado. Enciéndelo para escanear tus figuras.</value>
+  </data>
 </root>

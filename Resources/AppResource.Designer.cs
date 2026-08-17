@@ -268,6 +268,33 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NFC is disabled. Turn it on to scan your figures..
+        /// </summary>
+        internal static string NFCDisabled {
+            get {
+                return ResourceManager.GetString("NFCDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your device does not support NFC scanning..
+        /// </summary>
+        internal static string NFCNotSupported {
+            get {
+                return ResourceManager.GetString("NFCNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tap your figure or disc to the back of your phone to scan it....
+        /// </summary>
+        internal static string NFCScanMessage {
+            get {
+                return ResourceManager.GetString("NFCScanMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No achievements unlocked yet.
         /// </summary>
         internal static string NoAchievementsMessage {
