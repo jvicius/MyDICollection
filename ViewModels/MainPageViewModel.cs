@@ -1,13 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Mopups.Services;
 using MyDICollection.Helpers;
+using MyDICollection.Helpers.Crypto;
 using MyDICollection.Helpers.Extensions;
 using MyDICollection.Helpers.Fonts;
 using MyDICollection.Models;
 using MyDICollection.Popups;
 using MyDICollection.Resources;
 using MyDICollection.Services;
+using MyDICollection.Services.Nfc;
 using System.Collections.ObjectModel;
 
 namespace MyDICollection.ViewModels
@@ -25,6 +26,7 @@ namespace MyDICollection.ViewModels
         private readonly IPopupPageService _popupPageService;
         private readonly ILocalizationService _localizationService;
         private readonly ILogrosService _logrosService;
+        private readonly IDisneyNfcService _disneyNfcService;
         protected StatusBarService StatusBarService { get; set; }
 
         private List<FiguraModel> _allFigures = new();
@@ -108,13 +110,22 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private double _progresoLogrosDiscos = 0;
 
-        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService)
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService, IDisneyNfcService disneyNfcService)
         {
             _jsonDataService = jsonDataService;
             _popupPageService = popupPageService;
             StatusBarService = statusBarService;
             _localizationService = localizationService;
             _logrosService = logrosService;
+            _disneyNfcService  = disneyNfcService;
+
+#if DEBUG
+            //_disneyNfcService.OnLogGenerated += _disneyNfcService_OnLogGenerated;
+#endif
+
+            _disneyNfcService.ErrorOccurred += _disneyNfcService_OnError;
+            _disneyNfcService.FigureDetected += _disneyNfcService_OnFigureDetected;
+
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
@@ -225,6 +236,17 @@ namespace MyDICollection.ViewModels
             {
                 await Task.Delay(500);
                 SelectedMenuHome = false;
+
+                // Verificamos si el cel tiene NFC y si está prendido
+                if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsEnabled)
+                {
+                    _disneyNfcService.StartListening();
+                }
+                else
+                {
+                    Console.WriteLine("Este dispositivo no soporta NFC o está apagado.");
+                }
+
                 return;
             }
 
@@ -247,6 +269,33 @@ namespace MyDICollection.ViewModels
             {
                 await LoadDataAsync();
             }
+        }
+
+        private void _disneyNfcService_OnFigureDetected(object? sender, DisneyNfcUtils.DisneyFigureInfo e)
+        {
+            Console.WriteLine($"UID: {e.UidHex}");
+            Console.WriteLine($"ModelNumber: {e.InfCode}");
+
+            var item = Figures.First(f => f.Modelo == e.InfCode);
+            if(item!=null)
+            {
+
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    await AbrirDetalleAsync(item);
+                });
+            }
+        }
+
+        private void _disneyNfcService_OnError(object? sender, string e)
+        {
+            Console.WriteLine(e);
+            _disneyNfcService.StopListening();
+        }
+
+        private void _disneyNfcService_OnLogGenerated(object? sender, string e)
+        {
+            Console.WriteLine(e);
         }
 
         private async Task CargarLogrosFamaAsync()
@@ -300,11 +349,13 @@ namespace MyDICollection.ViewModels
 
         private void SetActiveMenu(string menuName)
         {
+            if (menuName == "Home")
+                return;
+
             SelectedMenuFigures = menuName == "MyFigures";
             SelectedMenuDiscs = menuName == "MyDiscs";
             SelectedMenuArchi = menuName == "Achievements";
             SelectedMenuSettings = menuName == "Settings";
-            SelectedMenuHome = menuName == "Home";
         }
 
         [RelayCommand]

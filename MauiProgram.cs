@@ -55,6 +55,12 @@ namespace MyDICollection
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();
 
+#if ANDROID
+    builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.Android.Services.AndroidDisneyNfcService>();
+#elif WINDOWS
+    builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.Windows.Services.WindowsDisneyNfcService>();
+#endif
+
             builder.ConfigureLifecycleEvents(events =>
             {
 #if WINDOWS

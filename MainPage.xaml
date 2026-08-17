@@ -585,7 +585,7 @@
             <!-- TU NUEVO BOTÓN CENTRAL -->
             <controls:CenterMenuButton Grid.Column="2"
                            ImageSource="none.png"
-                           Command="{Binding AbrirMenuAsync}"
+                           Command="{Binding AbrirMenuCommand}"
                            CommandParameter="Home" />
 
 
