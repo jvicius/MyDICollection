@@ -89,5 +89,8 @@
 
         public const string Bug = "\uf188";
 
+        public const string CloudUpload = "\uf0ee"; // Para hacer el Backup (Subir/Compartir)
+        public const string CloudDownload = "\uf0ed"; // Para Restaurar (Bajar/Cargar)
+
     }
 }

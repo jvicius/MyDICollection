@@ -249,4 +249,19 @@
   <data name="DescribeIssue" xml:space="preserve">
     <value>Describe el problema o sugerencia:</value>
   </data>
+  <data name="MenuBackup" xml:space="preserve">
+    <value>Respaldar Colección</value>
+  </data>
+  <data name="MenuRestore" xml:space="preserve">
+    <value>Restaurar Colección</value>
+  </data>
+  <data name="BackupShareTitle" xml:space="preserve">
+    <value>Guarda el respaldo de tu colección</value>
+  </data>
+  <data name="RestoreSuccess" xml:space="preserve">
+    <value>¡Colección restaurada con éxito! Por favor reinicia la app para ver los cambios.</value>
+  </data>
+  <data name="RestoreError" xml:space="preserve">
+    <value>Archivo inválido o error al restaurar el respaldo.</value>
+  </data>
 </root>

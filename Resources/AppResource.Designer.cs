@@ -106,6 +106,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save your collection backup.
+        /// </summary>
+        internal static string BackupShareTitle {
+            get {
+                return ResourceManager.GetString("BackupShareTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Brand.
         /// </summary>
         internal static string Brand {
@@ -259,6 +268,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Backup Collection.
+        /// </summary>
+        internal static string MenuBackup {
+            get {
+                return ResourceManager.GetString("MenuBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change Language.
         /// </summary>
         internal static string MenuChangeLanguage {
@@ -282,6 +300,15 @@ namespace MyDICollection.Resources {
         internal static string MenuReportIssue {
             get {
                 return ResourceManager.GetString("MenuReportIssue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore Collection.
+        /// </summary>
+        internal static string MenuRestore {
+            get {
+                return ResourceManager.GetString("MenuRestore", resourceCulture);
             }
         }
         
@@ -381,6 +408,24 @@ namespace MyDICollection.Resources {
         internal static string PowerDisc {
             get {
                 return ResourceManager.GetString("PowerDisc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid file or error restoring the backup..
+        /// </summary>
+        internal static string RestoreError {
+            get {
+                return ResourceManager.GetString("RestoreError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collection restored successfully! Please restart the app to see the changes..
+        /// </summary>
+        internal static string RestoreSuccess {
+            get {
+                return ResourceManager.GetString("RestoreSuccess", resourceCulture);
             }
         }
         

@@ -149,8 +149,10 @@ namespace MyDICollection.ViewModels
                 // Nota: Cambia los nombres de los íconos por los que tengas en tu clase FontAwesomeIcons
                 new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = AppResource.MenuAboutApp },
                 new MenuOpcion { Icono = FontAwesomeIcons.Language, Texto = AppResource.MenuChangeLanguage },
+                new MenuOpcion { Icono = FontAwesomeIcons.CloudUpload, Texto = AppResource.MenuBackup },
+                new MenuOpcion { Icono = FontAwesomeIcons.CloudDownload, Texto = AppResource.MenuRestore },
                 new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions },
-                new MenuOpcion { Icono = FontAwesomeIcons.Bug, Texto = AppResource.MenuReportIssue } 
+                new MenuOpcion { Icono = FontAwesomeIcons.Bug, Texto = AppResource.MenuReportIssue } ,
             };
         }
 
@@ -189,9 +191,18 @@ namespace MyDICollection.ViewModels
         {
             if (opcion == null) return;
 
-            if (opcion.Texto == AppResource.MenuReportIssue) // O tu AppResource
+            if (opcion.Texto == AppResource.MenuReportIssue) 
             {
                 await ReportarIssueAsync();
+            }
+
+            if (opcion.Texto == AppResource.MenuBackup)
+            {
+                await RespaldarColeccionAsync();
+            }
+            else if (opcion.Texto == AppResource.MenuRestore)
+            {
+                await RestaurarColeccionAsync();
             }
 
             if (opcion.Texto == AppResource.MenuAboutApp)
@@ -252,6 +263,85 @@ namespace MyDICollection.ViewModels
             {
                 System.Diagnostics.Debug.WriteLine($"Error al abrir GitHub: {ex.Message}");
                 // Opcional: Mostrar un MostrarAlertaAsync diciendo que no se pudo abrir el navegador
+            }
+        }
+
+        private async Task RespaldarColeccionAsync()
+        {
+            try
+            {
+                // 1. Buscamos dónde vive tu userdata.json actual
+                string rutaArchivo = Path.Combine(FileSystem.AppDataDirectory, "userdata.json");
+
+                if (!File.Exists(rutaArchivo))
+                {
+                    // Si por alguna razón no existe, no hay nada que respaldar
+                    return;
+                }
+
+                // 2. Usamos el Share nativo del celular
+                await Share.Default.RequestAsync(new ShareFileRequest
+                {
+                    Title = AppResource.BackupShareTitle, // Título del menú nativo
+                    File = new ShareFile(rutaArchivo)     // Le pasamos tu JSON
+                });
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al respaldar: {ex.Message}");
+            }
+        }
+
+        private async Task RestaurarColeccionAsync()
+        {
+            try
+            {
+                // 1. Definimos que solo queremos que el usuario pueda elegir archivos .json
+                var customFileType = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
+                {
+                    { DevicePlatform.iOS, new[] { "public.json" } }, // iOS usa UTTypes
+                    { DevicePlatform.Android, new[] { "application/json" } }, // Android usa MIME types
+                    { DevicePlatform.WinUI, new[] { ".json" } }, // Windows usa extensiones
+                    { DevicePlatform.macOS, new[] { "json" } }
+                });
+
+                // 2. Abrimos el explorador de archivos nativo
+                var resultado = await FilePicker.Default.PickAsync(new PickOptions
+                {
+                    PickerTitle = "Selecciona tu userdata.json",
+                    FileTypes = customFileType
+                });
+
+                if (resultado != null)
+                {
+                    await Task.Delay(500);
+                    // 3. Validamos que en efecto sea un JSON (por si las moscas)
+                    if (resultado.FileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                    {
+                        // 4. Ubicamos dónde debe ir el archivo en la app
+                        string rutaDestino = Path.Combine(FileSystem.AppDataDirectory, "userdata.json");
+
+                        // 5. Copiamos el archivo que eligió el usuario y sobreescribimos el actual
+                        using var streamOrigen = await resultado.OpenReadAsync();
+                        using var streamDestino = File.Create(rutaDestino);
+
+                        await streamOrigen.CopyToAsync(streamDestino);
+
+                        // 6. ¡Éxito! Le avisamos al usuario. 
+                        // NOTA: Como la base de datos cambió por debajo del agua, 
+                        // lo más sano es pedirle que reinicie la app para que tus listas se vuelvan a cargar limpias.
+
+                        await MostrarAlertaAsync(FontAwesomeIcons.CloudDownload, AppResource.RestoreSuccess, Colors.Green);
+                    }
+                    else
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.RestoreError, Colors.Red);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al restaurar: {ex.Message}");
             }
         }
 

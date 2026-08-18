@@ -249,4 +249,19 @@
   <data name="DescribeIssue" xml:space="preserve">
     <value>Describe the issue or suggestion:</value>
   </data>
+  <data name="MenuBackup" xml:space="preserve">
+    <value>Backup Collection</value>
+  </data>
+  <data name="MenuRestore" xml:space="preserve">
+    <value>Restore Collection</value>
+  </data>
+  <data name="BackupShareTitle" xml:space="preserve">
+    <value>Save your collection backup</value>
+  </data>
+  <data name="RestoreSuccess" xml:space="preserve">
+    <value>Collection restored successfully! Please restart the app to see the changes.</value>
+  </data>
+  <data name="RestoreError" xml:space="preserve">
+    <value>Invalid file or error restoring the backup.</value>
+  </data>
 </root>
