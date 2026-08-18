@@ -87,5 +87,7 @@
         public const string Trash = "\uf1f8";
         public const string TrashAlt = "\uf2ed";
 
+        public const string Bug = "\uf188";
+
     }
 }

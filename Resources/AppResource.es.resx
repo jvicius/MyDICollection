@@ -243,4 +243,10 @@
   <data name="DeleteFigure" xml:space="preserve">
     <value>Figura eliminada de tu colección.</value>
   </data>
+  <data name="MenuReportIssue" xml:space="preserve">
+    <value>Reportar un problema</value>
+  </data>
+  <data name="DescribeIssue" xml:space="preserve">
+    <value>Describe el problema o sugerencia:</value>
+  </data>
 </root>

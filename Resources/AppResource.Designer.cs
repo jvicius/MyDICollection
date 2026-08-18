@@ -160,6 +160,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Describe the issue or suggestion:.
+        /// </summary>
+        internal static string DescribeIssue {
+            get {
+                return ResourceManager.GetString("DescribeIssue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Figure.
         /// </summary>
         internal static string Figure {
@@ -264,6 +273,15 @@ namespace MyDICollection.Resources {
         internal static string MenuContributions {
             get {
                 return ResourceManager.GetString("MenuContributions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report Issue.
+        /// </summary>
+        internal static string MenuReportIssue {
+            get {
+                return ResourceManager.GetString("MenuReportIssue", resourceCulture);
             }
         }
         

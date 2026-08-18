@@ -149,7 +149,8 @@ namespace MyDICollection.ViewModels
                 // Nota: Cambia los nombres de los íconos por los que tengas en tu clase FontAwesomeIcons
                 new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = AppResource.MenuAboutApp },
                 new MenuOpcion { Icono = FontAwesomeIcons.Language, Texto = AppResource.MenuChangeLanguage },
-                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions }
+                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions },
+                new MenuOpcion { Icono = FontAwesomeIcons.Bug, Texto = AppResource.MenuReportIssue } 
             };
         }
 
@@ -188,6 +189,11 @@ namespace MyDICollection.ViewModels
         {
             if (opcion == null) return;
 
+            if (opcion.Texto == AppResource.MenuReportIssue) // O tu AppResource
+            {
+                await ReportarIssueAsync();
+            }
+
             if (opcion.Texto == AppResource.MenuAboutApp)
             {
                 var resultado = await _popupPageService.ShowPopupAsync<AboutPopup, AboutViewModel, bool>();
@@ -215,6 +221,37 @@ namespace MyDICollection.ViewModels
             if (opcion.Texto == AppResource.MenuContributions) // O el nombre que le hayas dado
             {
                 var resultado = await _popupPageService.ShowPopupAsync<ContributionsPopup, ContributionsViewModel, bool>();
+            }
+        }
+
+        private async Task ReportarIssueAsync()
+        {
+            try
+            {
+                // 1. Sacamos la info del dispositivo para que te llegue el chisme completo
+                string versionApp = AppInfo.Current.VersionString;
+                string plataforma = DeviceInfo.Current.Platform.ToString();
+
+                // 2. Armamos la plantilla con Markdown
+                string bodyCuerpo = $"**{AppResource.DescribeIssue}**\n\n\n" +
+                    $"---\n" +
+                    $"*📱 App Version: {versionApp}*\n" +
+                    $"*⚙️ OS: {plataforma}*";
+
+                // 3. Codificamos el texto para que la URL sea válida
+                string encodedBody = Uri.EscapeDataString(bodyCuerpo);
+                string encodedTitle = Uri.EscapeDataString("[Bug] ");
+
+                // 4. Tu URL directa con los parámetros inyectados
+                string url = $"https://github.com/jvicius/MyDICollection/issues/new?title={encodedTitle}&body={encodedBody}";
+
+                // 5. ¡Pum! Abrimos el navegador
+                await Launcher.Default.OpenAsync(new Uri(url));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al abrir GitHub: {ex.Message}");
+                // Opcional: Mostrar un MostrarAlertaAsync diciendo que no se pudo abrir el navegador
             }
         }
 
