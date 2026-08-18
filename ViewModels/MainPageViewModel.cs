@@ -29,6 +29,7 @@ namespace MyDICollection.ViewModels
         private readonly IDisneyNfcService _disneyNfcService;
         protected StatusBarService StatusBarService { get; set; }
 
+        private List<FiguraModel> _fullListFigures = new();
         private List<FiguraModel> _allFigures = new();
         private Dictionary<string, FiguraUserData> _userData = new();
 
@@ -61,7 +62,7 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private ObservableCollection<FiguraModel> _figures = new();
 
-        public bool MostrarLista => !IsBusy && (SelectedMenuFigures || SelectedMenuDiscs);
+        public bool MostrarLista => (SelectedMenuFigures || SelectedMenuDiscs);
 
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(MostrarLista))]
@@ -109,6 +110,8 @@ namespace MyDICollection.ViewModels
 
         [ObservableProperty]
         private double _progresoLogrosDiscos = 0;
+
+        private bool _isMenuExecuting = false;
 
         public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService, IDisneyNfcService disneyNfcService)
         {
@@ -232,77 +235,127 @@ namespace MyDICollection.ViewModels
         [RelayCommand]
         private async Task AbrirMenuAsync(string value)
         {
-            if ((value == "MyFigures" && SelectedMenuFigures) ||
-                (value == "MyDiscs" && SelectedMenuDiscs) ||
-                (value == "Achievements" && SelectedMenuArchi) ||
-                (value == "Settings" && SelectedMenuSettings))
+            // 2. Si ya se está ejecutando el comando, ignoramos el toque extra y salimos
+            if (_isMenuExecuting)
                 return;
 
-            SetActiveMenu(value);
-
-            if (value == "Home")
+            try
             {
-                await Task.Delay(500);
-                SelectedMenuHome = false;
+                // 3. Cerramos el candado
+                _isMenuExecuting = true;
 
-                if (!_disneyNfcService.IsSupported || !_disneyNfcService.IsAvailable)
-                {
-                    await MostrarAlertaAsync(FontAwesomeIcons.ErrorTimes, AppResource.NFCNotSupported, Colors.Red);
+                if ((value == "MyFigures" && SelectedMenuFigures) ||
+                    (value == "MyDiscs" && SelectedMenuDiscs) ||
+                    (value == "Achievements" && SelectedMenuArchi) ||
+                    (value == "Settings" && SelectedMenuSettings))
                     return;
-                }
 
-                if (!_disneyNfcService.IsEnabled)
+                SetActiveMenu(value);
+
+                if (value == "Home")
                 {
-                    await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.NFCDisabled, Colors.Yellow);
-                    return;
-                }
+                    await Task.Delay(500);
+                    SelectedMenuHome = false;
 
-                //// Verificamos si el cel tiene NFC y si está prendido
-                if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsSupported)
-                {
-                    var resultado = await _popupPageService.ShowPopupAsync<NfcScannerPopup, NfcScannerViewModel, DisneyNfcUtils.DisneyFigureInfo>();
-
-                    if (resultado != null)
+                    if (!_disneyNfcService.IsSupported || !_disneyNfcService.IsAvailable)
                     {
-                        var item = Figures.FirstOrDefault(f => f.Modelo == resultado.InfCode);
-                        if (item != null)
+                        await MostrarAlertaAsync(FontAwesomeIcons.ErrorTimes, AppResource.NFCNotSupported, Colors.Red);
+                        return;
+                    }
+
+                    if (!_disneyNfcService.IsEnabled)
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.NFCDisabled, Colors.Yellow);
+                        return;
+                    }
+
+                    //// Verificamos si el cel tiene NFC y si está prendido
+                    if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsSupported)
+                    {
+                        var resultado = await _popupPageService.ShowPopupAsync<NfcScannerPopup, NfcScannerViewModel, DisneyNfcUtils.DisneyFigureInfo>();
+
+                        await Task.Delay(500);
+
+                        if (resultado != null)
                         {
-                            MainThread.BeginInvokeOnMainThread(async () =>
+                            var item = _fullListFigures.FirstOrDefault(f => f.Modelo == resultado.InfCode);
+                            if (item != null)
                             {
-                                await Task.Delay(500);
-                                await AbrirDetalleAsync(item);
-                            });
+                                // 1. Prendemos la bandera para mostrar tu loader en pantalla
+                                //IsBusy = true;
+
+                                try
+                                {
+                                    // 💡 Ya no usamos MainThread.BeginInvokeOnMainThread aquí
+                                    // para no ahogar la interfaz mientras guarda y calcula logros.
+
+                                    item.NfcCodes ??= new ObservableCollection<string>();
+
+                                    bool chipYaRegistrado = _userData.ContainsKey(item.Id) && _userData[item.Id].NfcCodes.Contains(resultado.UidHex);
+
+                                    if (!chipYaRegistrado)
+                                    {
+                                        // Es un chip nuevo. Lo agregamos a la lista.
+                                        item.NfcCodes.Add(resultado.UidHex);
+
+                                        // Incrementamos la cantidad y calculamos logros en segundo plano
+                                        await IncrementarAsync(item);
+
+                                        await MostrarAlertaAsync(FontAwesomeIcons.OkCheckCircle, "¡Nueva figura agregada a tu colección!", Colors.Green);
+
+                                        await Task.Delay(500);
+                                    }
+
+                                    await AbrirDetalleAsync(item);
+                                }
+                                finally
+                                {
+                                    // 2. Pase lo que pase, apagamos el loader al terminar
+                                    //IsBusy = false;
+                                }
+                            }
+                            else
+                            {
+                                // Si la figura no está en tu catálogo base (_fullListFigures)
+                                await MostrarAlertaAsync(FontAwesomeIcons.NotFoundQuestion, AppResource.Figurenotfound, Colors.Orange);
+                            }
+                        }
+                        else
+                        {
+                            await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.Figurenotfound, Colors.Yellow);
                         }
                     }
+                    else
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ErrorTimes, AppResource.NFCNotSupported, Colors.Red);
+                    }
+                    return;
                 }
-                else
+
+                if (value == "MyFigures")
                 {
-                    Console.WriteLine("Este dispositivo no soporta NFC o está apagado.");
+                    IconInfo = FontAwesomeIcons.Figura2;
                 }
 
-             
+                if (value == "MyDiscs")
+                {
+                    IconInfo = FontAwesomeIcons.PowerDisc3;
+                }
 
-                return;
+                if (value == "Achievements")
+                {
+                    await CargarLogrosFamaAsync();
+                }
+
+                if (value == "MyFigures" || value == "MyDiscs")
+                {
+                    await LoadDataAsync();
+                }
             }
-
-            if (value == "MyFigures")
+            finally
             {
-                IconInfo = FontAwesomeIcons.Figura2;
-            }
-
-            if (value == "MyDiscs")
-            {
-                IconInfo = FontAwesomeIcons.PowerDisc3;
-            }
-
-            if (value == "Achievements")
-            {
-                await CargarLogrosFamaAsync();
-            }
-
-            if (value == "MyFigures" || value == "MyDiscs")
-            {
-                await LoadDataAsync();
+                // 4. Se ejecuta SIEMPRE al terminar, liberando el botón para el siguiente uso
+                _isMenuExecuting = false;
             }
         }
         private async Task CargarLogrosFamaAsync()
@@ -417,6 +470,15 @@ namespace MyDICollection.ViewModels
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
                 IEnumerable<FiguraModel> query = catalogo ?? new List<FiguraModel>();
 
+                _fullListFigures = query.ToList();
+
+                foreach (var figura in _fullListFigures)
+                {
+                    // Al modificar aquí, ya no afectas la consulta original
+                    figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
+                    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
+                }
+
                 // 2. Filtrar por menú ACTIVO
                 if (SelectedMenuFigures)
                     query = query.Where(w => w.Tipo == "Figura");
@@ -440,6 +502,16 @@ namespace MyDICollection.ViewModels
 
                 // 5. Cargar progreso del usuario
                 _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);
+
+                foreach (var figura in _fullListFigures)
+                {
+                    if (_userData.TryGetValue(figura.Id, out var datosUsuario))
+                    {
+                        figura.Obtenido = datosUsuario.Obtenido;
+                        figura.Cantidad = datosUsuario.Cantidad;
+                        figura.NfcCodes = new ObservableCollection<string>(datosUsuario.NfcCodes ?? new List<string>());
+                    }
+                }
 
                 foreach (var figura in _allFigures)
                 {
@@ -480,6 +552,11 @@ namespace MyDICollection.ViewModels
             OpcionesFranquicia.Add(AppResource.All);
             foreach (var franquicia in _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f))
                 OpcionesFranquicia.Add(franquicia);
+
+            if (OpcionesFranquicia.FirstOrDefault(f=>f==FiltroFranquicia)==null)
+            {
+                FiltroFranquicia = AppResource.All;
+            }
         }
 
         private void AplicarFiltros()
@@ -506,44 +583,50 @@ namespace MyDICollection.ViewModels
         {
             if (figura is null) return;
 
-            var figuraEnLista = _allFigures.FirstOrDefault(f => f.Id == figura.Id);
-            if (figuraEnLista is null) return;
+            IsBusy = true;
 
-            int nuevaCantidad = figuraEnLista.Cantidad + delta;
-            if (nuevaCantidad < 0) nuevaCantidad = 0;
-
-            var refrescar = false;
-            if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
-            if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
-
-            figuraEnLista.Cantidad = nuevaCantidad;
-            figuraEnLista.Obtenido = nuevaCantidad > 0;
-
-            await GuardarProgresoAsync(figuraEnLista);
-
-            // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
-            // Le pasamos la colección completa (_allFigures) para que evalúe 
-            var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_allFigures);
-
-            foreach (var logro in nuevosLogros)
+            try
             {
-                var navParams = new NavigationParameters { { "Logro", logro } };
-                await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
+                var figuraEnLista = _fullListFigures.FirstOrDefault(f => f.Id == figura.Id);
+                if (figuraEnLista is null) return; // Si se sale aquí, el finally apaga el IsBusy mágicamente
 
-                // Damos una pequeña pausa de medio segundo por si desbloqueó 2 logros al mismo tiempo 
-                // (así se encolan bonito en lugar de empalmarse)
-                await Task.Delay(500);
+                int nuevaCantidad = figuraEnLista.Cantidad + delta;
+                if (nuevaCantidad < 0) nuevaCantidad = 0;
+
+                var refrescar = false;
+                if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
+                if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
+
+                figuraEnLista.Cantidad = nuevaCantidad;
+                figuraEnLista.Obtenido = nuevaCantidad > 0;
+
+                await GuardarProgresoAsync(figuraEnLista);
+
+                // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
+                var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_fullListFigures);
+
+                foreach (var logro in nuevosLogros)
+                {
+                    var navParams = new NavigationParameters { { "Logro", logro } };
+                    await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
+
+                    await Task.Delay(500);
+                }
+                // 💥 FIN DEL MOTOR DE LOGROS 💥
+
+                if (refrescar)
+                {
+                    AplicarFiltros();
+                }
+                else
+                {
+                    ActualizarEstadisticas(ObtenerListaBaseFiltrada());
+                }
             }
-            // 💥 FIN DEL MOTOR DE LOGROS 💥
-
-            if (refrescar)
+            finally
             {
-                AplicarFiltros();
-            }
-            else
-            {
-                // Si no recargamos la lista visual para ahorrar memoria, de todos modos actualizamos los numeritos de arriba
-                ActualizarEstadisticas(ObtenerListaBaseFiltrada());
+                // Esto siempre se va a ejecutar, protegiendo tu app de quedarse pasmada
+                IsBusy = false;
             }
         }
 

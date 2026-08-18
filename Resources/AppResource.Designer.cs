@@ -88,6 +88,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New figure added to your collection!.
+        /// </summary>
+        internal static string AddFigure {
+            get {
+                return ResourceManager.GetString("AddFigure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string All {
@@ -151,6 +160,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The scanned figure was not found in your collection or the database..
+        /// </summary>
+        internal static string Figurenotfound {
+            get {
+                return ResourceManager.GetString("Figurenotfound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply Filters.
         /// </summary>
         internal static string FilterApplyButton {
@@ -201,6 +219,15 @@ namespace MyDICollection.Resources {
         internal static string LegalDisclaimerText {
             get {
                 return ResourceManager.GetString("LegalDisclaimerText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Syncing with the Infinity Base....
+        /// </summary>
+        internal static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
             }
         }
         

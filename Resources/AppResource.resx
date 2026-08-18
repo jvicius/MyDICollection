@@ -231,4 +231,13 @@
   <data name="NFCDisabled" xml:space="preserve">
     <value>NFC is disabled. Turn it on to scan your figures.</value>
   </data>
+  <data name="Figurenotfound" xml:space="preserve">
+    <value>The scanned figure was not found in your collection or the database.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Syncing with the Infinity Base...</value>
+  </data>
+  <data name="AddFigure" xml:space="preserve">
+    <value>New figure added to your collection!</value>
+  </data>
 </root>

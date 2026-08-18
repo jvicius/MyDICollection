@@ -231,4 +231,13 @@
   <data name="NFCDisabled" xml:space="preserve">
     <value>El NFC está desactivado. Enciéndelo para escanear tus figuras.</value>
   </data>
+  <data name="Figurenotfound" xml:space="preserve">
+    <value>La figura escaneada no se encontró en tu colección o base de datos.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Sincronizando con la Base Infinity...</value>
+  </data>
+  <data name="AddFigure" xml:space="preserve">
+    <value>¡Nueva figura agregada a tu colección!</value>
+  </data>
 </root>
