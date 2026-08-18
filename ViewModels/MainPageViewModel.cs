@@ -127,11 +127,11 @@ namespace MyDICollection.ViewModels
             MainThread.BeginInvokeOnMainThread(async () =>
             {
                 //borrar logros test
-                //var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
-                //if (File.Exists(rutaLogros))
-                //{
-                //    File.Delete(rutaLogros);
-                //}
+                var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
+                if (File.Exists(rutaLogros))
+                {
+                    File.Delete(rutaLogros);
+                }
 
                 SetStatusBarColors();
                 SetupMenu();
@@ -203,6 +203,10 @@ namespace MyDICollection.ViewModels
             else if (opcion.Texto == AppResource.MenuRestore)
             {
                 await RestaurarColeccionAsync();
+
+                // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
+                await EvaluarLogros();
+                // 💥 FIN DEL MOTOR DE LOGROS 💥
             }
 
             if (opcion.Texto == AppResource.MenuAboutApp)
@@ -754,15 +758,7 @@ namespace MyDICollection.ViewModels
                 await GuardarProgresoAsync(figuraEnLista);
 
                 // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
-                var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_fullListFigures);
-
-                foreach (var logro in nuevosLogros)
-                {
-                    var navParams = new NavigationParameters { { "Logro", logro } };
-                    await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
-
-                    await Task.Delay(500);
-                }
+                await EvaluarLogros();
                 // 💥 FIN DEL MOTOR DE LOGROS 💥
 
                 if (refrescar)
@@ -778,6 +774,19 @@ namespace MyDICollection.ViewModels
             {
                 // Esto siempre se va a ejecutar, protegiendo tu app de quedarse pasmada
                 IsBusy = false;
+            }
+        }
+
+        private async Task EvaluarLogros()
+        {
+            var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_fullListFigures);
+
+            foreach (var logro in nuevosLogros)
+            {
+                var navParams = new NavigationParameters { { "Logro", logro } };
+                await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
+
+                await Task.Delay(500);
             }
         }
 
