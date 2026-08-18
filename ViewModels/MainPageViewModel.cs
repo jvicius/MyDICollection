@@ -112,6 +112,7 @@ namespace MyDICollection.ViewModels
         private double _progresoLogrosDiscos = 0;
 
         private bool _isMenuExecuting = false;
+        private bool _IsScanFigure = false;
 
         public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService, IDisneyNfcService disneyNfcService)
         {
@@ -256,6 +257,7 @@ namespace MyDICollection.ViewModels
                 {
                     await Task.Delay(500);
                     SelectedMenuHome = false;
+                    _IsScanFigure = false;
 
                     if (!_disneyNfcService.IsSupported || !_disneyNfcService.IsAvailable)
                     {
@@ -299,14 +301,15 @@ namespace MyDICollection.ViewModels
                                         item.NfcCodes.Add(resultado.UidHex);
 
                                         // Incrementamos la cantidad y calculamos logros en segundo plano
-                                        await IncrementarAsync(item);
+                                        await CambiarCantidadAsync(item,1);
 
                                         await MostrarAlertaAsync(FontAwesomeIcons.OkCheckCircle, "¡Nueva figura agregada a tu colección!", Colors.Green);
 
                                         await Task.Delay(500);
                                     }
-
+                                    _IsScanFigure = true;
                                     await AbrirDetalleAsync(item);
+                                    _IsScanFigure = false;
                                 }
                                 finally
                                 {
@@ -452,10 +455,16 @@ namespace MyDICollection.ViewModels
 
             var navParams = new NavigationParameters
                 {
-                    { "FiguraActual", figura }
+                    { "FiguraActual", figura },
+                    { "IsScanFigure",_IsScanFigure }
                 };
 
             var resultado = await _popupPageService.ShowPopupAsync<FiguraInfoPopup, FiguraInfoViewModel, bool>(navParams);
+
+            if(!resultado)
+            {
+
+            }
         }
 
         private async Task LoadDataAsync()

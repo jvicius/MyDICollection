@@ -84,5 +84,8 @@
         public const string NotFoundFrown = "\uf119";        // Carita triste (el clásico estilo de "ups, no hay nada aquí")
         public const string NotFoundGhost = "\uf6e2";        // Fantasmita (súper común para errores 404 o cosas que no existen)
 
+        public const string Trash = "\uf1f8";
+        public const string TrashAlt = "\uf2ed";
+
     }
 }
