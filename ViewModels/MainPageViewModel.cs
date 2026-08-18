@@ -303,12 +303,14 @@ namespace MyDICollection.ViewModels
                                         // Incrementamos la cantidad y calculamos logros en segundo plano
                                         await CambiarCantidadAsync(item,1);
 
-                                        await MostrarAlertaAsync(FontAwesomeIcons.OkCheckCircle, "¡Nueva figura agregada a tu colección!", Colors.Green);
+                                        await MostrarAlertaAsync(FontAwesomeIcons.OkCheckCircle, AppResource.AddFigure, Colors.Green);
 
                                         await Task.Delay(500);
                                     }
                                     _IsScanFigure = true;
+                                    item.CurrentUidHex = resultado.UidHex;
                                     await AbrirDetalleAsync(item);
+                                    item.CurrentUidHex = string.Empty;
                                     _IsScanFigure = false;
                                 }
                                 finally
@@ -325,7 +327,7 @@ namespace MyDICollection.ViewModels
                         }
                         else
                         {
-                            await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.Figurenotfound, Colors.Yellow);
+                            //await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.Figurenotfound, Colors.Yellow);
                         }
                     }
                     else
@@ -463,7 +465,20 @@ namespace MyDICollection.ViewModels
 
             if(!resultado)
             {
+                if (!string.IsNullOrEmpty(figura.CurrentUidHex) && (figura.NfcCodes?.Any()??false))
+                {
+                    if (figura.NfcCodes.Contains(figura.CurrentUidHex))
+                    {
+                        figura.NfcCodes.Remove(figura.CurrentUidHex);
 
+                        await Task.Delay(500);
+
+                        await CambiarCantidadAsync(figura, -1);
+
+                        await MostrarAlertaAsync(FontAwesomeIcons.Trash, AppResource.DeleteFigure, Colors.Gray);
+                    }
+                }
+                
             }
         }
 

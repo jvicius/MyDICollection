@@ -240,4 +240,7 @@
   <data name="AddFigure" xml:space="preserve">
     <value>¡Nueva figura agregada a tu colección!</value>
   </data>
+  <data name="DeleteFigure" xml:space="preserve">
+    <value>Figura eliminada de tu colección.</value>
+  </data>
 </root>

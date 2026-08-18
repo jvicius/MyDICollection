@@ -151,6 +151,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Figure removed from your collection..
+        /// </summary>
+        internal static string DeleteFigure {
+            get {
+                return ResourceManager.GetString("DeleteFigure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Figure.
         /// </summary>
         internal static string Figure {

@@ -62,5 +62,12 @@ namespace MyDICollection.Models
             get => _nfcCodes;
             set { if (_nfcCodes != value) { _nfcCodes = value; OnPropertyChanged(); } }
         }
+        private string _currentUidHex;
+        [JsonIgnore]
+        public string CurrentUidHex
+        {
+            get => _currentUidHex;
+            set { if (_currentUidHex != value) { _currentUidHex = value; OnPropertyChanged(); } }
+        }
     }
 }
