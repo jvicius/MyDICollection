@@ -127,11 +127,11 @@ namespace MyDICollection.ViewModels
             MainThread.BeginInvokeOnMainThread(async () =>
             {
                 //borrar logros test
-                var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
-                if (File.Exists(rutaLogros))
-                {
-                    File.Delete(rutaLogros);
-                }
+                //var rutaLogros = Path.Combine(FileSystem.AppDataDirectory, "LogrosUsuario.json");
+                //if (File.Exists(rutaLogros))
+                //{
+                //    File.Delete(rutaLogros);
+                //}
 
                 SetStatusBarColors();
                 SetupMenu();
@@ -421,6 +421,7 @@ namespace MyDICollection.ViewModels
                                 {
                                     // 💡 Ya no usamos MainThread.BeginInvokeOnMainThread aquí
                                     // para no ahogar la interfaz mientras guarda y calcula logros.
+                                    _IsScanFigure = true;
 
                                     item.NfcCodes ??= new ObservableCollection<string>();
 
@@ -438,7 +439,7 @@ namespace MyDICollection.ViewModels
 
                                         await Task.Delay(500);
                                     }
-                                    _IsScanFigure = true;
+                                    
                                     item.CurrentUidHex = resultado.UidHex;
                                     await AbrirDetalleAsync(item);
                                     item.CurrentUidHex = string.Empty;
@@ -750,7 +751,9 @@ namespace MyDICollection.ViewModels
 
                 var refrescar = false;
                 if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
+                if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 1 && _IsScanFigure) refrescar = true;
                 if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
+                if (FiltroObtenido == AppResource.Missing && nuevaCantidad == 0 && _IsScanFigure) refrescar = true;
 
                 figuraEnLista.Cantidad = nuevaCantidad;
                 figuraEnLista.Obtenido = nuevaCantidad > 0;
