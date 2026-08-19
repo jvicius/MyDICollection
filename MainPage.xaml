@@ -8,6 +8,8 @@
              xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
              xmlns:controls="clr-namespace:MyDICollection.Controls"
              xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
              >
 
     <!-- ESTA ES LA MAGIA PARA LA BARRA SUPERIOR -->
