@@ -628,13 +628,6 @@ namespace MyDICollection.ViewModels
 
                 _fullListFigures = query.ToList();
 
-                foreach (var figura in _fullListFigures)
-                {
-                    // Al modificar aquí, ya no afectas la consulta original
-                    figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
-                    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
-                }
-
                 // 2. Filtrar por menú ACTIVO
                 if (SelectedMenuFigures)
                     query = query.Where(w => w.Tipo == "Figura");
@@ -644,12 +637,18 @@ namespace MyDICollection.ViewModels
                 var listaFiltrada = query.ToList();
 
                 // 3. Traducir SOLO los que quedaron en el filtro
-                foreach (var figura in listaFiltrada)
+                foreach (var figura in _fullListFigures)
                 {
                     // Al modificar aquí, ya no afectas la consulta original
                     figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
                     figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
                 }
+                //foreach (var figura in listaFiltrada)
+                //{
+                //    // Al modificar aquí, ya no afectas la consulta original
+                //    figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
+                //    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
+                //}
 
                 // 4. Ordenar al final
                 _allFigures = (Settings.LanguageSettings == "es")

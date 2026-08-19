@@ -1342,7 +1342,7 @@
   },
   {
     "id": "DI-PD-100-133",
-    "nombre": "C.H.R.O.M.E. Damage Increaser (Rare)",
+    "nombre": "C.H.R.O.M.E. Damage Increaser",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "1.0",
@@ -1420,7 +1420,7 @@
   },
   {
     "id": "DI-PD-100-139",
-    "nombre": "Scrooge McDuck's Lucky Dime (Rare)",
+    "nombre": "Scrooge McDuck's Lucky Dime",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "1.0",
@@ -1433,7 +1433,7 @@
   },
   {
     "id": "DI-PD-100-140",
-    "nombre": "User Control (Rare)",
+    "nombre": "User Control",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "1.0",
@@ -1459,7 +1459,7 @@
   },
   {
     "id": "DI-PD-100-142",
-    "nombre": "Emperor Zurg's Wrath (Rare)",
+    "nombre": "Emperor Zurg's Wrath",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "1.0",
@@ -1472,7 +1472,7 @@
   },
   {
     "id": "DI-PD-100-143",
-    "nombre": "Merlin's Summon (Rare)",
+    "nombre": "Merlin's Summon",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "1.0",
@@ -1537,7 +1537,7 @@
   },
   {
     "id": "DI-PD-200-148",
-    "nombre": "Infinity Gauntlet (Rare)",
+    "nombre": "Infinity Gauntlet",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "2.0",
@@ -1927,7 +1927,7 @@
   },
   {
     "id": "DI-PD-100-178",
-    "nombre": "Mike's New Car (Rare)",
+    "nombre": "Mike's New Car",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -1953,7 +1953,7 @@
   },
   {
     "id": "DI-PD-100-180",
-    "nombre": "Captain Hook's Ship (Rare)",
+    "nombre": "Captain Hook's Ship",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -1966,7 +1966,7 @@
   },
   {
     "id": "DI-PD-100-181",
-    "nombre": "Dumbo (Rare)",
+    "nombre": "Dumbo",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2018,7 +2018,7 @@
   },
   {
     "id": "DI-PD-100-185",
-    "nombre": "Abu the Elephant (Rare)",
+    "nombre": "Abu the Elephant",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2135,7 +2135,7 @@
   },
   {
     "id": "DI-PD-100-194",
-    "nombre": "Condorman Glider (Rare)",
+    "nombre": "Condorman Glider",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2148,7 +2148,7 @@
   },
   {
     "id": "DI-PD-100-195",
-    "nombre": "WALL-E's Fire Extinguisher (Rare)",
+    "nombre": "WALL-E's Fire Extinguisher",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2161,7 +2161,7 @@
   },
   {
     "id": "DI-PD-100-196",
-    "nombre": "On the Grid (Rare)",
+    "nombre": "On the Grid",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2239,7 +2239,7 @@
   },
   {
     "id": "DI-PD-100-202",
-    "nombre": "TRON Interface (Rare)",
+    "nombre": "TRON Interface",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2317,7 +2317,7 @@
   },
   {
     "id": "DI-PD-100-208",
-    "nombre": "Astro Blasters Space Cruiser (Rare)",
+    "nombre": "Astro Blasters Space Cruiser",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "1.0",
@@ -2954,7 +2954,7 @@
   },
   {
     "id": "DI-PD-200-257",
-    "nombre": "Spider-Cycle (Rare)",
+    "nombre": "Spider-Cycle",
     "tipo": "Disco de Poder",
     "subtipo": "Hexagonal",
     "version": "2.0",
@@ -3300,7 +3300,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Sorcerer%27s_Apprentice_Mickey",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000021",
+    "modelo_fabrica": "INF-1000021-D23",
     "edicion_especial": "D23"
   },
   {
@@ -3497,7 +3497,7 @@
   },
   {
     "id": "DI-PD-200-290",
-    "nombre": "Marvel Team-Up: Yondu (Rare)",
+    "nombre": "Marvel Team-Up: Yondu",
     "tipo": "Disco de Poder",
     "subtipo": "Circular",
     "version": "2.0",
