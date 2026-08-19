@@ -213,7 +213,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Jack_Skellington",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000149"
+    "modelo_fabrica": "INF-1000022"
   },
   {
     "id": "DI-10-019",
@@ -405,7 +405,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Hulk",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000119"
+    "modelo_fabrica": "INF-1000101"
   },
   {
     "id": "DI-20-006",
@@ -429,7 +429,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Spider-Man",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000134"
+    "modelo_fabrica": "INF-1000107"
   },
   {
     "id": "DI-20-008",
@@ -441,7 +441,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nova",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000230"
+    "modelo_fabrica": "INF-1000114"
   },
   {
     "id": "DI-20-009",
@@ -453,7 +453,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Iron_Fist",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000190"
+    "modelo_fabrica": "INF-1000113"
   },
   {
     "id": "DI-20-010",
@@ -489,7 +489,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Star-Lord",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000109"
+    "modelo_fabrica": "INF-1000106"
   },
   {
     "id": "DI-20-013",
@@ -525,7 +525,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Groot",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000127"
+    "modelo_fabrica": "INF-1000104"
   },
   {
     "id": "DI-20-016",
@@ -597,7 +597,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Maleficent",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000174"
+    "modelo_fabrica": "INF-1000121"
   },
   {
     "id": "DI-20-022",
@@ -645,7 +645,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Anakin_Skywalker",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000239"
+    "modelo_fabrica": "INF-1000200"
   },
   {
     "id": "DI-30-002",
@@ -669,7 +669,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Yoda",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000241"
+    "modelo_fabrica": "INF-1000202"
   },
   {
     "id": "DI-30-004",
@@ -681,7 +681,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Obi-Wan_Kenobi",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000240"
+    "modelo_fabrica": "INF-1000201"
   },
   {
     "id": "DI-30-005",
@@ -705,7 +705,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Luke_Skywalker",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000242"
+    "modelo_fabrica": "INF-1000206"
   },
   {
     "id": "DI-30-007",
@@ -717,7 +717,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Princess_Leia",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000228"
+    "modelo_fabrica": "INF-1000208"
   },
   {
     "id": "DI-30-008",
@@ -753,7 +753,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Darth_Vader",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000243"
+    "modelo_fabrica": "INF-1000210"
   },
   {
     "id": "DI-30-011",
@@ -789,7 +789,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Finn",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000216"
+    "modelo_fabrica": "INF-1000230"
   },
   {
     "id": "DI-30-014",
@@ -801,7 +801,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Kylo_Ren",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000245"
+    "modelo_fabrica": "INF-1000231"
   },
   {
     "id": "DI-30-015",
@@ -1058,7 +1058,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Yondu",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000180"
+    "modelo_fabrica": "INF-1000128"
   },
   {
     "id": "DI-200-110",
@@ -1094,7 +1094,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Kanan_Jarrus",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-1000244"
+    "modelo_fabrica": "INF-1000213"
   },
   {
     "id": "DI-300-113",
@@ -1130,7 +1130,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Mulan",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000112"
+    "modelo_fabrica": "INF-1000223"
   },
   {
     "id": "DI-300-116",
@@ -1190,7 +1190,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Nick_Wilde",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000222"
+    "modelo_fabrica": "INF-1000236"
   },
   {
     "id": "DI-300-121",
@@ -1214,7 +1214,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Black_Panther",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000163"
+    "modelo_fabrica": "INF-1000246"
   },
   {
     "id": "DI-300-123",
@@ -1262,7 +1262,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Alice",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-4000137"
+    "modelo_fabrica": "INF-1000303"
   },
   {
     "id": "DI-300-127",
@@ -1286,7 +1286,7 @@
     "wiki_url": "https://disneyinfinity.fandom.com/wiki/Time",
     "obtenido": false,
     "cantidad": 0,
-    "modelo_fabrica": "INF-3000200"
+    "modelo_fabrica": "INF-1000305"
   },
   {
     "id": "DI-300-129",

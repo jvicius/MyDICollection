@@ -290,9 +290,9 @@ namespace MyDICollection.ViewModels
                     File = new ShareFile(rutaArchivo)     // Le pasamos tu JSON
                 });
 
-                await Task.Delay(500);
+                //await Task.Delay(500);
 
-                await MostrarAlertaAsync(FontAwesomeIcons.CloudUpload, AppResource.BackupSuccess, Colors.Green);
+                //await MostrarAlertaAsync(FontAwesomeIcons.CloudUpload, AppResource.BackupSuccess, Colors.Green);
             }
             catch (Exception ex)
             {
