@@ -394,5 +394,49 @@
     "Descripcion": "Consigue todas las figuras de Alicia en el Pais de las Maravillas",
     "DescripcionEn": "Find all Alice in Wonderland edition figures.",
     "BadgeImage": "badgealicia.png"
+  },
+  {
+    "Id": "PDALLCOMPLETE10",
+    "CategoriaItem": "Disco de Poder",
+    "TipoFiltro": "Version",
+    "ValorFiltro": "1.0",
+    "Titulo": "Colleccionista de poder V1.0",
+    "TituloEn": "Power Collector V1.0",
+    "Descripcion": "Consigue absolutamente todos las discos de poder V1.0 de la colección.",
+    "DescripcionEn": "Collect absolutely every power disc's V1.0 in the collection.",
+    "BadgeImage": "pdall10.png"
+  },
+  {
+    "Id": "PDALLCOMPLETE20",
+    "CategoriaItem": "Disco de Poder",
+    "TipoFiltro": "Version",
+    "ValorFiltro": "2.0",
+    "Titulo": "Colleccionista de poder V2.0",
+    "TituloEn": "Power Collector V2.0",
+    "Descripcion": "Consigue absolutamente todos las discos de poder V2.0 de la colección.",
+    "DescripcionEn": "Collect absolutely every power disc's V2.0 in the collection.",
+    "BadgeImage": "pdall20.png"
+  },
+  {
+    "Id": "PDALLCOMPLETE30",
+    "CategoriaItem": "Disco de Poder",
+    "TipoFiltro": "Version",
+    "ValorFiltro": "3.0",
+    "Titulo": "Colleccionista de poder V3.0",
+    "TituloEn": "Power Collector V3.0",
+    "Descripcion": "Consigue absolutamente todos las discos de poder V3.0 de la colección.",
+    "DescripcionEn": "Collect absolutely every power disc's V3.0 in the collection.",
+    "BadgeImage": "pdall30.png"
+  },
+  {
+    "Id": "MUNDO",
+    "CategoriaItem": "Disco de Poder",
+    "TipoFiltro": "Especial",
+    "ValorFiltro": "Mundo",
+    "Titulo": "Colleccionista de Mundos",
+    "TituloEn": "World Collector",
+    "Descripcion": "Consigue absolutamente todos los Mundos",
+    "DescripcionEn": "Collect absolutely every World's'",
+    "BadgeImage": "pdamundos.png"
   }
 ]

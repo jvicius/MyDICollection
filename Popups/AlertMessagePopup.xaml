@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+                  xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+                  xmlns:responsive="clr-namespace:MyDICollection.Helpers.Responsive"
+                  xmlns:controls="clr-namespace:MyDICollection.Controls"
+                  xmlns:fonts="clr-namespace:MyDICollection.Helpers.Fonts"
+                  xmlns:viewmodels="clr-namespace:MyDICollection.ViewModels"
+                  x:Class="MyDICollection.Popups.AlertMessagePopup"
+                  x:DataType="viewmodels:AlertMessagePopupViewModel"
+                  BackgroundColor="#80000000">
+
+    <mopups:PopupPage.Animation>
+        <animations:ScaleAnimation PositionIn="Center" PositionOut="Center" DurationIn="200" DurationOut="200"/>
+    </mopups:PopupPage.Animation>
+
+    <controls:SafeAreaView>
+
+        <Grid HorizontalOptions="Center" 
+              VerticalOptions="Center" 
+              Padding="{responsive:ResponsiveThickness BaseValue='20'}">
+
+            <Border Style="{StaticResource BorderPopup}">
+
+                <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=15}" 
+                                     HorizontalOptions="Center"
+                                     Padding="{responsive:ResponsiveThickness BaseValue='10,20'}">
+
+                    <!-- Ícono dinámico de FontAwesome -->
+                    <Label Text="{Binding Icono}"         
+                           HorizontalOptions="Center"
+                           Style="{StaticResource InfoIconLabel}" 
+                           TextColor="{Binding FontColor}"/>
+
+                    <!-- Mensaje dinámico -->
+                    <Label Text="{Binding Mensaje}" 
+                           Style="{StaticResource BorderInfoLabel}"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           MaxLines="4"
+                           LineBreakMode="WordWrap" />
+
+                    <!-- Divisor estético -->
+                    <BoxView HeightRequest="1" 
+                             Color="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource White}}" 
+                             Opacity="0.2" 
+                             Margin="{responsive:ResponsiveThickness BaseValue='5,10,5,10'}"/>
+
+                    <!-- Botón de Cerrar hexagonal -->
+                    <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Close}" 
+                                            Style="{StaticResource HexaButton}">
+                        <controls:HexagonButton.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CerrarCommand}"/>
+                        </controls:HexagonButton.GestureRecognizers>
+                    </controls:HexagonButton>
+
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+    </controls:SafeAreaView>
+
+</mopups:PopupPage>

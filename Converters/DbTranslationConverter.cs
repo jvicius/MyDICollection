@@ -35,6 +35,7 @@ namespace MyDICollection.Converters
                 "Enredados" => "Tangled",
                 "Frozen" => "Frozen", 
                 "Phineas y Ferb" => "Phineas and Ferb",
+                "Cenicienta" => "Cinderella's",
 
                 // ---- Franquicias 2.0 ----
                 "Marvel" => "Marvel", 
@@ -59,6 +60,17 @@ namespace MyDICollection.Converters
                 "El Libro de la Selva" => "The Jungle Book",
                 "Alicia en el Pais de las Maravillas" => "Alice in Wonderland",
                 "Valiente" => "Brave",
+                "101 Dalmatas" => "101 Dalmatians",
+                "La Bella y la Bestia" => "Beauty and the Beast",
+                "Pomos de cama y escobas" => "Bedknobs and Broomsticks",
+                "Pato Darkwing" => "Darkwing Duck",
+                "Parques Disney" => "Disney Parks",
+                "Pato Aventuras" => "DuckTales",
+                "El Rey Leon" => "The Lion King",
+                "Los Muppets" => "The Muppets",
+                "Bernardo y Bianca" => "The Rescuers",
+                "La espada en la piedra" => "The Sword in the Stone",
+                "El planeta del tesoro" => "Treasure Planet",
 
                 "Todos" => "All",
 

@@ -105,13 +105,31 @@
                     </Label.FormattedText>
                 </Label>
 
-                <!-- Botón para cerrar (Usamos tu HexagonButton o un simple Button) -->
-                <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Close}" 
-                    Style="{StaticResource HexaButton}">
-                    <controls:HexagonButton.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CerrarCommand}"/>
-                    </controls:HexagonButton.GestureRecognizers>
-                </controls:HexagonButton>
+                <!-- Botones de Acción -->
+                <HorizontalStackLayout HorizontalOptions="Center" 
+                                       Spacing="{responsive:ResponsiveSize BaseValue=20}">
+
+                    <!-- Botón para Eliminar (Solo visible si viene del escáner) -->
+                    <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Trash}" 
+                                            IsVisible="{Binding IsScanFigure}"
+                                            TextColor="White"
+                                            HexBackgroundColor="{StaticResource Primary}" 
+                                            HexBorderColor="{StaticResource Primary}"
+                                            Style="{StaticResource HexaButton}">
+                        <controls:HexagonButton.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EliminarFiguraCommand}"/>
+                        </controls:HexagonButton.GestureRecognizers>
+                    </controls:HexagonButton>
+
+                    <!-- Botón para cerrar (El original) -->
+                    <controls:HexagonButton Text="{x:Static fonts:FontAwesomeIcons.Close}" 
+                                            Style="{StaticResource HexaButton}">
+                        <controls:HexagonButton.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CerrarCommand}"/>
+                        </controls:HexagonButton.GestureRecognizers>
+                    </controls:HexagonButton>
+
+                </HorizontalStackLayout>
 
             </VerticalStackLayout>
         </Border>

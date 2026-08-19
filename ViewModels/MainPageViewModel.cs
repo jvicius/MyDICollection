@@ -1,13 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Mopups.Services;
 using MyDICollection.Helpers;
+using MyDICollection.Helpers.Crypto;
 using MyDICollection.Helpers.Extensions;
 using MyDICollection.Helpers.Fonts;
 using MyDICollection.Models;
 using MyDICollection.Popups;
 using MyDICollection.Resources;
 using MyDICollection.Services;
+using MyDICollection.Services.Nfc;
 using System.Collections.ObjectModel;
 
 namespace MyDICollection.ViewModels
@@ -25,8 +26,10 @@ namespace MyDICollection.ViewModels
         private readonly IPopupPageService _popupPageService;
         private readonly ILocalizationService _localizationService;
         private readonly ILogrosService _logrosService;
+        private readonly IDisneyNfcService _disneyNfcService;
         protected StatusBarService StatusBarService { get; set; }
 
+        private List<FiguraModel> _fullListFigures = new();
         private List<FiguraModel> _allFigures = new();
         private Dictionary<string, FiguraUserData> _userData = new();
 
@@ -59,7 +62,7 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private ObservableCollection<FiguraModel> _figures = new();
 
-        public bool MostrarLista => !IsBusy && (SelectedMenuFigures || SelectedMenuDiscs);
+        public bool MostrarLista => (SelectedMenuFigures || SelectedMenuDiscs);
 
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(MostrarLista))]
@@ -108,13 +111,18 @@ namespace MyDICollection.ViewModels
         [ObservableProperty]
         private double _progresoLogrosDiscos = 0;
 
-        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService)
+        private bool _isMenuExecuting = false;
+        private bool _IsScanFigure = false;
+
+        public MainPageViewModel(IJsonDataService jsonDataService, IPopupPageService popupPageService, StatusBarService statusBarService, ILocalizationService localizationService, ILogrosService logrosService, IDisneyNfcService disneyNfcService)
         {
             _jsonDataService = jsonDataService;
             _popupPageService = popupPageService;
             StatusBarService = statusBarService;
             _localizationService = localizationService;
             _logrosService = logrosService;
+            _disneyNfcService  = disneyNfcService;
+
 
             MainThread.BeginInvokeOnMainThread(async () =>
             {
@@ -141,7 +149,10 @@ namespace MyDICollection.ViewModels
                 // Nota: Cambia los nombres de los íconos por los que tengas en tu clase FontAwesomeIcons
                 new MenuOpcion { Icono = FontAwesomeIcons.InfoCircle, Texto = AppResource.MenuAboutApp },
                 new MenuOpcion { Icono = FontAwesomeIcons.Language, Texto = AppResource.MenuChangeLanguage },
-                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions }
+                new MenuOpcion { Icono = FontAwesomeIcons.CloudUpload, Texto = AppResource.MenuBackup },
+                new MenuOpcion { Icono = FontAwesomeIcons.CloudDownload, Texto = AppResource.MenuRestore },
+                new MenuOpcion { Icono = FontAwesomeIcons.Handshake, Texto = AppResource.MenuContributions },
+                new MenuOpcion { Icono = FontAwesomeIcons.Bug, Texto = AppResource.MenuReportIssue } ,
             };
         }
 
@@ -180,6 +191,24 @@ namespace MyDICollection.ViewModels
         {
             if (opcion == null) return;
 
+            if (opcion.Texto == AppResource.MenuReportIssue) 
+            {
+                await ReportarIssueAsync();
+            }
+
+            if (opcion.Texto == AppResource.MenuBackup)
+            {
+                await RespaldarColeccionAsync();
+            }
+            else if (opcion.Texto == AppResource.MenuRestore)
+            {
+                await RestaurarColeccionAsync();
+
+                // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
+                await EvaluarLogros();
+                // 💥 FIN DEL MOTOR DE LOGROS 💥
+            }
+
             if (opcion.Texto == AppResource.MenuAboutApp)
             {
                 var resultado = await _popupPageService.ShowPopupAsync<AboutPopup, AboutViewModel, bool>();
@@ -210,45 +239,262 @@ namespace MyDICollection.ViewModels
             }
         }
 
-        [RelayCommand]
-        private async Task AbrirMenuAsync(string value)
+        private async Task ReportarIssueAsync()
         {
-            if ((value == "MyFigures" && SelectedMenuFigures) ||
-                (value == "MyDiscs" && SelectedMenuDiscs) ||
-                (value == "Achievements" && SelectedMenuArchi) ||
-                (value == "Settings" && SelectedMenuSettings))
-                return;
-
-            SetActiveMenu(value);
-
-            if (value == "Home")
+            try
             {
-                await Task.Delay(500);
-                SelectedMenuHome = false;
-                return;
+                // 1. Sacamos la info del dispositivo para que te llegue el chisme completo
+                string versionApp = AppInfo.Current.VersionString;
+                string plataforma = DeviceInfo.Current.Platform.ToString();
+
+                // 2. Armamos la plantilla con Markdown
+                string bodyCuerpo = $"**{AppResource.DescribeIssue}**\n\n\n" +
+                    $"---\n" +
+                    $"*📱 App Version: {versionApp}*\n" +
+                    $"*⚙️ OS: {plataforma}*";
+
+                // 3. Codificamos el texto para que la URL sea válida
+                string encodedBody = Uri.EscapeDataString(bodyCuerpo);
+                string encodedTitle = Uri.EscapeDataString("[Bug] ");
+
+                // 4. Tu URL directa con los parámetros inyectados
+                string url = $"https://github.com/jvicius/MyDICollection/issues/new?title={encodedTitle}&body={encodedBody}";
+
+                // 5. ¡Pum! Abrimos el navegador
+                await Launcher.Default.OpenAsync(new Uri(url));
             }
-
-            if (value == "MyFigures")
+            catch (Exception ex)
             {
-                IconInfo = FontAwesomeIcons.Figura2;
-            }
-
-            if (value == "MyDiscs")
-            {
-                IconInfo = FontAwesomeIcons.PowerDisc3;
-            }
-
-            if (value == "Achievements")
-            {
-                await CargarLogrosFamaAsync();
-            }
-
-            if (value == "MyFigures" || value == "MyDiscs")
-            {
-                await LoadDataAsync();
+                System.Diagnostics.Debug.WriteLine($"Error al abrir GitHub: {ex.Message}");
+                // Opcional: Mostrar un MostrarAlertaAsync diciendo que no se pudo abrir el navegador
             }
         }
 
+        private async Task RespaldarColeccionAsync()
+        {
+            try
+            {
+                // 1. Buscamos dónde vive tu userdata.json actual
+                string rutaArchivo = Path.Combine(FileSystem.AppDataDirectory, "userdata.json");
+
+                if (!File.Exists(rutaArchivo))
+                {
+                    // Si por alguna razón no existe, no hay nada que respaldar
+                    return;
+                }
+
+                // 2. Usamos el Share nativo del celular
+                await Share.Default.RequestAsync(new ShareFileRequest
+                {
+                    Title = AppResource.BackupShareTitle, // Título del menú nativo
+                    File = new ShareFile(rutaArchivo)     // Le pasamos tu JSON
+                });
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al respaldar: {ex.Message}");
+            }
+        }
+
+        private async Task RestaurarColeccionAsync()
+        {
+            try
+            {
+                // 1. Definimos que solo queremos que el usuario pueda elegir archivos .json
+                var customFileType = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
+                {
+                    { DevicePlatform.iOS, new[] { "public.json" } }, // iOS usa UTTypes
+                    { DevicePlatform.Android, new[] { "application/json" } }, // Android usa MIME types
+                    { DevicePlatform.WinUI, new[] { ".json" } }, // Windows usa extensiones
+                    { DevicePlatform.macOS, new[] { "json" } }
+                });
+
+                // 2. Abrimos el explorador de archivos nativo
+                var resultado = await FilePicker.Default.PickAsync(new PickOptions
+                {
+                    PickerTitle = "Selecciona tu userdata.json",
+                    FileTypes = customFileType
+                });
+
+                if (resultado != null)
+                {
+                    await Task.Delay(500);
+                    // 3. Validamos que en efecto sea un JSON (por si las moscas)
+                    if (resultado.FileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                    {
+                        // 4. Ubicamos dónde debe ir el archivo en la app
+                        string rutaDestino = Path.Combine(FileSystem.AppDataDirectory, "userdata.json");
+
+                        // 5. Copiamos el archivo que eligió el usuario y sobreescribimos el actual
+                        using var streamOrigen = await resultado.OpenReadAsync();
+                        using var streamDestino = File.Create(rutaDestino);
+
+                        await streamOrigen.CopyToAsync(streamDestino);
+
+                        // 6. ¡Éxito! Le avisamos al usuario. 
+                        // NOTA: Como la base de datos cambió por debajo del agua, 
+                        // lo más sano es pedirle que reinicie la app para que tus listas se vuelvan a cargar limpias.
+
+                        await MostrarAlertaAsync(FontAwesomeIcons.CloudDownload, AppResource.RestoreSuccess, Colors.Green);
+                    }
+                    else
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.RestoreError, Colors.Red);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error al restaurar: {ex.Message}");
+            }
+        }
+
+        protected async Task<bool> MostrarAlertaAsync(string icono, string mensaje, Color fontColor = null)
+        {
+            // Si no mandas color, le ponemos un rojo de advertencia por default
+            fontColor ??= Colors.Red;
+
+            var parameters = new NavigationParameters
+            {
+                { "Icono", icono },
+                { "Mensaje", mensaje },
+                { "FontColor", fontColor }
+            };
+
+            return await _popupPageService.ShowPopupAsync<AlertMessagePopup, AlertMessagePopupViewModel, bool>(parameters);
+        }
+
+        [RelayCommand]
+        private async Task AbrirMenuAsync(string value)
+        {
+            // 2. Si ya se está ejecutando el comando, ignoramos el toque extra y salimos
+            if (_isMenuExecuting)
+                return;
+
+            try
+            {
+                // 3. Cerramos el candado
+                _isMenuExecuting = true;
+
+                if ((value == "MyFigures" && SelectedMenuFigures) ||
+                    (value == "MyDiscs" && SelectedMenuDiscs) ||
+                    (value == "Achievements" && SelectedMenuArchi) ||
+                    (value == "Settings" && SelectedMenuSettings))
+                    return;
+
+                SetActiveMenu(value);
+
+                if (value == "Home")
+                {
+                    await Task.Delay(500);
+                    SelectedMenuHome = false;
+                    _IsScanFigure = false;
+
+                    if (!_disneyNfcService.IsSupported || !_disneyNfcService.IsAvailable)
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ErrorTimes, AppResource.NFCNotSupported, Colors.Red);
+                        return;
+                    }
+
+                    if (!_disneyNfcService.IsEnabled)
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.NFCDisabled, Colors.Yellow);
+                        return;
+                    }
+
+                    //// Verificamos si el cel tiene NFC y si está prendido
+                    if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsSupported)
+                    {
+                        var resultado = await _popupPageService.ShowPopupAsync<NfcScannerPopup, NfcScannerViewModel, DisneyNfcUtils.DisneyFigureInfo>();
+
+                        await Task.Delay(500);
+
+                        if (resultado != null)
+                        {
+                            var item = _fullListFigures.FirstOrDefault(f => f.Modelo == resultado.InfCode);
+                            if (item != null)
+                            {
+                                // 1. Prendemos la bandera para mostrar tu loader en pantalla
+                                //IsBusy = true;
+
+                                try
+                                {
+                                    // 💡 Ya no usamos MainThread.BeginInvokeOnMainThread aquí
+                                    // para no ahogar la interfaz mientras guarda y calcula logros.
+                                    _IsScanFigure = true;
+
+                                    item.NfcCodes ??= new ObservableCollection<string>();
+
+                                    bool chipYaRegistrado = _userData.ContainsKey(item.Id) && _userData[item.Id].NfcCodes.Contains(resultado.UidHex);
+
+                                    if (!chipYaRegistrado)
+                                    {
+                                        // Es un chip nuevo. Lo agregamos a la lista.
+                                        item.NfcCodes.Add(resultado.UidHex);
+
+                                        // Incrementamos la cantidad y calculamos logros en segundo plano
+                                        await CambiarCantidadAsync(item,1);
+
+                                        await MostrarAlertaAsync(FontAwesomeIcons.OkCheckCircle, AppResource.AddFigure, Colors.Green);
+
+                                        await Task.Delay(500);
+                                    }
+                                    
+                                    item.CurrentUidHex = resultado.UidHex;
+                                    await AbrirDetalleAsync(item);
+                                    item.CurrentUidHex = string.Empty;
+                                    _IsScanFigure = false;
+                                }
+                                finally
+                                {
+                                    // 2. Pase lo que pase, apagamos el loader al terminar
+                                    //IsBusy = false;
+                                }
+                            }
+                            else
+                            {
+                                // Si la figura no está en tu catálogo base (_fullListFigures)
+                                await MostrarAlertaAsync(FontAwesomeIcons.NotFoundQuestion, AppResource.Figurenotfound, Colors.Orange);
+                            }
+                        }
+                        else
+                        {
+                            //await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.Figurenotfound, Colors.Yellow);
+                        }
+                    }
+                    else
+                    {
+                        await MostrarAlertaAsync(FontAwesomeIcons.ErrorTimes, AppResource.NFCNotSupported, Colors.Red);
+                    }
+                    return;
+                }
+
+                if (value == "MyFigures")
+                {
+                    IconInfo = FontAwesomeIcons.Figura2;
+                }
+
+                if (value == "MyDiscs")
+                {
+                    IconInfo = FontAwesomeIcons.PowerDisc3;
+                }
+
+                if (value == "Achievements")
+                {
+                    await CargarLogrosFamaAsync();
+                }
+
+                if (value == "MyFigures" || value == "MyDiscs")
+                {
+                    await LoadDataAsync();
+                }
+            }
+            finally
+            {
+                // 4. Se ejecuta SIEMPRE al terminar, liberando el botón para el siguiente uso
+                _isMenuExecuting = false;
+            }
+        }
         private async Task CargarLogrosFamaAsync()
         {
             var historialUsuario = await _logrosService.ObtenerLogrosDesbloqueadosAsync();
@@ -300,11 +546,13 @@ namespace MyDICollection.ViewModels
 
         private void SetActiveMenu(string menuName)
         {
+            if (menuName == "Home")
+                return;
+
             SelectedMenuFigures = menuName == "MyFigures";
             SelectedMenuDiscs = menuName == "MyDiscs";
             SelectedMenuArchi = menuName == "Achievements";
             SelectedMenuSettings = menuName == "Settings";
-            SelectedMenuHome = menuName == "Home";
         }
 
         [RelayCommand]
@@ -341,10 +589,29 @@ namespace MyDICollection.ViewModels
 
             var navParams = new NavigationParameters
                 {
-                    { "FiguraActual", figura }
+                    { "FiguraActual", figura },
+                    { "IsScanFigure",_IsScanFigure }
                 };
 
             var resultado = await _popupPageService.ShowPopupAsync<FiguraInfoPopup, FiguraInfoViewModel, bool>(navParams);
+
+            if(!resultado)
+            {
+                if (!string.IsNullOrEmpty(figura.CurrentUidHex) && (figura.NfcCodes?.Any()??false))
+                {
+                    if (figura.NfcCodes.Contains(figura.CurrentUidHex))
+                    {
+                        figura.NfcCodes.Remove(figura.CurrentUidHex);
+
+                        await Task.Delay(500);
+
+                        await CambiarCantidadAsync(figura, -1);
+
+                        await MostrarAlertaAsync(FontAwesomeIcons.Trash, AppResource.DeleteFigure, Colors.Gray);
+                    }
+                }
+                
+            }
         }
 
         private async Task LoadDataAsync()
@@ -359,6 +626,8 @@ namespace MyDICollection.ViewModels
                 var catalogo = await _jsonDataService.ReadJsonFileAsync<List<FiguraModel>>(CatalogFileName);
                 IEnumerable<FiguraModel> query = catalogo ?? new List<FiguraModel>();
 
+                _fullListFigures = query.ToList();
+
                 // 2. Filtrar por menú ACTIVO
                 if (SelectedMenuFigures)
                     query = query.Where(w => w.Tipo == "Figura");
@@ -368,12 +637,18 @@ namespace MyDICollection.ViewModels
                 var listaFiltrada = query.ToList();
 
                 // 3. Traducir SOLO los que quedaron en el filtro
-                foreach (var figura in listaFiltrada)
+                foreach (var figura in _fullListFigures)
                 {
                     // Al modificar aquí, ya no afectas la consulta original
                     figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
                     figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
                 }
+                //foreach (var figura in listaFiltrada)
+                //{
+                //    // Al modificar aquí, ya no afectas la consulta original
+                //    figura.Tipo = figura.Tipo.ToCurrentLanguageTraslate();
+                //    figura.Franquicia = figura.Franquicia.ToCurrentLanguageTraslate();
+                //}
 
                 // 4. Ordenar al final
                 _allFigures = (Settings.LanguageSettings == "es")
@@ -382,6 +657,16 @@ namespace MyDICollection.ViewModels
 
                 // 5. Cargar progreso del usuario
                 _userData = await _jsonDataService.ReadUserDataAsync<Dictionary<string, FiguraUserData>>(UserDataFileName);
+
+                foreach (var figura in _fullListFigures)
+                {
+                    if (_userData.TryGetValue(figura.Id, out var datosUsuario))
+                    {
+                        figura.Obtenido = datosUsuario.Obtenido;
+                        figura.Cantidad = datosUsuario.Cantidad;
+                        figura.NfcCodes = new ObservableCollection<string>(datosUsuario.NfcCodes ?? new List<string>());
+                    }
+                }
 
                 foreach (var figura in _allFigures)
                 {
@@ -422,6 +707,11 @@ namespace MyDICollection.ViewModels
             OpcionesFranquicia.Add(AppResource.All);
             foreach (var franquicia in _allFigures.Select(f => f.Franquicia).Distinct().OrderBy(f => f))
                 OpcionesFranquicia.Add(franquicia);
+
+            if (OpcionesFranquicia.FirstOrDefault(f=>f==FiltroFranquicia)==null)
+            {
+                FiltroFranquicia = AppResource.All;
+            }
         }
 
         private void AplicarFiltros()
@@ -448,44 +738,57 @@ namespace MyDICollection.ViewModels
         {
             if (figura is null) return;
 
-            var figuraEnLista = _allFigures.FirstOrDefault(f => f.Id == figura.Id);
-            if (figuraEnLista is null) return;
+            IsBusy = true;
 
-            int nuevaCantidad = figuraEnLista.Cantidad + delta;
-            if (nuevaCantidad < 0) nuevaCantidad = 0;
+            try
+            {
+                var figuraEnLista = _fullListFigures.FirstOrDefault(f => f.Id == figura.Id);
+                if (figuraEnLista is null) return; // Si se sale aquí, el finally apaga el IsBusy mágicamente
 
-            var refrescar = false;
-            if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
-            if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
+                int nuevaCantidad = figuraEnLista.Cantidad + delta;
+                if (nuevaCantidad < 0) nuevaCantidad = 0;
 
-            figuraEnLista.Cantidad = nuevaCantidad;
-            figuraEnLista.Obtenido = nuevaCantidad > 0;
+                var refrescar = false;
+                if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 0) refrescar = true;
+                if (FiltroObtenido == AppResource.Owned && nuevaCantidad == 1 && _IsScanFigure) refrescar = true;
+                if (FiltroObtenido == AppResource.Missing && nuevaCantidad > 0) refrescar = true;
+                if (FiltroObtenido == AppResource.Missing && nuevaCantidad == 0 && _IsScanFigure) refrescar = true;
 
-            await GuardarProgresoAsync(figuraEnLista);
+                figuraEnLista.Cantidad = nuevaCantidad;
+                figuraEnLista.Obtenido = nuevaCantidad > 0;
 
-            // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
-            // Le pasamos la colección completa (_allFigures) para que evalúe 
-            var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_allFigures);
+                await GuardarProgresoAsync(figuraEnLista);
+
+                // 💥 AQUI METEMOS EL MOTOR DE LOGROS 💥
+                await EvaluarLogros();
+                // 💥 FIN DEL MOTOR DE LOGROS 💥
+
+                if (refrescar)
+                {
+                    AplicarFiltros();
+                }
+                else
+                {
+                    ActualizarEstadisticas(ObtenerListaBaseFiltrada());
+                }
+            }
+            finally
+            {
+                // Esto siempre se va a ejecutar, protegiendo tu app de quedarse pasmada
+                IsBusy = false;
+            }
+        }
+
+        private async Task EvaluarLogros()
+        {
+            var nuevosLogros = await _logrosService.EvaluarLogrosAsync(_fullListFigures);
 
             foreach (var logro in nuevosLogros)
             {
                 var navParams = new NavigationParameters { { "Logro", logro } };
                 await _popupPageService.ShowPopupAsync<LogroDesbloqueadoPopup, LogroDesbloqueadoViewModel, bool>(navParams);
 
-                // Damos una pequeña pausa de medio segundo por si desbloqueó 2 logros al mismo tiempo 
-                // (así se encolan bonito en lugar de empalmarse)
                 await Task.Delay(500);
-            }
-            // 💥 FIN DEL MOTOR DE LOGROS 💥
-
-            if (refrescar)
-            {
-                AplicarFiltros();
-            }
-            else
-            {
-                // Si no recargamos la lista visual para ahorrar memoria, de todos modos actualizamos los numeritos de arriba
-                ActualizarEstadisticas(ObtenerListaBaseFiltrada());
             }
         }
 

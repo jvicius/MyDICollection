@@ -222,4 +222,46 @@
   <data name="NoAchievementsMessage" xml:space="preserve">
     <value>No achievements unlocked yet</value>
   </data>
+  <data name="NFCScanMessage" xml:space="preserve">
+    <value>Tap your figure or disc to the back of your phone to scan it...</value>
+  </data>
+  <data name="NFCNotSupported" xml:space="preserve">
+    <value>Your device does not support NFC scanning.</value>
+  </data>
+  <data name="NFCDisabled" xml:space="preserve">
+    <value>NFC is disabled. Turn it on to scan your figures.</value>
+  </data>
+  <data name="Figurenotfound" xml:space="preserve">
+    <value>The scanned figure was not found in your collection or the database.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Syncing with the Infinity Base...</value>
+  </data>
+  <data name="AddFigure" xml:space="preserve">
+    <value>New figure added to your collection!</value>
+  </data>
+  <data name="DeleteFigure" xml:space="preserve">
+    <value>Figure removed from your collection.</value>
+  </data>
+  <data name="MenuReportIssue" xml:space="preserve">
+    <value>Report Issue</value>
+  </data>
+  <data name="DescribeIssue" xml:space="preserve">
+    <value>Describe the issue or suggestion:</value>
+  </data>
+  <data name="MenuBackup" xml:space="preserve">
+    <value>Backup Collection</value>
+  </data>
+  <data name="MenuRestore" xml:space="preserve">
+    <value>Restore Collection</value>
+  </data>
+  <data name="BackupShareTitle" xml:space="preserve">
+    <value>Save your collection backup</value>
+  </data>
+  <data name="RestoreSuccess" xml:space="preserve">
+    <value>Collection restored successfully! Please restart the app to see the changes.</value>
+  </data>
+  <data name="RestoreError" xml:space="preserve">
+    <value>Invalid file or error restoring the backup.</value>
+  </data>
 </root>

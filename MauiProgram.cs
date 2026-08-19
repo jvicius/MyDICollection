@@ -51,9 +51,19 @@ namespace MyDICollection
             builder.Services.AddTransient<FilterViewModel>();
             builder.Services.AddTransient<LogroDesbloqueadoPopup>();
             builder.Services.AddTransient<LogroDesbloqueadoViewModel>();
+            builder.Services.AddTransient<NfcScannerPopup>();
+            builder.Services.AddTransient<NfcScannerViewModel>();
+            builder.Services.AddTransient<AlertMessagePopup>();
+            builder.Services.AddTransient<AlertMessagePopupViewModel>();
 
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();
+
+#if ANDROID
+    builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.Android.Services.AndroidDisneyNfcService>();
+#elif WINDOWS
+    builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.Windows.Services.WindowsDisneyNfcService>();
+#endif
 
             builder.ConfigureLifecycleEvents(events =>
             {

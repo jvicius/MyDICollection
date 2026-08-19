@@ -88,11 +88,29 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New figure added to your collection!.
+        /// </summary>
+        internal static string AddFigure {
+            get {
+                return ResourceManager.GetString("AddFigure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string All {
             get {
                 return ResourceManager.GetString("All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save your collection backup.
+        /// </summary>
+        internal static string BackupShareTitle {
+            get {
+                return ResourceManager.GetString("BackupShareTitle", resourceCulture);
             }
         }
         
@@ -142,11 +160,38 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Figure removed from your collection..
+        /// </summary>
+        internal static string DeleteFigure {
+            get {
+                return ResourceManager.GetString("DeleteFigure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Describe the issue or suggestion:.
+        /// </summary>
+        internal static string DescribeIssue {
+            get {
+                return ResourceManager.GetString("DescribeIssue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Figure.
         /// </summary>
         internal static string Figure {
             get {
                 return ResourceManager.GetString("Figure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The scanned figure was not found in your collection or the database..
+        /// </summary>
+        internal static string Figurenotfound {
+            get {
+                return ResourceManager.GetString("Figurenotfound", resourceCulture);
             }
         }
         
@@ -205,11 +250,29 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Syncing with the Infinity Base....
+        /// </summary>
+        internal static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About the App.
         /// </summary>
         internal static string MenuAboutApp {
             get {
                 return ResourceManager.GetString("MenuAboutApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backup Collection.
+        /// </summary>
+        internal static string MenuBackup {
+            get {
+                return ResourceManager.GetString("MenuBackup", resourceCulture);
             }
         }
         
@@ -228,6 +291,24 @@ namespace MyDICollection.Resources {
         internal static string MenuContributions {
             get {
                 return ResourceManager.GetString("MenuContributions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report Issue.
+        /// </summary>
+        internal static string MenuReportIssue {
+            get {
+                return ResourceManager.GetString("MenuReportIssue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore Collection.
+        /// </summary>
+        internal static string MenuRestore {
+            get {
+                return ResourceManager.GetString("MenuRestore", resourceCulture);
             }
         }
         
@@ -268,6 +349,33 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NFC is disabled. Turn it on to scan your figures..
+        /// </summary>
+        internal static string NFCDisabled {
+            get {
+                return ResourceManager.GetString("NFCDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your device does not support NFC scanning..
+        /// </summary>
+        internal static string NFCNotSupported {
+            get {
+                return ResourceManager.GetString("NFCNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tap your figure or disc to the back of your phone to scan it....
+        /// </summary>
+        internal static string NFCScanMessage {
+            get {
+                return ResourceManager.GetString("NFCScanMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No achievements unlocked yet.
         /// </summary>
         internal static string NoAchievementsMessage {
@@ -300,6 +408,24 @@ namespace MyDICollection.Resources {
         internal static string PowerDisc {
             get {
                 return ResourceManager.GetString("PowerDisc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid file or error restoring the backup..
+        /// </summary>
+        internal static string RestoreError {
+            get {
+                return ResourceManager.GetString("RestoreError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collection restored successfully! Please restart the app to see the changes..
+        /// </summary>
+        internal static string RestoreSuccess {
+            get {
+                return ResourceManager.GetString("RestoreSuccess", resourceCulture);
             }
         }
         

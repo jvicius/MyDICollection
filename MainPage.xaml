@@ -228,13 +228,6 @@
 
         </Grid>
 
-        <!-- Loader -->
-        <ActivityIndicator Grid.Row="2"
-                            IsRunning="{Binding IsBusy}"
-                            IsVisible="{Binding IsBusy}"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"/>
-
         <!-- Lista de figuras -->
         <CollectionView Grid.Row="2"
                         ItemsSource="{Binding Figures}"
@@ -548,6 +541,46 @@
 
         </CollectionView>
 
+        <!-- Loader -->
+        <!-- Overlay de Carga con Transparencia -->
+        <!-- Ponle el RowSpan según cuántas filas tenga tu Grid principal (ej. Grid.RowSpan="3") 
+     o quítale los atributos de Row si tu Grid no tiene filas definidas -->
+        <Grid Grid.Row="0" 
+            Grid.RowSpan="3" 
+            IsVisible="{Binding IsBusy}" 
+            BackgroundColor="#80000000">
+
+            <!-- Crecimos un poco el cuadrado a 150 y le agregamos Padding para los márgenes internos -->
+            <Border
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="{responsive:ResponsiveSize BaseValue=160}"
+                HeightRequest="{responsive:ResponsiveSize BaseValue=160}"
+                Padding="{responsive:ResponsiveThickness BaseValue=10}"
+                Style="{StaticResource BorderPopup}">
+
+                <VerticalStackLayout Spacing="{responsive:ResponsiveSize BaseValue=15}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
+
+                    <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+
+                    <!-- Agregamos WordWrap y HorizontalTextAlignment para que baje de renglón centrado -->
+                    <Label Text="{helpers:Translate Loading}"
+                     HorizontalOptions="Center"
+                     HorizontalTextAlignment="Center"
+                     LineBreakMode="WordWrap"
+                     MaxLines="3"
+                     FontAttributes="Bold"
+                     Style="{StaticResource FilterLabel}"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+        </Grid>
+
         <!--Menu Inferior-->
 
 
@@ -585,7 +618,7 @@
             <!-- TU NUEVO BOTÓN CENTRAL -->
             <controls:CenterMenuButton Grid.Column="2"
                            ImageSource="none.png"
-                           Command="{Binding AbrirMenuAsync}"
+                           Command="{Binding AbrirMenuCommand}"
                            CommandParameter="Home" />
 
 

@@ -222,4 +222,46 @@
   <data name="NoAchievementsMessage" xml:space="preserve">
     <value>Aún no tienes logros desbloqueados</value>
   </data>
+  <data name="NFCScanMessage" xml:space="preserve">
+    <value>Acerque su figura o disco a la parte trasera del celular para escanearla...</value>
+  </data>
+  <data name="NFCNotSupported" xml:space="preserve">
+    <value>Tu dispositivo no soporta la lectura por NFC.</value>
+  </data>
+  <data name="NFCDisabled" xml:space="preserve">
+    <value>El NFC está desactivado. Enciéndelo para escanear tus figuras.</value>
+  </data>
+  <data name="Figurenotfound" xml:space="preserve">
+    <value>La figura escaneada no se encontró en tu colección o base de datos.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Sincronizando con la Base Infinity...</value>
+  </data>
+  <data name="AddFigure" xml:space="preserve">
+    <value>¡Nueva figura agregada a tu colección!</value>
+  </data>
+  <data name="DeleteFigure" xml:space="preserve">
+    <value>Figura eliminada de tu colección.</value>
+  </data>
+  <data name="MenuReportIssue" xml:space="preserve">
+    <value>Reportar un problema</value>
+  </data>
+  <data name="DescribeIssue" xml:space="preserve">
+    <value>Describe el problema o sugerencia:</value>
+  </data>
+  <data name="MenuBackup" xml:space="preserve">
+    <value>Respaldar Colección</value>
+  </data>
+  <data name="MenuRestore" xml:space="preserve">
+    <value>Restaurar Colección</value>
+  </data>
+  <data name="BackupShareTitle" xml:space="preserve">
+    <value>Guarda el respaldo de tu colección</value>
+  </data>
+  <data name="RestoreSuccess" xml:space="preserve">
+    <value>¡Colección restaurada con éxito! Por favor reinicia la app para ver los cambios.</value>
+  </data>
+  <data name="RestoreError" xml:space="preserve">
+    <value>Archivo inválido o error al restaurar el respaldo.</value>
+  </data>
 </root>
