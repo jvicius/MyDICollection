@@ -132,4 +132,12 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<!--<PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
+		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Debug'">
+		<CodesignEntitlements>Platforms\iOS\Entitlements.debug.plist</CodesignEntitlements>
+	</PropertyGroup>-->
+
 </Project>
