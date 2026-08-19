@@ -264,4 +264,7 @@
   <data name="RestoreError" xml:space="preserve">
     <value>Invalid file or error restoring the backup.</value>
   </data>
+  <data name="BackupSuccess" xml:space="preserve">
+    <value>Collection Backup successfully!</value>
+  </data>
 </root>

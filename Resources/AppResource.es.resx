@@ -264,4 +264,7 @@
   <data name="RestoreError" xml:space="preserve">
     <value>Archivo inválido o error al restaurar el respaldo.</value>
   </data>
+  <data name="BackupSuccess" xml:space="preserve">
+    <value>¡Colección guardada con éxito!</value>
+  </data>
 </root>

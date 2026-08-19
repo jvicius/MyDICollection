@@ -63,6 +63,8 @@ namespace MyDICollection
     builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.Android.Services.AndroidDisneyNfcService>();
 #elif WINDOWS
     builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.Windows.Services.WindowsDisneyNfcService>();
+#elif IOS
+    builder.Services.AddSingleton<MyDICollection.Services.Nfc.IDisneyNfcService, MyDICollection.Platforms.iOS.Services.IosDisneyNfcService>();
 #endif
 
             builder.ConfigureLifecycleEvents(events =>

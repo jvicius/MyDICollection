@@ -115,6 +115,15 @@ namespace MyDICollection.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collection Backup successfully!.
+        /// </summary>
+        internal static string BackupSuccess {
+            get {
+                return ResourceManager.GetString("BackupSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Brand.
         /// </summary>
         internal static string Brand {
