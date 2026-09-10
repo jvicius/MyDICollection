@@ -30,10 +30,18 @@ namespace MyDICollection.ViewModels
             }
         }
 
-        private void _disneyNfcService_OnError(object? sender, string e)
+        private async void _disneyNfcService_OnError(object? sender, string e)
         {
             Console.WriteLine(e);
             _disneyNfcService.StopListening();
+
+            ResultSource.TrySetResult(null);
+
+            if (MopupService.Instance.PopupStack.Count > 0)
+            {
+                await MopupService.Instance.PopAsync();
+            }
+
         }
 
         private async void _disneyNfcService_OnFigureDetected(object? sender, DisneyNfcUtils.DisneyFigureInfo e)

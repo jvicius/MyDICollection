@@ -126,6 +126,8 @@ public sealed class AndroidDisneyNfcService
         {
             RaiseError(
                 $"Error leyendo la figura: {ex.Message}");
+
+            ErrorOccurred?.Invoke(this, $"Error leyendo la figura: {ex.Message}");
         }
         finally
         {
