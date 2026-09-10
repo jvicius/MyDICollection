@@ -409,13 +409,13 @@ namespace MyDICollection.ViewModels
                     //// Verificamos si el cel tiene NFC y si está prendido
                     if (_disneyNfcService.IsEnabled && _disneyNfcService.IsAvailable && _disneyNfcService.IsSupported)
                     {
-                        var resultado = await _popupPageService.ShowPopupAsync<NfcScannerPopup, NfcScannerViewModel, DisneyNfcUtils.DisneyFigureInfo>();
+                        var resultado = await _popupPageService.ShowPopupAsync<NfcScannerPopup, NfcScannerViewModel, NfcScanResult>();
 
                         await Task.Delay(500);
 
-                        if (resultado != null)
+                        if (resultado.nfcScanResultEnum == NfcScanResultEnum.Success)
                         {
-                            var item = _fullListFigures.FirstOrDefault(f => f.Modelo == resultado.InfCode);
+                            var item = _fullListFigures.FirstOrDefault(f => f.Modelo == resultado.disneyFigureInfo.InfCode);
                             if (item != null)
                             {
                                 // 1. Prendemos la bandera para mostrar tu loader en pantalla
@@ -429,12 +429,12 @@ namespace MyDICollection.ViewModels
 
                                     item.NfcCodes ??= new ObservableCollection<string>();
 
-                                    bool chipYaRegistrado = _userData.ContainsKey(item.Id) && _userData[item.Id].NfcCodes.Contains(resultado.UidHex);
+                                    bool chipYaRegistrado = _userData.ContainsKey(item.Id) && _userData[item.Id].NfcCodes.Contains(resultado.disneyFigureInfo.UidHex);
 
                                     if (!chipYaRegistrado)
                                     {
                                         // Es un chip nuevo. Lo agregamos a la lista.
-                                        item.NfcCodes.Add(resultado.UidHex);
+                                        item.NfcCodes.Add(resultado.disneyFigureInfo.UidHex);
 
                                         // Incrementamos la cantidad y calculamos logros en segundo plano
                                         await CambiarCantidadAsync(item,1);
@@ -444,7 +444,7 @@ namespace MyDICollection.ViewModels
                                         await Task.Delay(500);
                                     }
                                     
-                                    item.CurrentUidHex = resultado.UidHex;
+                                    item.CurrentUidHex = resultado.disneyFigureInfo.UidHex;
                                     await AbrirDetalleAsync(item);
                                     item.CurrentUidHex = string.Empty;
                                     _IsScanFigure = false;
@@ -463,7 +463,10 @@ namespace MyDICollection.ViewModels
                         }
                         else
                         {
-                            //await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.Figurenotfound, Colors.Yellow);
+                            if (resultado.nfcScanResultEnum == NfcScanResultEnum.Error)
+                            {
+                                await MostrarAlertaAsync(FontAwesomeIcons.ExclamationTriangle, AppResource.Figurenotfound, Colors.Yellow);
+                            }
                         }
                     }
                     else

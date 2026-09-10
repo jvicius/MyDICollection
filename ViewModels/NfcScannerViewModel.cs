@@ -1,11 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Mopups.Services;
 using MyDICollection.Helpers.Crypto;
+using MyDICollection.Models;
 using MyDICollection.Services.Nfc;
 
 namespace MyDICollection.ViewModels
 {
-    public partial class NfcScannerViewModel : PopupPageViewModelBase<DisneyNfcUtils.DisneyFigureInfo>
+    public partial class NfcScannerViewModel : PopupPageViewModelBase<NfcScanResult>
     {
         private readonly IDisneyNfcService _disneyNfcService;
         public NfcScannerViewModel(IDisneyNfcService disneyNfcService) 
@@ -22,7 +23,7 @@ namespace MyDICollection.ViewModels
         {
             _disneyNfcService.StopListening();
 
-            ResultSource.TrySetResult(null);
+            ResultSource.TrySetResult(new NfcScanResult { nfcScanResultEnum = NfcScanResultEnum.Close});
 
             if (MopupService.Instance.PopupStack.Count > 0)
             {
@@ -35,7 +36,7 @@ namespace MyDICollection.ViewModels
             Console.WriteLine(e);
             _disneyNfcService.StopListening();
 
-            ResultSource.TrySetResult(null);
+            ResultSource.TrySetResult(new NfcScanResult { nfcScanResultEnum = NfcScanResultEnum.Error, errorMessage = e});
 
             if (MopupService.Instance.PopupStack.Count > 0)
             {
@@ -49,7 +50,7 @@ namespace MyDICollection.ViewModels
             Console.WriteLine($"UID: {e.UidHex}");
             Console.WriteLine($"ModelNumber: {e.InfCode}");
 
-            ResultSource.TrySetResult(e);
+            ResultSource.TrySetResult(new NfcScanResult { nfcScanResultEnum = NfcScanResultEnum.Success , disneyFigureInfo = e});
 
             if (MopupService.Instance.PopupStack.Count > 0)
             {
